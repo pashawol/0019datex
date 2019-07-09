@@ -1,0 +1,40 @@
+mixin s-segments()
+	// start s-segments
+	+b.SECTION.s-segments.section.block-with-lazy#s-segments&attributes(attributes)
+		.pos-st.tabs.container
+			//- align-items-center
+			.pos-st.row
+				+e.col.col-lg-5.order-lg-last
+					+b.section-title
+						h2 
+							span.text-primary Сегменты, 
+							| в&nbsp;которых мы 	работаем
+					.tabs__caption
+						.tabs__btn.active Средний бизнес
+						.tabs__btn Крупный бизнес
+					+e.text Не&nbsp;важной в&nbsp;какой вы&nbsp;сфере, мы&nbsp;погружаемся в&nbsp;ваши процессы, добиваемся долгосрочных результатов и&nbsp;несем за&nbsp;них ответственность на&nbsp;протяжении жизненного цикла проекта.
+					
+					+e.btn.btn-primary.d-none.d-lg-inline-block(href="#" data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
+				.pos-st.col
+					.tabs__wrap
+						mixin tab()
+							.pos-st.tabs__content2&attributes(attributes)
+								ul
+									mixin col(t,data)
+										li
+											picture
+												source( srcset=`img/s-segment-${data}.jpg` media="(min-width: 576px)")
+												// тут сделай кроп шириной   576px или чуть больше, какой там стандартный
+												img.object-fit-js.lazy(src="#" data-src=`img/s-segment-${data}.jpg`, alt="")
+											strong=t
+									+col("розничные магазины","bg")
+									+col("автосервисы","bg2")
+									+col("сферы услуг","bg")
+									+col("тсж, жкх","bg2")
+									+col("фитнес клубы","bg")
+									+col("торговые организации","bg2")
+						+tab()(class="active")
+						+tab()
+			.d-lg-none.text-center
+				+e.btn.btn-primary(href="#" data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
+	// end s-segments

@@ -1,0 +1,46 @@
+mixin mob-mnu() 
+	+b.menu-mobile--js 
+		+e.inner
+			.container
+				- var nav= {"Главная":"/#header-block","Компетенции":"/#s-competences","Команда":"/#s-team","Этапы работ":"#","Отзывы":"#"," Сопровождение":"#","Консультация":"#","Контакты":"#"}
+					+e.UL.nav
+						each linkPatch, linkName in nav
+							+e.LI.item: +e.A.link(href= linkPatch)= linkName
+	//  мобильное меню
+mixin top-line()
+	// start .top-line
+	.top-line__tel.d-sm-none(href="tel:+7(846)3004840") ПОЗВОНИТЬ СЕЙЧАС
+	+b.top-line--js.block-with-lazy
+		
+		.container
+			.row
+				.col-sm-auto.col
+					a(href="/")
+						img(src="img/logo.png", alt="")
+				+e.col.col.d-none.d-sm-block
+					.row.justify-content-end
+						.col-auto
+							+e.tel(href="tel:+7(846)3004840")
+
+								+icon("phone-receiver")
+								| +7 (846) 300 48 40 
+						.col-auto.d-none.d-xl-block
+							+e.btn.btn-outline(href="#") заказать звонок
+				.col-sm.col-auto.order-sm-first
+					.row
+						.col
+							+e.city
+								+e.city-name
+									+icon("flag")
+									| САМАРА
+						.col-auto.order-sm-first
+							+b.toggle-menu-mobile--js
+								+b.line-wrap.hamburger
+									+e.item.line
+									+e.item.line
+									+e.item.line
+								+e.text.d-none.d-md-block  меню
+		+mob-mnu()
+	// end .top-line
+
+

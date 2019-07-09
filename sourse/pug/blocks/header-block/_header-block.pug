@@ -1,0 +1,28 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		picture
+			source( srcset="img/header-bg.jpg" media="(min-width: 992px)")
+			// тут сделай кроп шириной   992px или чуть больше, какой там стандартный
+			source( srcset="img/header-bg-md.jpg" media="(min-width: 576px)")
+			// тут сделай кроп шириной   576px или чуть больше, какой там стандартный
+			img.object-fit-js(src="#", alt="")  
+		.container
+			+e.top-text Цифровизируйся с&nbsp;Datex
+			h1 Лучшая проектная команда под автоматизацию задач любой сложности
+			+e.sub-text Внедряем технологичные конкурентные решения на&nbsp;базе 1С для среднего и&nbsp;крупного бизнеса
+			+e.btn.btn-primary(href="#") заказать автоматизацию
+		+e.foot
+			.container
+				.row
+					.col-sm
+						+e.logo
+							+icon('1c')
+							| Сертифицированные партнеры 1С
+					+e.col.col-auto
+						+e.scroll-link.scroll-link(href="#s-competences")
+							+icon('mouse')
+					.col
+		
+		//- 	.row
+	// end header-block

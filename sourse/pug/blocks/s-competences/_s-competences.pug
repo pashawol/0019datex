@@ -1,0 +1,62 @@
+mixin s-competences()
+	// start s-competences
+	+b.SECTION.s-competences.section.block-with-lazy#s-competences&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Ключевые компетенции 
+					|
+					span.text-primary нашей команды 
+				.h4 Автоматизируя процессы в&nbsp;вашем бизнесе, мы&nbsp;делаем его эффективнее.
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin item(i,  or)
+						+e.slide.swiper-slide
+							+e.item
+								.before 0
+									= i
+								+e.icon-wrap
+									+icon("s-competences-" + i)
+								//- h6= or
+								block
+								p Создаем рекламную кампанию, полностью берем на&nbsp;себя управление, оптимизируем бюджет и&nbsp;ежемесячно присылаем отчеты.
+								if or
+									+e.btn.btn-primary(href="#" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
+								else
+									+e.btn.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
+						// /+e.slide.swiper-slide
+					+item('1','оптово-розничная торговля')
+						h6 оптово-розничная
+							br
+							| торговля
+					+item('2','бухгалтерский учёт')
+						h6 бухгалтерский
+							br
+							| учёт
+					+item('3','учёт зарплаты и кадров')
+						h6 учёт зарплаты
+							br
+							| и&nbsp;кадров
+					+item('4','информационно-технологическое сопровождение (итс)')
+						h6 информационно-
+							br
+							| технологическое
+							br
+							| сопровождение (итс)
+					+item('5','сопровождение 1с')
+						h6 сопровождение
+							br
+							| 1с
+					+item('6','доработка существующей системы учёта')
+						h6 доработка
+							br
+							| существующей
+							br
+							| системы учёта
+					+item('7','автоматизация производства')
+						h6 автоматизация производства
+					+item('8','торгово-кассовое оборудование')
+						h6 торгово-кассовое оборудование
+					+item('9','учёт автотранспорта и транспортная логистика')
+						h6 учёт автотранспорта и&nbsp;транспортная логистика 	
+			+control-sl()
+	// end s-competences

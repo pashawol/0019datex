@@ -20,7 +20,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.inputMask();
 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>')
 
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню

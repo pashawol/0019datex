@@ -1,9 +1,27 @@
 mixin s-steps()
 	// start s-steps
 	+b.SECTION.s-steps.section.block-with-lazy#s-steps&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 s-steps
-				
-			.row
+		.pos-st.tabs.container
+			//- align-items-center
+			.pos-st.row
+				+e.col.col-lg-5.order-lg-last
+					+b.section-title
+						h2 
+							span.text-primary Этапы работы 
+							| нашей команды с&nbsp;вашим бизнесом
+					.tabs__caption
+						.tabs__btn.active Средний бизнес
+						.tabs__btn Крупный бизнес
+					+e.text На&nbsp;графике показан усредненный жизненный цикл проекта, в&nbsp;каждом отдельном случае жизненный цикл может отличаться.
+					
+					+e.btn.btn-primary.d-none.d-lg-inline-block.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
+				.pos-st.col
+					.tabs__wrap
+						mixin tab()
+							.pos-st.tabs__content2&attributes(attributes)
+								 
+						+tab()(class="active")
+						+tab()
+			.d-lg-none.text-center
+				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
 	// end s-steps

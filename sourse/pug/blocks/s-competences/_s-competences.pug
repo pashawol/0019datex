@@ -20,7 +20,7 @@ mixin s-competences()
 								block
 								p Создаем рекламную кампанию, полностью берем на&nbsp;себя управление, оптимизируем бюджет и&nbsp;ежемесячно присылаем отчеты.
 								if or
-									+e.btn.btn-primary(href="#" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
+									+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
 								else
 									+e.btn.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
 						// /+e.slide.swiper-slide

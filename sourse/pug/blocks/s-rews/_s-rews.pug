@@ -3,7 +3,33 @@ mixin s-rews()
 	+b.SECTION.s-rews.section.block-with-lazy#s-rews&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-rews
-				
-			.row
+				h2 Отзывы клиентов
+			
+			+e.slider.slider--js2.swiper-container
+				+e.control-sl
+					+arrow()
+				.swiper-wrapper
+					mixin item()
+						+e.slide.swiper-slide
+							.row
+								.col-lg-6
+								h3  С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.
+								+e.link(href="#")
+									+icon('youtube')
+									| смотреть видео-отзыв
+								.col-lg-6
+									+e.card.row
+										.col-auto
+											+e.img-wrap
+												+e.logo
+													img.lazy(src="#" data-src="img/rew-logo.jpg", alt="")
+												picture 
+													source(type="image/webp" srcset=`img/rew-img.webp` )
+													img.object-fit-js.lazy(src="#" data-src=`img/rew-img.png`, alt='')
+										.col
+											h6 николаев 
+												span.text-primary пётр
+											p Руководитель отдела продаж
+					+item()
+					+item()
 	// end s-rews

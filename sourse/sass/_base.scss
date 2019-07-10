@@ -1,5 +1,8 @@
 html {
-	overflow-x: hidden;
+	&:not(.fixed){
+
+		overflow-x: hidden;
+	}
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 	background-position: center top;
@@ -139,7 +142,7 @@ body {
 		width: 100%;
 		height: 100%;
 		@include mt;
-		// background-color: #000000;
+		background-color: #000000;
 		opacity: 0;
 		z-index: -1;
 		top: 0;
@@ -383,6 +386,7 @@ textarea {
 
 .tabs {
 	&__btn {
+		font-weight: 500;
 		&:hover {
 			cursor: pointer;
 		}

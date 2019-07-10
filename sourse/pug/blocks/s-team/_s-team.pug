@@ -8,7 +8,7 @@ mixin s-team()
 					span.text-primary DATEX SOFT
 				h5 Каждый специалист нашей команды думает как принести пользу команде через пользу клиенту.
 			.row
-				mixin item(  p)
+				mixin item(  p, t)
 					+e.col.col-lg.col-6
 						+e.item()
 							+e.img-wrap
@@ -16,25 +16,25 @@ mixin s-team()
 									+icon('1c')
 									| Сертифицированные партнеры 1С
 								picture 
+									source(type="image/webp" srcset=`img/team.webp` media="(min-width: 390px)")
+									source(type="image/png" srcset=`img/team.png` media="(min-width: 390px)")
 									// тут сделай кроп шириной   200px или чуть больше, какой там стандартный
-									source(type="image/webp" srcset=`img/team.webp` media="(min-width: 576px)")
-									source(type="image/png" srcset=`img/team.png` media="(min-width: 576px)")
 									source(type="image/webp" srcset=`img/team-sm.webp` )
-									img.object-fit-js(src=`img/team-sm.png`, alt='')
+									img.object-fit-js.lazy(src="#" data-src=`img/team-sm.png`, alt='')
 							block
 							p= p
-							+e.btn.btn-outline-secondary(href="#" data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  подробнее
+							+e.btn.btn-outline-secondary.popup-with-move-anim(href="#modal-team" data-title= t data-prof= p  data-text="1990 года рождения – в 2013 году окончил Аэрокосмический университет и начал свою карьеру как программист 1С. С тех пор поучаствовал в более чем 300 проектах автоматизации, как программист и не меньшим числом как управленец. В послужном списке Всеволода есть крупнейшие корпорации РФ. С 2015 года руководит крупными командами по автоматизации. С 2019 года является руководителем офиса Datex в Самаре. "   data-btn=`Обсудить проект с ${t}`)  подробнее
 					// /.col
-				+item('Руководитель команды')
+				+item('Руководитель команды','Лысиков Всеволод')
 					h6 лысиков
 						span.text-primary всеволод
-				+item('Руководитель отдела внедрения')
+				+item('Руководитель отдела внедрения','Шуба Валентин')
 					h6 шуба
 						span.text-primary валентин
-				+item('Коммерческий директор')
+				+item('Коммерческий директор','Нестеров Андрей')
 					h6 нестеров
 						span.text-primary андрей
-				+item('IT директор')
+				+item('IT директор','Колоколов Дмитрий')
 					h6 колоколов
 						span.text-primary дмитрий
 	// end s-team

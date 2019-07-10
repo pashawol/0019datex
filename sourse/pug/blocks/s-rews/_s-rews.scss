@@ -1,4 +1,8 @@
 .s-rews {
+
+	.icon{
+		font-size: rem(35);
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

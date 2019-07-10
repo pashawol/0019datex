@@ -74,14 +74,7 @@ jQuery(document).ready(function ($) {
 				$('.top-nav  ').removeClass('fixed');
 			}
 		});
-		// конец добавил
-		if (window.matchMedia("(min-width: 992px)").matches) {
-
-			btnToggle.removeClass("on");
-			// $("body").removeClass("fixed");
-			menu.removeClass("active");
-			$("body").removeClass("fixed");
-		}
+ 
 	}
 
 	$(window).resize(function () {
@@ -99,17 +92,21 @@ jQuery(document).ready(function ($) {
 	$(" .top-nav ul a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
+		var destinationMinus =  elementClick.replay('/','');
+		if(destinationMinus) {
 
-		$('html, body').animate({
-			scrollTop: destination
-		}, 1100);
+			$('html, body').animate({
+				scrollTop: destinationMinus
+			}, 1100);
+	
+			return false;
+		}
 
-		return false;
 	});
 
 	// slider
 	$(".section").each(function () {
-		var swiper2 = new Swiper($(this).find('.slider--js'), {
+		var slider = {
 			slidesPerView: 1,
 			watchOverflow: true,
 			spaceBetween: 0,
@@ -126,16 +123,41 @@ jQuery(document).ready(function ($) {
 				prevEl: $(this).find('.swiper-button-prev'),
 			},
 			loop: true,
-		});
+		}
+		var swiper2 = new Swiper($(this).find('.slider--js'), slider);
+		var swiper3 = new Swiper($(this).find('.slider--js2'), slider);
 	});
 
 	parent.on('mouseenter', 'li', function () {
 		parent.find("picture").removeClass('active');
 		$(this).find("picture").addClass('active')
 	})
+
+
+	$('.popup-with-move-anim').click(function () {
+		var th = $(this);
+		$(th.attr('href')).find(".order").val(th.data('order'));
+ 
+		
+		$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title')); 
+		$(th.attr('href')).find(".form-wrap__btn").text(th.data('btn'));
+		// $(th.attr('href')).find(".btn-name").text(th.data('btn'));
+	})
+	$(".s-team__btn").click(function(){
+		var th = $(this);
+		var modal = $(th.attr('href'));
+		modal.find("h3").html(th.data('title')); 
+		modal.find(".modal-team__small-text").html(th.data('prof')); 
+		modal.find("p").html(th.data('text')); 
+		order  =  th.data('btn');
+		modal.find(".modal-team__btn").attr('data-order', order) ; 
+		modal.find("picture").html(th.parent().find('picture').html())
+
+	})
 });
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
+
 	// функции для запуска lazy
 	// функции для запуска lazy
 	LazyFunction: function () {
@@ -286,35 +308,10 @@ JSCCommon = {
 			$("body, html").toggleClass("fixed");
 			return false;
 		});
-		// $('.menu-mobile--js ul li a').on('click', function () {
-		// 	$(".menu-mobile--js .toggle-mnu").click();
-		// });
-
-		$(document).mouseup(function (e) {
-			var container = $(".menu-mobile--js.active");
-			if (container.has(e.target).length === 0) {
-				btnToggle.removeClass("on");
-				// $("body").toggleClass("fixed");
-				menu.removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
+		$('.menu-item a').on('click', function () {
+			btnToggle.click();
 		});
-		// закрыть меню при горизонтальном свайпе
-		$('.menu-mobile--js.active').swipe({
-			swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-				if (direction == 'left') {
-					btnToggle.removeClass("on");
-					$(".menu-mobile--js.active").removeClass("active");
-					$("body, html").removeClass("fixed");
-				}
-				if (direction == 'right') {
-					btnToggle.removeClass("on");
-					$(".menu-mobile--js.active").removeClass("active");
-					$("body, html").removeClass("fixed");
-				}
-			},
-			triggerOnTouchEnd: false,
-		});
+ 
 	},
 	// /mobileMenu
 

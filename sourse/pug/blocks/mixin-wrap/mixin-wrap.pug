@@ -48,11 +48,20 @@ mixin arrow()
 mixin soc()
 	+b.soc
 		mixin item()
-			+e.A.item(href="" target="_blank"): i(class="fab")&attributes(attributes)
-		+item()(class="fa-twitter")
-		+item()(class=" fa-facebook")
-		+item()(class="fa-google-plus")
-//- WP menu
+			+e.A.item(href="" target="_blank")
+				block
+		+item()
+			+icon("vk")
+		
+		+item()
+			+icon("fb")
+		
+		+item()
+			+icon("inst")
+		
+		+item()
+			+icon("youtube")
+		
 //- mixin mnu()
 //- 	- var nav= { "Наши работы":"#","Цены":"#","Калькулятор":"#","Акции":"#" ,"Заказать":"#"}
 //- 	ul.menu
@@ -81,3 +90,4 @@ mixin control-sl()
 	.control-wrap
 		+arrow()
 		.swiper-pagination
+		

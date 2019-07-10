@@ -1,23 +1,25 @@
  
 	  
 .soc{
-	margin: 0 -5px;
+	margin: 0 rem(-18px);
+	display: flex;
+	justify-content: center;
 	&__item{
 		display: inline-block;
 		text-decoration: none !important;
-		margin: 0 5px;
+		margin: 0 rem(18px);
 		vertical-align: middle;
 		@include mt;
+		// color: #ffffff !important;
+		
+		.icon{
+			font-size: rem(30) !important;
+			color: #ffffff !important;
+		}
 		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: .6 ;
+			opacity: 0.5;
 		}
 	}
-	svg{
-		width: 31px;
-		height: 31px;
-	}
-	 
 
 }
  

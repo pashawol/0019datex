@@ -1,41 +1,65 @@
+.fixed{
+  .top-line__body{
+    background-color: #171718;
+  }
+}
 .top-line {
   position: absolute;
   left: 0;
   top: 0;
+  min-width: 100%;
   width: 100vw;
   padding-right: calc(100vw - 100%); 
   // height: 10px;
   transform: translateY(0); 
-  z-index: 200;
+  z-index: 1000;
   color: #ffffff;
+  
+  .container{
+    position: relative;
+    // background-color: #171718;
+  }
   &.fixed-ready{ 
-		z-index: 200; 
+    z-index: 20; 
 		background-color: #171718;
-		transform: translateY(-100%);
-    padding-top: em(10px);
-    padding-bottom: em(10px);
-	 
-	}
+    transform: translateY(-100%);
+    .top-line__body{
+      
+      padding-top: em(10px);
+      padding-bottom: em(10px);
+    }
+    
+  }
+  &__body{
+
+    position: relative;
+    z-index: 1000;
+  }
 	&.fixed{
 		@include mt(.9);
 		transform: translateY(0); 
 		position: fixed;
-		z-index: 200;
+    z-index: 1000;
 	}
+  &__body{
   @include media-breakpoint-up(sm) {
 
-    padding-top: rem(42);
+      padding-top: rem(42);
+    }
+    padding-top: rem(20);
   }
-  padding-top: rem(20);
-  font-size: $small;
-  // font-size: 14px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: rem(2.52px);
-	.icon{
-    font-size: rem(18);
-    color: $primary;
-    margin-right: rem(10);
+  &__body{
+    font-size: $small;
+    // font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: rem(2.52px);
+    .icon{
+      font-size: rem(18);
+      color: $primary;
+      margin-right: rem(10);
+    }
+    
   }
   .container{
     max-width: (1820px + $grid-gutter-width);
@@ -269,77 +293,115 @@
 }
 
 .menu-mobile {
-	position: fixed !important;
+  position: fixed;
+	// position: absolute;
 	z-index: 999;
-	max-width: 85%;
-	height: 101vh;
-	width: 280px;
+	// max-width: 85%;
+	height: 100vh;
+	// width: 280px;
+  width: 100%;
 	top: 0;
 	// left: 0;
 	right: 0;
-	transform: translate(100%, 0);
+	transform: translate(0, -120%);
 	@include mt(.6);
 	will-change: transform;
 
 	&__inner {
-		background-color: #c3c3c3;
-		padding: 5% 0;
+    background-color: #171718;
+		width: 100%;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rem(150) 15px; 
 	}
-
+  
 	&.active {
-		transform: translate(0, 0);
-
+    transform: translate(0, 0);
+    
 		.toggle-menu-mobile {
-			opacity: 1;
+      opacity: 1;
 		}
 	}
-
-	.toggle-menu-mobile {
-		// position: relative;
-		cursor: pointer;
-		margin-left: -15%;
-		position: absolute;
-		opacity: 0;
-		left: 0;
-		right: auto;
-		color: #FFF;
-		top: 10px;
-		z-index: 9999;
-		background-color: transparent;
-
-		span,
-		span:after,
-		span:before {
-			background-color: #FFF;
-		}
-
-		&.on {
-			opacity: 1;
-
-			span {
-				background-color: transparent;
-			}
-		}
-	}
-
-	ul {
-		position: relative;
-	}
-
-	li {
-		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
-
-		a {
-			// font-size: 16px;
-
-			padding: 10px;
-			display: block;
+  
  
+	&__foot{
+    .icon{
+      
+      color: $primary;
+    }
+    
+    
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left; 
+		@include media-breakpoint-up(xxl) {
+      
+      padding-bottom: rem(70);
+    }
+    background-color: #171718;
+    padding-top: rem(10);
+		padding-bottom: rem(50);
+		.container{
+      max-width: (1820px + $grid-gutter-width);
 		}
+		font-size: $small;
+    
 	}
+	&__logo{
+    // display: flex;
+		display: inline-flex;
+		text-align: left;
+		line-height: 1.2;
+		.icon{
+      margin-right: rem(15);
+			font-size: rem(36);
+		}
+		max-width: rem(225);
+	}
+}
+.menu {
+  //  display: flex;
+  @include media-breakpoint-down(xs) {
+    
+  }
+  @include media-breakpoint-up(sm) {
+    columns: 2;
+    text-align: left;
+  }
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: em(1030);
+  list-style-type: none;
+  @include rfs(rem(48));
+  
+  &-item {
+    @include media-breakpoint-up(sm) {
+      
+      // display: inline-block;
+      vertical-align: top;
+    }
+    margin: 0; 
+    a {
+      // font-size: 16px;
+      
+      padding: rem(10px) 0;
+      display: block;
+      font-weight: 900;
+      color: #ffffff;
+      text-decoration: none;
+      &:hover{
+        color: $primary;
+      }
+      
+    }
+  }
 }

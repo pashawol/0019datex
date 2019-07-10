@@ -1,4 +1,5 @@
-
+//- include ../mixin-wrap/mixin-wrap.pug
+//- include ../form-wrap/form-wrap.pug
 mixin modal() 
  
 	//- #modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
@@ -22,25 +23,40 @@ mixin modal()
 	
  
 
-	//- #thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
-	//- 	div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			br
-	//- 			.h2 Заявка принята
-	//- 			br
-	//- 			.h3 Скоро с Вами свяжутся
-	//- 			br 
+
 
 	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
 		.text-center
-			+e.title.h3.ttu Обратный звонок
-			p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
-		+input("text","Ваше Имя")(required) 
-		+input("tel","Ваш телефон")(required)
-		//- +input("email","Ваше email")(required)
-		//- +text( "Комментарий")
-		+e.INPUT.btn.btn.btn-block.btn-warning.mb-4(type="submit" value="Рассчитать") 
-		+polite()
+			+e.title--js 
+			+e.title-sub--js Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 15&nbsp;минут
+		input.order(type="hidden")
+		+input("text","name","Введите имя")(required)
+		+input("tel","tel","Введите телефон")( required)
+		+input("email","email","Ваш e-mail")( required)
+			
+		+e.btn(type="submit")
+		+polite
 	// #modal-call
+	 
+ 
+	 
+	+b.form-wrap(id="thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form text-center" )
+		+e.title Спасибо за обращение!
+		+e.title-sub Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей
 	// modal
+
+
+	+b.modal-team(id="modal-team" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg " )
+		.row
+			.col-xxl-6.col-sm-5
+				picture 
+				
+			.col
+				h3 
+				+e.small-text 
+				+e.logo
+					+icon('1c')
+					| Сертифицированные партнеры 1С
+				p   
+				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Обсудить проект"  data-btn="Обсудить проект") обсудить проект 
+	// #modal-team

@@ -1,9 +1,30 @@
 mixin s-start()
 	// start s-start
 	+b.SECTION.s-start.section.block-with-lazy#s-start&attributes(attributes)
+		picture
+			source( srcset="img/s-start-bg.jpg" media="(min-width: 576px)" ) 
+			source( srcset="img/s-start-bg-md.webp" media="(min-width: 576px)")
+			// тут сделай кроп шириной   576px или чуть больше, какой там стандартный
+			source( srcset="img/s-start-bg-sm.webp"  )
+			img.object-fit-js.lazy(src="#" data-src="img/s-start-bg-sm.jpg", alt="")  
 		.container
 			+b.section-title.text-center
-				h2 s-start
-				
+				h2 Поможем эффективно начать
+					span.text-primary.d-block сотрудничество 
 			.row
+				mixin item(r,t)
+					+e.col.col 
+						h6= r
+						h3= t
+						strong бесплатно
+						ul
+							li Выезд специалиста-аналитика
+							li Демонстрация решения
+							li Первичный анализ
+							li Подготовка КП
+							li Демо-доступ к решению
+							li Анализ текущей тех. базы и подбор оборудования
+						a.popup-with-move-anim(href="#modal-call" data-title="Заказать " data-order= ` заказать бесплатно ${t}`   data-btn="Заказать  ") заказать бесплатно
+				+item('для среднего бизнеса','Экспресс обследование')
+				+item('для крупного бизнеса','Комплексный аудит')
 	// end s-start

@@ -14,7 +14,7 @@ mixin s-segments()
 						.tabs__btn Крупный бизнес
 					+e.text Не&nbsp;важной в&nbsp;какой вы&nbsp;сфере, мы&nbsp;погружаемся в&nbsp;ваши процессы, добиваемся долгосрочных результатов и&nbsp;несем за&nbsp;них ответственность на&nbsp;протяжении жизненного цикла проекта.
 					
-					+e.btn.btn-primary.d-none.d-lg-inline-block(href="#" data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
+					+e.btn.btn-primary.d-none.d-lg-inline-block.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
 				.pos-st.col
 					.tabs__wrap
 						mixin tab()
@@ -36,5 +36,5 @@ mixin s-segments()
 						+tab()(class="active")
 						+tab()
 			.d-lg-none.text-center
-				+e.btn.btn-primary(href="#" data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
+				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
 	// end s-segments

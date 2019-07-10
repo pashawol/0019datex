@@ -23,8 +23,10 @@ mixin s-segments()
 									mixin col(t,data)
 										li
 											picture
+												source.lazy-sourse(srcset="#" type="image/webp"   data-srcset=`img/s-segment-${data}.webp` media="(min-width: 576px)")
 												source.lazy-sourse(srcset="#" type="image/jpg"   data-srcset=`img/s-segment-${data}.jpg` media="(min-width: 576px)")
-												// тут сделай кроп шириной   576px или чуть больше, какой там стандартный
+												// тут сделай кроп шириной   576px или чуть больше, какой там стандартный 
+												source.lazy-sourse(srcset="#" type="image/webp"   data-srcset=`img/s-segment-${data}.webp` )
 												img.object-fit-js.lazy(src="#" data-src=`img/s-segment-${data}.jpg`, alt="")
 											strong=t
 									+col("розничные магазины","bg")

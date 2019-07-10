@@ -16,10 +16,10 @@ mixin s-team()
 									+icon('1c')
 									| Сертифицированные партнеры 1С
 								picture 
-									source(type="image/webp" srcset=`img/team.webp` media="(min-width: 390px)")
-									source(type="image/png" srcset=`img/team.png` media="(min-width: 390px)")
+									source.lazy-sourse(srcset="#" data-srcset=`img/team.webp` media="(min-width: 390px)" type="image/webp" )
+									source.lazy-sourse(srcset="#" data-srcset=`img/team.png` media="(min-width: 390px)" type="image/png" )
 									// тут сделай кроп шириной   200px или чуть больше, какой там стандартный
-									source(type="image/webp" srcset=`img/team-sm.webp` )
+									source.lazy-sourse(srcset="#" data-srcset=`img/team-sm.webp` type="image/webp" )
 									img.object-fit-js.lazy(src="#" data-src=`img/team-sm.png`, alt='')
 							block
 							p= p

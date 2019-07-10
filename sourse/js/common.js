@@ -206,7 +206,7 @@ JSCCommon = {
 
 		// лэзи 
 		document.addEventListener("DOMContentLoaded", function () {
-			var lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
+			var lazyImages = [].slice.call(document.querySelectorAll(".lazy-sourse"));
 			var active = false;
 
 			const lazyLoad = function () {
@@ -217,10 +217,10 @@ JSCCommon = {
 						lazyImages.forEach(function (lazyImage) {
 							var imgWrapper = lazyImage.parentNode.clientHeight + 500;
 							if (((lazyImage.getBoundingClientRect().top - imgWrapper) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + imgWrapper) >= 0) && getComputedStyle(lazyImage).display !== "none") {
-								lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
-								lazyImage.src = lazyImage.dataset.src;
-								// lazyImage.srcset = lazyImage.dataset.srcset;
-								lazyImage.classList.remove("lazy");
+								// lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
+								// lazyImage.src = lazyImage.dataset.src;
+								lazyImage.srcset = lazyImage.dataset.srcset;
+								// lazyImage.classList.remove("lazy");
 
 								lazyImages = lazyImages.filter(function (image) {
 									return image !== lazyImage;

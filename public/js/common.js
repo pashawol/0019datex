@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.customRange();
 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/psd.png);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/psd.png);"></div>')
 
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню

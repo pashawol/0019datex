@@ -24,18 +24,18 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0 ;
+	background-position: center -89px ;
 	opacity: 0;
 	// opacity: 0.7;
 } 
 .header-block{
 	@include media-breakpoint-up(xl) {
-		height: 1000px;
+		// height: 1000px;
 	}
 }
 body {
 	// opacity: .7;
-	// min-height: 10000px;  
+	// min-height: 14000px;  
 }
 
 .mono {
@@ -96,6 +96,9 @@ body {
 .section-title {
 	@extend .h2;
 	padding-bottom: em(28);
+	span{
+		display: inline-block;
+	}
 	
 	>h2 {
 		font-size: inherit;
@@ -383,7 +386,7 @@ textarea {
 	display: table-cell
 }
 
-
+.tabs2,
 .tabs {
 	&__btn {
 		font-weight: 500;
@@ -396,7 +399,7 @@ textarea {
 	&__content2,
 	&__content {
 		&.active {
-			display: block;
+			display: block !important;
 		}
 
 		display: none;
@@ -404,27 +407,27 @@ textarea {
 }
 
 
-// select.form-control {
-// 	background-image: url(../img/svg/bott.svg);
-// 	background-repeat: no-repeat;
-// 	background-position: 97% 50%; // background-size: rem(18) ;
-// 	padding-right: rem(23px);
-// 	appearance: none !important;
+select.form-control {
+	background-image: url(../img/chevron-down-red.svg);
+	background-repeat: no-repeat;
+	background-position: calc(100% - #{rem(20)}) 50%; // background-size: rem(18) ;
+	padding-right: rem(23px);
+	appearance: none !important;
 
-// 	&:not([size]):not([multiple]) {
-// 		height: $input-height;
-// 	}
+	&:not([size]):not([multiple]) {
+		height: $input-height;
+	}
 
-// 	&:focus::-ms-value {
-// 		// Suppress the nested default white text on blue background highlight given to
-// 		// the selected option text when the (still closed) <select> receives focus
-// 		// in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
-// 		// match the appearance of the native widget.
-// 		// See https://github.com/twbs/bootstrap/issues/19398.
-// 		color: $input-color;
-// 		background-color: $input-bg;
-// 	}
-// }
+	&:focus::-ms-value {
+		// Suppress the nested default white text on blue background highlight given to
+		// the selected option text when the (still closed) <select> receives focus
+		// in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+		// match the appearance of the native widget.
+		// See https://github.com/twbs/bootstrap/issues/19398.
+		color: $input-color;
+		background-color: $input-bg;
+	}
+}
 
 
 input[type='number'] {
@@ -468,7 +471,7 @@ picture{
 	display: block;
 	// display: flex;
  
-	img{
+	img.object-fit-js{
 		height: 100%;
 		width: 100%;
 		// max-width: 100%;
@@ -498,6 +501,22 @@ picture{
   }
 	 
 }
+.btn-dark{
+	@extend .btn;
+	background-color: $body-color;
+	color: #ffffff;
+	// border-color: $primary;
+	border: none;
+	&::before{
+
+		background-color: darken($color: $body-color, $amount: 10%) ; 
+  }
+  &::after {
+		background-color: darken($color: $body-color, $amount: 20%) ; 
+  }
+	 
+}
+
 .btn-outline{
 	@extend .btn; 
 	border-color: $primary;
@@ -562,6 +581,20 @@ a{
 	}
 
 }
+.swiper-button-hand.btn-primary{
+	background-image: none;
+	width: rem(60);
+	height: rem(60);
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: static;
+	margin-left: rem(9);
+	.icon{
+		font-size: rem(14);
+	}
+}
 
 	.control-wrap{
 		margin-left: auto;
@@ -609,7 +642,7 @@ a{
 		}  
 	}
 }
-
+.tabs2,
 .tabs{
 	&__caption{
 
@@ -637,6 +670,17 @@ a{
 		margin-left: -2px;
 	}
 }
+
+
+.tabs2 {
+ 
+	&__btn{
+	 
+		border: 2px solid #48494a; 
+	}
+	 
+}
+
 .container{
 	@include media-breakpoint-down(xs) {
 		padding-left: 20px;

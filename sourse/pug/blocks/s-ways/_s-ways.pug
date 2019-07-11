@@ -3,7 +3,125 @@ mixin s-ways()
 	+b.SECTION.s-ways.section.block-with-lazy#s-ways&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-ways
+				h2 Уже знаете, что нужно внедрить 
+					| 
+					span.text-primary в ваш бизнес?
 				
-			.row
+			+e.block
+				form(action="#")
+					+e.page.active
+						+e.group
+							h6.ttu.text-center Выберите программу:
+							.d-lg-none
+								+e.input-wrap.form-group
+									+e.SELECT.input.form-control( )
+										option(value="#") 1C: Управление нашей фирмой
+										option(value="#") 1C: Розница
+										option(value="#") 1C: Управление торговлей
+										option(value="#") 1C: Бухгалтерия
+										option(value="#") 1C: Зарплата и управление персоналом
+										option(value="#") Дополнительные лицензии
+										option(value="#") 1C: Комплексная автоматизация
+										option(value="#") 1C: ERP Управление предприятием
+							+e.row.row.d-none.d-lg-flex
+								mixin inputrad(i )
+									+e.col.col-3
+										+b.LABEL.program
+											+e.INPUT.input(type="radio" name='radio')
+											+e.SPAN.inner
+												+e.SPAN.icon-wrap
+													+icon('program-i-'+i)
+												block
+									// /.col-3
+								+inputrad('1')
+									| 1C: Управление нашей фирмой
+								+inputrad('2')
+									| 1C: Розница
+								+inputrad('3')
+									| 1C: Управление торговлей
+								+inputrad('4')
+									| 1C: Бухгалтерия
+								+inputrad('5')
+									| 1C: Зарплата и&nbsp;управление персоналом
+								+inputrad('6')
+									| Дополнительные лицензии
+								+inputrad('7')
+									| 1C: Комплексная автоматизация
+								+inputrad('8')
+									| 1C: ERP Управление предприятием
+							+e.foot
+								.row
+									.col
+										h6.ttu.text-lg-left.text-center Количество лицензий:
+										.range-block
+											input.range-js(type="text" data-min='10' data-from="1" data-max='500' data-values='1,5,10,20,50,100,300,500' )
+											// 
+									.col-md-auto
+										h6.ttu.text-lg-left.text-center тип защиты:
+										+b.LABEL.protect
+											+e.INPUT.input(type="checkbox")
+											+e.SPAN.text--left Программная
+											+e.range
+											+e.SPAN.text--right USB
+								//  тут повесишь disabled=disabled, чтобы на кнопку не нажать
+								+e.btn(type="button" ) далее
+									+icon("long-arrow-alt-right")
+					// /+e.page.active
+					+e.page--order
+						.row
+							.col-lg-6
+								+e.group-sm--left
+									.row.align-items-center
+										.col-lg-12.col-sm-6.col-auto
+											+e.title.h3.d-none.d-lg-block 1С: Управление торговлей
+											+e.PICTURE.img-wrap.text-center
+												// тут сделай кроп шириной   300px или чуть больше, какой там стандартный 
+												source.lazy-sourse(srcset="#" data-srcset=`img/prod.webp`  type="image/webp" media="(min-width: 576px)" ) 
+												// тут сделай кроп шириной   180px или чуть больше, какой там стандартный
+												source.lazy-sourse(srcset="#" data-srcset=`img/prod.webp`  type="image/webp" )  
+												// тут сделай кроп шириной   180px или чуть больше, какой там стандартный
+												img.lazy.res-i(src="#" data-src="img/prod.jpg", alt="")   
+										.col
+											+e.title.h3.d-lg-none 1С: Управление торговлей
+											.row
+												.col-auto
+													+e.foot-text
+														.icon-wrap
+															+icon('user')
+														| Количество лицензий:
+														| 
+														span.counter-js
+													
+												.col-auto
+													+e.foot-text
+														.icon-wrap
+															+icon('safe-shield-protection')
+														| Тип защиты: Программная
+							.col-lg-6
+								+e.group-sm
+									+b.form-wrap
+										.text-center
+											+e.title Заполните форму
+											+e.title-sub С&nbsp;вами свяжется специалист и&nbsp;проконсультирует по&nbsp;покупке и&nbsp;внедрению программы
+												br
+												strong.text-body &laquo;1С: Управление торговлей&raquo;
+										+b.manager-block
+											.row
+												.col-auto
+													+e.PICTURE.img-wrap.text-center
+														// тут сделай кроп шириной   100px или чуть больше, какой там стандартный
+														source.lazy-sourse(srcset="#" data-srcset=`img/team-sm.webp`  type="image/webp" ) 
+														img.lazy.object-fit-js(src="#" data-src="img/team-sm.png", alt="")  
+												.col
+														h6.ttu Колоколов 
+															span.text-primary дмитрий
+														p Автоматизировал более 300 торговых предприятий
+										input.order(type="hidden")
+										+input("tel","tel","Введите телефон")( required) 
+										+e.btn(type="submit") оставить заявку
+										+polite
+										+e.btn-back(hre="#")
+											+icon('long-arrow-alt-left')
+											| вернуться назад
+					// /+e.page
 	// end s-ways

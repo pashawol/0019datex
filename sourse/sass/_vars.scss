@@ -87,7 +87,7 @@ $small: rem(14);
   background-position: center center;
   background-image: url($img);
 }
-@mixin mt($s: .36){
+@mixin mt($s: .26){
   transition: all #{$s}s ;}
 @mixin c-white{
   color: #fff;}

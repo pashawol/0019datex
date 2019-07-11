@@ -1,5 +1,155 @@
 .s-ways {
+	background-color: $light;
+	padding-bottom: rem(120);
+	.section-title{
+		padding-bottom: em(15);
+	}
+	&__block{
+
+		background-color: #ffffff;
+		// margin-bottom: rem(40);
+	}
+	&__group{
+		@include media-breakpoint-up(xl) {
+
+			padding: rem(56) rem(110) rem(60);
+		}
+		@include media-breakpoint-up(sm) {
+
+			padding: rem(56) rem(50);
+		}
+		padding: rem(56) rem(30);
+	}
+	&__row{
+		@include roww(10);
+	}
 		 
+	h6{
+		letter-spacing: rem(3.6px);
+		padding-bottom: 28px;
+	}
+	&__col{
+		margin-bottom: rem(20);
+		min-height: rem(100);
+	}
+	&__foot{
+		padding-top: rem(35);
+	}
+	.range-block{
+
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-block;
+		@extend .btn-lg;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(240);
+		&[disabled]{
+			pointer-events: none;
+			opacity: 0.5;
+		}
+		.icon{
+			font-size: rem(14);
+			margin-left: rem(5);
+			position: relative;
+			top: rem(-1);
+		}
+
+	}
+	.form-wrap{
+		max-width: 457px;
+		margin-left: auto;
+		margin-right: auto;
+		&__btn-back{
+			@extend .btn;
+			@extend .btn-link;
+			@extend .btn-block;
+			@extend .btn-lg;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(340);
+			font-weight: 900;
+			color: #6f7378 !important;
+			text-decoration: none !important;
+			cursor: pointer;
+			&[disabled]{
+				pointer-events: none;
+				opacity: 0.5;
+			}
+			.icon{
+				font-size: rem(14);
+				margin-right: rem(10);
+				position: relative;
+				top: rem(-1);
+			}
+	
+		}
+	}
+	&__page{
+		&:not(.active){
+			display: none ;
+		}
+		&.active{
+			display: block !important;
+		}
+	}
+	&__group-sm{
+		@include media-breakpoint-up(xl) {
+
+			padding: rem(60) rem(50) rem(80);
+		}
+		padding: rem(60) rem(30);
+	}
+	&__title{
+		max-width: rem(320);
+	}
+	&__foot-text{
+		display: flex;
+		align-items: center;
+		font-size: $small;
+		margin-bottom: rem(10);
+		.icon-wrap{
+			color: #ffffff;	
+			width: rem(40px);
+			height: rem(40px);
+			background-color: $primary;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: rem(15);
+			flex-shrink: 0;
+			.icon{
+				font-size: rem(15);
+			}
+		}
+	}
+	&__page--order{
+		@include media-breakpoint-up(lg) {
+
+			padding-right: rem(50);
+		}
+	}
+
+	&__img-wrap{
+		margin-bottom: rem(50);
+		// max-height: rem(311);
+		img{
+			max-height: 100%;
+		}
+		@include media-breakpoint-up(lg) {
+		}
+		@include media-breakpoint-up(sm) {
+			max-width: rem(290);
+
+		}
+		max-width: rem(120);
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -20,8 +170,155 @@
 	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(md) {
+		&__group-sm--left{
+			padding-bottom: 0;
+		}
+	}
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+}
+.pb-0{
+	padding-bottom: 0 !important;
+}
+
+.program{
+	height: 100%;
+	display: flex;
+	font-size: rem(16);
+	line-height: 1.38;
+	cursor: pointer;
+
+	.icon{
+		font-size: rem(40);
+		color: $primary;
+		margin-right: rem(10);
+	}
+	&__inner{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		padding: rem(10) rem(16);
+		// padding-right: rem(30);
+		border: 2px solid $secondary;
+		@include mt;
+		background-image: url(../img/check-red.svg);
+		background-image: none;
+		background-size: rem(21) rem(15);
+		background-repeat: no-repeat;
+		background-position: calc(100% - #{rem(17)}) rem(17);
+	}
+	input{
+		@extend .invisible;
+	}
+	input:checked ~ &__inner{
+		border-color: $primary;
+		background-image: url(../img/check-red.svg);
+	}
+
+}
+
+.range-block{
+	@include media-breakpoint-up(md) {
+
+		margin-top:  -34px;
+	}
+	margin-top:  -14px;
+	margin-bottom: rem(75);
+	cursor: pointer;
+}
+.irs--round .irs-grid-text {
+	color: #6f7378;
+ 
+font-size: rem(18px);
+font-weight: 400;
+line-height: 1.38;
+font-family: $default-font;
+// font-weight: bold;
+}
+
+.irs--round .irs-handle{
+	background-color: $primary  !important;
+	border-color:$primary !important;
+	width: 30px;
+	height: 30px;
+	top: 22px;
+	box-shadow: none;
+	cursor: pointer;
+}
+.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single,
+.irs--round .irs-bar{
+	background-color: $primary  !important;
+
+}
+.irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before{
+	border-top-color: $primary  !important;
+}
+.irs-grid-pol.small{
+	display: none;
+}
+.irs-grid-text{
+	top: rem(20);
+}
+
+.irs--round .irs-line{
+	background-color: $secondary;
+
+}
+
+
+.protect{
+	display: flex;
+	font-size: rem(16);
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-top: rem(-8);
+	margin-bottom: rem(55);
+	&__text{
+		color: #6f7378;
+		@include mt;
+		&--left{
+			color: $body-color;
+		}
+	}
+	&__range{
+		width: rem(60);
+		height: 4px;
+		border-radius: 2px;
+		background-color: $secondary;
+		
+		@include mt;
+		position: relative;
+		margin-left: rem(15);
+		margin-right: rem(15);
+		&::before{
+			content: '';
+			width: 30px;
+			height: 30px;
+			background-color: $primary;
+			position: absolute;
+			@include a-cent(y);
+			border-radius: 50%;
+			@include mt;
+			right: calc(100% - 30px);
+		}
+	}
+	&__input{
+		@extend .invisible;
+	}
+	&__input:checked ~ &__text--left{
+		color: #6f7378;
+	}
+	&__input:checked ~ &__text--right{
+		color: $body-color;
+	}
+	&__input:checked ~ &__range{
+		&::before{
+			right: 0;
+		}
+	}
 }

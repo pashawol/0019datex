@@ -1,9 +1,27 @@
 mixin s-contact()
 	// start s-contact
 	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 s-contact
-				
+		.container 
 			.row
+				.col
+					+e.group
+						h6 свяжитесь с нами:
+						a.text-body.h2.fw-900(href="tel:88463004840")
+							+icon("phone-receiver")
+							| 8 846 300 48 40
+						.h4.strong.d-lg-none.fw-400 Партизанская ул, дом № 86, офис 723
+						.h4.strong: a.text-body(href="mailto:info@datexsoft.ru") info@datexsoft.ru
+						.d-none.d-lg-block
+							+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию"   data-btn="Получить консультацию") заказать звонок
+				
+				.col-lg-auto
+					+e.group
+						.d-none.d-lg-block
+							h6 мы находимся по адресу:
+						.h2.fw-900.d-none.d-lg-block
+							+icon("flag")
+							| г. Самара,
+						.h4.strong.d-none.d-lg-block Партизанская ул, дом № 86, офис 723
+						+e.btn.btn-primary.popup-with-move-anim(href="#modal-map"  ) посмотреть на карте
+
 	// end s-contact

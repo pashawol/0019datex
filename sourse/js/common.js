@@ -14,13 +14,15 @@ jQuery(document).ready(function ($) {
 	JSCCommon.magnificPopupCall();
 
 	JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs2');
 
 	JSCCommon.mobileMenu();
 
 	JSCCommon.inputMask();
+	JSCCommon.customRange();
 
 
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/psd.png);"></div>')
 
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
@@ -154,6 +156,20 @@ jQuery(document).ready(function ($) {
 		modal.find("picture").html(th.parent().find('picture').html())
 
 	})
+
+
+	$(".accordion__head").click(function(){
+		$(this).next().slideToggle().parent().toggleClass('active');
+	})
+
+	$(".s-ways__btn ").click(function(){
+		$(this).parents(".s-ways__page").hide().removeClass("active").next().fadeIn().addClass("active")
+	})
+	
+	$(" .form-wrap__btn-back").click(function(){
+		$(this).parents(".s-ways__page").hide().removeClass("active").prev().fadeIn().addClass("active")
+	})
+	
 });
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
@@ -295,6 +311,16 @@ JSCCommon = {
 			});
 		})
 		// /modal галерея
+		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		 
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+			closeBtnInside: false,
+			fixedContentPos: false, 
+			tClose: 'Закрыть (Esc)',
+		});
 	},
 	// /magnificPopupCall
 	mobileMenu: function () {
@@ -321,13 +347,11 @@ JSCCommon = {
 			parent.find("picture").removeClass('active');
 			$(this)
 				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__wrap').find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-			$(this).closest('.' + tab).find('.' + tab + '__wrap').find('.' + tab + '__content2').hide().removeClass('active')
+				.closest('.' + tab).find('.' + tab + '__content2').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active');
 		});
 	},
+ 
 	// /табы  . 
 
 
@@ -335,10 +359,46 @@ JSCCommon = {
 	inputMask: function () {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
-	}
+	},
+	customRange: function () {
+		var $d3 = $(".range-js");
+		var $d34 = $(".range-js");
+
+		$d3.ionRangeSlider({
+			skin: "round",
+			hide_min_max: 'true',
+			// hide_from_to: 'true',
+			grid: true,         // default false (enable grid)
+			// grid_num: 100,        // default 4 (set number of grid cells)
+			step: 1,    
+			grid_snap: false   // default false (snap grid to step)
+		});
+
+		$d34.on("change", function () {
+			var $inp = $(this);
+			var from = $inp.prop("value"); // reading input value
+			// var from2 = $inp.data("from"); // reading input data-from attribute
+
+			$('.counter-js').text(from); // FROM value
+		});
+
+		// var $d3_instance = $d3.data("ionRangeSlider");
+		// $(document).on('change  input  cut  copy  paste', '.range-result-js', function () {
+		// 	var th = $(this);
+		// 	var data = th.val();
+		// 	var min = +data;
+		// 	// th.val(data + ' т')
+		// 	$d3_instance.update({
+		// 		from: min,
+		// 	})
+		// });
+	},
 	// /inputMask
 
 };
 
 JSCCommon.LazyFunction();
 /***/
+
+
+

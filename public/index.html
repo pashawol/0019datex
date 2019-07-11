@@ -12,6 +12,7 @@
     <meta name="theme-color" content="#1e1e1e">
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="libs/swiper-4.2.0/swiper.min.css">
+    <link rel="stylesheet" href="libs/ion.rangeSlider/css/ion.rangeSlider.min.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -19,7 +20,11 @@
       <!-- start HEADER.header-->
       <header class="header block-with-lazy">
         <!-- start .top-line-->
-        <div class="top-line__tel d-sm-none" href="tel:+7(846)3004840">ПОЗВОНИТЬ СЕЙЧАС</div>
+        <div class="top-line__tel d-sm-none" href="tel:+7(846)3004840"> 
+          <svg class="icon icon-phone-receiver ">
+            <use xlink:href="img/svg/sprite.svg#phone-receiver"></use>
+          </svg>ПОЗВОНИТЬ СЕЙЧАС
+        </div>
         <div class="top-line top-line--js block-with-lazy">
           <div class="top-line__body">
             <div class="container">
@@ -594,27 +599,103 @@
       <!-- end s-digilization-->
       <!-- start s-steps-->
       <section class="s-steps section block-with-lazy" id="s-steps">
-        <div class="pos-st tabs container">
-          <div class="pos-st row">
+        <div class="tabs2 container">
+          <div class="row">
             <div class="s-steps__col col-lg-5 order-lg-last">
               <div class="section-title">
                 <h2> <span class="text-primary">Этапы работы </span>нашей команды с&nbsp;вашим бизнесом</h2>
               </div>
-              <div class="tabs__caption">
-                <div class="tabs__btn active">Средний бизнес</div>
-                <div class="tabs__btn">Крупный бизнес</div>
+              <div class="tabs2__caption">
+                <div class="tabs2__btn">Средний бизнес</div>
+                <div class="tabs2__btn active"> Крупный бизнес</div>
               </div>
               <div class="s-steps__text">На&nbsp;графике показан усредненный жизненный цикл проекта, в&nbsp;каждом отдельном случае жизненный цикл может отличаться.
-              </div><a class="s-steps__btn btn-primary d-none d-lg-inline-block popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="стать клиентом" data-btn="Оставить заявку"> стать клиентом</a>
+              </div><a class="s-steps__btn btn-primary d-none d-lg-inline-block popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="стать клиентом в Этапах работы" data-btn="Оставить заявку"> стать клиентом</a>
             </div>
-            <div class="pos-st col">
-              <div class="tabs__wrap">
-                        <div class="pos-st tabs__content2 active"></div>
-                        <div class="pos-st tabs__content2"></div>
+            <div class="col">
+              <div class="tabs2__wrap">
+                        <div class="tabs2__content2">
+                                  <div class="accordion accordion--js">
+                                    <div class="accordion__head">
+                                      <div class="accordion__title"> Заявка или звонок в&nbsp;офис для консультации
+                                      </div>
+                                    </div>
+                                    <div class="accordion__body">На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+                                    </div>
+                                  </div>
+                                  <!-- /.accordion-->
+                                  <div class="accordion accordion--js">
+                                    <div class="accordion__head">
+                                      <div class="accordion__title"> Выезд специалиста к&nbsp;вам в&nbsp;офис и&nbsp;согласование перечня необходимых продуктов и&nbsp;работ
+                                      </div>
+                                    </div>
+                                    <div class="accordion__body">На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+                                    </div>
+                                  </div>
+                                  <!-- /.accordion-->
+                                  <div class="accordion accordion--js">
+                                    <div class="accordion__head">
+                                      <div class="accordion__title">Исполнение поставленных задач
+                                      </div>
+                                    </div>
+                                    <div class="accordion__body">На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+                                    </div>
+                                  </div>
+                                  <!-- /.accordion-->
+                        </div>
+                        <!-- /.tabs2__content2-->
+                        <div class="tabs2__content2 active">
+                                  <div class="accordion accordion--js">
+                                    <div class="accordion__head">
+                                      <div class="accordion__title">Заявка или звонок в&nbsp;офис для консультации
+                                      </div>
+                                    </div>
+                                    <div class="accordion__body">На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+                                    </div>
+                                  </div>
+                                  <!-- /.accordion-->
+                                  <div class="accordion accordion--js">
+                                    <div class="accordion__head">
+                                      <div class="accordion__title">Выезд проектной команды
+                                      </div>
+                                    </div>
+                                    <div class="accordion__body">На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+                                    </div>
+                                  </div>
+                                  <!-- /.accordion-->
+                                  <div class="accordion accordion--js">
+                                    <div class="accordion__head">
+                                      <div class="accordion__title">Проведение проектного обследования (опционально)
+                                      </div>
+                                    </div>
+                                    <div class="accordion__body">На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+                                    </div>
+                                  </div>
+                                  <!-- /.accordion-->
+                                  <div class="accordion accordion--js">
+                                    <div class="accordion__head">
+                                      <div class="accordion__title">Согласование бюджета и&nbsp;сроков
+                                      </div>
+                                    </div>
+                                    <div class="accordion__body">На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+                                    </div>
+                                  </div>
+                                  <!-- /.accordion-->
+                                  <div class="accordion accordion--js">
+                                    <div class="accordion__head">
+                                      <div class="accordion__title">Исполнение проекта
+                                      </div>
+                                    </div>
+                                    <div class="accordion__body">На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+                                    </div>
+                                  </div>
+                                  <!-- /.accordion-->
+                        </div>
+                        <!-- /.tabs2__content2-->
               </div>
             </div>
           </div>
-          <div class="d-lg-none text-center"><a class="s-steps__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="стать клиентом" data-btn="Оставить заявку"> стать клиентом</a>
+          <div class="d-lg-none text-center"><a class="s-steps__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="стать клиентом в Этапах работы" data-btn="Оставить заявку"> стать клиентом</a>
           </div>
         </div>
       </section>
@@ -632,7 +713,7 @@
             <h2>Поможем эффективно начать<span class="text-primary d-block">сотрудничество </span></h2>
           </div>
           <div class="row">
-                <div class="s-start__col col"> 
+                <div class="s-start__col col-lg">
                   <h6>для среднего бизнеса</h6>
                   <h3>Экспресс обследование</h3><strong>бесплатно</strong>
                   <ul>
@@ -644,7 +725,7 @@
                     <li>Анализ текущей тех. базы и подбор оборудования</li>
                   </ul><a class="popup-with-move-anim" href="#modal-call" data-title="Заказать " data-order=" заказать бесплатно Экспресс обследование" data-btn="Заказать  ">заказать бесплатно</a>
                 </div>
-                <div class="s-start__col col"> 
+                <div class="s-start__col col-lg">
                   <h6>для крупного бизнеса</h6>
                   <h3>Комплексный аудит</h3><strong>бесплатно</strong>
                   <ul>
@@ -666,64 +747,84 @@
           <div class="section-title text-center">
             <h2>Отзывы клиентов</h2>
           </div>
-          <div class="s-rews__slider slider slider--js2 swiper-container">
+          <div class="d-flex flex-row">
             <div class="s-rews__control-sl">
-              <div class="swiper-button-hand swiper-button-hand-next swiper-button-next"></div>
-              <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev"> </div>
+              <div class="swiper-button-hand btn-primary swiper-button-hand-prev swiper-button-prev">
+                <svg class="icon icon-long-arrow-alt-left ">
+                  <use xlink:href="img/svg/sprite.svg#long-arrow-alt-left"></use>
+                </svg>
+              </div>
+              <div class="swiper-button-hand btn-primary swiper-button-hand-next swiper-button-next">
+                <svg class="icon icon-long-arrow-alt-right ">
+                  <use xlink:href="img/svg/sprite.svg#long-arrow-alt-right"></use>
+                </svg>
+              </div>
             </div>
-            <div class="swiper-wrapper">
-                <div class="s-rews__slide swiper-slide">
-                  <div class="row">
-                    <div class="col-lg-6"></div>
-                    <h3> С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.</h3><a class="s-rews__link" href="#">
-                    <svg class="icon icon-youtube ">
-                      <use xlink:href="img/svg/sprite.svg#youtube"></use>
-                    </svg>смотреть видео-отзыв</a>
-                    <div class="col-lg-6">
-                      <div class="s-rews__card row">
-                        <div class="col-auto">
-                          <div class="s-rews__img-wrap">
-                            <div class="s-rews__logo"><img class="lazy" src="#" data-src="img/rew-logo.jpg" alt=""/>
-                            </div>
-                            <picture> 
-                              <source type="image/webp" srcset="img/rew-img.webp"/><img class="object-fit-js lazy" src="#" data-src="img/rew-img.png" alt=""/>
-                            </picture>
-                          </div>
+            <div class="s-rews__slider slider slider--js2 swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="s-rews__slide swiper-slide">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="s-rews__caption">
+                          <h3> С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.</h3><a class="s-rews__link popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
+                          <svg class="icon icon-youtube ">
+                            <use xlink:href="img/svg/sprite.svg#youtube"></use>
+                          </svg>смотреть видео-отзыв</a>
                         </div>
-                        <div class="col">
-                          <h6>николаев <span class="text-primary">пётр</span></h6>
-                          <p>Руководитель отдела продаж</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="s-rews__card">
+                          <div class="row">
+                            <div class="col-auto">
+                              <div class="s-rews__img-wrap">
+                                <div class="s-rews__logo"><img class="lazy" src="#" data-src="img/rew-logo.jpg" alt=""/>
+                                </div>
+                                <picture> 
+                                  <source type="image/webp" srcset="img/rew-img.webp"/><img class="object-fit-js lazy" src="#" data-src="img/rew-img.png" alt=""/>
+                                </picture>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <h6>николаев <span class="text-primary">пётр</span></h6>
+                              <p>Руководитель отдела продаж</p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="s-rews__slide swiper-slide">
-                  <div class="row">
-                    <div class="col-lg-6"></div>
-                    <h3> С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.</h3><a class="s-rews__link" href="#">
-                    <svg class="icon icon-youtube ">
-                      <use xlink:href="img/svg/sprite.svg#youtube"></use>
-                    </svg>смотреть видео-отзыв</a>
-                    <div class="col-lg-6">
-                      <div class="s-rews__card row">
-                        <div class="col-auto">
-                          <div class="s-rews__img-wrap">
-                            <div class="s-rews__logo"><img class="lazy" src="#" data-src="img/rew-logo.jpg" alt=""/>
-                            </div>
-                            <picture> 
-                              <source type="image/webp" srcset="img/rew-img.webp"/><img class="object-fit-js lazy" src="#" data-src="img/rew-img.png" alt=""/>
-                            </picture>
-                          </div>
+                  <div class="s-rews__slide swiper-slide">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="s-rews__caption">
+                          <h3> С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.</h3><a class="s-rews__link popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
+                          <svg class="icon icon-youtube ">
+                            <use xlink:href="img/svg/sprite.svg#youtube"></use>
+                          </svg>смотреть видео-отзыв</a>
                         </div>
-                        <div class="col">
-                          <h6>николаев <span class="text-primary">пётр</span></h6>
-                          <p>Руководитель отдела продаж</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="s-rews__card">
+                          <div class="row">
+                            <div class="col-auto">
+                              <div class="s-rews__img-wrap">
+                                <div class="s-rews__logo"><img class="lazy" src="#" data-src="img/rew-logo.jpg" alt=""/>
+                                </div>
+                                <picture> 
+                                  <source type="image/webp" srcset="img/rew-img.webp"/><img class="object-fit-js lazy" src="#" data-src="img/rew-img.png" alt=""/>
+                                </picture>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <h6>николаев <span class="text-primary">пётр</span></h6>
+                              <p>Руководитель отдела продаж</p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -733,9 +834,209 @@
       <section class="s-ways section block-with-lazy" id="s-ways">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-ways</h2>
+            <h2>
+              Уже знаете, что нужно внедрить  <span class="text-primary">в ваш бизнес?</span></h2>
           </div>
-          <div class="row"></div>
+          <div class="s-ways__block">
+            <form action="#">
+              <div class="s-ways__page active">
+                <div class="s-ways__group">
+                  <h6 class="ttu text-center">Выберите программу:</h6>
+                  <div class="d-lg-none">
+                    <div class="s-ways__input-wrap form-group">
+                      <select class="s-ways__input form-control">
+                        <option value="#">1C: Управление нашей фирмой</option>
+                        <option value="#">1C: Розница</option>
+                        <option value="#">1C: Управление торговлей</option>
+                        <option value="#">1C: Бухгалтерия</option>
+                        <option value="#">1C: Зарплата и управление персоналом</option>
+                        <option value="#">Дополнительные лицензии</option>
+                        <option value="#">1C: Комплексная автоматизация</option>
+                        <option value="#">1C: ERP Управление предприятием</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="s-ways__row row d-none d-lg-flex">
+                    <div class="s-ways__col col-3">
+                      <label class="program"><input class="program__input" type="radio" name="radio"/><span class="program__inner"><span class="program__icon-wrap">
+                        <svg class="icon icon-program-i-1 ">
+                          <use xlink:href="img/svg/sprite.svg#program-i-1"></use>
+                        </svg></span>1C: Управление нашей фирмой</span>
+                      </label>
+                    </div>
+                    <!-- /.col-3-->
+                    <div class="s-ways__col col-3">
+                      <label class="program"><input class="program__input" type="radio" name="radio"/><span class="program__inner"><span class="program__icon-wrap">
+                        <svg class="icon icon-program-i-2 ">
+                          <use xlink:href="img/svg/sprite.svg#program-i-2"></use>
+                        </svg></span>1C: Розница</span>
+                      </label>
+                    </div>
+                    <!-- /.col-3-->
+                    <div class="s-ways__col col-3">
+                      <label class="program"><input class="program__input" type="radio" name="radio"/><span class="program__inner"><span class="program__icon-wrap">
+                        <svg class="icon icon-program-i-3 ">
+                          <use xlink:href="img/svg/sprite.svg#program-i-3"></use>
+                        </svg></span>1C: Управление торговлей</span>
+                      </label>
+                    </div>
+                    <!-- /.col-3-->
+                    <div class="s-ways__col col-3">
+                      <label class="program"><input class="program__input" type="radio" name="radio"/><span class="program__inner"><span class="program__icon-wrap">
+                        <svg class="icon icon-program-i-4 ">
+                          <use xlink:href="img/svg/sprite.svg#program-i-4"></use>
+                        </svg></span>1C: Бухгалтерия</span>
+                      </label>
+                    </div>
+                    <!-- /.col-3-->
+                    <div class="s-ways__col col-3">
+                      <label class="program"><input class="program__input" type="radio" name="radio"/><span class="program__inner"><span class="program__icon-wrap">
+                        <svg class="icon icon-program-i-5 ">
+                          <use xlink:href="img/svg/sprite.svg#program-i-5"></use>
+                        </svg></span>1C: Зарплата и&nbsp;управление персоналом</span>
+                      </label>
+                    </div>
+                    <!-- /.col-3-->
+                    <div class="s-ways__col col-3">
+                      <label class="program"><input class="program__input" type="radio" name="radio"/><span class="program__inner"><span class="program__icon-wrap">
+                        <svg class="icon icon-program-i-6 ">
+                          <use xlink:href="img/svg/sprite.svg#program-i-6"></use>
+                        </svg></span>Дополнительные лицензии</span>
+                      </label>
+                    </div>
+                    <!-- /.col-3-->
+                    <div class="s-ways__col col-3">
+                      <label class="program"><input class="program__input" type="radio" name="radio"/><span class="program__inner"><span class="program__icon-wrap">
+                        <svg class="icon icon-program-i-7 ">
+                          <use xlink:href="img/svg/sprite.svg#program-i-7"></use>
+                        </svg></span>1C: Комплексная автоматизация</span>
+                      </label>
+                    </div>
+                    <!-- /.col-3-->
+                    <div class="s-ways__col col-3">
+                      <label class="program"><input class="program__input" type="radio" name="radio"/><span class="program__inner"><span class="program__icon-wrap">
+                        <svg class="icon icon-program-i-8 ">
+                          <use xlink:href="img/svg/sprite.svg#program-i-8"></use>
+                        </svg></span>1C: ERP Управление предприятием</span>
+                      </label>
+                    </div>
+                    <!-- /.col-3-->
+                  </div>
+                  <div class="s-ways__foot">
+                    <div class="row">
+                      <div class="col">
+                        <h6 class="ttu text-lg-left text-center">Количество лицензий:</h6>
+                        <div class="range-block">
+                          <input class="range-js" type="text" data-min="10" data-from="1" data-max="500" data-values="1,5,10,20,50,100,300,500"/>
+                          <!-- -->
+                        </div>
+                      </div>
+                      <div class="col-md-auto">
+                        <h6 class="ttu text-lg-left text-center">тип защиты:</h6>
+                        <label class="protect"><input class="protect__input" type="checkbox"/><span class="protect__text protect__text--left">Программная</span><span class="protect__range"></span><span class="protect__text protect__text--right">USB</span>
+                        </label>
+                      </div>
+                    </div>
+                    <!--  тут повесишь disabled=disabled, чтобы на кнопку не нажать-->
+                    <button class="s-ways__btn" type="button">далее
+                      <svg class="icon icon-long-arrow-alt-right ">
+                        <use xlink:href="img/svg/sprite.svg#long-arrow-alt-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.page.active-->
+              <div class="s-ways__page s-ways__page--order">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="s-ways__group-sm s-ways__group-sm--left">
+                      <div class="row align-items-center">
+                        <div class="col-lg-12 col-sm-6 col-auto">
+                          <div class="s-ways__title h3 d-none d-lg-block">1С: Управление торговлей
+                          </div>
+                          <picture class="s-ways__img-wrap text-center">
+                            <!-- тут сделай кроп шириной   300px или чуть больше, какой там стандартный -->
+                            <source class="lazy-sourse" srcset="#" data-srcset="img/prod.webp" type="image/webp" media="(min-width: 576px)"/>
+                            <!-- тут сделай кроп шириной   180px или чуть больше, какой там стандартный-->
+                            <source class="lazy-sourse" srcset="#" data-srcset="img/prod.webp" type="image/webp"/>
+                            <!-- тут сделай кроп шириной   180px или чуть больше, какой там стандартный--><img class="lazy res-i" src="#" data-src="img/prod.jpg" alt=""/>
+                          </picture>
+                        </div>
+                        <div class="col">
+                          <div class="s-ways__title h3 d-lg-none">1С: Управление торговлей
+                          </div>
+                          <div class="row">
+                            <div class="col-auto">
+                              <div class="s-ways__foot-text">
+                                <div class="icon-wrap">
+                                  <svg class="icon icon-user ">
+                                    <use xlink:href="img/svg/sprite.svg#user"></use>
+                                  </svg>
+                                </div>Количество лицензий:
+                                 <span class="counter-js"></span>
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="s-ways__foot-text">
+                                <div class="icon-wrap">
+                                  <svg class="icon icon-safe-shield-protection ">
+                                    <use xlink:href="img/svg/sprite.svg#safe-shield-protection"></use>
+                                  </svg>
+                                </div>Тип защиты: Программная
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="s-ways__group-sm">
+                      <div class="form-wrap">
+                        <div class="text-center">
+                          <div class="form-wrap__title">Заполните форму
+                          </div>
+                          <div class="form-wrap__title-sub">С&nbsp;вами свяжется специалист и&nbsp;проконсультирует по&nbsp;покупке и&nbsp;внедрению программы<br/><strong class="text-body">&laquo;1С: Управление торговлей&raquo;</strong>
+                          </div>
+                        </div>
+                        <div class="manager-block">
+                          <div class="row">
+                            <div class="col-auto">
+                              <picture class="manager-block__img-wrap text-center">
+                                <!-- тут сделай кроп шириной   100px или чуть больше, какой там стандартный-->
+                                <source class="lazy-sourse" srcset="#" data-srcset="img/team-sm.webp" type="image/webp"/><img class="lazy object-fit-js" src="#" data-src="img/team-sm.png" alt=""/>
+                              </picture>
+                            </div>
+                            <div class="col">
+                              <h6 class="ttu">Колоколов <span class="text-primary">дмитрий</span></h6>
+                              <p>Автоматизировал более 300 торговых предприятий</p>
+                            </div>
+                          </div>
+                        </div>
+                        <input class="order" type="hidden"/>
+                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Введите телефон" required="required"/>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <button class="form-wrap__btn" type="submit">оставить заявку
+                        </button>
+                        <div class="form-wrap__polite">
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</small>
+                          </label>
+                        </div>
+                        <div class="form-wrap__btn-back" hre="#">
+                          <svg class="icon icon-long-arrow-alt-left ">
+                            <use xlink:href="img/svg/sprite.svg#long-arrow-alt-left"></use>
+                          </svg>вернуться назад
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.page-->
+            </form>
+          </div>
         </div>
       </section>
       <!-- end s-ways-->
@@ -743,45 +1044,211 @@
       <section class="s-why section block-with-lazy" id="s-why">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-why</h2>
+            <h2>
+              Почему наши клиенты  <span class="text-primary">выбирают нас</span></h2>
           </div>
-          <div class="row"></div>
+          <div class="s-why__slider slider slider--js swiper-container">
+            <div class="swiper-wrapper">
+                <div class="s-why__slide swiper-slide">
+                  <div class="s-why__item"> 
+                    <div class="s-why__icon-wrap">
+                      <svg class="icon icon-s-why-1 ">
+                        <use xlink:href="img/svg/sprite.svg#s-why-1"></use>
+                      </svg>
+                    </div>
+                    <h6>скидка&nbsp;30% на&nbsp;все услуги</h6>
+                    <p>Для всех новых клиентов предоставляем на&nbsp;первые 5&nbsp;часов скидку&nbsp;30% на&nbsp;любые услуги.</p>
+                  </div>
+                </div>
+                <!-- /+e.slide.swiper-slide-->
+                <div class="s-why__slide swiper-slide">
+                  <div class="s-why__item"> 
+                    <div class="s-why__icon-wrap">
+                      <svg class="icon icon-s-why-2 ">
+                        <use xlink:href="img/svg/sprite.svg#s-why-2"></use>
+                      </svg>
+                    </div>
+                    <h6>оплатите по&nbsp;факту</h6>
+                    <p>Хотите проверить качество? Сначала выполним работы, оплатите за&nbsp;результат.</p>
+                  </div>
+                </div>
+                <!-- /+e.slide.swiper-slide-->
+                <div class="s-why__slide swiper-slide">
+                  <div class="s-why__item"> 
+                    <div class="s-why__icon-wrap">
+                      <svg class="icon icon-s-why-3 ">
+                        <use xlink:href="img/svg/sprite.svg#s-why-3"></use>
+                      </svg>
+                    </div>
+                    <h6>приступим сегодня</h6>
+                    <p>сегодня Если у&nbsp;Вас горящий проект - мы&nbsp;приступим к&nbsp;работе уже сегодня.</p>
+                  </div>
+                </div>
+                <!-- /+e.slide.swiper-slide-->
+                <div class="s-why__slide swiper-slide">
+                  <div class="s-why__item"> 
+                    <div class="s-why__icon-wrap">
+                      <svg class="icon icon-s-why-4 ">
+                        <use xlink:href="img/svg/sprite.svg#s-why-4"></use>
+                      </svg>
+                    </div>
+                    <h6>соблюдаем бюджет</h6>
+                    <p>Все переработки мы&nbsp;берем на&nbsp;себя, вы&nbsp;платите только оговоренную сумму.</p>
+                  </div>
+                </div>
+                <!-- /+e.slide.swiper-slide-->
+                <div class="s-why__slide swiper-slide">
+                  <div class="s-why__item"> 
+                    <div class="s-why__icon-wrap">
+                      <svg class="icon icon-s-why-5 ">
+                        <use xlink:href="img/svg/sprite.svg#s-why-5"></use>
+                      </svg>
+                    </div>
+                    <h6>бесплатные часы</h6>
+                    <p>При покупке программ дарим бесплатные часы работы специалиста.</p>
+                  </div>
+                </div>
+                <!-- /+e.slide.swiper-slide-->
+                <div class="s-why__slide swiper-slide">
+                  <div class="s-why__item"> 
+                    <div class="s-why__icon-wrap">
+                      <svg class="icon icon-s-why-6 ">
+                        <use xlink:href="img/svg/sprite.svg#s-why-6"></use>
+                      </svg>
+                    </div>
+                    <h6>общение с&nbsp;руководителем</h6>
+                    <p>Руководители разбираются в&nbsp;предметной области и&nbsp;лично общаются с&nbsp;клиентом.</p>
+                  </div>
+                </div>
+                <!-- /+e.slide.swiper-slide-->
+            </div>
+          </div>
+          <div class="control-wrap">
+            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next"></div>
+            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev"> </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
       <!-- end s-why-->
       <!-- start s-doc-->
       <section class="s-doc section block-with-lazy" id="s-doc">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-doc</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="section-title">
+                <h2>
+                  Вашу 1С&nbsp;уже сопровождает <span class="text-body">другая компания?</span></h2>
+                <h4>Скачайте нашу презентацию и&nbsp;узнайте об индивидуальных условиях сопровождения 1С&nbsp;для вашей компании.</h4>
+              </div><a class="s-doc__btn btn-dark" href="#" download="download">скачать презентацию<span>13 mb</span></a>
+            </div>
+            <div class="pos-s col-lg-6 align-self-end text-center">
+              <picture class="s-doc__img-wrap text-center">
+                <source class="lazy-sourse" srcset="#" data-srcset="img/pdf.webp" type="image/webp" media="(min-width: 576px)"/>
+                <source class="lazy-sourse" srcset="#" data-srcset="img/pdf.jpg" type="image/jpg" media="(min-width: 576px)"/><img class="lazy res-i" src="#" data-src="#" alt=""/>
+              </picture>
+            </div>
           </div>
-          <div class="row"></div>
         </div>
       </section>
       <!-- end s-doc-->
       <!-- start s-consultation-->
       <section class="s-consultation section block-with-lazy" id="s-consultation">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-consultation</h2>
+        <div class="container"> 
+          <div class="section-title"> 
+            <h2>Получите консультацию</h2><strong>бесплатно</strong>
+            <picture> 
+              <source class="lazy-sourse" srcset="#" data-srcset="img/form.webp" media="(min-width: 768px)" type="image/webp"/>
+              <source class="lazy-sourse" srcset="#" data-srcset="img/form.png" media="(min-width: 768px)" type="image/png"/>
+              <!-- тут сделай кроп шириной   140px или чуть больше, какой там стандартный -->
+              <source class="lazy-sourse" srcset="#" data-srcset="img/form-sm.webp" type="image/webp"/><img class="object-fit-js lazy" src="#" data-src="img/form-sm.png" alt=""/>
+            </picture>
+            <p>Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.</p>
+            <h6>нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию">получить консультацию</a>
           </div>
-          <div class="row"></div>
         </div>
       </section>
       <!-- end s-consultation-->
       <!-- start s-contact-->
       <div class="s-contact section block-with-lazy" id="s-contact">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-contact</h2>
+        <div class="container"> 
+          <div class="row">
+            <div class="col">
+              <div class="s-contact__group">
+                <h6>свяжитесь с нами:</h6><a class="text-body h2 fw-900" href="tel:88463004840">
+                  <svg class="icon icon-phone-receiver ">
+                    <use xlink:href="img/svg/sprite.svg#phone-receiver"></use>
+                  </svg>8 846 300 48 40</a>
+                <div class="h4 strong d-lg-none fw-400">Партизанская ул, дом № 86, офис 723</div>
+                <div class="h4 strong"><a class="text-body" href="mailto:info@datexsoft.ru">info@datexsoft.ru</a></div>
+                <div class="d-none d-lg-block"><a class="s-contact__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию">заказать звонок</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-auto">
+              <div class="s-contact__group">
+                <div class="d-none d-lg-block">
+                  <h6>мы находимся по адресу:</h6>
+                </div>
+                <div class="h2 fw-900 d-none d-lg-block">
+                  <svg class="icon icon-flag ">
+                    <use xlink:href="img/svg/sprite.svg#flag"></use>
+                  </svg>г. Самара,
+                </div>
+                <div class="h4 strong d-none d-lg-block">Партизанская ул, дом № 86, офис 723</div><a class="s-contact__btn btn-primary popup-with-move-anim" href="#modal-map">посмотреть на карте</a>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
         </div>
       </div>
       <!-- end s-contact-->
       <footer class="footer block-with-lazy">
-        <div class="container">
-          <h2>footer</h2>
+        <div class="footer__body">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="row row--sm align-items-center">
+                  <div class="col-sm-auto"><img class="lazy" src="#" data-src="img/logo.png" alt=""/></div>
+                  <div class="col samll d-none d-lg-block">Лучшая проектная команда в Самаре</div>
+                </div>
+              </div>
+              <div class="col-sm-auto">
+                <div class="soc"><a class="soc__item" href="" target="_blank">
+                  <svg class="icon icon-vk ">
+                    <use xlink:href="img/svg/sprite.svg#vk"></use>
+                  </svg></a><a class="soc__item" href="" target="_blank">
+                  <svg class="icon icon-fb ">
+                    <use xlink:href="img/svg/sprite.svg#fb"></use>
+                  </svg></a><a class="soc__item" href="" target="_blank">
+                  <svg class="icon icon-inst ">
+                    <use xlink:href="img/svg/sprite.svg#inst"></use>
+                  </svg></a><a class="soc__item" href="" target="_blank">
+                  <svg class="icon icon-youtube ">
+                    <use xlink:href="img/svg/sprite.svg#youtube"></use>
+                  </svg></a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="footer__logo">
+                  <svg class="icon icon-1c ">
+                    <use xlink:href="img/svg/sprite.svg#1c"></use>
+                  </svg>Сертифицированные партнеры 1С
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__foot">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">© Datexsoft 2019. Все&nbsp;права&nbsp;защищены.</div>
+              <div class="footer__col col-sm-auto text-center"><a href="#" target="_blank">Политика конфиденциальности</a><a href="#" target="_blank">Пользовательское соглашение</a>
+              </div>
+              <div class="col text-sm-right"><a class="footer__developer" href="http://thepackers.ru/" target="_blank"> <span>Разработка сайта – </span> 
+                ThePackers.ru</a>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
@@ -839,6 +1306,7 @@
     </div>
     <!-- #modal-team-->
     <script src="js/jquery.min.js"></script>
+    <script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
     <script src="libs/picturefill.min.js"></script>
     <script src="libs/object-fit-images/dist/ofi.min.js"></script>
     <!-- modal libs-->

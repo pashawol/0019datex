@@ -40,10 +40,14 @@ mixin pugin()
 //- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
-	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
-		
+	 
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev 
+mixin arrow2()
+	.swiper-button-hand.btn-primary.swiper-button-hand-prev.swiper-button-prev
+		+icon('long-arrow-alt-left')
+	.swiper-button-hand.btn-primary.swiper-button-hand-next.swiper-button-next
+		+icon('long-arrow-alt-right')
+
  
 mixin soc()
 	+b.soc

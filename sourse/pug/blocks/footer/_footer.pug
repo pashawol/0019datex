@@ -1,4 +1,30 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
-		.container
-			h2 footer
+		+e.body
+			.container
+				.row
+					.col
+						.row.row--sm.align-items-center
+							.col-sm-auto
+								img.lazy(src="#" data-src="img/logo.png", alt="")
+							.col.samll.d-none.d-lg-block Лучшая проектная команда в Самаре
+					.col-sm-auto
+						+soc()
+					.col
+						+e.logo
+							+icon('1c')
+							| Сертифицированные партнеры 1С
+		+e.foot
+			.container
+				.row
+					.col-sm © Datexsoft 2019. Все&nbsp;права&nbsp;защищены.
+					+e.col.col-sm-auto.text-center
+						
+							a(href="#" target="_blank") Политика конфиденциальности
+							a(href="#" target="_blank") Пользовательское соглашение
+							
+					.col.text-sm-right
+						+e.developer(href="http://thepackers.ru/" target="_blank") 
+							span Разработка сайта – 
+							| 
+							|ThePackers.ru

@@ -3,7 +3,42 @@ mixin s-why()
 	+b.SECTION.s-why.section.block-with-lazy#s-why&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-why
+				h2 Почему наши клиенты 
+					| 
+					span.text-primary выбирают нас
 				
-			.row
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin item(i )
+						+e.slide.swiper-slide
+							+e.item 
+								+e.icon-wrap
+									+icon("s-why-" + i)
+								 
+								block 
+						// /+e.slide.swiper-slide
+					+item(1)
+						h6 скидка&nbsp;30% на&nbsp;все услуги
+						p Для всех новых клиентов предоставляем на&nbsp;первые 5&nbsp;часов скидку&nbsp;30% на&nbsp;любые услуги.
+					+item(2)
+						h6 оплатите по&nbsp;факту
+
+						p Хотите проверить качество? Сначала выполним работы, оплатите за&nbsp;результат.
+					+item(3)
+						h6 приступим сегодня
+
+						p сегодня Если у&nbsp;Вас горящий проект - мы&nbsp;приступим к&nbsp;работе уже сегодня.
+					+item(4)
+						h6 соблюдаем бюджет
+
+						p Все переработки мы&nbsp;берем на&nbsp;себя, вы&nbsp;платите только оговоренную сумму.
+					+item(5)
+						h6 бесплатные часы
+
+						p При покупке программ дарим бесплатные часы работы специалиста.
+					+item(6)
+						h6 общение с&nbsp;руководителем
+
+						p Руководители разбираются в&nbsp;предметной области и&nbsp;лично общаются с&nbsp;клиентом.
+			+control-sl()
 	// end s-why

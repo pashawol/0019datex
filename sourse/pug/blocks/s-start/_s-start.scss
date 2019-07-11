@@ -20,13 +20,22 @@
 	}
 	.row{
 		margin: 0;
+		margin-bottom: rem(60);
 	}
 	&__col{
 		background-color: #ffffff;
-		padding: rem(75)  rem(77) rem(65);
-		margin-bottom: rem(60);
+		 
+		@include media-breakpoint-up(sm) {
+			
+			padding: rem(75)  rem(77) rem(65);
+					}
+		padding: rem(75 * .8)  rem(77 * .50) rem(65 * .8);
 		&:first-child{
-			border-right: 1px solid #e9e9e9;
+			@include media-breakpoint-up(lg) {
+				border-bottom: 1px solid transparent;
+				border-right: 1px solid #e9e9e9;
+			}
+			border-bottom: 1px solid  #e9e9e9;
 		}
 		h6{
 			color: $primary;
@@ -78,9 +87,14 @@
 			@extend .btn-primary;
 			@extend .btn-block;
 			@extend .btn-lg;
+			
 			margin-left: auto;
 			margin-right: auto;
+			
+			@include media-breakpoint-up(sm) {
 			max-width: rem(332);
+		}
+		max-width: rem(362);
 			// margin-top: rem(40);
 			margin-top: auto;
 		}

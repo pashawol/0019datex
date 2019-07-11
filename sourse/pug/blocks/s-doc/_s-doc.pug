@@ -2,8 +2,20 @@ mixin s-doc()
 	// start s-doc
 	+b.SECTION.s-doc.section.block-with-lazy#s-doc&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-doc
-				
 			.row
+				.col-lg-6
+					+b.section-title
+						h2 Вашу 1С&nbsp;уже сопровождает 
+							|
+							span.text-body другая компания?
+						h4 Скачайте нашу презентацию и&nbsp;узнайте об индивидуальных условиях сопровождения 1С&nbsp;для вашей компании.
+					+e.btn.btn-dark(href="#" download) скачать презентацию
+						span 13 mb
+				.pos-s.col-lg-6.align-self-end.text-center
+					+e.PICTURE.img-wrap.text-center
+						 
+						source.lazy-sourse(srcset="#" data-srcset=`img/pdf.webp`  type="image/webp" media="(min-width: 576px)" )   
+						source.lazy-sourse(srcset="#" data-srcset=`img/pdf.jpg`  type="image/jpg"  media="(min-width: 576px)" )  
+						img.lazy.res-i(src="#" data-src="#", alt="")   
+				
 	// end s-doc

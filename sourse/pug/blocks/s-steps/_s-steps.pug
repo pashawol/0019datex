@@ -1,27 +1,60 @@
 mixin s-steps()
 	// start s-steps
 	+b.SECTION.s-steps.section.block-with-lazy#s-steps&attributes(attributes)
-		.pos-st.tabs.container
+		.tabs2.container
 			//- align-items-center
-			.pos-st.row
+			.row
 				+e.col.col-lg-5.order-lg-last
 					+b.section-title
 						h2 
 							span.text-primary Этапы работы 
 							| нашей команды с&nbsp;вашим бизнесом
-					.tabs__caption
-						.tabs__btn.active Средний бизнес
-						.tabs__btn Крупный бизнес
+					.tabs2__caption
+						.tabs2__btn Средний бизнес
+						.tabs2__btn.active  Крупный бизнес
 					+e.text На&nbsp;графике показан усредненный жизненный цикл проекта, в&nbsp;каждом отдельном случае жизненный цикл может отличаться.
 					
-					+e.btn.btn-primary.d-none.d-lg-inline-block.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
-				.pos-st.col
-					.tabs__wrap
+					+e.btn.btn-primary.d-none.d-lg-inline-block.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом в Этапах работы"   data-btn="Оставить заявку")  стать клиентом
+				.col
+					.tabs2__wrap
 						mixin tab()
-							.pos-st.tabs__content2&attributes(attributes)
-								 
-						+tab()(class="active")
+							.tabs2__content2&attributes(attributes)
+								block 
+							// /.tabs2__content2
+						mixin accord()
+							+b.accordion--js
+								+e.head
+									block
+								+e.body На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+							// /.accordion
+						
+						
 						+tab()
+							+accord()
+								+e.title  Заявка или звонок в&nbsp;офис для консультации
+							
+							+accord()
+								+e.title  Выезд специалиста к&nbsp;вам в&nbsp;офис и&nbsp;согласование перечня необходимых продуктов и&nbsp;работ
+							
+							+accord()
+								+e.title Исполнение поставленных задач
+							
+						+tab()(class="active")
+							+accord()
+								+e.title Заявка или звонок в&nbsp;офис для консультации
+							
+							+accord()
+								+e.title Выезд проектной команды
+							
+							+accord()
+								+e.title Проведение проектного обследования (опционально)
+							
+							+accord()
+								+e.title Согласование бюджета и&nbsp;сроков
+							
+							+accord()
+								+e.title Исполнение проекта
+							
 			.d-lg-none.text-center
-				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
+				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом в Этапах работы"   data-btn="Оставить заявку")  стать клиентом
 	// end s-steps

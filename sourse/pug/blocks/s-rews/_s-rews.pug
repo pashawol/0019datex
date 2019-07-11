@@ -4,32 +4,34 @@ mixin s-rews()
 		.container
 			+b.section-title.text-center
 				h2 Отзывы клиентов
-			
-			+e.slider.slider--js2.swiper-container
+			.d-flex.flex-row
 				+e.control-sl
-					+arrow()
-				.swiper-wrapper
-					mixin item()
-						+e.slide.swiper-slide
-							.row
-								.col-lg-6
-								h3  С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.
-								+e.link(href="#")
-									+icon('youtube')
-									| смотреть видео-отзыв
-								.col-lg-6
-									+e.card.row
-										.col-auto
-											+e.img-wrap
-												+e.logo
-													img.lazy(src="#" data-src="img/rew-logo.jpg", alt="")
-												picture 
-													source(type="image/webp" srcset=`img/rew-img.webp` )
-													img.object-fit-js.lazy(src="#" data-src=`img/rew-img.png`, alt='')
-										.col
-											h6 николаев 
-												span.text-primary пётр
-											p Руководитель отдела продаж
-					+item()
-					+item()
+					+arrow2()
+				+e.slider.slider--js2.swiper-container
+					.swiper-wrapper
+						mixin item()
+							+e.slide.swiper-slide
+								.row
+									.col-lg-6
+										+e.caption
+											h3  С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.
+											+e.link.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto")
+												+icon('youtube')
+												| смотреть видео-отзыв
+									.col-lg-6
+										+e.card
+											.row
+												.col-auto
+													+e.img-wrap
+														+e.logo
+															img.lazy(src="#" data-src="img/rew-logo.jpg", alt="")
+														picture 
+															source(type="image/webp" srcset=`img/rew-img.webp` )
+															img.object-fit-js.lazy(src="#" data-src=`img/rew-img.png`, alt='')
+												.col
+													h6 николаев 
+														span.text-primary пётр
+													p Руководитель отдела продаж
+						+item()
+						+item()
 	// end s-rews

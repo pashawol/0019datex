@@ -160,12 +160,12 @@ body {
 		overflow: hidden;
 		position: absolute;
 		// position: fixed;
-		width: 100%;
+		width: 100vw;
 		left: 0;
 		top: 0;
 		z-index: 999;
-		@include media-breakpoint-up(md) {
-			margin-right: 14px;
+		@include media-breakpoint-up(lg) {
+			padding-right: 17px;
 		}
 
 		&::before {

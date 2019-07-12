@@ -145,13 +145,13 @@ jQuery(document).ready(function ($) {
 	heightses();
 
 	// листалка по стр
-	$(" .top-nav ul a, .scroll-link").click(function () {
+	$(" .menu-mobile ul a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
 	 
 				var destination = $(elementClick).offset().top;
 				// console.log(elementClick.replace( '/'));
 
-				$('html, body').animate({ scrollTop: destination }, 1000);
+				$('html, body').animate({ scrollTop: destination }, 800);
 				
 				return false;
 				

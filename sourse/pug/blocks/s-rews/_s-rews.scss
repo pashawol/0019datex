@@ -41,7 +41,11 @@
 		letter-spacing: rem(2.52px);
 		font-size: $small;
 		text-decoration: none !important; 
-		margin-bottom: rem(60);
+		@include media-breakpoint-up(sm) {
+
+			margin-bottom: rem(60);
+		}
+		margin-bottom: rem(30);
 		display: inline-block;
 		z-index: 2;
 		color: $primary !important;
@@ -74,8 +78,8 @@
 			padding-left: 0;
 		}
 		text-align: left;
-		padding-left: rem(100);
-		padding-top: rem(10);
+		padding-left: rem(30);
+		// padding-top: rem(10);
 		position: relative;
 		.row{
 
@@ -100,7 +104,11 @@
 	}
 	&__img-wrap{
 		position: relative;
-		width: rem(200);
+		@include media-breakpoint-up(sm) {
+
+			width: rem(200);
+		}
+		width: rem(120);
 		// max-width: rem;
 	}
 	h6{
@@ -171,6 +179,14 @@
 		}
 		.section-title {
 			padding-bottom: .68889em;
+	}
+	&__card {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(420);
+		.row{
+			@include roww(10);
+		}
 	}
 	} 
 

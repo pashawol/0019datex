@@ -1,20 +1,21 @@
 html {
 	&:not(.fixed){
-
-		overflow-x: hidden;
+		
+		// overflow-x: hidden;
 	}
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 	background-position: center top;
 	background-repeat: no-repeat;
 	// @include media-breakpoint-up(sm) {
-
-	// 	margin-left: calc(100vw - 100%);
-	// 	margin-right: 0;
+		
+		// 	margin-left: calc(100vw - 100%);
+		// 	margin-right: 0;
 	// }
-
+	
 	// background-image: url(../screen/main.jpg);
 	&.fixed{
+	
 		width: 100%;
 		position: absolute;
 	}
@@ -163,6 +164,9 @@ body {
 		left: 0;
 		top: 0;
 		z-index: 999;
+		@include media-breakpoint-up(md) {
+			margin-right: 14px;
+		}
 
 		&::before {
 			z-index: 999;
@@ -178,7 +182,7 @@ body {
 }
 
 .main-wrapper {
-	// position: relative;
+	position: relative;
 	overflow: hidden;
 	height: 100%;
 	// left: 0;
@@ -601,7 +605,10 @@ a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: static;
+	// position: static;
+	position: relative;
+	top: 0;
+	left: 0;
 	margin-left: rem(9);
 	.icon{
 		font-size: rem(14);

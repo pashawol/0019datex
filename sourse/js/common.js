@@ -388,8 +388,11 @@ JSCCommon = {
 			$("body, html").toggleClass("fixed");
 			return false;
 		});
-		$('.menu-item a').on('click', function () {
-			// btnToggle.click();
+		$('.menu-item a').on('click', function (e) {
+			// e.preventDefault();
+			btnToggle.removeClass("on");
+			menu.removeClass("active");
+			$("body, html").removeClass("fixed");
 		});
  
 	},

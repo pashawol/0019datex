@@ -1,18 +1,19 @@
 mixin header-block()
 	// start header-block
 	+b.header-block#header-block
-		picture
-			source( srcset="img/header-bg.jpg" media="(min-width: 992px)")
-			// тут сделай кроп шириной   992px или чуть больше, какой там стандартный
-			source( srcset="img/header-bg-md.jpg" media="(min-width: 576px)")
-			// тут сделай кроп шириной   576px или чуть больше, какой там стандартный
-			img.object-fit-js(src="#", alt="")  
-		.container
+		div(class="wow fadeIn" data-wow-duration=`${dur * 2}s` data-wow-delay=`${delay * 3.2}s`) 
+			picture
+				source( srcset="img/header-bg.jpg" media="(min-width: 992px)")
+				// тут сделай кроп шириной   992px или чуть больше, какой там стандартный
+				source( srcset="img/header-bg-md.jpg" media="(min-width: 576px)")
+				// тут сделай кроп шириной   576px или чуть больше, какой там стандартный
+				img.object-fit-js(src="#", alt="")  
+		.container(class="wow fadeIn" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 2}s`) 
 			+e.top-text Цифровизируйся с&nbsp;Datex
 			h1 Лучшая проектная команда под автоматизацию задач любой сложности
 			+e.sub-text Внедряем технологичные конкурентные решения на&nbsp;базе 1С для среднего и&nbsp;крупного бизнеса
 			+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Заказать автоматизацию" data-order="Заказать автоматизацию"   data-btn="Заказать автоматизацию") заказать автоматизацию
-		+e.foot
+		+e.foot(class="wow fadeIn" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 3}s`) 
 			.container
 				.row
 					.col-sm
@@ -23,6 +24,7 @@ mixin header-block()
 						+e.scroll-link.scroll-link(href="#s-competences")
 							+icon('mouse')
 					.col
+					
 		
 		//- 	.row
 	// end header-block

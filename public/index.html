@@ -14,8 +14,16 @@
     <link rel="stylesheet" href="libs/swiper-4.2.0/swiper.min.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider/css/ion.rangeSlider.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!-- этот скрипт грузит прелоэдэр- его не сжимать со всеми-->
+    <script src="js/pace.min.js"></script>
+    <style>
+      .prld-on{overflow:hidden}.pace{user-select:none;z-index:10000;position:fixed;top:0;left:0;width:100%;height:100vh;background-color:#fff;display:flex;justify-content:center;align-items:center;opacity:1}.pace .pace-progress{background:#db1e32;position:fixed;z-index:2000;top:50%;margin-top:-.5px;right:100%;width:100%;height:1px;transition:.05s ease-in transform}.pace::after{content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAAApCAMAAABZV6Y4AAAAulBMVEUAAAAeHh4eHh4eHh4eHh4fHx8eHh4eHh4gICAeHh7bHjEeHh4eHh4eHh4eHh4eHh4eHh4eHh4PDw8dHR0eHh4eHh4eHh4eHh4bGxseHh4eHh4eHh4dHR0fHx8dHR0eHh4eHh4eHh4eHh4gICAiIiIeHh4dHR0eHh4dHR0eHh4eHh4dHR0dHR0eHh4eHh4aGhodHR0eHh4jIyMeHh4cHBzbHjIeHh4dHR3bHjMeHh7cHzPcHjMeHh7bHjIOrY0/AAAAPHRSTlMA7Z5VmDGpbhaF7vW9/J/58TwDNy3eo3QS5NC2rSgj1ZRlyR4Nw14/Sf6mWE+AQwl6awfZNaOLvt67ppfmC2+eAAAEZElEQVRYw7WZaXuiMBCAB48WFxWhWMQTxQPXs+q2e7D//29td3nMTEaOjU3fb5AIvE8yk0mErnGlBgAVQ2bSfAj9eOxCPkPsvYWU0ChnAPBa0sV77OCHmMCIA9EYjMBKrnz9+01JFla/tjEhm1EL+w0gpZ2UMwOolXR5Os34sxEzwLYpgCEungHgIckjCOuQRYPqjtN7laScRbmGA2MDr3w2CbClBuUaSKuWMSLuhHbxNWtAFa9sBwhHbOjPSzQ4wQY4qzXt0Hc1a0CIl10TBHucyp06lGpwjsBoszfr1jiQ8BhiYHTx7hLUNZIGCzRDbq7o1oBRB2+8ZARGGxQ1UB6ZslajB+98Tcrpl2us+Cusp/StPnlML71FEy7VmO7fiTd+OOgmlM4ICLOEMf335nYFecMcS+62j1RjUMniNu+d/320QwLDgxS6/FEN/NrD/qGVZCfwS4trvAEnJooUquFBAfN+Is2Y3jlnbiCoUZfy0TlBYrz/KnKYfU2LI2BgznzM1XiCIjyLjDYLDCUNiCZZw3HoiqeL2bXTrwEvdE6/0BVDUYMmDCu63tyKyD41RHY/6degOSOwaGCoasAuY0IOMTtcxDK4/QSN+Tk7aaprRJ2bGRlZ+OmnLi5S6hp1KGFl31o8AyFsX5kWasCAlxyYvg2TRLsVqWss67d4LiD4rpzAaOFaX6yBD+qkxc1pQlecJzGrfAWNAgyTVbQyFgYGW8WLNbZY6qZJ1RE3tlKpO3P1a+D+AguT+zQuCYvIUCSPuZQD1hftGljUYnzeqTG25WJnHtBtC4AnXhPq1EB84rE43KsRWbLGEi9ZfWX0PkXjQrJV0717NJhGU8ypA88By8/QmE9oa+Nejfpaig3PxjnFO7xp17it/rd3asSYqTyMaJxT4M4wlWnQsM3inU0ElPX/rhsvZN2g+XWSsbIcFTWO1Vu2J1blMn64oF6M0PVn4gLsxVXYu+LY2ENNw4MSMDCQxj0apiFtE59xbAwBZsRYV2lYcIDXiu/QeCQLKErl8VWvxpJ8PD3xUdWgtYA9xkDJoxPp1PDIZidekA2cqsZhQFZQTEr5PGrUOPTpTBiRibBT0xg3E2QDuEnKpa9RoyZP1iqZYatrn+9frvxCDTl5REeDHXA2kjJadW2ZakmioQc5B6Jffl/5KWnE43dGnrN5bRrS9zl4lFDEq4pGu5FFxAPDTkdtTv8vuNH4JmnY1jt2K+HspK2H0ZTB9B7MFTSyWWFgyA+g4XHM1ijhwZX2s35+Gbz5sIaDM4jt8jcJHSF1jfYprXUx9zJ+4HBr0aCBYWb+9Gyqatg79hdJEzhTsrxo0KCB4QBCw2OoqLFw+B9MPhRsrvyPa9A//3x+/IfPVdBYv1VdAMAzEDywzT0H+rBGmLti0/CwLjzhDnNqi8UOV6gKDk9xlt/j++7SqFeL6qcKbWTLX8WQCbr95vMujgDpnUXrFG4xu6I5TA+GcrqX/y++wTcFK+DMF6K1E/4BR1TWHBF4wt8AAAAASUVORK5CYII=);display:block;background-color:#fff;position:fixed;z-index:2000;left:50%;transform:translateX(-50%);margin-top:-.5px;transition:.05s ease-in transform;padding:1rem;width:234px}.pace-before{display:block;margin-top:260px;left:50%;content:attr(data-progress-text);font-weight:100;font-size:1rem;line-height:1;text-align:center;color:#1d1b1d;font-weight:700}
+      
+      
+      
+    </style>
   </head>
-  <body>
+  <body class="prld-on">
     <div class="main-wrapper">
       <!-- start HEADER.header-->
       <header class="header block-with-lazy">
@@ -70,7 +78,7 @@
           <svg class="icon icon-phone-receiver ">
             <use xlink:href="img/svg/sprite.svg#phone-receiver"></use>
           </svg>ПОЗВОНИТЬ СЕЙЧАС</a>
-        <div class="top-line top-line--js block-with-lazy">
+        <div class="top-line top-line--js block-with-lazy wow fadeIn" data-wow-duration="0.6s" data-wow-delay="0.3s"> 
           <div class="top-line__body">
             <div class="container">
               <div class="row">
@@ -122,20 +130,22 @@
       <!-- end HEADER.header-->
       <!-- start header-block-->
       <div class="header-block" id="header-block">
-        <picture>
-          <source srcset="img/header-bg.jpg" media="(min-width: 992px)"/>
-          <!-- тут сделай кроп шириной   992px или чуть больше, какой там стандартный-->
-          <source srcset="img/header-bg-md.jpg" media="(min-width: 576px)"/>
-          <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный--><img class="object-fit-js" src="#" alt=""/>
-        </picture>
-        <div class="container">
+        <div class="wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.96s"> 
+          <picture>
+            <source srcset="img/header-bg.jpg" media="(min-width: 992px)"/>
+            <!-- тут сделай кроп шириной   992px или чуть больше, какой там стандартный-->
+            <source srcset="img/header-bg-md.jpg" media="(min-width: 576px)"/>
+            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный--><img class="object-fit-js" src="#" alt=""/>
+          </picture>
+        </div>
+        <div class="container wow fadeIn" data-wow-duration="0.6s" data-wow-delay="0.6s"> 
           <div class="header-block__top-text">Цифровизируйся с&nbsp;Datex
           </div>
           <h1>Лучшая проектная команда под автоматизацию задач любой сложности</h1>
           <div class="header-block__sub-text">Внедряем технологичные конкурентные решения на&nbsp;базе 1С для среднего и&nbsp;крупного бизнеса
           </div><a class="header-block__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Заказать автоматизацию" data-order="Заказать автоматизацию" data-btn="Заказать автоматизацию">заказать автоматизацию</a>
         </div>
-        <div class="header-block__foot">
+        <div class="header-block__foot wow fadeIn" data-wow-duration="0.6s" data-wow-delay="0.8999999999999999s"> 
           <div class="container">
             <div class="row">
               <div class="col-sm">
@@ -160,13 +170,13 @@
       <section class="s-competences section block-with-lazy" id="s-competences">
         <div class="container">
           <div class="section-title">
-            <h2>
-              Ключевые компетенции <span class="text-primary">нашей команды </span></h2>
-            <div class="h4">Автоматизируя процессы в&nbsp;вашем бизнесе, мы&nbsp;делаем его эффективнее.</div>
+            <h2 class="wow fadeInUp" data-wow-duration="0.6s">
+               Ключевые компетенции <span class="text-primary">нашей команды </span></h2>
+            <div class="h4 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.15s"> Автоматизируя процессы в&nbsp;вашем бизнесе, мы&nbsp;делаем его эффективнее.</div>
           </div>
           <div class="s-competences__slider slider slider--js swiper-container">
             <div class="swiper-wrapper">
-                <div class="s-competences__slide swiper-slide">
+                <div class="s-competences__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.15s">
                   <div class="s-competences__item">
                     <div class="before">01
                     </div>
@@ -180,7 +190,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-competences__slide swiper-slide">
+                <div class="s-competences__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
                   <div class="s-competences__item">
                     <div class="before">02
                     </div>
@@ -194,7 +204,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-competences__slide swiper-slide">
+                <div class="s-competences__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.44999999999999996s">
                   <div class="s-competences__item">
                     <div class="before">03
                     </div>
@@ -208,7 +218,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-competences__slide swiper-slide">
+                <div class="s-competences__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
                   <div class="s-competences__item">
                     <div class="before">04
                     </div>
@@ -222,7 +232,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-competences__slide swiper-slide">
+                <div class="s-competences__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.75s">
                   <div class="s-competences__item">
                     <div class="before">05
                     </div>
@@ -236,7 +246,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-competences__slide swiper-slide">
+                <div class="s-competences__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.8999999999999999s">
                   <div class="s-competences__item">
                     <div class="before">06
                     </div>
@@ -250,7 +260,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-competences__slide swiper-slide">
+                <div class="s-competences__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="1.05s">
                   <div class="s-competences__item">
                     <div class="before">07
                     </div>
@@ -264,7 +274,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-competences__slide swiper-slide">
+                <div class="s-competences__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="1.2s">
                   <div class="s-competences__item">
                     <div class="before">08
                     </div>
@@ -278,7 +288,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-competences__slide swiper-slide">
+                <div class="s-competences__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="1.3499999999999999s">
                   <div class="s-competences__item">
                     <div class="before">09
                     </div>
@@ -306,7 +316,7 @@
       <section class="s-segments section block-with-lazy" id="s-segments">
         <div class="pos-st tabs container">
           <div class="pos-st row">
-            <div class="s-segments__col col-lg-5 order-lg-last">
+            <div class="s-segments__col col-lg-5 order-lg-last wow fadeInUp" data-wow-duration="0.6s">
               <div class="section-title">
                 <h2> <span class="text-primary">Сегменты, </span>в&nbsp;которых мы 	работаем</h2>
               </div>
@@ -320,107 +330,95 @@
             <div class="pos-st col">
               <div class="tabs__wrap">
                         <div class="pos-st tabs__content2 active">
+                                    <picture class="active">
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
+                                    </picture>
                           <ul>
-                                        <li>
-                                          <picture class="active">
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
-                                          </picture><strong>розничные магазины</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
-                                          </picture><strong>автосервисы</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
-                                          </picture><strong>сферы услуг</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
-                                          </picture><strong>тсж, жкх</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
-                                          </picture><strong>фитнес клубы</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
-                                          </picture><strong>торговые организации</strong>
-                                        </li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.15s"><strong>розничные магазины</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s"><strong>автосервисы</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.44999999999999996s"><strong>сферы услуг</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"><strong>тсж, жкх</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.75s"><strong>фитнес клубы</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.8999999999999999s"><strong>торговые организации</strong></li>
                           </ul>
                         </div>
                         <div class="pos-st tabs__content2">
+                                    <picture class="active">
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
+                                    </picture>
+                                    <picture>
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
+                                      <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
+                                      <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
+                                      <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
+                                    </picture>
                           <ul>
-                                        <li>
-                                          <picture class="active">
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
-                                          </picture><strong>розничные магазины</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
-                                          </picture><strong>автосервисы</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
-                                          </picture><strong>сферы услуг</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
-                                          </picture><strong>тсж, жкх</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg.jpg" alt=""/>
-                                          </picture><strong>фитнес клубы</strong>
-                                        </li>
-                                        <li>
-                                          <picture>
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp" media="(min-width: 576px)"/>
-                                            <source class="lazy-sourse" srcset="#" type="image/jpg" data-srcset="img/s-segment-bg2.jpg" media="(min-width: 576px)"/>
-                                            <!-- тут сделай кроп шириной   576px или чуть больше, какой там стандартный -->
-                                            <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-segment-bg2.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-segment-bg2.jpg" alt=""/>
-                                          </picture><strong>торговые организации</strong>
-                                        </li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.15s"><strong>розничные магазины</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s"><strong>автосервисы</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.44999999999999996s"><strong>сферы услуг</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"><strong>тсж, жкх</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.75s"><strong>фитнес клубы</strong></li>
+                                        <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.8999999999999999s"><strong>торговые организации</strong></li>
                           </ul>
                         </div>
               </div>
@@ -435,12 +433,12 @@
       <section class="s-team section block-with-lazy" id="s-team">
         <div class="container">
           <div class="section-title text-center">
-            <h2>
+            <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
               Ключевые лица проектной команды   <span class="text-primary">DATEX SOFT</span></h2>
-            <h5>Каждый специалист нашей команды думает как принести пользу команде через пользу клиенту.</h5>
+            <h5 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Каждый специалист нашей команды думает как принести пользу команде через пользу клиенту.</h5>
           </div>
           <div class="row">
-                <div class="s-team__col col-lg col-6">
+                <div class="s-team__col col-lg col-6 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
                   <div class="s-team__item">
                     <div class="s-team__img-wrap">
                       <div class="s-team__logo">
@@ -460,7 +458,7 @@
                   </div>
                 </div>
                 <!-- /.col-->
-                <div class="s-team__col col-lg col-6">
+                <div class="s-team__col col-lg col-6 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
                   <div class="s-team__item">
                     <div class="s-team__img-wrap">
                       <div class="s-team__logo">
@@ -480,7 +478,7 @@
                   </div>
                 </div>
                 <!-- /.col-->
-                <div class="s-team__col col-lg col-6">
+                <div class="s-team__col col-lg col-6 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.8999999999999999s">
                   <div class="s-team__item">
                     <div class="s-team__img-wrap">
                       <div class="s-team__logo">
@@ -500,7 +498,7 @@
                   </div>
                 </div>
                 <!-- /.col-->
-                <div class="s-team__col col-lg col-6">
+                <div class="s-team__col col-lg col-6 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="1.2s">
                   <div class="s-team__item">
                     <div class="s-team__img-wrap">
                       <div class="s-team__logo">
@@ -529,7 +527,7 @@
         <div class="container">
           <div class="row">
             <div class="col">
-              <div class="section-title">
+              <div class="section-title wow fadeInUp" data-wow-duration="0.6s">
                 <h2> <span class="text-primary">Цифровизация </span>бизнес-процессов  в&nbsp;компании </h2>
                 <div class="h4">Результат нашей работы.</div>
               </div>
@@ -537,7 +535,7 @@
             <div class="col-lg-6">
               <div class="s-digilization__slider slider slider--js swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="s-digilization__slide swiper-slide">
+                    <div class="s-digilization__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
                       <div class="s-digilization__item"> 
                         <div class="s-digilization__icon-wrap">
                           <svg class="icon icon-s-digilization-1 ">
@@ -549,7 +547,7 @@
                       </div>
                     </div>
                     <!-- /+e.slide.swiper-slide-->
-                    <div class="s-digilization__slide swiper-slide">
+                    <div class="s-digilization__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
                       <div class="s-digilization__item"> 
                         <div class="s-digilization__icon-wrap">
                           <svg class="icon icon-s-digilization-2 ">
@@ -561,7 +559,7 @@
                       </div>
                     </div>
                     <!-- /+e.slide.swiper-slide-->
-                    <div class="s-digilization__slide swiper-slide">
+                    <div class="s-digilization__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.8999999999999999s">
                       <div class="s-digilization__item"> 
                         <div class="s-digilization__icon-wrap">
                           <svg class="icon icon-s-digilization-3 ">
@@ -573,7 +571,7 @@
                       </div>
                     </div>
                     <!-- /+e.slide.swiper-slide-->
-                    <div class="s-digilization__slide swiper-slide">
+                    <div class="s-digilization__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="1.2s">
                       <div class="s-digilization__item"> 
                         <div class="s-digilization__icon-wrap">
                           <svg class="icon icon-s-digilization-4 ">
@@ -601,7 +599,7 @@
       <section class="s-steps section block-with-lazy" id="s-steps">
         <div class="tabs2 container">
           <div class="row">
-            <div class="s-steps__col col-lg-5 order-lg-last">
+            <div class="s-steps__col col-lg-5 order-lg-last wow fadeInUp" data-wow-duration="0.6s">
               <div class="section-title">
                 <h2> <span class="text-primary">Этапы работы </span>нашей команды с&nbsp;вашим бизнесом</h2>
               </div>
@@ -615,7 +613,7 @@
             <div class="col">
               <div class="tabs2__wrap">
                         <div class="tabs2__content2 active">
-                                  <div class="accordion accordion--js">
+                                  <div class="accordion accordion--js wow fadeInUp" data-wow-duration="0.6s">
                                     <div class="accordion__head">
                                       <div class="accordion__title"> Заявка или звонок в&nbsp;офис для консультации
                                       </div>
@@ -624,7 +622,7 @@
                                     </div>
                                   </div>
                                   <!-- /.accordion-->
-                                  <div class="accordion accordion--js">
+                                  <div class="accordion accordion--js wow fadeInUp" data-wow-duration="0.6s">
                                     <div class="accordion__head">
                                       <div class="accordion__title"> Выезд специалиста к&nbsp;вам в&nbsp;офис и&nbsp;согласование перечня необходимых продуктов и&nbsp;работ
                                       </div>
@@ -633,7 +631,7 @@
                                     </div>
                                   </div>
                                   <!-- /.accordion-->
-                                  <div class="accordion accordion--js">
+                                  <div class="accordion accordion--js wow fadeInUp" data-wow-duration="0.6s">
                                     <div class="accordion__head">
                                       <div class="accordion__title">Исполнение поставленных задач
                                       </div>
@@ -645,7 +643,7 @@
                         </div>
                         <!-- /.tabs2__content2-->
                         <div class="tabs2__content2">
-                                  <div class="accordion accordion--js">
+                                  <div class="accordion accordion--js wow fadeInUp" data-wow-duration="0.6s">
                                     <div class="accordion__head">
                                       <div class="accordion__title">Заявка или звонок в&nbsp;офис для консультации
                                       </div>
@@ -654,7 +652,7 @@
                                     </div>
                                   </div>
                                   <!-- /.accordion-->
-                                  <div class="accordion accordion--js">
+                                  <div class="accordion accordion--js wow fadeInUp" data-wow-duration="0.6s">
                                     <div class="accordion__head">
                                       <div class="accordion__title">Выезд проектной команды
                                       </div>
@@ -663,7 +661,7 @@
                                     </div>
                                   </div>
                                   <!-- /.accordion-->
-                                  <div class="accordion accordion--js">
+                                  <div class="accordion accordion--js wow fadeInUp" data-wow-duration="0.6s">
                                     <div class="accordion__head">
                                       <div class="accordion__title">Проведение проектного обследования (опционально)
                                       </div>
@@ -672,7 +670,7 @@
                                     </div>
                                   </div>
                                   <!-- /.accordion-->
-                                  <div class="accordion accordion--js">
+                                  <div class="accordion accordion--js wow fadeInUp" data-wow-duration="0.6s">
                                     <div class="accordion__head">
                                       <div class="accordion__title">Согласование бюджета и&nbsp;сроков
                                       </div>
@@ -681,7 +679,7 @@
                                     </div>
                                   </div>
                                   <!-- /.accordion-->
-                                  <div class="accordion accordion--js">
+                                  <div class="accordion accordion--js wow fadeInUp" data-wow-duration="0.6s">
                                     <div class="accordion__head">
                                       <div class="accordion__title">Исполнение проекта
                                       </div>
@@ -709,11 +707,11 @@
           <source class="lazy-sourse" srcset="#" type="image/webp" data-srcset="img/s-start-bg-sm.webp"/><img class="object-fit-js lazy" src="#" data-src="img/s-start-bg-sm.jpg" alt=""/>
         </picture>
         <div class="container">
-          <div class="section-title text-center">
+          <div class="section-title text-center wow fadeInUp" data-wow-duration="0.6s">
             <h2>Поможем эффективно начать <span class="text-primary">сотрудничество </span></h2>
           </div>
           <div class="row">
-                <div class="s-start__col col-lg">
+                <div class="s-start__col col-lg wow fadeInUp" data-wow-duration="0.6s">
                   <h6>для среднего бизнеса</h6>
                   <h3>Экспресс обследование</h3><strong>бесплатно</strong>
                   <ul>
@@ -725,7 +723,7 @@
                     <li>Анализ текущей тех. базы и подбор оборудования</li>
                   </ul><a class="popup-with-move-anim" href="#modal-call" data-title=" Экспресс обследование для среднего бизнеса" data-order=" заказать бесплатно Экспресс обследование" data-btn="Заказать  ">заказать бесплатно</a>
                 </div>
-                <div class="s-start__col col-lg">
+                <div class="s-start__col col-lg wow fadeInUp" data-wow-duration="0.6s">
                   <h6>для крупного бизнеса</h6>
                   <h3>Комплексный аудит</h3><strong>бесплатно</strong>
                   <ul>
@@ -744,11 +742,11 @@
       <!-- start s-rews-->
       <section class="s-rews section block-with-lazy" id="s-rews">
         <div class="container">
-          <div class="section-title text-center">
+          <div class="section-title text-center wow fadeInUp" data-wow-duration="0.6s">
             <h2>Отзывы клиентов</h2>
           </div>
           <div class="d-flex flex-row">
-            <div class="s-rews__control-sl">
+            <div class="s-rews__control-sl wow fadeInUp" data-wow-duration="0.6s">
               <div class="swiper-button-hand btn-primary swiper-button-hand-prev swiper-button-prev">
                 <svg class="icon icon-long-arrow-alt-left ">
                   <use xlink:href="img/svg/sprite.svg#long-arrow-alt-left"></use>
@@ -766,13 +764,14 @@
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="s-rews__caption">
-                          <h3> С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.</h3><a class="s-rews__link popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
+                          <h3 class="wow fadeInUp" data-wow-duration="0.6s"> С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.</h3><a class="s-rews__link popup-youtube wow fadeInUp" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-wow-duration="0.6s">
                           <svg class="icon icon-youtube ">
                             <use xlink:href="img/svg/sprite.svg#youtube"></use>
                           </svg>смотреть видео-отзыв</a>
+                          <div class="before wow fadeIn" data-wow-duration="0.6s" data-wow-delay="0.6s"></div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
+                      <div class="col-lg-6 wow fadeInUp" data-wow-duration="0.6s">
                         <div class="s-rews__card">
                           <div class="row">
                             <div class="col-auto">
@@ -797,13 +796,14 @@
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="s-rews__caption">
-                          <h3> С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.</h3><a class="s-rews__link popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
+                          <h3 class="wow fadeInUp" data-wow-duration="0.6s"> С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.</h3><a class="s-rews__link popup-youtube wow fadeInUp" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-wow-duration="0.6s">
                           <svg class="icon icon-youtube ">
                             <use xlink:href="img/svg/sprite.svg#youtube"></use>
                           </svg>смотреть видео-отзыв</a>
+                          <div class="before wow fadeIn" data-wow-duration="0.6s" data-wow-delay="0.6s"></div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
+                      <div class="col-lg-6 wow fadeInUp" data-wow-duration="0.6s">
                         <div class="s-rews__card">
                           <div class="row">
                             <div class="col-auto">
@@ -833,11 +833,11 @@
       <!-- start s-ways-->
       <section class="s-ways section block-with-lazy" id="s-ways">
         <div class="container">
-          <div class="section-title text-center">
+          <div class="section-title text-center wow fadeInUp" data-wow-duration="0.6s">
             <h2>
               Уже знаете, что нужно внедрить  <span class="text-primary">в ваш бизнес?</span></h2>
           </div>
-          <div class="s-ways__block">
+          <div class="s-ways__block wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
             <form action="#">
               <div class="s-ways__page active">
                 <div class="s-ways__group">
@@ -1025,11 +1025,11 @@
                           <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</small>
                           </label>
                         </div>
-                        <div class="form-wrap__btn-back" hre="#">
+                        <button class="form-wrap__btn-back" type="button">
                           <svg class="icon icon-long-arrow-alt-left ">
                             <use xlink:href="img/svg/sprite.svg#long-arrow-alt-left"></use>
                           </svg>вернуться назад
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1044,13 +1044,13 @@
       <!-- start s-why-->
       <section class="s-why section block-with-lazy" id="s-why">
         <div class="container">
-          <div class="section-title text-center">
+          <div class="section-title text-center wow fadeInUp" data-wow-duration="0.6s">
             <h2>
               Почему наши клиенты  <span class="text-primary">выбирают нас</span></h2>
           </div>
           <div class="s-why__slider slider slider--js swiper-container">
             <div class="swiper-wrapper">
-                <div class="s-why__slide swiper-slide">
+                <div class="s-why__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
                   <div class="s-why__item"> 
                     <div class="s-why__icon-wrap">
                       <svg class="icon icon-s-why-1 ">
@@ -1062,7 +1062,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-why__slide swiper-slide">
+                <div class="s-why__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
                   <div class="s-why__item"> 
                     <div class="s-why__icon-wrap">
                       <svg class="icon icon-s-why-2 ">
@@ -1074,7 +1074,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-why__slide swiper-slide">
+                <div class="s-why__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.8999999999999999s">
                   <div class="s-why__item"> 
                     <div class="s-why__icon-wrap">
                       <svg class="icon icon-s-why-3 ">
@@ -1086,7 +1086,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-why__slide swiper-slide">
+                <div class="s-why__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="1.2s">
                   <div class="s-why__item"> 
                     <div class="s-why__icon-wrap">
                       <svg class="icon icon-s-why-4 ">
@@ -1098,7 +1098,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-why__slide swiper-slide">
+                <div class="s-why__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="1.5s">
                   <div class="s-why__item"> 
                     <div class="s-why__icon-wrap">
                       <svg class="icon icon-s-why-5 ">
@@ -1110,7 +1110,7 @@
                   </div>
                 </div>
                 <!-- /+e.slide.swiper-slide-->
-                <div class="s-why__slide swiper-slide">
+                <div class="s-why__slide swiper-slide wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="1.7999999999999998s">
                   <div class="s-why__item"> 
                     <div class="s-why__icon-wrap">
                       <svg class="icon icon-s-why-6 ">
@@ -1137,16 +1137,15 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
-              <div class="section-title">
+              <div class="section-title wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.15s">
                 <h2>
                   Вашу 1С&nbsp;уже сопровождает <span class="text-body">другая компания?</span></h2>
                 <h4>Скачайте нашу презентацию и&nbsp;узнайте об индивидуальных условиях сопровождения 1С&nbsp;для вашей компании.</h4>
               </div><a class="s-doc__btn btn-dark popup-with-move-anim" href="#modal-call" data-title="Скачать презентацию" data-order="Скачать презентацию" data-btn="Скачать презентацию">скачать презентацию<span>13 mb</span></a>
             </div>
             <div class="pos-s col-lg-6 align-self-end text-center">
-              <picture class="s-doc__img-wrap text-center">
-                <source class="lazy-sourse" srcset="#" data-srcset="img/pdf.webp" type="image/webp" media="(min-width: 576px)"/>
-                <source class="lazy-sourse" srcset="#" data-srcset="img/pdf.jpg" type="image/jpg" media="(min-width: 576px)"/><img class="lazy res-i" src="#" data-src="img/pdf.jpg" alt=""/>
+              <picture class="s-doc__img-wrap text-center wow fadeIn" data-wow-duration="0.6s" data-wow-delay="0.06s">
+                <source class="lazy-sourse" srcset="#" data-srcset="img/pdf.webp" type="image/webp"/><img class="lazy res-i" src="#" data-src="img/pdf.jpg" alt=""/>
               </picture>
             </div>
           </div>
@@ -1157,15 +1156,15 @@
       <section class="s-consultation section block-with-lazy" id="s-consultation">
         <div class="container"> 
           <div class="section-title"> 
-            <h2>Получите консультацию</h2><strong>бесплатно</strong>
-            <picture> 
+            <h2 class="wow fadeInUp" data-wow-duration="0.6s">Получите консультацию</h2><strong class="wow fadeInUp" data-wow-duration="0.6s">бесплатно</strong>
+            <picture class="wow fadeIn" data-wow-duration="0.6s" data-wow-delay="0.15s"> 
               <source class="lazy-sourse" srcset="#" data-srcset="img/form.webp" media="(min-width: 768px)" type="image/webp"/>
               <source class="lazy-sourse" srcset="#" data-srcset="img/form.png" media="(min-width: 768px)" type="image/png"/>
               <!-- тут сделай кроп шириной   140px или чуть больше, какой там стандартный -->
               <source class="lazy-sourse" srcset="#" data-srcset="img/form-sm.webp" type="image/webp"/><img class="object-fit-js lazy" src="#" data-src="img/form-sm.png" alt=""/>
             </picture>
-            <p>Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.</p>
-            <h6>нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию">получить консультацию</a>
+            <p class="wow fadeInUp" data-wow-duration="0.6s">Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.</p>
+            <h6 class="wow fadeInUp" data-wow-duration="0.6s">нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию" lass="wow fadeInUp" data-wow-duration="0.6s">получить консультацию</a>
           </div>
         </div>
       </section>
@@ -1176,27 +1175,31 @@
           <div class="row">
             <div class="col">
               <div class="s-contact__group">
-                <h6>свяжитесь с нами:</h6><a class="text-body h2 fw-900" href="tel:88463004840">
-                  <svg class="icon icon-phone-receiver ">
-                    <use xlink:href="img/svg/sprite.svg#phone-receiver"></use>
-                  </svg>8 846 300 48 40</a>
-                <div class="h4 strong d-lg-none fw-400">Партизанская ул, дом № 86, офис 723</div>
-                <div class="h4 strong"><a class="text-body" href="mailto:info@datexsoft.ru">info@datexsoft.ru</a></div>
-                <div class="d-none d-lg-block"><a class="s-contact__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок" data-btn="Заказать звонок">заказать звонок</a>
+                <h6 class="wow fadeInUp" data-wow-duration="0.6s">свяжитесь с нами:</h6>
+                <div class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s"><a class="text-body h2 fw-900" href="tel:88463004840">
+                    <svg class="icon icon-phone-receiver ">
+                      <use xlink:href="img/svg/sprite.svg#phone-receiver"></use>
+                    </svg>8 846 300 48 40</a>
+                  <div class="h4 strong d-lg-none fw-400">Партизанская ул, дом № 86, офис 723</div>
+                  <div class="h4 strong"><a class="text-body" href="mailto:info@datexsoft.ru">info@datexsoft.ru</a></div>
+                  <div class="d-none d-lg-block"><a class="s-contact__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок" data-btn="Заказать звонок">заказать звонок</a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-auto">
               <div class="s-contact__group">
                 <div class="d-none d-lg-block">
-                  <h6>мы находимся по адресу:</h6>
+                  <h6 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.15s">мы находимся по адресу:</h6>
                 </div>
-                <div class="h2 fw-900 d-none d-lg-block">
-                  <svg class="icon icon-flag ">
-                    <use xlink:href="img/svg/sprite.svg#flag"></use>
-                  </svg>г. Самара,
+                <div class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
+                  <div class="h2 fw-900 d-none d-lg-block">
+                    <svg class="icon icon-flag ">
+                      <use xlink:href="img/svg/sprite.svg#flag"></use>
+                    </svg>г. Самара,
+                  </div>
+                  <div class="h4 strong d-none d-lg-block">Партизанская ул, дом № 86, офис 723</div><a class="s-contact__btn btn-primary popup-with-move-anim" href="#modal-map">посмотреть на карте</a>
                 </div>
-                <div class="h4 strong d-none d-lg-block">Партизанская ул, дом № 86, офис 723</div><a class="s-contact__btn btn-primary popup-with-move-anim" href="#modal-map">посмотреть на карте</a>
               </div>
             </div>
           </div>
@@ -1291,10 +1294,10 @@
         <div class="col-xxl-6 col-sm-5">
           <div class="row row--sm align-items-center">
             <div class="col-auto col-sm">
-              <picture> </picture>
+              <picture> <img src="#" alt=""/></picture>
             </div>
             <div class="col d-sm-none">
-              <h3> </h3>
+              <h3>#</h3>
               <div class="modal-team__small-text"> 
               </div>
               <div class="modal-team__logo">
@@ -1307,7 +1310,7 @@
         </div>
         <div class="col">
           <div class="d-none d-sm-block">
-            <h3> </h3>
+            <h3>#</h3>
             <div class="modal-team__small-text"> 
             </div>
             <div class="modal-team__logo">
@@ -1329,12 +1332,13 @@
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <!-- modal libs-->
     <!-- slider libs-->
+    <script src="libs/wow.min.js"></script>
+    <script src="libs/wow.min.js"></script>
     <script src="libs/swiper-4.2.0/swiper.min.js"></script>
     <!-- /slider libs-->
     <!-- for svg libs-->
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
     <!-- /for svg libs-->
-    <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="libs/jquery.inputmask.bundle.min.js"></script>
     <script src="js/common.js"></script>
   </body>

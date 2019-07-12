@@ -1,13 +1,14 @@
+
 mixin s-ways()
 	// start s-ways
 	+b.SECTION.s-ways.section.block-with-lazy#s-ways&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
 				h2 Уже знаете, что нужно внедрить 
 					| 
 					span.text-primary в ваш бизнес?
 				
-			+e.block
+			+e.block(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  data-wow-delay=`${dur * 1}s`  )
 				form(action="#")
 					+e.page.active
 						+e.group
@@ -120,7 +121,7 @@ mixin s-ways()
 										+input("tel","tel","Введите телефон")( required) 
 										+e.btn(type="submit") оставить заявку
 										+polite
-										+e.btn-back(hre="#")
+										+e.btn-back(type="button")
 											+icon('long-arrow-alt-left')
 											| вернуться назад
 					// /+e.page

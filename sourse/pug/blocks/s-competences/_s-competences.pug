@@ -3,14 +3,14 @@ mixin s-competences()
 	+b.SECTION.s-competences.section.block-with-lazy#s-competences&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Ключевые компетенции 
+				h2(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )  Ключевые компетенции 
 					|
 					span.text-primary нашей команды 
-				.h4 Автоматизируя процессы в&nbsp;вашем бизнесе, мы&nbsp;делаем его эффективнее.
+				.h4(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * .5}s`)  Автоматизируя процессы в&nbsp;вашем бизнесе, мы&nbsp;делаем его эффективнее.
 			+e.slider.slider--js.swiper-container
 				.swiper-wrapper
 					mixin item(i,  or)
-						+e.slide.swiper-slide
+						+e.slide.swiper-slide(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (i * .5) }s`)
 							+e.item
 								.before 0
 									= i

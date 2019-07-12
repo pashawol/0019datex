@@ -1,13 +1,34 @@
 var $ = jQuery;
 var btnToggle = $(".toggle-menu-mobile--js"),
 	menu = $(".menu-mobile--js")
+	body = document.querySelector('body')
+html = document.querySelector('html')
 var parent = $(".s-segments  ")
+
+Pace.on('start', function () {
+	document.documentElement.className += " loading-proccessing";
+});
+
+Pace.on('hide', function () {
+	 
+	body.classList.remove('prld-on');
+	var wow = new WOW({
+		mobile: false
+	});
+	wow.init();
+	setTimeout(function () {
+
+		JSCCommon.mobileMenu();
+	}, 100); 
+});
+
 jQuery(document).ready(function ($) {
 
 	
 	parent.on('mouseenter', 'li', function () {
+		// $(".s-segments picture  ").html($(this).find("picture").html)
 		// $(this).find("picture").removeClass('active');
-		$(this).find("picture").addClass('active').parent().siblings().find("picture").removeClass('active')
+		$(this).parents(".tabs__content2").find("picture").eq($(this).index()).addClass('active').siblings().removeClass('active')
 	})
 
 
@@ -39,28 +60,37 @@ jQuery(document).ready(function ($) {
 
 		function fixedMenu() {
 			var topNav = $('.top-line--js  ');
+			if ($(this).scrollTop() > topNav.height()) {
+				setTimeout(function () {
+					topNav.addClass('top-ready');
+
+				}, .6);
+				// topNav.addClass('top-top');
+			} else {
+			 
+				topNav.removeClass('top-ready');
+			}
+			
 			if ($(this).scrollTop() > (topH / 4)) {
 				setTimeout(function () {
 					topNav.addClass('fixed-ready');
 
 				}, .6);
-				topNav.addClass('fixed-top');
+				// topNav.addClass('fixed-top');
 			} else {
-				if (!topNav.hasClass('fixed')) {
-
-					setTimeout(function () {
-						topNav.removeClass('fixed-top');
-
-					}, .6);
-				}
+			 
 				topNav.removeClass('fixed-ready');
 			}
 
 
+
 			if ($(this).scrollTop() > (topH * .8)) {
-				topNav.addClass('fixed');
+				topNav.addClass('fixed').removeClass('fixed-top');
 			} else {
-				topNav.removeClass('fixed');
+				if (topNav.hasClass('fixed')) {
+
+					topNav.removeClass('fixed').addClass('fixed-top');
+				}
 			}
 			
 			if ($(this).scrollTop() > (topH )) {
@@ -75,13 +105,7 @@ jQuery(document).ready(function ($) {
 			fixedMenu();
 		});
 		var w = $(window).width();
-
-		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		// 
-		// скрывает моб меню
  
-
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > topH) {
 				$('.top-nav  ').addClass('fixed');

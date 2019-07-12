@@ -2,10 +2,10 @@ mixin s-rews()
 	// start s-rews
 	+b.SECTION.s-rews.section.block-with-lazy#s-rews&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
 				h2 Отзывы клиентов
 			.d-flex.flex-row
-				+e.control-sl
+				+e.control-sl(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
 					+arrow2()
 				+e.slider.slider--js2.swiper-container
 					.swiper-wrapper
@@ -14,11 +14,12 @@ mixin s-rews()
 								.row
 									.col-lg-6
 										+e.caption
-											h3  С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.
-											+e.link.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto")
+											h3(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )  С&nbsp;командой DATEX очень приятно работать: ребята никогда не&nbsp;подведут.
+											+e.link.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto"  class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
 												+icon('youtube')
 												| смотреть видео-отзыв
-									.col-lg-6
+											.before(class="wow fadeIn" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (1 * 2) }s`  )
+									.col-lg-6(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
 										+e.card
 											.row
 												.col-auto

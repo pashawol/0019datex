@@ -1,19 +1,20 @@
 mixin s-consultation()
+ 
 	// start s-consultation
 	+b.SECTION.s-consultation.section.block-with-lazy#s-consultation&attributes(attributes)
 		.container 
 			+b.section-title 
-				h2 Получите консультацию
-				strong бесплатно
-				picture 
+				h2(class="wow fadeInUp", data-wow-duration=`${dur * 1}s`) Получите консультацию
+				strong(class="wow fadeInUp", data-wow-duration=`${dur * 1}s`) бесплатно
+				picture(class="wow fadeIn" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (1 * .5) }s`) 
 					source.lazy-sourse(srcset="#" data-srcset=`img/form.webp` media="(min-width: 768px)" type="image/webp" )
 					source.lazy-sourse(srcset="#" data-srcset=`img/form.png` media="(min-width: 768px)" type="image/png" )
 					// тут сделай кроп шириной   140px или чуть больше, какой там стандартный 
 					source.lazy-sourse(srcset="#" data-srcset=`img/form-sm.webp`  type="image/webp" )
 					img.object-fit-js.lazy(src="#" data-src=`img/form-sm.png`, alt='')
-				p Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.
-				h6 нестеров 
+				p(class="wow fadeInUp", data-wow-duration=`${dur * 1}s`) Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.
+				h6(class="wow fadeInUp", data-wow-duration=`${dur * 1}s`) нестеров 
 					span.text-primary андрей
 					small Коммерческий директор
-				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию"   data-btn="Получить консультацию") получить консультацию
+				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию"   data-btn="Получить консультацию" lass="wow fadeInUp", data-wow-duration=`${dur * 1}s`) получить консультацию
 	// end s-consultation

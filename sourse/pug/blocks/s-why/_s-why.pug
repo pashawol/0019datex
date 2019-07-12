@@ -2,7 +2,7 @@ mixin s-why()
 	// start s-why
 	+b.SECTION.s-why.section.block-with-lazy#s-why&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
 				h2 Почему наши клиенты 
 					| 
 					span.text-primary выбирают нас
@@ -10,7 +10,7 @@ mixin s-why()
 			+e.slider.slider--js.swiper-container
 				.swiper-wrapper
 					mixin item(i )
-						+e.slide.swiper-slide
+						+e.slide.swiper-slide(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  data-wow-delay=`${dur * i * .5 * 1}s`  )
 							+e.item 
 								+e.icon-wrap
 									+icon("s-why-" + i)

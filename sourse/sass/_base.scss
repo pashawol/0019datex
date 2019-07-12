@@ -170,13 +170,20 @@ body {
 			// opacity: 1;
 			opacity: 0.76;
 		}
+		.main-wrapper{
+			// position: absolute;
+			position: fixed;
+		}
 	}
 }
 
 .main-wrapper {
-	position: relative;
+	// position: relative;
 	overflow: hidden;
 	height: 100%;
+	// left: 0;
+	// top: 0;
+	width: 100%;
 }
 
 .slick-slide img {
@@ -691,4 +698,20 @@ a{
 		padding-left: 20px;
 		padding-right: 20px;
 	} 
+}
+
+
+.pace-inactive {
+	@include mt;
+	opacity: 0 !important;
+	z-index: -100 !important;
+	
+}
+
+
+@include media-breakpoint-up(lg) {
+
+	.wow{
+		visibility: hidden;
+}
 }

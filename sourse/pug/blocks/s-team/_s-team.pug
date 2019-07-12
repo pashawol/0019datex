@@ -3,13 +3,13 @@ mixin s-team()
 	+b.SECTION.s-team.section.block-with-lazy#s-team&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Ключевые лица проектной команды  
+				h2(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (1 * 1) }s`  ) Ключевые лица проектной команды  
 					| 
 					span.text-primary DATEX SOFT
-				h5 Каждый специалист нашей команды думает как принести пользу команде через пользу клиенту.
+				h5(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (1 * 1) }s`  ) Каждый специалист нашей команды думает как принести пользу команде через пользу клиенту.
 			.row
-				mixin item(  p, t)
-					+e.col.col-lg.col-6
+				mixin item(  p, t, i)
+					+e.col.col-lg.col-6(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (i * 1) }s`  )
 						+e.item()
 							+e.img-wrap
 								+e.logo
@@ -25,16 +25,16 @@ mixin s-team()
 							p= p
 							+e.btn.btn-outline-secondary.popup-with-move-anim(href="#modal-team" data-title= t data-prof= p  data-text="1990 года рождения – в 2013 году окончил Аэрокосмический университет и начал свою карьеру как программист 1С. С тех пор поучаствовал в более чем 300 проектах автоматизации, как программист и не меньшим числом как управленец. В послужном списке Всеволода есть крупнейшие корпорации РФ. С 2015 года руководит крупными командами по автоматизации. С 2019 года является руководителем офиса Datex в Самаре. "   data-btn=`Обсудить проект с ${t}`)  подробнее
 					// /.col
-				+item('Руководитель команды','Лысиков Всеволод')
+				+item('Руководитель команды','Лысиков Всеволод',"1")
 					h6 лысиков
 						span.text-primary всеволод
-				+item('Руководитель отдела внедрения','Шуба Валентин')
+				+item('Руководитель отдела внедрения','Шуба Валентин',"2")
 					h6 шуба
 						span.text-primary валентин
-				+item('Коммерческий директор','Нестеров Андрей')
+				+item('Коммерческий директор','Нестеров Андрей',"3")
 					h6 нестеров
 						span.text-primary андрей
-				+item('IT директор','Колоколов Дмитрий')
+				+item('IT директор','Колоколов Дмитрий',"4")
 					h6 колоколов
 						span.text-primary дмитрий
 	// end s-team

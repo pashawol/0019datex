@@ -23,7 +23,7 @@ mixin top-line()
 	a.top-line__tel.top-line__tel--mob.d-sm-none(href="tel:+7(846)3004840") 
 		+icon("phone-receiver")
 		| ПОЗВОНИТЬ СЕЙЧАС
-	+b.top-line--js.block-with-lazy
+	+b.top-line--js.block-with-lazy(class="wow fadeIn" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 1}s`) 
 		+e.body
 			.container
 				.row

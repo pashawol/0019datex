@@ -1,4 +1,33 @@
 .s-rews {
+	.before{
+		content: '';
+		background-image: url(../img/rew-before.webp);
+		background-size: cover;
+		background-repeat: no-repeat;
+	
+		pointer-events: none;
+		position: absolute;
+		z-index: -1;
+		@include media-breakpoint-up(lg) {
+	
+			top: 100%;
+			left: 0;
+			right: auto;	
+			bottom: auto;
+		}
+		@include media-breakpoint-up(sm) {
+			width: rem(134px);
+			height: rem(101px);
+			bottom: 0;
+		}
+		bottom: rem(30);
+		width: rem(134px * .9);
+		height: rem(101px * .9);
+		right: 0;
+	
+	
+	
+	}
 	&__slide{
 		padding-bottom: rem(50);
 		padding-left: 5px;
@@ -16,35 +45,6 @@
 		display: inline-block;
 		z-index: 2;
 		color: $primary !important;
-		&::before{
-			content: '';
-			background-image: url(../img/rew-before.webp);
-			background-size: cover;
-			background-repeat: no-repeat;
-		
-			pointer-events: none;
-			position: absolute;
-			z-index: -1;
-			@include media-breakpoint-up(lg) {
-
-				top: 100%;
-				left: 0;
-				right: auto;	
-				bottom: auto;
-			}
-			@include media-breakpoint-up(sm) {
-				width: rem(134px);
-				height: rem(101px);
-				bottom: 0;
-			}
-			bottom: rem(30);
-			width: rem(134px * .9);
-			height: rem(101px * .9);
-			right: 0;
-
-
-
-		}
 		.icon{
 			font-size: rem(48);
 			margin-right: rem(20);

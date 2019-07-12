@@ -4,7 +4,7 @@ mixin s-doc()
 		.container
 			.row
 				.col-lg-6
-					+b.section-title
+					+b.section-title(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (1 * .5) }s`)
 						h2 Вашу 1С&nbsp;уже сопровождает 
 							|
 							span.text-body другая компания?
@@ -12,10 +12,10 @@ mixin s-doc()
 					+e.btn.btn-dark.popup-with-move-anim(href="#modal-call"  data-title="Скачать презентацию" data-order="Скачать презентацию"   data-btn="Скачать презентацию") скачать презентацию
 						span 13 mb
 				.pos-s.col-lg-6.align-self-end.text-center
-					+e.PICTURE.img-wrap.text-center
+					+e.PICTURE.img-wrap.text-center(class="wow fadeIn" data-wow-duration=`${dur * 1}s`  data-wow-delay=`${delay  * (1 * .2) }s`)
 						 
-						source.lazy-sourse(srcset="#" data-srcset=`img/pdf.webp`  type="image/webp" media="(min-width: 576px)" )   
-						source.lazy-sourse(srcset="#" data-srcset=`img/pdf.jpg`  type="image/jpg"  media="(min-width: 576px)" )  
+						source.lazy-sourse(srcset="#" data-srcset=`img/pdf.webp`  type="image/webp"   )   
+					  
 						img.lazy.res-i(src="#" data-src="img/pdf.jpg", alt="")   
 				
 	// end s-doc

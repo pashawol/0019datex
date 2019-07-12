@@ -8,12 +8,12 @@ mixin s-start()
 			source.lazy-sourse(srcset="#" type="image/webp"    data-srcset="img/s-start-bg-sm.webp"  )
 			img.object-fit-js.lazy(src="#" data-src="img/s-start-bg-sm.jpg", alt="")  
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )
 				h2 Поможем эффективно начать 
 					span.text-primary сотрудничество 
 			.row
 				mixin item(r,t)
-					+e.col.col-lg
+					+e.col.col-lg(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )
 						h6= r
 						h3= t
 						strong бесплатно

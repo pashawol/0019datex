@@ -5,23 +5,25 @@ mixin s-contact()
 			.row
 				.col
 					+e.group
-						h6 свяжитесь с нами:
-						a.text-body.h2.fw-900(href="tel:88463004840")
-							+icon("phone-receiver")
-							| 8 846 300 48 40
-						.h4.strong.d-lg-none.fw-400 Партизанская ул, дом № 86, офис 723
-						.h4.strong: a.text-body(href="mailto:info@datexsoft.ru") info@datexsoft.ru
-						.d-none.d-lg-block
-							+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок"   data-btn="Заказать звонок") заказать звонок
+						h6(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  ) свяжитесь с нами:
+						div(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (1 * 1) }s`)
+							a.text-body.h2.fw-900(href="tel:88463004840")
+								+icon("phone-receiver")
+								| 8 846 300 48 40
+							.h4.strong.d-lg-none.fw-400 Партизанская ул, дом № 86, офис 723
+							.h4.strong: a.text-body(href="mailto:info@datexsoft.ru") info@datexsoft.ru
+							.d-none.d-lg-block
+								+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок"   data-btn="Заказать звонок") заказать звонок
 				
 				.col-lg-auto
 					+e.group
 						.d-none.d-lg-block
-							h6 мы находимся по адресу:
-						.h2.fw-900.d-none.d-lg-block
-							+icon("flag")
-							| г. Самара,
-						.h4.strong.d-none.d-lg-block Партизанская ул, дом № 86, офис 723
-						+e.btn.btn-primary.popup-with-move-anim(href="#modal-map"  ) посмотреть на карте
+							h6(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (1 * .5) }s`) мы находимся по адресу:
+						div(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (1 * 1) }s`)
+							.h2.fw-900.d-none.d-lg-block
+								+icon("flag")
+								| г. Самара,
+							.h4.strong.d-none.d-lg-block Партизанская ул, дом № 86, офис 723
+							+e.btn.btn-primary.popup-with-move-anim(href="#modal-map"  ) посмотреть на карте
 
 	// end s-contact

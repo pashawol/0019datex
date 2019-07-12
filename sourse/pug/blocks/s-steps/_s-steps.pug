@@ -4,7 +4,7 @@ mixin s-steps()
 		.tabs2.container
 			//- align-items-center
 			.row
-				+e.col.col-lg-5.order-lg-last
+				+e.col.col-lg-5.order-lg-last(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
 					+b.section-title
 						h2 
 							span.text-primary Этапы работы 
@@ -22,7 +22,7 @@ mixin s-steps()
 								block 
 							// /.tabs2__content2
 						mixin accord()
-							+b.accordion--js
+							+b.accordion--js(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
 								+e.head
 									block
 								+e.body На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.

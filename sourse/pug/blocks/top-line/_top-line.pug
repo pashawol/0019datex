@@ -1,10 +1,11 @@
 mixin mob-mnu() 
 	+b.menu-mobile--js 
 		+e.inner 
-			- var nav= {"Главная":"/#header-block","Компетенции":"/#s-competences","Команда":"/#s-team","Этапы работ":"/#s-steps","Отзывы":"/#rew"," Сопровождение":"#/s-start","Консультация":"/#s-consultation","Контакты":"/#s-contact"}
-				ul.menu
-					each linkPatch, linkName in nav
-						li.menu-item: a(href= linkPatch)= linkName
+			- var nav= {"Главная":"#header-block","Компетенции":"#s-competences","Команда":"#s-team","Этапы работ":"#s-steps","Отзывы":"#rew"," Сопровождение":"#/s-start","Консультация":"#s-consultation","Контакты":"#s-contact"}
+				+e.nav-wrap
+					ul.menu
+						each linkPatch, linkName in nav
+							li.menu-item: a(href= linkPatch)= linkName
 			+e.foot
 				.container
 					.row
@@ -17,8 +18,9 @@ mixin mob-mnu()
 						.col.d-none.d-lg-block
 	//  мобильное меню
 mixin top-line()
+	+mob-mnu()
 	// start .top-line
-	.top-line__tel.d-sm-none(href="tel:+7(846)3004840") 
+	a.top-line__tel.top-line__tel--mob.d-sm-none(href="tel:+7(846)3004840") 
 		+icon("phone-receiver")
 		| ПОЗВОНИТЬ СЕЙЧАС
 	+b.top-line--js.block-with-lazy
@@ -51,7 +53,6 @@ mixin top-line()
 										+e.item.line
 										+e.item.line
 									+e.text.d-none.d-md-block  меню
-		+mob-mnu()
 	// end .top-line
 
 

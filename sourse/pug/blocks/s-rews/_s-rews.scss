@@ -1,6 +1,9 @@
 .s-rews {
 	&__slide{
 		padding-bottom: rem(50);
+		padding-left: 5px;
+		padding-right: 5px;
+		min-width: 100%;
 	}
 	&__link{
 		font-weight: 900;
@@ -12,7 +15,7 @@
 		margin-bottom: rem(60);
 		display: inline-block;
 		z-index: 2;
-
+		color: $primary !important;
 		&::before{
 			content: '';
 			background-image: url(../img/rew-before.webp);

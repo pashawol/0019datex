@@ -29,6 +29,9 @@
 	min-height: calc(100vh - 40px); 
 	background-color: $body-color; 
 	picture{
+		@include media-breakpoint-down(xs) {
+			display: none;
+		} 
 		// height: 100%;
 		position: absolute;
 		left: 0;

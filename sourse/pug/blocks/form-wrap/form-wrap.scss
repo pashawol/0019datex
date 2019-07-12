@@ -81,26 +81,12 @@
  &__polite{
 	 margin-left: auto;
 	 margin-right: auto;
-	 max-width: rem(370);
+	 max-width: rem(400);
  }
 }
 
 
-.parsley-error{
- border-image: none;
- border: 2px solid  red !important;
- color: red;
- outline: 0 !important;
-	
-}
-.parsley-success{
- border: 2px solid  #00d600 !important;
-
-}
-.parsley-errors-list{
- color: red;
-}
-
+ 
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -151,11 +137,11 @@
  margin-right: auto; 
  margin-top: rem(15);
  color: #6f7378;
- @include media-breakpoint-up(md) {
+//  @include media-breakpoint-up(md) {
 	 text-align: left;
-	 padding-left: rem(45);
- }
- text-align: center;
+	 padding-left: rem(55);
+//  }
+//  text-align: center;
  margin-bottom: rem(20);
  cursor: pointer;
  position: relative;
@@ -173,32 +159,41 @@
 	 overflow: hidden;
  }
  &__lab{
-	 @include media-breakpoint-up(md) {
+	//  @include media-breakpoint-up(md) {
 
 		 left: 0;
 		 display: block;
 		 top: rem(5px);
 		 // display: inline-block;
-		 width: rem(24px);
-		 height: rem(24px);
-		 width: 30px;
-			height: 30px;
+		 @include media-breakpoint-up(sm) {
+
+			 width: rem(30px);
+			 height: rem(30px);
+			}
+			width: rem(35px);
+			height: rem(35px);
 			background-color: $light;
 		 @include mt;
 		 position: absolute; 
 		 margin-right: 10px; 
-	 }
+	//  }
  }
- @include media-breakpoint-up(md) {
+//  @include media-breakpoint-up(md) {
 
 	 &__input[type="checkbox"] + &__lab{
 		 &::after{ 
-			 content:   url("../img/check.svg");
+			 content:  '';
+			 background-image:  url("../img/check.svg");
+			 background-position: center center;
+			 background-repeat: no-repeat;
+			 background-size: contain;
+			 width: 70%;
+			 height: 70%;
 			 position: absolute;
 			 @include a-cent; 
 			 opacity: 0;
 		 }
-	 }
+	//  }
  }
 	 &__input[type="radio"] + &__lab{
 		 
@@ -239,7 +234,7 @@
 		margin-bottom: 0;
 	}
 	h6{
-		margin-bottom: 0 !important;
+		// margin-bottom: 0 !important;
 		padding-bottom: 0 !important;
 	}
 	&__img-wrap{

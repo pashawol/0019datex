@@ -1,3 +1,17 @@
+@include media-breakpoint-down(xs) {
+	.mfp-container{
+		padding: 0;
+		background-color: #ffffff;
+	}
+	.mfp-content{
+		position: static;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+
+		// height: 100%;
+	}
+}
 .modal-win {
 	display: block;
 	position: relative;
@@ -5,6 +19,10 @@
 	max-width: 550px;
 	margin-left: auto;
 	margin-right: auto;
+	@include media-breakpoint-down(xs) { 
+			height: 100%; 
+			position: static;
+	}
 	ul{
 		list-style-type: none;
 		margin-bottom: 0;
@@ -133,7 +151,12 @@ button.mfp-close,
 }
 
 .modal-team{
-	max-width: 1070px;
+	@include media-breakpoint-down(xs) {
+		picture{
+			width: rem(160);
+		}
+	}
+	max-width: rem(1070px);
 	
 
 	@include media-breakpoint-up(lg) {
@@ -142,11 +165,18 @@ button.mfp-close,
 	}
 	@include media-breakpoint-up(sm) {
 
-		padding: rem(80) rem(20);
+		padding: rem(80) 20px;
 	}
 	&__small-text{
 		color: #6f7378;
 		margin-bottom: 1em;
+		@include media-breakpoint-up(xxl) {
+			padding-bottom: 0;
+		}
+		@include media-breakpoint-up(sm) {
+
+			padding-bottom: .5rem;
+		}
 	}
 
 	&__logo{
@@ -160,6 +190,13 @@ button.mfp-close,
 		font-size: $small;
 		max-width: em(350);
 		line-height: 1.2;
+		@include media-breakpoint-up(xxl) {
+			padding-bottom: 0;
+		}
+		@include media-breakpoint-up(sm) {
+
+			padding-bottom: .5rem;
+		}
 		.icon{
 			margin-right: rem(10);
 			font-size: rem(28);
@@ -168,6 +205,11 @@ button.mfp-close,
 	}
 		 &__btn{
 			 width: rem(260);
+			 @include media-breakpoint-down(xs) {
+						margin-left: auto;
+						margin-right: auto;
+						display: block;
+			 }
 		 }
 		 picture{
 			 max-width: rem(348);
@@ -175,5 +217,18 @@ button.mfp-close,
 		 }
 		 p{
 			 font-size: rem(16);
+			 @include media-breakpoint-up(xxl) {
+				 padding-bottom: 0;
+			 }
+			 @include media-breakpoint-up(sm) {
+
+				 padding-bottom: .5rem;
+				 padding-top: 0;
+			 }
+			 padding-top: 1rem;
 		 }
+}
+
+.row--sm{
+	@include roww(10);
 }

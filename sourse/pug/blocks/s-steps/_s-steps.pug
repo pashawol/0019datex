@@ -10,8 +10,8 @@ mixin s-steps()
 							span.text-primary Этапы работы 
 							| нашей команды с&nbsp;вашим бизнесом
 					.tabs2__caption
-						.tabs2__btn Средний бизнес
-						.tabs2__btn.active  Крупный бизнес
+						.tabs2__btn.active Средний бизнес
+						.tabs2__btn  Крупный бизнес
 					+e.text На&nbsp;графике показан усредненный жизненный цикл проекта, в&nbsp;каждом отдельном случае жизненный цикл может отличаться.
 					
 					+e.btn.btn-primary.d-none.d-lg-inline-block.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом в Этапах работы"   data-btn="Оставить заявку")  стать клиентом
@@ -29,7 +29,7 @@ mixin s-steps()
 							// /.accordion
 						
 						
-						+tab()
+						+tab()(class="active")
 							+accord()
 								+e.title  Заявка или звонок в&nbsp;офис для консультации
 							
@@ -39,7 +39,7 @@ mixin s-steps()
 							+accord()
 								+e.title Исполнение поставленных задач
 							
-						+tab()(class="active")
+						+tab()
 							+accord()
 								+e.title Заявка или звонок в&nbsp;офис для консультации
 							

@@ -71,9 +71,9 @@ mixin s-ways()
 						.row
 							.col-lg-6
 								+e.group-sm--left
-									.row.align-items-center
+									.row.row--sm.align-items-center
 										.col-lg-12.col-sm-6.col-auto
-											+e.title.h3.d-none.d-lg-block 1С: Управление торговлей
+											+e.title.h3.d-none.d-lg-block 1С:&nbsp;Управление торговлей
 											+e.PICTURE.img-wrap.text-center
 												// тут сделай кроп шириной   300px или чуть больше, какой там стандартный 
 												source.lazy-sourse(srcset="#" data-srcset=`img/prod.webp`  type="image/webp" media="(min-width: 576px)" ) 
@@ -82,9 +82,9 @@ mixin s-ways()
 												// тут сделай кроп шириной   180px или чуть больше, какой там стандартный
 												img.lazy.res-i(src="#" data-src="img/prod.jpg", alt="")   
 										.col
-											+e.title.h3.d-lg-none 1С: Управление торговлей
+											+e.title.h3.d-lg-none 1С:&nbsp;Управление торговлей
 											.row
-												.col-auto
+												.col-sm-auto
 													+e.foot-text
 														.icon-wrap
 															+icon('user')
@@ -92,7 +92,7 @@ mixin s-ways()
 														| 
 														span.counter-js
 													
-												.col-auto
+												.col-sm-auto
 													+e.foot-text
 														.icon-wrap
 															+icon('safe-shield-protection')
@@ -103,8 +103,8 @@ mixin s-ways()
 										.text-center
 											+e.title Заполните форму
 											+e.title-sub С&nbsp;вами свяжется специалист и&nbsp;проконсультирует по&nbsp;покупке и&nbsp;внедрению программы
-												br
-												strong.text-body &laquo;1С: Управление торговлей&raquo;
+												| 
+												strong.text-body &laquo;1С:&nbsp;Управление торговлей&raquo;
 										+b.manager-block
 											.row
 												.col-auto

@@ -28,16 +28,16 @@ mixin modal()
 	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
 		.text-center
 			+e.title--js 
-			+e.title-sub--js Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 15&nbsp;минут
+			+e.title-sub--js 
 		input.order(type="hidden")
-		+input("text","name","Введите имя")(required)
+		+input("text","name","Введите имя")
 		+input("tel","tel","Введите телефон")( required)
-		+input("email","email","Ваш e-mail")( required)
+		+input("email","email","Ваш e-mail")
 			
 		+e.btn(type="submit")
 		+polite
 	// #modal-call
-	 
+	
  
 	 
 	+b.form-wrap(id="thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form text-center" )
@@ -49,14 +49,24 @@ mixin modal()
 	+b.modal-team(id="modal-team" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg " )
 		.row
 			.col-xxl-6.col-sm-5
-				picture 
+				.row.row--sm.align-items-center
+					.col-auto.col-sm
+							picture 
+					.col.d-sm-none
+						h3 
+						+e.small-text 
+						+e.logo
+							+icon('1c')
+							| Сертифицированные партнеры 1С
 				
 			.col
-				h3 
-				+e.small-text 
-				+e.logo
-					+icon('1c')
-					| Сертифицированные партнеры 1С
+				.d-none.d-sm-block
+				
+					h3 
+					+e.small-text 
+					+e.logo
+						+icon('1c')
+						| Сертифицированные партнеры 1С
 				p   
 				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Обсудить проект"  data-btn="Обсудить проект") обсудить проект 
 	// #modal-team

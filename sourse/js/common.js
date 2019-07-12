@@ -1,8 +1,15 @@
 var $ = jQuery;
 var btnToggle = $(".toggle-menu-mobile--js"),
 	menu = $(".menu-mobile--js")
-var parent = $(".s-segments ")
+var parent = $(".s-segments  ")
 jQuery(document).ready(function ($) {
+
+	
+	parent.on('mouseenter', 'li', function () {
+		// $(this).find("picture").removeClass('active');
+		$(this).find("picture").addClass('active').parent().siblings().find("picture").removeClass('active')
+	})
+
 
 	objectFitImages();
 	// Picture element HTML5 shiv
@@ -28,7 +35,7 @@ jQuery(document).ready(function ($) {
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
-		var topH = $(".header-block").innerHeight();
+		var topH = $(".header-block").height();
 
 		function fixedMenu() {
 			var topNav = $('.top-line--js  ');
@@ -54,6 +61,12 @@ jQuery(document).ready(function ($) {
 				topNav.addClass('fixed');
 			} else {
 				topNav.removeClass('fixed');
+			}
+			
+			if ($(this).scrollTop() > (topH )) {
+				$(".top-line__tel--mob").addClass('active');
+			} else {
+				$(".top-line__tel--mob").removeClass('active');
 			}
 
 		}
@@ -83,34 +96,27 @@ jQuery(document).ready(function ($) {
 		heightses();
 
 	});
-	$(window).on("load", function () {
-		heightses();
-
-	})
+ 
 
 	heightses();
 
 	// листалка по стр
 	$(" .top-nav ul a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
-		var destinationMinus =  elementClick.replay('/','');
-		if(destinationMinus) {
+	 
+				var destination = $(elementClick).offset().top;
+				// console.log(elementClick.replace( '/'));
 
-			$('html, body').animate({
-				scrollTop: destinationMinus
-			}, 1100);
-	
-			return false;
-		}
-
+				$('html, body').animate({ scrollTop: destination }, 1000);
+				
+				return false;
+				
 	});
 
 	// slider
 	$(".section").each(function () {
 		var slider = {
-			slidesPerView: 1,
-			watchOverflow: true,
+			slidesPerView: 1, 
 			spaceBetween: 0,
 			lazy: {
 				loadPrevNext: true,
@@ -130,11 +136,6 @@ jQuery(document).ready(function ($) {
 		var swiper3 = new Swiper($(this).find('.slider--js2'), slider);
 	});
 
-	parent.on('mouseenter', 'li', function () {
-		parent.find("picture").removeClass('active');
-		$(this).find("picture").addClass('active')
-	})
-
 
 	$('.popup-with-move-anim').click(function () {
 		var th = $(this);
@@ -142,8 +143,13 @@ jQuery(document).ready(function ($) {
  
 		
 		$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title')); 
+		$(th.attr('href')).find(".form-wrap__title-sub--js").html('Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 15&nbsp;минут'); 
 		$(th.attr('href')).find(".form-wrap__btn").text(th.data('btn'));
-		// $(th.attr('href')).find(".btn-name").text(th.data('btn'));
+		if ($(this).hasClass("s-doc__btn")) {
+
+			$(th.attr('href')).find(".form-wrap__title-sub--js").html('Заполните форму, и&nbsp;мы&nbsp;пришлем на&nbsp;ваш e-mail презентацию'); 
+		}
+			// $(th.attr('href')).find(".btn-name").text(th.data('btn'));
 	})
 	$(".s-team__btn").click(function(){
 		var th = $(this);
@@ -163,11 +169,15 @@ jQuery(document).ready(function ($) {
 	})
 
 	$(".s-ways__btn ").click(function(){
-		$(this).parents(".s-ways__page").hide().removeClass("active").next().fadeIn().addClass("active")
+		$(this).parents(".s-ways__page").hide().removeClass("active").next().fadeIn().addClass("active");
+		$('html, body').animate({ scrollTop: $(".s-ways__block").offset().top - 100}, 500);
+		 
+		
 	})
 	
 	$(" .form-wrap__btn-back").click(function(){
-		$(this).parents(".s-ways__page").hide().removeClass("active").prev().fadeIn().addClass("active")
+		$(this).parents(".s-ways__page").hide().removeClass("active").prev().fadeIn().addClass("active");
+		$('html, body').animate({ scrollTop: $(".s-ways__block").offset().top - 100}, 500);
 	})
 	
 });
@@ -344,7 +354,8 @@ JSCCommon = {
 	// табы  . 
 	tabscostume: function (tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			parent.find("picture").removeClass('active');
+			// parent.find("picture").removeClass('active');
+			// setTimeout
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content2').hide().removeClass('active')
@@ -358,7 +369,7 @@ JSCCommon = {
 	// /CustomYoutubeBlock
 	inputMask: function () {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
+		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
 	},
 	customRange: function () {
 		var $d3 = $(".range-js");

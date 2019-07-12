@@ -3,6 +3,7 @@
 	padding-bottom: rem(120);
 	.section-title{
 		padding-bottom: em(15);
+		
 	}
 	&__block{
 
@@ -101,6 +102,12 @@
 			padding: rem(60) rem(50) rem(80);
 		}
 		padding: rem(60) rem(30);
+		@include media-breakpoint-up(lg) {
+
+			&--left{
+				padding-right: 0 !important;
+			}
+		}
 	}
 	&__title{
 		max-width: rem(320);
@@ -134,18 +141,22 @@
 	}
 
 	&__img-wrap{
-		margin-bottom: rem(50);
 		// max-height: rem(311);
 		img{
 			max-height: 100%;
 		}
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(290);
+			margin-bottom: rem(50);
+			margin-top: 0;
 		}
 		@include media-breakpoint-up(sm) {
-			max-width: rem(290);
+			max-width: rem(250);
+			margin-bottom: rem(70);
+			margin-top: rem(30);
 
 		}
-		max-width: rem(120);
+		max-width: rem(130);
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
@@ -171,12 +182,27 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {
-		&__group-sm--left{
-			padding-bottom: 0;
+		&__group-sm{
+			padding-top: 0;
 		}
+					&__group-sm--left{
+						padding-bottom: 0;
+						padding-top: rem(30);
+					}
+					.form-wrap__btn-back{
+						padding: 0;
+					}
 	}
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(xs) {
+
+		.h3, h3 {
+			font-size: calc(1rem + 1.03333vw);
+	}
+		&__group-sm--left{
+			padding-bottom: rem(30);
+		}
+	} 
 
 }
 .pb-0{

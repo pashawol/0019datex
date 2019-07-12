@@ -9,13 +9,13 @@ mixin s-doc()
 							|
 							span.text-body другая компания?
 						h4 Скачайте нашу презентацию и&nbsp;узнайте об индивидуальных условиях сопровождения 1С&nbsp;для вашей компании.
-					+e.btn.btn-dark(href="#" download) скачать презентацию
+					+e.btn.btn-dark.popup-with-move-anim(href="#modal-call"  data-title="Скачать презентацию" data-order="Скачать презентацию"   data-btn="Скачать презентацию") скачать презентацию
 						span 13 mb
 				.pos-s.col-lg-6.align-self-end.text-center
 					+e.PICTURE.img-wrap.text-center
 						 
 						source.lazy-sourse(srcset="#" data-srcset=`img/pdf.webp`  type="image/webp" media="(min-width: 576px)" )   
 						source.lazy-sourse(srcset="#" data-srcset=`img/pdf.jpg`  type="image/jpg"  media="(min-width: 576px)" )  
-						img.lazy.res-i(src="#" data-src="#", alt="")   
+						img.lazy.res-i(src="#" data-src="img/pdf.jpg", alt="")   
 				
 	// end s-doc

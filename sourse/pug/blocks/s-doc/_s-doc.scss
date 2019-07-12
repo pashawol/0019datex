@@ -35,6 +35,9 @@
 		box-shadow: 11px 11px 35px rgba(0, 0, 0, 0.6);
 		margin-top: rem(-21);
 		max-width: rem(436);
+		@include media-breakpoint-down(xs) {
+			display: none;
+		} 
 		@include media-breakpoint-down(md) {
 			max-width: rem(406);
 			@include a-cent(x);
@@ -47,7 +50,7 @@
 		@extend .btn-lg;
 		@include media-breakpoint-up(lg) {
 
-			width: rem(355);
+			min-width: rem(355);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

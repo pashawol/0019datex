@@ -70,13 +70,15 @@
 			position: absolute;
 			right: em(-.5);
 			text-align: right;
-			top: em(-3);
+			
+			top: em(-2.6);
 			@include rfs(115);
 			@include media-breakpoint-down(xs) {
 				font-size: rem(80);
 			} 
 			line-height: 1;
-			font-weight: 900;
+			// font-weight: 900;
+			font-weight: bold;
 			color: #ffffff;
 			// font-size: rem(100);
 		}
@@ -88,7 +90,7 @@
 		}
 		padding: rem(35) rem(20);
 		font-size: rem(16);
-		cursor: crosshair;
+		// cursor: crosshair;
 		p{
 			
 			line-height: 1.8;
@@ -139,7 +141,7 @@
 			max-width: (100% / 3);
 		}
 		@include media-breakpoint-up(sm) {
-				margin-bottom: 0;
+				margin-bottom: rem(10);
 			max-width: 50%;
 			padding-left: 10px;
 			padding-right: 10px;
@@ -153,7 +155,7 @@
 	}
 		 
 	@include media-breakpoint-up(xl) {
-		padding-bottom: rem(42);
+		padding-bottom: rem(122);
 	}
 	padding-bottom: rem(80);
 	@include media-breakpoint-up(lg) {}

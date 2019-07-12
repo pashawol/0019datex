@@ -47,6 +47,9 @@
 
 	&__btn{
 		width: rem(271);
+		@include media-breakpoint-down(md) {
+			margin-top: rem(30);
+		} 
 	}
 	.tabs2__btn{
 		&:not(.active){
@@ -129,6 +132,7 @@
  
 	.accordion{
 		border: 2px solid $secondary;
+		cursor: pointer;
 	@include mt;
 	@include media-breakpoint-up(lg) {
 

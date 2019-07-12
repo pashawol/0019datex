@@ -9,8 +9,8 @@ mixin s-start()
 			img.object-fit-js.lazy(src="#" data-src="img/s-start-bg-sm.jpg", alt="")  
 		.container
 			+b.section-title.text-center
-				h2 Поможем эффективно начать
-					span.text-primary.d-block сотрудничество 
+				h2 Поможем эффективно начать 
+					span.text-primary сотрудничество 
 			.row
 				mixin item(r,t)
 					+e.col.col-lg
@@ -24,7 +24,7 @@ mixin s-start()
 							li Подготовка КП
 							li Демо-доступ к решению
 							li Анализ текущей тех. базы и подбор оборудования
-						a.popup-with-move-anim(href="#modal-call" data-title="Заказать " data-order= ` заказать бесплатно ${t}`   data-btn="Заказать  ") заказать бесплатно
+						a.popup-with-move-anim(href="#modal-call" data-title=` ${t} ${r}` data-order= ` заказать бесплатно ${t}`   data-btn="Заказать  ") заказать бесплатно
 				+item('для среднего бизнеса','Экспресс обследование')
 				+item('для крупного бизнеса','Комплексный аудит')
 	// end s-start

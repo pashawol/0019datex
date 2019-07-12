@@ -11,8 +11,9 @@ mixin s-doc()
 						h4 Скачайте нашу презентацию и&nbsp;узнайте об индивидуальных условиях сопровождения 1С&nbsp;для вашей компании.
 					+e.btn.btn-dark.popup-with-move-anim(href="#modal-call"  data-title="Скачать презентацию" data-order="Скачать презентацию"   data-btn="Скачать презентацию") скачать презентацию
 						span 13 mb
-				.pos-s.col-lg-6.align-self-end.text-center
-					+e.PICTURE.img-wrap.text-center(class="wow fadeIn" data-wow-duration=`${dur * 1}s`  data-wow-delay=`${delay  * (1 * .2) }s`)
+				.pos-s.col-lg-6.align-self-end.text-center(class="wow fadeIn" data-wow-duration=`${dur * 1}s`  data-wow-delay=`${delay  * (1 * .2) }s`)
+					
+					+e.PICTURE.img-wrap.text-center
 						 
 						source.lazy-sourse(srcset="#" data-srcset=`img/pdf.webp`  type="image/webp"   )   
 					  

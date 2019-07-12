@@ -1,0 +1,16 @@
+mixin s-thanks()
+	// start s-thanks
+	+b.s-thanks
+		.container
+			+e.img-wrap(href='/').d-block
+				img.res-i(src="img/logo-dark.png", alt="")
+			+b.section-title.text-center
+				h1  Спасибо  за&nbsp;обращение!
+				+e.text.h4 Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 15&nbsp;минут, если вы&nbsp;оставили заявку в&nbsp;рабочее время, если нет&nbsp;&mdash; то&nbsp;свяжемся сразу как будем на&nbsp;рабочем месте.
+				+e.btn.btn-primary(href="/") 
+					+icon('long-arrow-alt-left')
+					| Вернуться  
+			div
+				+e.text.h6 Подпишитесь на&nbsp;нас в&nbsp;социальных сетях, чтобы не&nbsp;потерять:
+				+soc()
+	// end s-thanks

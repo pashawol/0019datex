@@ -23,36 +23,39 @@ mixin top-line()
 	a.top-line__tel.top-line__tel--mob.d-sm-none(href="tel:+7(846)3004840") 
 		+icon("phone-receiver")
 		| ПОЗВОНИТЬ СЕЙЧАС
-	+b.top-line--js.block-with-lazy(class="wow fadeIn" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 1}s`) 
-		+e.body
-			.container
-				.row
-					.col-sm-auto.col
-						a(href="/")
-							img(src="img/logo.png", alt="")
-					+e.col.col.d-none.d-sm-block
-						.row.justify-content-end
-							.col-auto
-								+e.tel(href="tel:+7(846)3004840")
+	+b.top-line--js.block-with-lazy
+		mixin body()
+			+e.body&attributes(attributes)
+				.container
+					.row
+						.col-sm-auto.col
+							a(href="/")
+								img(src="img/logo.png", alt="")
+						+e.col.col.d-none.d-sm-block
+							.row.justify-content-end
+								.col-auto
+									+e.tel(href="tel:+7(846)3004840")
 
-									+icon("phone-receiver")
-									| +7 (846) 300 48 40 
-							.col-auto.d-none.d-xl-block
-								+e.btn.btn-outline.popup-with-move-anim(href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок"   data-btn="Заказать звонок") заказать звонок
-					.col-sm.col-auto.order-sm-first
-						.row
-							.col
-								+e.city
-									+e.city-name
-										+icon("flag")
-										| САМАРА
-							.col-auto.order-sm-first
-								+b.toggle-menu-mobile--js
-									+b.line-wrap.hamburger
-										+e.item.line
-										+e.item.line
-										+e.item.line
-									+e.text.d-none.d-md-block  меню
+										+icon("phone-receiver")
+										| +7 (846) 300 48 40 
+								.col-auto.d-none.d-xl-block
+									+e.btn.btn-outline.popup-with-move-anim(href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок"   data-btn="Заказать звонок") заказать звонок
+						.col-sm.col-auto.order-sm-first
+							.row
+								.col
+									+e.city
+										+e.city-name
+											+icon("flag")
+											| САМАРА
+								.col-auto.order-sm-first
+									+b.toggle-menu-mobile--js
+										+b.line-wrap.hamburger
+											+e.item.line
+											+e.item.line
+											+e.item.line
+										+e.text.d-none.d-md-block  меню
+		+body()(class="wow fadeIn body-1" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 1}s`) 
+		+body()(class="body-2")
 	// end .top-line
 
 

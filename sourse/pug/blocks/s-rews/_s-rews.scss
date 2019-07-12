@@ -114,6 +114,8 @@
 		display: flex;
 		justify-content: flex-end;
 		padding-top: rem(35);
+		position: relative;
+		z-index: 10;
 		@include media-breakpoint-up(sm) {
 
 			margin-bottom: rem(-100);

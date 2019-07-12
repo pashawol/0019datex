@@ -1,14 +1,14 @@
 
 mixin s-ways()
 	// start s-ways
-	+b.SECTION.s-ways.section.block-with-lazy#s-ways&attributes(attributes)
+	+b.SECTION.s-ways.section.block-with-lazy#s-ways
 		.container
 			+b.section-title.text-center(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
 				h2 Уже знаете, что нужно внедрить 
 					| 
 					span.text-primary в ваш бизнес?
 				
-			+e.block(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  data-wow-delay=`${dur * 1}s`  )
+			+e.wrapper(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  data-wow-delay=`${dur * 1}s`  )
 				form(action="#")
 					+e.page.active
 						+e.group
@@ -55,7 +55,7 @@ mixin s-ways()
 									.col
 										h6.ttu.text-lg-left.text-center Количество лицензий:
 										.range-block
-											input.range-js(type="text" data-min='10' data-from="1" data-max='500' data-values='1,5,10,20,50,100,300,500' )
+											input.input-range-js(type="text" data-min='10' data-from="1" data-max='500' data-values='1,5,10,20,50,100,300,500' )
 											// 
 									.col-md-auto
 										h6.ttu.text-lg-left.text-center тип защиты:

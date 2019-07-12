@@ -1,0 +1,35 @@
+include ../../_assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include ../../blocks/mixin-wrap/mixin-wrap.pug
+include ../../blocks/form-wrap/form-wrap.pug
+
+include ../../blocks/header/_header.pug
+//- include ../../blocks/footer/_footer.pug 
+include ../../blocks/modal/_modal.pug
+include ../../blocks/top-line/_top-line.pug
+include ../../blocks/top-nav/_top-nav.pug 
+include ../../blocks/header-block/_header-block.pug
+include ../../blocks/s-form/_s-form.pug
+
+doctype html
+html#html-doc(lang="ru"  class="oh loading-enabled")
+	head
+		meta(charset="utf-8")
+
+		block title
+			title title
+		meta(name="description", content="Создаем имидж лидера рынка для Вашей компании с помощью упаковки. Визуальная и смысловая упаковка бизнеса по технологии собственной разработки.")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport", content="width=device-width, shrink-to-fit=no")
+		meta(property='og:image', content='path/to/image.jpg')
+		link(rel='shortcut icon',   type="image/ico",  href='img/favicon/favicon.ico')
+		
+		// Custom Browsers Color
+		meta(name='theme-color', content='#f9d749') 
+		link(rel="stylesheet", href="css/main.min.css")
+	body.prld-on
+		.main-wrapper
+			block pagecontent
+				h3 content
+		+modal()

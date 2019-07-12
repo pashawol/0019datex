@@ -1,8 +1,8 @@
 var $ = jQuery;
 var btnToggle = $(".toggle-menu-mobile--js"),
 	menu = $(".menu-mobile--js")
-	body = document.querySelector('body')
-html = document.querySelector('html')
+	body = $('body')
+html = $('html')
 var parent = $(".s-segments  ")
 
 Pace.on('start', function () {
@@ -11,14 +11,14 @@ Pace.on('start', function () {
 
 Pace.on('hide', function () {
 	 
-	body.classList.remove('prld-on');
+	body.removeClass('prld-on');
 	var wow = new WOW({
 		mobile: false
 	});
 	wow.init();
 	setTimeout(function () {
 
-		JSCCommon.mobileMenu();
+		// JSCCommon.mobileMenu();
 	}, 100); 
 });
 
@@ -47,7 +47,27 @@ jQuery(document).ready(function ($) {
 	JSCCommon.mobileMenu();
 
 	JSCCommon.inputMask();
-	JSCCommon.customRange();
+	
+	var $d3 = $(".input-range-js");
+		 
+
+	$d3.ionRangeSlider({
+		skin: "round",
+		hide_min_max: 'true',
+		// hide_from_to: 'true',
+		grid: true,         // default false (enable grid)
+		// grid_num: 100,        // default 4 (set number of grid cells)
+		step: 1,    
+		grid_snap: false   // default false (snap grid to step)
+	});
+
+	$d3.on("change", function () {
+		var $inp = $(this);
+		var from = $inp.prop("value"); // reading input value
+		// var from2 = $inp.data("from"); // reading input data-from attribute
+
+		$('.counter-js').text(from); // FROM value
+	});
 
 
 	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/psd.png);"></div>')
@@ -194,14 +214,14 @@ jQuery(document).ready(function ($) {
 
 	$(".s-ways__btn ").click(function(){
 		$(this).parents(".s-ways__page").hide().removeClass("active").next().fadeIn().addClass("active");
-		$('html, body').animate({ scrollTop: $(".s-ways__block").offset().top - 100}, 500);
+		$('html, body').animate({ scrollTop: $(".s-ways__wrapper").offset().top - 100}, 500);
 		 
 		
 	})
 	
 	$(" .form-wrap__btn-back").click(function(){
 		$(this).parents(".s-ways__page").hide().removeClass("active").prev().fadeIn().addClass("active");
-		$('html, body').animate({ scrollTop: $(".s-ways__block").offset().top - 100}, 500);
+		$('html, body').animate({ scrollTop: $(".s-ways__wrapper").offset().top - 100}, 500);
 	})
 	
 });
@@ -369,7 +389,7 @@ JSCCommon = {
 			return false;
 		});
 		$('.menu-item a').on('click', function () {
-			btnToggle.click();
+			// btnToggle.click();
 		});
  
 	},
@@ -395,39 +415,7 @@ JSCCommon = {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
 	},
-	customRange: function () {
-		var $d3 = $(".range-js");
-		var $d34 = $(".range-js");
-
-		$d3.ionRangeSlider({
-			skin: "round",
-			hide_min_max: 'true',
-			// hide_from_to: 'true',
-			grid: true,         // default false (enable grid)
-			// grid_num: 100,        // default 4 (set number of grid cells)
-			step: 1,    
-			grid_snap: false   // default false (snap grid to step)
-		});
-
-		$d34.on("change", function () {
-			var $inp = $(this);
-			var from = $inp.prop("value"); // reading input value
-			// var from2 = $inp.data("from"); // reading input data-from attribute
-
-			$('.counter-js').text(from); // FROM value
-		});
-
-		// var $d3_instance = $d3.data("ionRangeSlider");
-		// $(document).on('change  input  cut  copy  paste', '.range-result-js', function () {
-		// 	var th = $(this);
-		// 	var data = th.val();
-		// 	var min = +data;
-		// 	// th.val(data + ' т')
-		// 	$d3_instance.update({
-		// 		from: min,
-		// 	})
-		// });
-	},
+ 
 	// /inputMask
 
 };

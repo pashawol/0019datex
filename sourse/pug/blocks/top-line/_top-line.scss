@@ -26,6 +26,12 @@
   top: 0;
   min-width: 100vw;
   width: 100vw;
+  .body-1{
+    display: block;
+  }
+  .body-2{
+    display: none;
+  }
   // transform: translateY(0);
   
   @include media-breakpoint-up(lg) {
@@ -44,6 +50,12 @@
   
   &.top-ready{
     transform: translateY(-110%);
+    .body-1{
+      display: none;
+    }
+    .body-2{
+      display: block;
+    }
   }
   &.fixed-ready {
     position: fixed;
@@ -354,6 +366,7 @@
   transform: translate(0, -120%);
   @include mt(.6);
   will-change: transform;
+  color: #ffffff;
 
   &__inner {
     background-color: #171718;

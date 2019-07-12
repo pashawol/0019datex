@@ -141,8 +141,30 @@ button.mfp-close,
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
-
-
+.mfp-container{
+	padding: 0;
+}
+.modal-map{
+	// max-width: rem(1070px);
+	width: 100%;
+	max-width: 100%;
+	position: relative;
+	padding: 0 !important;
+	max-height: 100vh;
+	.mfp-close{
+		background-color: $primary;
+		// @extend .btn-primary;
+	 
+		color: transparent !important;
+		background-image: url(../img/close-white.svg) !important;
+		width: rem(60px);
+	height: rem(60px); 
+	}
+	#map{
+		@include block(192, 100);
+		max-height: 100vh;
+	}
+}
 .politic{
 	font-size: 1em;
 	font-size: 12px;

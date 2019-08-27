@@ -39,7 +39,7 @@
 	background-color: #0c0c0e; 
 	picture{
 		@include media-breakpoint-down(xs) {
-			display: none;
+			// display: none;
 		} 
 		// height: 100%;
 		// position: absolute;

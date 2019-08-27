@@ -41,6 +41,10 @@
 	.icon{
 		font-size: rem(72);
 		color: $primary;
+		@include media-breakpoint-down(xs) {
+			// margin-bottom: 0;
+			margin-bottom: rem(20);
+		} 
 	}
 	&__icon-wrap{
 		// height: 1em;
@@ -134,9 +138,9 @@
 	}
 		 
 	@include media-breakpoint-up(xl) {
-		padding-bottom: rem(95);
 		padding-top: rem(85);
 	}
+	padding-bottom: rem(105);
 	// padding-bottom: rem(80);
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

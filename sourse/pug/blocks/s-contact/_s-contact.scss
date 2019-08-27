@@ -2,8 +2,8 @@
 	background-color: $light;
 	background-size: contain;
 	&.visible{
-
 		background-image: url(../img/contact-bg.png);
+
 	}
 	@include media-breakpoint-up(lg) {
 

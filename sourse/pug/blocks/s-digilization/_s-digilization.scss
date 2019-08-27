@@ -84,10 +84,14 @@
 		@include media-breakpoint-up(lg) {
 
 		}
+		@include media-breakpoint-up(lg){
+
+			max-width: 25%;
+		}
 		@include media-breakpoint-up(sm) {
 			// text-align: left;
-				margin-bottom: 0;
-			max-width: 25%;
+				// margin-bottom: 0;
+			max-width: 50%;
 			padding-left: 10px;
 			padding-right: 10px;
 		}

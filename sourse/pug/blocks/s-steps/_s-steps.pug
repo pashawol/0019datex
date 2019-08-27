@@ -3,59 +3,62 @@ mixin s-steps()
 	+b.SECTION.s-steps.section.block-with-lazy#s-steps&attributes(attributes)
 		.tabs2.container
 			//- align-items-center
-			.row
-				+e.col.col-lg-5.order-lg-last(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
-					+b.section-title
-						h2 
-							span.text-primary Этапы работы 
-							| 
-							| нашей команды с&nbsp;вашим бизнесом
-					.tabs2__caption
-						.tabs2__btn.active Средний бизнес
-						.tabs2__btn  Крупный бизнес
-					+e.text На&nbsp;графике показан усредненный жизненный цикл проекта, в&nbsp;каждом отдельном случае жизненный цикл может отличаться.
+			+b.section-title(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
+				h2 
+					span.text-primary Этапы работы 
+					| 
+					| с&nbsp;вашим бизнесом
+			+e.text(class="wow fadeInUp" data-wow-duration=`${dur * 2}s`   ) Мы&nbsp;относимся к&nbsp;каждому проекту индивидуально и&nbsp;формируем проектную команду исключительно из&nbsp;опытных специалистов.
+			.tabs2__caption(class="wow fadeInUp" data-wow-duration=`${dur * 3}s`   )
+				.tabs2__btn.active Средний бизнес
+				.tabs2__btn  Крупный бизнес
+			 
+			.tabs2__wrap(class="wow fadeInUp" data-wow-duration=`${dur * 4}s`   )
+				mixin tab()
+					.tabs2__content2&attributes(attributes)
+						.row
+							block 
+					// /.tabs2__content2
+				mixin accord()
+					+e.col&attributes(attributes)
+						+b.accordion--js
+							+e.head
+								block
+							+e.body На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
+					// /.accordion
+				
+				
+				+tab()(class="active")
+					+accord()(class="col-md")
+						+e.title
+							span  Заявка или звонок  
 					
-					+e.btn.btn-primary.d-none.d-lg-inline-block.popup-with-move-anim(href="#modal-call"  data-title="Cтать клиентом" data-order="стать клиентом в Этапах работы"   data-btn="Cтать клиентом")  стать клиентом
-				.col
-					.tabs2__wrap
-						mixin tab()
-							.tabs2__content2&attributes(attributes)
-								block 
-							// /.tabs2__content2
-						mixin accord()
-							+b.accordion--js(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
-								+e.head
-									block
-								+e.body На графике показан усредненный жизненный цикл проекта, в каждом отдельном случае жизненный цикл может отличаться.
-							// /.accordion
+					+accord()(class="col-md")
+						+e.title
+							span  Выезд специалиста к&nbsp;вам  
+					
+					+accord()(class="col-md")
+						+e.title
+							span Исполнение поставленных задач
+					
+				+tab()
+					+accord()(class="col-md-6")
+						+e.title
+							span Заявка или звонок 
+					
+					+accord()(class="col-md-6")
+						+e.title
+							span Выезд проектной команды
+					
+					+accord()(class="col-md-6")
+						+e.title
+							span Проведение проектного обследования (опционально)
+					
+					+accord()(class="col-md-6")
+						+e.title
+							span Согласование бюджета и&nbsp;сроков
+				 
 						
-						
-						+tab()(class="active")
-							+accord()
-								+e.title  Заявка или звонок в&nbsp;офис для консультации
-							
-							+accord()
-								+e.title  Выезд специалиста к&nbsp;вам в&nbsp;офис и&nbsp;согласование перечня необходимых продуктов и&nbsp;работ
-							
-							+accord()
-								+e.title Исполнение поставленных задач
-							
-						+tab()
-							+accord()
-								+e.title Заявка или звонок в&nbsp;офис для консультации
-							
-							+accord()
-								+e.title Выезд проектной команды
-							
-							+accord()
-								+e.title Проведение проектного обследования (опционально)
-							
-							+accord()
-								+e.title Согласование бюджета и&nbsp;сроков
-							
-							+accord()
-								+e.title Исполнение проекта
-							
-			.d-lg-none.text-center
+			.text-center(class="wow fadeInUp" data-wow-duration=`${dur * 5}s`   )
 				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом в Этапах работы"   data-btn="Оставить заявку")  стать клиентом
 	// end s-steps

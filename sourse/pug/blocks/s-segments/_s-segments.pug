@@ -3,49 +3,44 @@ mixin s-segments()
 	+b.SECTION.s-segments.section.block-with-lazy#s-segments&attributes(attributes)
 		 
 		.pos-st.tabs.container
-			//- align-items-center
-			.pos-st.row
-				+e.col.col-lg-5.order-lg-last(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )
-					+b.section-title
-						h2 
-							span.text-primary Сегменты, 
-							| 
-							| в&nbsp;которых мы 	работаем
-					.tabs__caption
-						.tabs__btn.active Средний бизнес
-						.tabs__btn Крупный бизнес
-					+e.text Не&nbsp;важной в&nbsp;какой вы&nbsp;сфере, мы&nbsp;погружаемся в&nbsp;ваши процессы, добиваемся долгосрочных результатов и&nbsp;несем за&nbsp;них ответственность на&nbsp;протяжении жизненного цикла проекта.
-					
-					+e.btn.btn-primary.d-none.d-lg-inline-block.popup-with-move-anim(href="#modal-call"  data-title="Cтать клиентом" data-order="Cтать клиентом"   data-btn="Cтать клиентом")  стать клиентом
-				.pos-st.col
-					.tabs__wrap
-						mixin tab()
-							.pos-st.tabs__content2&attributes(attributes)
-								mixin pic(data)
-									picture&attributes(attributes)
-										source.lazy-sourse(srcset="#" type="image/webp"   data-srcset=`img/s-segment-${data}.webp` media="(min-width: 576px)")
-										source.lazy-sourse(srcset="#" type="image/jpg"   data-srcset=`img/s-segment-${data}.jpg` media="(min-width: 576px)")
-										// тут сделай кроп шириной   576px или чуть больше, какой там стандартный 
-										source.lazy-sourse(srcset="#" type="image/webp"   data-srcset=`img/s-segment-${data}.webp` )
-										img.object-fit-js.lazy(src="#" data-src=`img/s-segment-${data}.jpg`, alt="")
-								+pic("bg")(class="active")
-								+pic("bg2")
-								+pic("bg") 
-								+pic("bg2") 
-								+pic("bg") 
-								+pic("bg2") 
-								ul
-									mixin col(t,data,i)
-										li(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (i * .5) }s`  )
-											strong=t
-									+col("розничные магазины","bg",'1')(class="active"  )
-									+col("автосервисы","bg2",'2')
-									+col("сферы услуг","bg",'3') 
-									+col("тсж, жкх","bg2",'4') 
-									+col("фитнес клубы","bg",'5') 
-									+col("торговые организации","bg2",'6') 
-						+tab()(class="active")
-						+tab()
-			.d-lg-none.text-center
+			+b.section-title
+				h2 
+					span.text-primary Сегменты, 
+					| 
+					| в&nbsp;которых мы 	работаем
+			+e.text(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  ) Не&nbsp;важно в&nbsp;какой вы&nbsp;сфере, мы&nbsp;погружаемся в&nbsp;ваши процессы, добиваемся долгосрочных результатов и&nbsp;несем за&nbsp;них ответственность на&nbsp;протяжении жизненного цикла проекта.
+			.tabs__caption
+				.tabs__btn.active Средний бизнес
+				.tabs__btn Крупный бизнес 
+			.tabs__wrap
+				mixin tab()
+					.pos-st.tabs__content2(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (i * .5) }s`)&attributes(attributes)
+						mixin pic(data)
+							//- picture&attributes(attributes)
+							//- 	source.lazy-sourse(srcset="#" type="image/webp"   data-srcset=`img/s-segment-${data}.webp` media="(min-width: 576px)")
+							//- 	source.lazy-sourse(srcset="#" type="image/jpg"   data-srcset=`img/s-segment-${data}.jpg` media="(min-width: 576px)")
+							//- 	// тут сделай кроп шириной   576px или чуть больше, какой там стандартный 
+							//- 	source.lazy-sourse(srcset="#" type="image/webp"   data-srcset=`img/s-segment-${data}.webp` )
+							//- 	img.object-fit-js.lazy(src="#" data-src=`img/s-segment-${data}.jpg`, alt="")
+						+pic("bg")(class="active")
+						+pic("bg2")
+						+pic("bg") 
+						+pic("bg2") 
+						+pic("bg") 
+						+pic("bg2") 
+						ul
+							mixin col(t)
+								li(  )
+									strong=t
+							+col("Розничные магазины","bg",'1')
+							+col("Автотранспорт и транспортная компания","bg2",'2')
+							+col("Автосервисы","bg2",'2')
+							+col("Розничные сети, аптечные сети","bg2",'2')
+							+col("Сферы услуг","bg",'3')  
+							+col("Торговые организации","bg2",'6') 
+				+tab()(class="active")
+				+tab()
+			.text-center
 				+e.btn.btn-primary.popup-with-move-anim(href="#modal-call"  data-title="Оставить заявку" data-order="стать клиентом"   data-btn="Оставить заявку")  стать клиентом
+		
 	// end s-segments

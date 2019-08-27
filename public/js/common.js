@@ -5,26 +5,26 @@ var btnToggle = $(".toggle-menu-mobile--js"),
 html = $('html')
 var parent = $(".s-segments  ")
 
-Pace.on('start', function () {
-	document.documentElement.className += " loading-proccessing";
-});
+// Pace.on('start', function () {
+// 	document.documentElement.className += " loading-proccessing";
+// });
 
-Pace.on('hide', function () {
+// Pace.on('hide', function () {
 	 
-	body.removeClass('prld-on');
+// 	body.removeClass('prld-on');
+// });
+
+jQuery(document).ready(function ($) {
 	var wow = new WOW({
 		mobile: false
 	});
 	wow.init();
 	setTimeout(function () {
-
+	
 		// JSCCommon.mobileMenu();
 	}, 100); 
-});
 
-jQuery(document).ready(function ($) {
-
-	
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Landing2.0.jpg);"></div>')
 	parent.on('mouseenter', 'li', function () {
 		// $(".s-segments picture  ").html($(this).find("picture").html)
 		// $(this).find("picture").removeClass('active');

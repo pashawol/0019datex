@@ -1,6 +1,6 @@
 .s-digilization {
 	// @extend .s-competences; 
-	background-color: $light;
+	// background-color: $light;
 
 	.icon{
 		font-size: rem(72);
@@ -13,26 +13,22 @@
 		text-transform: uppercase;
 		font-weight: 900;
 		@include media-breakpoint-up(sm){
-			margin-left: 0;
-			margin-right: 0;
+			// margin-left: 0;
+			// margin-right: 0;
 		}
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.section-title{
 		// padding-bottom: 0;
-		margin-bottom: 0;
-		@include media-breakpoint-up(lg) {
-
-		 
-			text-align: left;
-		}
+		margin-bottom: 0; 
 		text-align: center;
+		padding-bottom: em(20);
 		h2{
 			// @extend .col-lg-auto;
 			padding-bottom: 1.2rem;
 			span{
-				display: block;
+				// display: block;
 			}
 		}
 		.h4{
@@ -89,9 +85,9 @@
 
 		}
 		@include media-breakpoint-up(sm) {
-			text-align: left;
+			// text-align: left;
 				margin-bottom: 0;
-			max-width: 50%;
+			max-width: 25%;
 			padding-left: 10px;
 			padding-right: 10px;
 		}
@@ -106,8 +102,8 @@
 	}
 		 
 	@include media-breakpoint-up(xl) {
-		padding-bottom: rem(42);
-		padding-top: rem(125);
+		padding-bottom: rem(22);
+		padding-top: rem(85);
 	}
 	padding-bottom: rem(80);
 	@include media-breakpoint-up(xl) {}

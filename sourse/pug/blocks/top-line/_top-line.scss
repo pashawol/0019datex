@@ -146,6 +146,7 @@
   }
 
   img {
+    height: auto;
     @include media-breakpoint-up(sm) {
 
       max-width: rem(162);
@@ -457,7 +458,10 @@
   margin-right: auto;
   max-width: em(1030);
   list-style-type: none;
-  @include rfs(rem(48));
+  @include media-breakpoint-up(lg) {
+    font-size: rem(48);
+  }
+  @include rfs(rem(24));
 
   &-item {
     @include media-breakpoint-up(sm) {

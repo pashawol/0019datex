@@ -1,4 +1,8 @@
 .s-ways {
+	.counter-js,
+	.protect_text{
+		padding-left: rem(3);
+	}
 	background-color: $light;
 	padding-bottom: rem(120);
 	.section-title{
@@ -149,6 +153,8 @@
 		// max-height: rem(311);
 		img{
 			max-height: 100%;
+			max-width: 100%;
+			height: auto;
 		}
 		@include media-breakpoint-up(xxl) {
 			max-width: rem(290);

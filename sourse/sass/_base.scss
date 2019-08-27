@@ -29,7 +29,7 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center -89px ;
+	background-position: center 200px ;
 	opacity: 0;
 	// opacity: 0.7;
 } 
@@ -95,11 +95,15 @@ body {
 	@include media-breakpoint-up(sm) {
 		padding-top: rem(105);
 	}
-	padding-top: rem(80);
+	padding-top: rem(100);
 }
 
 .section-title {
 	@extend .h2;
+	@include media-breakpoint-up(sm) {
+
+		padding-bottom: em(28);
+	}
 	padding-bottom: em(28);
 	span{
 		display: inline-block;
@@ -406,6 +410,14 @@ textarea {
 .tabs {
 	&__btn {
 		font-weight: 500;
+		&:not(.active){
+
+			border-color:  #cfd2d5;
+			color: #6f7378;
+		}
+		&.active{
+			color: $primary;
+		}
 		&:hover {
 			cursor: pointer;
 		}

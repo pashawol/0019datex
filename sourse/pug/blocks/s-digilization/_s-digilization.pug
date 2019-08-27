@@ -2,31 +2,30 @@ mixin s-digilization()
 	// start s-digilization
 	+b.SECTION.s-digilization.section.block-with-lazy#s-digilization&attributes(attributes)
 		.container
-			.row
-				.col
-					+b.section-title(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
-						h2 
-							span.text-primary Цифровизация 
-							| бизнес-процессов  в&nbsp;компании 
-						.h4 Результат нашей работы.
-				.col-lg-6
-					+e.slider.slider--js.swiper-container
-						.swiper-wrapper
-							mixin item(i,  or)
-								+e.slide.swiper-slide(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (i * 1) }s`  )
-									+e.item 
-										+e.icon-wrap
-											+icon("s-digilization-" + i)
-										h6= or
-										block 
-								// /+e.slide.swiper-slide
-							+item('1','увеличение продаж')
-								p Вы&nbsp;сможете отслеживать маркетинговые показатели. Перестанете сливать бюджет там, где это не&nbsp;выгодно и&nbsp;наоборот, увеличите бюджет в&nbsp;рентабельные каналы.
-							+item('2','эффективность сотрудников')
-								p Вы&nbsp;сможете своевременно работать с&nbsp;персоналом, а&nbsp;ваши сотрудники буудт соблюдать KPI.
-							+item('3','гибкость продукта')
-								p Вы&nbsp;увидите слабые и&nbsp;сильные стороны продукта. Слабые будете усиливать, а&nbsp;на&nbsp;сильных делать акцент.
-							+item('4','контроль всех процессов')
-								p Вы&nbsp;сможете следить за&nbsp;бизнесом не&nbsp;вливаясь в&nbsp;каждый процесс потому, что все жизненно-важные показатели будут на&nbsp;виду.
-					+control-sl()
+			+b.section-title(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`   )
+				h2 
+					span.text-primary Цифровизация  
+					| 
+					| бизнес-процессов  в&nbsp;компании 
+				.h4 Результат нашей работы.
+			 
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin item(i,  or)
+						+e.slide.swiper-slide(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (i * 1) }s`  )
+							+e.item 
+								+e.icon-wrap
+									+icon("s-digilization-" + i)
+								h6= or
+								block 
+						// /+e.slide.swiper-slide
+					+item('1','увеличение продаж')
+						p Вы&nbsp;сможете отслеживать маркетинговые показатели. Перестанете сливать бюджет там, где это не&nbsp;выгодно и&nbsp;наоборот, увеличите бюджет в&nbsp;рентабельные каналы.
+					+item('2','эффективность сотрудников')
+						p Вы&nbsp;сможете своевременно работать с&nbsp;персоналом, а&nbsp;ваши сотрудники буудт соблюдать KPI.
+					+item('3','гибкость продукта')
+						p Вы&nbsp;увидите слабые и&nbsp;сильные стороны продукта. Слабые будете усиливать, а&nbsp;на&nbsp;сильных делать акцент.
+					+item('4','контроль всех процессов')
+						p Вы&nbsp;сможете следить за&nbsp;бизнесом не&nbsp;вливаясь в&nbsp;каждый процесс потому, что все жизненно-важные показатели будут на&nbsp;виду.
+			+control-sl()
 	// end s-digilization

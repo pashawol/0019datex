@@ -8,23 +8,26 @@ mixin s-start()
 			source.lazy-sourse(srcset="#" type="image/webp"    data-srcset="img/s-start-bg-sm.webp"  )
 			img.object-fit-js.lazy(src="#" data-src="img/s-start-bg-sm.jpg", alt="")  
 		.container
-			+b.section-title.text-center(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )
-				h2 Поможем эффективно начать 
-					span.text-primary сотрудничество 
 			.row
 				mixin item(r,t)
 					+e.col.col-lg(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )
-						h6= r
-						h3= t
-						strong бесплатно
-						ul
-							li Выезд специалиста-аналитика
-							li Демонстрация решения
-							li Первичный анализ
-							li Подготовка КП
-							li Демо-доступ к решению
-							li Анализ текущей тех. базы и подбор оборудования
-						a.popup-with-move-anim(href="#modal-call" data-title=` ${t} ${r}` data-order= ` заказать бесплатно ${t}`   data-btn="Заказать  ") заказать бесплатно
+						+e.inner
+							+b.section-title.text-center(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )
+								h2 
+									span.text-primary Бесплатный старт
+									|
+									|  для вашего бизнеса
+							//- h6= r
+							//- h3= t
+							//- strong бесплатно
+							ul
+								li Выезд специалиста-аналитика
+								li Демонстрация решения
+								li Анализ текущей тех. базы и подбор оборудования
+								li Демо-доступ к решению
+								li Установка программ
+								li Первоначальное обучение и заполнение базы
+							a.popup-with-move-anim(href="#modal-call" data-title=` ${t} ${r}` data-order= ` заказать бесплатно ${t}`   data-btn="Заказать  ") заказать бесплатно
 				+item('для среднего бизнеса','Экспресс обследование')
-				+item('для крупного бизнеса','Комплексный аудит')
+				//- +item('для крупного бизнеса','Комплексный аудит')
 	// end s-start

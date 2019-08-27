@@ -1,44 +1,40 @@
 .s-steps {
-
-
-	&__col{
-		background-color: #ffffff;
-		z-index: 3;
-		@include media-breakpoint-up(lg) {
-
-			padding-left: 0;
-			transform: translateX(-15px);
-			padding-top: rem(110);
-			// margin-right: -15px;
-			padding-right: 0;
-		} 
-		// margin-left: rem(-10);
+	background-color: $light;
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(90);
 	}
+	// &__col{
+	// 	background-color: #ffffff;
+	// 	z-index: 3;
+	// 	@include media-breakpoint-up(lg) {
+
+	// 		padding-left: 0;
+	// 		transform: translateX(-15px);
+	// 		padding-top: rem(110 / 4);
+	// 		// margin-right: -15px;
+	// 		padding-right: 0;
+	// 	} 
+	// 	// margin-left: rem(-10);
+	// }
 	.section-title{
-		padding-bottom: rem(32);
+		// padding-bottom: rem(22);
+		h2{
+			// padding-bottom: 0;
+		}
 		@include media-breakpoint-up(lg) {
-			text-align: left;
-			padding-bottom: rem(19);
+			// text-align: left;
+			padding-bottom: rem(9);
 		}
 		text-align: center;
 	}
-	@include media-breakpoint-up(xl) {
-		padding-top: rem(120);
-	}
+ 
 	&__text{
-		@include media-breakpoint-up(sm) {
-
-			font-size: rem(18);
-		}
+	@extend .h5;
 		line-height: 1.8;
-		@include media-breakpoint-up(lg) {
-			text-align: left;
-			margin-bottom: rem(30);
-			margin-left: 0;
-			margin-right: 0;
-			max-width: rem(510);
-		}
-		max-width: rem(670);
+		@include media-breakpoint-up(lg) { 
+			margin-bottom: rem(30); 
+			max-width: rem(890);
+		} 
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: rem(38);
@@ -47,32 +43,34 @@
 
 	&__btn{
 		width: rem(271);
+		margin-top: rem(30);
 		@include media-breakpoint-down(md) {
-			margin-top: rem(30);
 		} 
+	}
+	.tabs2{
+		&__caption{
+			margin-bottom: rem(50);
+		}
 	}
 	.tabs2__btn{
 		&:not(.active){
 
-			border-color: #cfd2d5;
+			border-color:  #cfd2d5;
 			color: #6f7378;
 		}
 		&.active{
 			color: $primary;
 		}
 	}
-	.tabs2__caption{
-		@include media-breakpoint-up(lg) {
-			max-width: none;
-	}
-	margin-left: auto;
-	margin-right: auto;
-	max-width: rem(546);
-
-	}
+ 
 	// padding-bottom: 238px;
 	padding-bottom: rem(96px);
-		 
+		&__col{
+			margin-bottom: rem(20);
+		} 
+		.row{
+			justify-content: center;
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -99,80 +97,100 @@
 	@include media-breakpoint-up(lg) {
 
 		.tabs2{
-			&__content2,
-			&__content {
-				width: 100%;
+			&__wrap{
+				z-index: 200;
 				position: relative;
-				background-color: #ffffff;
-				@include mt;
-				display: block !important;
-				&.active {
-					// display: block;
-					opacity: 1;
-					z-index: 2;
-				}
-				&:not(.active){
-					opacity: 0;
-					z-index: -1;
-				}
-				&:nth-child(1){
-					position: absolute;
-					@include a-cent(y);
-					left: 0;
-				}
-				// display: none;
 			}
+			// &__content2{
+				
+			// 	display: flex;
+			// 	flex-wrap: wrap;
+			// 	margin-left: -15px;
+			// 	margin-right: -15px;
+			// }
+			// .accordion{
+			// 	flex-grow: 1;
+			// 	margin-left: 15px;
+			// 	margin-right: 15px;
+			// 	max-width: calc(100%/ 3 - 30px);
+			// }
 		}
-	}
-		.tabs__content2{
-			
-			counter-reset: num;
-		}
-	}
- 
-	.accordion{
-		border: 2px solid $secondary;
-		cursor: pointer;
-	@include mt;
-	@include media-breakpoint-up(lg) {
 
-		max-width: rem(526);
+		// 	&__content2,
+		// 	&__content {
+		// 		width: 100%;
+		// 		position: relative;
+		// 		background-color: #ffffff;
+		// 		@include mt;
+		// 		display: block !important;
+		// 		&.active {
+		// 			// display: block;
+		// 			opacity: 1;
+		// 			z-index: 2;
+		// 		}
+		// 		&:not(.active){
+		// 			opacity: 0;
+		// 			z-index: -1;
+		// 		}
+		// 		&:nth-child(1){
+		// 			position: absolute;
+		// 			@include a-cent(y);
+		// 			left: 0;
+		// 		}
+		// 		// display: none;
+		// 	}
+		// }
 	}
-	margin-bottom: rem(20);
-	padding-bottom: rem(10);
+	.row{
+		@include roww(10);
+		z-index: 200;
+	}
+}
+
+.accordion{
+	// border: 2px solid $secondary;
+	background-color: #ffffff;
+	cursor: pointer;
+	height: 100%;
+	@include mt;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	@include media-breakpoint-up(lg) {
+		
+		// max-width: rem(526);
+	}
+
+	padding-bottom: rem(20);
 	&.active{
-		border-color: #f2f6fa;
-		background-color: #f2f6fa;
+		// border-color: #f2f6fa;
+		// background-color: #f2f6fa;
+
+		z-index: 200;
 	}
 	&__head{
 		font-weight: bold;
 		position: relative;
-		padding: rem(28) rem(32)  ;
-		padding-bottom: rem(14);
+		padding: rem(30) rem(32)  rem(10) ;
+		// padding-bottom: rem(14);
 		position: relative;
-		&::before {
-			content: counter(num)' ЭТАП';
-			counter-increment: num;
-			display: inline-block;
-			font-size: $small;
-			font-weight: 900;
-			text-transform: uppercase;
-			// Text style for "2,  этап"
-			letter-spacing: rem(2.52px);
-			background-color: $primary;
-			color: #ffffff;
-			padding: rem(3) rem(7);
-			margin-bottom: rem(15);
-		}
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+		
 		&::after{
 			content: '';
 			position: absolute;
-			right: rem(28);
+			right: rem(25);
 			width: rem(60px);
 			height: rem(60px);
 			border: 2px solid #cfd2d5;
 			border-radius: 50%;
 			@include a-cent(y);
+			// position: absolute;
+			// top: rem(40);
 			cursor: pointer;
 			@include mt;
 			margin-top: rem(5);
@@ -192,13 +210,51 @@
 	&__body{
 		display: none;
 		padding: rem(0) rem(32) rem(9);
+		// position: absolute;
+		// top: 100%;
+		// background-color: #ffffff;
+		// left: 0;
+		// width: 100%;
 	}
 	&__title{
+		span{
+			display: block;
+		}
+		&::before {
+			content: '';
+			content: counter(num)' ЭТАП';
+			counter-increment: num ;
+			display: inline-block;
+			font-size: $small;
+			font-weight: 900;
+			text-transform: uppercase;
+			// Text style for "2,  этап"
+			letter-spacing: rem(2.52px);
+			background-color: $primary;
+			color: #ffffff;
+			padding: rem(3) rem(7);
+			margin-bottom: rem(15);
+			width: auto;
+			flex-shrink: 0;
+		}
 		@include media-breakpoint-up(lg) {
-			padding-right: 0;
-			max-width: rem(380);
+			padding-right: rem(70);
+			// max-width: rem(280);
 		}
 		padding-right: rem(70);
 		line-height: 1.4;
+	}
+}
+
+.tabs2__content2 {
+
+	counter-reset: num;
+
+	.accordion {
+		&__head {
+			&::before {
+				// content: counter(num)' ЭТАП';
+			}
+		}
 	}
 }

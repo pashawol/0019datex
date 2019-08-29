@@ -71,6 +71,15 @@
 		.row{
 			justify-content: center;
 		}
+		.tabs2__content2:nth-child(1){
+			.s-steps__col{
+				@include media-breakpoint-up(md) {
+
+					flex: 0 0 (100% / 3);
+					max-width: (100% / 3);
+				}
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

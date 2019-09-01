@@ -205,6 +205,10 @@ jQuery(document).ready(function ($) {
 		breakpointsInverse: true,
 		speed: 400,
 		loop: true,
+		pagination: {
+			el: $(this).find('.swiper-pagination'),
+			clickable: true,
+		},
 		navigation: {
 			nextEl: ('.s-catalog-slider__slider-next'),
 			prevEl: ('.s-catalog-slider__slider-prev'),

@@ -11,6 +11,9 @@
 	&__slider-wrapper{
 		position: relative;
 	}
+	.swiper-pagination{
+		margin-top: rem(20);
+	}
 	.cat-slider-nav{
 		position: absolute;
 		@include a-cent(y);

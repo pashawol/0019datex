@@ -735,3 +735,21 @@ a{
 		
 }
 }
+
+.page-top-block{
+	margin-top: 66px;
+	@include media-breakpoint-up(xxl) {
+		margin-top: 153px;
+	}
+	@include media-breakpoint-up(md) {
+		margin-top: 90px;
+	}
+	@include media-breakpoint-up(sm) {
+		margin-top: 85px;
+	}
+}
+
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(xs) {}

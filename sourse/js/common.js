@@ -157,6 +157,19 @@ jQuery(document).ready(function ($) {
 				
 	});
 
+
+	$(" .toggle-menu-mobile--js").click(function () {
+		$(".top-line-search").toggleClass("search-disable")
+	});
+	
+	
+	$(" .menu-item-has-children").click(function (e) {
+		e.preventDefault();
+		$(".top-line-search").toggleClass("search-disable");
+		$(".top-submenu--js").slideToggle(1000);
+		$(this).toggleClass("active")
+	});
+
 	// slider
 	$(".section").each(function () {
 		var slider = {

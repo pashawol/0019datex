@@ -70,24 +70,25 @@ mixin soc()
 		+item()
 			+icon("youtube")
 		
-//- mixin mnu()
-//- 	- var nav= { "Наши работы":"#","Цены":"#","Калькулятор":"#","Акции":"#" ,"Заказать":"#"}
-//- 	ul.menu
-//- 		li.menu-item.menu-item-has-children
-//- 			a(href="#") О нас
-//- 			ul.sub-menu
-//- 				li.menu-item: a(href="#") Строительство загородных домов
-//- 				li.menu-item: a(href="#") Отделка загородных домов
-//- 				li.menu-item: a(href="#") Покраска деревянных домов
-//- 				li.menu-item: a(href="#") Штукатурные фасады загородных домов
-//- 		each linkPatch, linkName in nav
-//- 			li.menu-item: a(href="#")= linkName
-
 mixin mnu()
-	- var nav= {"Продукция ":"#","Услуги  ":"#","Подбор септика   ":"#","Акции ":"#"," О компании  ":"#"," Доставка и оплата ":"#"," Клиентам  ":"#"," Наши работы   ":"#","Контакты ":"#"}
-	+e.UL.nav
+	- var nav= { "Проектное направление":"#","О компании":"#","Контакты":"#"}
+	ul.menu
+		li.menu-item.menu-item-has-children
+			a(href="#") Программы «1С»
+			+icon("top-nav-arrow")
+			ul.sub-menu
+				//- li.menu-item: a(href="#") Строительство загородных домов
+				//- li.menu-item: a(href="#") Отделка загородных домов
+				//- li.menu-item: a(href="#") Покраска деревянных домов
+				//- li.menu-item: a(href="#") Штукатурные фасады загородных домов
 		each linkPatch, linkName in nav
-			+e.LI.item: +e.A.link(href= linkPatch)= linkName
+			li.menu-item: a(href="#")= linkName
+
+//- mixin mnu()
+//- 	- var nav= {"Продукция ":"#","Услуги  ":"#","Подбор септика   ":"#","Акции ":"#"," О компании  ":"#"," Доставка и оплата ":"#"," Клиентам  ":"#"," Наши работы   ":"#","Контакты ":"#"}
+//- 	+e.UL.nav
+//- 		each linkPatch, linkName in nav
+//- 			+e.LI.item: +e.A.link(href= linkPatch)= linkName
 
 
 mixin arrow()
@@ -99,3 +100,67 @@ mixin control-sl()
 		+arrow()
 		.swiper-pagination
 		
+
+
+mixin mobile-menu()
+	// start mobile-menu
+	+b.SECTION.mobile-menu.section.block-with-lazy#mobile-menu&attributes(attributes)
+		.container
+			+e.A.main-item(href="#")
+				+e.logo-wrapper
+					img(src="img/1C-logo.png" alt="")
+				+e.item-title Интернет-магазин «1С»
+			ul
+				mixin mob-item(i, t)
+					li
+						+e.A.item(href="#")
+							+e.svg-wrapper
+								+icon(`mob-m${i}`)
+							+e.item-title
+								if t
+									span=t
+								else
+									block
+				+mob-item("1","Бухгалтерский учет")
+				+mob-item("2","Торговый и складской учет")
+				+mob-item("3","Розница")
+				+mob-item("4","Расчет зарплаты и кадры")
+				+mob-item("5","Общепит и гостиничный бизнес")
+				+mob-item("6","Медицина")
+				+mob-item("7","Автотранспорт и логистика")
+				+mob-item("8","Дополнительные лицензии")
+				+mob-item("9","Документооборот")
+				+mob-item("10","Комплексная автоматизация")
+				+mob-item("11","Серверные лицензии")
+				+mob-item("12")
+					span Производственные предприятия и&nbsp;ERP
+				+mob-item("13","ИТС")
+				+mob-item("14","Отраслевые решения")
+				+mob-item("15","CRM")
+	// end mobile-menu
+
+mixin pic( i,exp="jpg", bg, lazy="lazy", media='576px')
+	- const smpath2 = "2x"
+	- const smpath1 = "1x"
+	mixin src(i, exp, path , lazy, source, bg)
+		-const url= `img/@${path}/${i}.${exp}`
+		-const ifLazy = (lazy== "lazy")
+		-const src = ( ifLazy ? "#" : url)
+		-const data = (ifLazy ?  url  : null)
+
+		if source
+			source( srcset=src data-srcset= data  type=`image/${exp}`   )&attributes(attributes)
+		else
+			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+	
+	// picture
+	picture( class= lazy)&attributes(attributes) 
+			if media !== 0 
+				each val in ["webp",exp] 
+					each val2 in [smpath2,smpath1] 
+						+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
+			else 
+				+src(i,'webp',smpath2+`/webp`,lazy,"source")
+				// /webp images  
+			+src(i, exp,smpath2, lazy,"",bg) 
+	// /picture

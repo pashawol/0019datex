@@ -140,10 +140,15 @@ jQuery(document).ready(function ($) {
 		heightses();
 
 	});
- 
-
+	
+	
 	heightses();
 
+
+	// $(".page-top-block").css("margin-top": $('.top-line').height());
+		
+
+	
 	// листалка по стр
 	$(" .menu-mobile ul a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
@@ -192,6 +197,29 @@ jQuery(document).ready(function ($) {
 		var swiper2 = new Swiper($(this).find('.slider--js'), slider);
 		var swiper3 = new Swiper($(this).find('.slider--js2'), slider);
 	});
+
+
+	// $(".section").each(function () {
+	// 	var slider = {
+	// 		slidesPerView: 1, 
+	// 		spaceBetween: 0,
+	// 		lazy: {
+	// 			loadPrevNext: true,
+	// 		},
+	// 		pagination: {
+	// 			el: $(this).find('.swiper-pagination'),
+	// 			clickable: true,
+	// 		},
+
+	// 		navigation: {
+	// 			nextEl: $(this).find('.swiper-button-next'),
+	// 			prevEl: $(this).find('.swiper-button-prev'),
+	// 		},
+	// 		loop: true,
+	// 	}
+	// 	var swiper2 = new Swiper($(this).find('#catalog-slider--js'), slider);
+	// 	// var swiper3 = new Swiper($(this).find('.slider--js2'), slider);
+	// });
 
 
 	$('.popup-with-move-anim').click(function () {
@@ -243,93 +271,93 @@ JSCCommon = {
 
 	// функции для запуска lazy
 	// функции для запуска lazy
-	LazyFunction: function () {
-		// Для лэзи загрузки 
+	// LazyFunction: function () {
+	// 	// Для лэзи загрузки 
 
-		document.addEventListener("DOMContentLoaded", function () {
-			var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-			var active = false;
+	// 	document.addEventListener("DOMContentLoaded", function () {
+	// 		var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+	// 		var active = false;
 
-			const lazyLoad = function () {
-				if (active === false) {
-					active = true;
+	// 		const lazyLoad = function () {
+	// 			if (active === false) {
+	// 				active = true;
 
-					setTimeout(function () {
-						lazyImages.forEach(function (lazyImage) {
-							var imgWrapper = lazyImage.parentNode.clientHeight + 500;
-							if (((lazyImage.getBoundingClientRect().top - imgWrapper) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + imgWrapper) >= 0) && getComputedStyle(lazyImage).display !== "none") {
-								lazyImage.src = lazyImage.dataset.src;
-								// lazyImage.srcset = lazyImage.dataset.srcset;
-								lazyImage.classList.remove("lazy");
+	// 				setTimeout(function () {
+	// 					lazyImages.forEach(function (lazyImage) {
+	// 						var imgWrapper = lazyImage.parentNode.clientHeight + 500;
+	// 						if (((lazyImage.getBoundingClientRect().top - imgWrapper) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + imgWrapper) >= 0) && getComputedStyle(lazyImage).display !== "none") {
+	// 							lazyImage.src = lazyImage.dataset.src;
+	// 							// lazyImage.srcset = lazyImage.dataset.srcset;
+	// 							lazyImage.classList.remove("lazy");
 
-								lazyImages = lazyImages.filter(function (image) {
-									return image !== lazyImage;
-								});
+	// 							lazyImages = lazyImages.filter(function (image) {
+	// 								return image !== lazyImage;
+	// 							});
 
-								if (lazyImages.length === 0) {
-									document.removeEventListener("scroll", lazyLoad);
-									window.removeEventListener("resize", lazyLoad);
-									window.removeEventListener("orientationchange", lazyLoad);
-									window.addEventListener("DOMContentLoaded", lazyLoad);
-								}
-							}
-						});
+	// 							if (lazyImages.length === 0) {
+	// 								document.removeEventListener("scroll", lazyLoad);
+	// 								window.removeEventListener("resize", lazyLoad);
+	// 								window.removeEventListener("orientationchange", lazyLoad);
+	// 								window.addEventListener("DOMContentLoaded", lazyLoad);
+	// 							}
+	// 						}
+	// 					});
 
-						active = false;
-					}, 200);
-				}
-			};
+	// 					active = false;
+	// 				}, 200);
+	// 			}
+	// 		};
 
-			document.addEventListener("scroll", lazyLoad);
-			window.addEventListener("resize", lazyLoad);
-			window.addEventListener("orientationchange", lazyLoad);
-			window.addEventListener("DOMContentLoaded", lazyLoad);
-		});
+	// 		document.addEventListener("scroll", lazyLoad);
+	// 		window.addEventListener("resize", lazyLoad);
+	// 		window.addEventListener("orientationchange", lazyLoad);
+	// 		window.addEventListener("DOMContentLoaded", lazyLoad);
+	// 	});
 
 
-		// лэзи 
-		document.addEventListener("DOMContentLoaded", function () {
-			var lazyImages = [].slice.call(document.querySelectorAll(".lazy-sourse"));
-			var active = false;
+	// 	// лэзи 
+	// 	document.addEventListener("DOMContentLoaded", function () {
+	// 		var lazyImages = [].slice.call(document.querySelectorAll(".lazy-sourse"));
+	// 		var active = false;
 
-			const lazyLoad = function () {
-				if (active === false) {
-					active = true;
+	// 		const lazyLoad = function () {
+	// 			if (active === false) {
+	// 				active = true;
 
-					setTimeout(function () {
-						lazyImages.forEach(function (lazyImage) {
-							var imgWrapper = lazyImage.parentNode.clientHeight + 500;
-							if (((lazyImage.getBoundingClientRect().top - imgWrapper) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + imgWrapper) >= 0) && getComputedStyle(lazyImage).display !== "none") {
-								// lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
-								// lazyImage.src = lazyImage.dataset.src;
-								lazyImage.srcset = lazyImage.dataset.srcset;
-								// lazyImage.classList.remove("lazy");
+	// 				setTimeout(function () {
+	// 					lazyImages.forEach(function (lazyImage) {
+	// 						var imgWrapper = lazyImage.parentNode.clientHeight + 500;
+	// 						if (((lazyImage.getBoundingClientRect().top - imgWrapper) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + imgWrapper) >= 0) && getComputedStyle(lazyImage).display !== "none") {
+	// 							// lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
+	// 							// lazyImage.src = lazyImage.dataset.src;
+	// 							lazyImage.srcset = lazyImage.dataset.srcset;
+	// 							// lazyImage.classList.remove("lazy");
 
-								lazyImages = lazyImages.filter(function (image) {
-									return image !== lazyImage;
-								});
+	// 							lazyImages = lazyImages.filter(function (image) {
+	// 								return image !== lazyImage;
+	// 							});
 
-								if (lazyImages.length === 0) {
-									document.removeEventListener("scroll", lazyLoad);
-									window.removeEventListener("resize", lazyLoad);
-									window.removeEventListener("orientationchange", lazyLoad);
-									window.addEventListener("DOMContentLoaded", lazyLoad);
-								}
-							}
-						});
+	// 							if (lazyImages.length === 0) {
+	// 								document.removeEventListener("scroll", lazyLoad);
+	// 								window.removeEventListener("resize", lazyLoad);
+	// 								window.removeEventListener("orientationchange", lazyLoad);
+	// 								window.addEventListener("DOMContentLoaded", lazyLoad);
+	// 							}
+	// 						}
+	// 					});
 
-						active = false;
-					}, 200);
-				}
-			};
+	// 					active = false;
+	// 				}, 200);
+	// 			}
+	// 		};
 
-			document.addEventListener("scroll", lazyLoad);
-			window.addEventListener("resize", lazyLoad);
-			window.addEventListener("orientationchange", lazyLoad);
-			window.addEventListener("DOMContentLoaded", lazyLoad);
-		});
+	// 		document.addEventListener("scroll", lazyLoad);
+	// 		window.addEventListener("resize", lazyLoad);
+	// 		window.addEventListener("orientationchange", lazyLoad);
+	// 		window.addEventListener("DOMContentLoaded", lazyLoad);
+	// 	});
 
-	},
+	// },
 
 	// /LazyFunction
 
@@ -436,7 +464,7 @@ JSCCommon = {
 
 };
 
-JSCCommon.LazyFunction();
+// JSCCommon.LazyFunction();
 /***/
 
 

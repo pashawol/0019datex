@@ -1,6 +1,84 @@
 .s-catalog-slider {
+	padding-bottom: 0;
+	.section-title{
+		padding: 0;
+		margin-bottom: rem(40);
+	}
 	&__main-block{
-		background-color: #f5c33e;
+		padding: rem(50) 0;
+		// background-color: #f5c33e;
+	}
+	&__slider-wrapper{
+		position: relative;
+	}
+	.cat-slider-nav{
+		position: absolute;
+		@include a-cent(y);
+		width: rem(60);
+		height: rem(60);
+		border-radius: 50%;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.icon{
+			font-size: rem(15);
+			color: $primary;
+		}
+	}
+	&__slider-prev{
+		left: rem(50);
+	}
+	&__slider-next{
+		right: rem(50);
+	}
+	&__slider-title{
+		color: $body-color;
+		font-size: rem(28);
+	}
+	&__item{
+		background-color: #fff;
+		padding: rem(30);
+		display: flex;
+		align-items: center;
+		&-title{
+			font-size: rem(16);
+			font-weight: 500;
+			margin-bottom: rem(5);
+			a{
+				color: $body-color;
+				line-height: $h5-font-size;
+				border-bottom: 1px solid #C5C5C5;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+		&-text{
+			margin-bottom: rem(10);
+			color: #6f7378;
+			font-size: $small;
+			font-weight: 400;
+		}
+		&-price{
+			border-radius: 3px;
+			background-color: #fdd058;
+			display: inline;
+			padding: rem(5);
+			font-size: $small;
+			font-weight: 500;
+		}
+	}
+	&__img-wrapper{
+		margin-right: rem(20);
+	}
+	&__slider{
+		display: flex;
+	}
+	&__slide{
+		&:not(:last-child){
+			margin-right: rem(20);
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -1,0 +1,35 @@
+mixin s-buy-prog()
+	// start s-buy-prog
+	+b.SECTION.s-buy-prog.bg-light.section.lazy-background#s-buy-prog&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Купить программы «1С»
+				
+			.row
+				mixin buy-prog-i(i, t)
+					+e.col.col-12.col-sm-6.col-lg-4.col-xxl-3
+						+e.item
+							+e.svg-wrapper
+								+icon(`mob-m${i}`)
+							+e.item-title
+								if t
+									a(href="#")=t
+								else 
+									block
+				+buy-prog-i("1","Бухгалтерский учет")
+				+buy-prog-i("2","Торговый и складской учет")
+				+buy-prog-i("3","Розница")
+				+buy-prog-i("4")
+					a(href="#") Расчет зарплаты и&nbsp;кадры
+				+buy-prog-i("5","Общепит и гостиничный бизнес")
+				+buy-prog-i("6","Медицина")
+				+buy-prog-i("7","Автотранспорт и логистика")
+				+buy-prog-i("8","Дополнительные лицензии")
+				+buy-prog-i("9","Документооборот")
+				+buy-prog-i("10","Комплексная автоматизация")
+				+buy-prog-i("11","Серверные лицензии")
+				+buy-prog-i("12","Производственные предприятия и ERP")
+				+buy-prog-i("13","ИТС")
+				+buy-prog-i("14","Отраслевые решения")
+				+buy-prog-i("15","CRM")
+	// end s-buy-prog

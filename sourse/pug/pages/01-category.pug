@@ -17,6 +17,7 @@ include ../blocks/s-rews/_s-rews.pug
 include ../blocks/s-search-line/_s-search-line.pug
 include ../blocks/mobile-menu/_mobile-menu.pug
 include ../blocks/s-catalog-slider/_s-catalog-slider.pug
+include ../blocks/s-buy-prog/_s-buy-prog.pug
 
 block title
 	title title
@@ -29,6 +30,7 @@ block pagecontent
 	
 	//- +s-search-line()
 	+s-catalog-slider()(class="page-top-block")
+	+s-buy-prog()
 
 	//- +header-block()
 	//- +s-segments

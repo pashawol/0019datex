@@ -14,20 +14,23 @@ mixin s-catalog-slider()
 				+e.slider-next.cat-slider-nav
 					+icon("slider-next")
 				.container
-					+e.slider#catalog-slider--js
-						mixin catalog-slider
-							+e.slide
-								+e.item
-									+e.img-wrapper
-										img(src="img/product-box.png" alt="#")
-									+e.item-descr
-										+e.item-title 
-											a(href="#") 1С:Управление нашей фирмой
-										+e.item-text Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-										+e.item-price 33 600
-						+catalog-slider
-						+catalog-slider
-						+catalog-slider
+					+e.slider.swiper-container#catalog-slider--js
+						.swiper-wrapper
+							mixin catalog-slider
+								+e.slide.swiper-slide
+									+e.item
+										+e.img-wrapper
+											img(src="img/product-box.png" alt="#")
+										+e.item-descr
+											+e.item-title 
+												a(href="#") 1С:Управление нашей фирмой
+											+e.item-text Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
+											+e.item-price 33 600
+							+catalog-slider
+							+catalog-slider
+							+catalog-slider
+							+catalog-slider
+							+catalog-slider
 
 
 			

@@ -199,6 +199,38 @@ jQuery(document).ready(function ($) {
 	});
 
 
+	var swiper = new Swiper('#catalog-slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpointsInverse: true,
+		speed: 400,
+		loop: true,
+		navigation: {
+			nextEl: ('.s-catalog-slider__slider-next'),
+			prevEl: ('.s-catalog-slider__slider-prev'),
+		},
+		breakpoints: {
+
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			},
+
+			1100: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			}
+		}
+	})
+
+
+
+
 	// $(".section").each(function () {
 	// 	var slider = {
 	// 		slidesPerView: 1, 

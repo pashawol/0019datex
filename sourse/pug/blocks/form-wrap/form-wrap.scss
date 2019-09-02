@@ -288,16 +288,23 @@
 	//  }
  }
 	 &__input[type="radio"] + &__lab{
-		 
+			width: 20px;
+			height: 20px;
+			background-color: #fff;
+			border: 2px solid #dadde2;
+		 @include a-cent(y);
+		 left: 16px;
 		 border-radius: 50%;
 	 &::after{ 
+		 @include mt;
 		 content: '';
 		 position: absolute;
 		 @include a-cent;
-		 background-color: $success;
+		//  background-color: $success;
+		width: 20px;
+		height: 20px;
+		 border: 7px solid $primary;
 		 opacity: 0;
-		 width: 10px;
-		 height: 10px;
 		 border-radius: 50%;
 	 }
  }

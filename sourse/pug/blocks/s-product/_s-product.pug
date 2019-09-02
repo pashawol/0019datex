@@ -1,0 +1,29 @@
+mixin s-product()
+	// start s-product
+	+b.SECTION.s-product.section.lazy-background#s-product&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				+breadcrumb("Главная","Программы «1С»","Бухгалтерский учет","1С:Бухгалтерия 8 ПРОФ")
+				h2 1С:Бухгалтерия 8 ПРОФ
+				
+			.row
+				.col-auto
+					+e.product-img
+						img(src="img/product.png" alt="#")
+				.col
+					+form-wrap
+						+in-rad("additional")
+							|Основная поставка
+							+e.SPAN.additional-price 9 000 000
+								span.i-font o
+						+in-rad("additional")
+							|Электронная поставка
+							+e.SPAN.additional-price 10 000
+								span.i-font o
+						+in-rad("additional")
+							|USB поставка
+							+e.SPAN.additional-price 8 900
+								span.i-font o
+							
+				.col-auto
+	// end s-product

@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
 		// JSCCommon.mobileMenu();
 	}, 100); 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Landing2.0.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/category.jpg);"></div>')
 	parent.on('mouseenter', 'li', function () {
 		// $(".s-segments picture  ").html($(this).find("picture").html)
 		// $(this).find("picture").removeClass('active');
@@ -227,6 +227,39 @@ jQuery(document).ready(function ($) {
 
 			1100: {
 				slidesPerView: 3,
+				spaceBetween: 20
+			}
+		}
+	})
+
+	var swiper = new Swiper('#catalog-slider-2--js', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpointsInverse: true,
+		speed: 400,
+		loop: true,
+		pagination: {
+			el: $(this).find('.swiper-pagination'),
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ('.s-catalog-slider__slider-next'),
+			prevEl: ('.s-catalog-slider__slider-prev'),
+		},
+		breakpoints: {
+
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			},
+
+			1100: {
+				slidesPerView: 4,
 				spaceBetween: 20
 			}
 		}

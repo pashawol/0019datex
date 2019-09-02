@@ -9,10 +9,11 @@ mixin s-catalog-slider()
 			+pic("slider-bg","jpg","bg")(class="picture-bg")
 			+e.slider-title.text-center Популярные программы «1С»
 			+e.slider-wrapper
-				+e.slider-prev.cat-slider-nav
-					+icon("slider-prev")
-				+e.slider-next.cat-slider-nav
-					+icon("slider-next")
+				+e.slider-nav
+					+e.slider-prev.cat-slider-nav
+						+icon("slider-prev")
+					+e.slider-next.cat-slider-nav
+						+icon("slider-next")
 				.container
 					+e.slider.swiper-container#catalog-slider--js
 						.swiper-wrapper
@@ -26,10 +27,52 @@ mixin s-catalog-slider()
 												a(href="#") 1С:Управление нашей фирмой
 											+e.item-text Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
 											+e.item-price 33 600
+												span.i-font o
 							+catalog-slider
 							+catalog-slider
 							+catalog-slider
 							+catalog-slider
+				.swiper-pagination
+
+
+			
+				
+
+	// end s-catalog-slider
+
+
+mixin s-catalog-slider-2()
+	// start s-catalog-slider
+	+b.SECTION.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
+		+b.section-title.text-center
+			.container
+				+breadcrumb("Главная","Программы «1С»","Бухгалтерский учет")
+				h2 Бухгалтерский учет
+		+e.main-block.bg-wrap
+			+pic("slider-bg","jpg","bg")(class="picture-bg")
+			+e.slider-title.text-center При заказе любой программы «1С» <strong>для вас бесплатно:</strong>
+			+e.slider-wrapper
+				+e.slider-nav
+					+e.slider-prev.cat-slider-nav
+						+icon("slider-prev")
+					+e.slider-next.cat-slider-nav
+						+icon("slider-next")
+				.container
+					+e.slider.swiper-container#catalog-slider-2--js
+						.swiper-wrapper
+							mixin catalog-slider-2(i, t)
+								+e.slide.swiper-slide
+									+e.item
+										+e.svg-wrapper
+											img(src=`img/slider-icon${i}.png` alt="#")
+										+e.item-title 
+											a(href="#")=t
+											//- +e.item-price 33 600
+											//- 	span.i-font o
+							+catalog-slider-2("1","Доставка по городу")
+							+catalog-slider-2("2","Установка «1С»")
+							+catalog-slider-2("3","Заведение справочной информации")
+							+catalog-slider-2("4","Обновление «1С»")
 				.swiper-pagination
 
 

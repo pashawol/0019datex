@@ -73,3 +73,80 @@ mixin s-competences()
 				h6 учёт автотранспорта и&nbsp;транспортная логистика 	
 			//- +control-sl()
 	// end s-competences
+
+
+mixin s-competences-2()
+	// start s-competences
+	+b.SECTION.s-competences.section.block-with-lazy#s-competences&attributes(attributes)
+		.container
+			//- +b.section-title
+			//- 	h2(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )  Ключевые компетенции 
+			//- 		|
+			//- 		span.text-primary нашей команды 
+			//- 	.h4(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * .5}s`)  Автоматизируя процессы в&nbsp;вашем бизнесе, мы&nbsp;делаем его эффективнее.
+		 
+			mixin item(i, t,  or, d, ep) 
+				+e.item(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (i * .5) }s`)
+					//- .before 0
+					//- 	= i
+					.row
+						.col-7
+							.row
+								.col-auto.d-none.d-xl-block
+									+e.img-wrapper
+										img(src="img/product-box.png" alt="")
+								.col
+									+e.item-title
+										a(href="#")=t
+									+e.descr Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
+									if d
+										+e.demo Бесплатный демо-доступ
+
+
+									
+						//- h6= or
+						.col
+							.row
+								if ep
+									.col.col-xl-12
+										.row
+											.col.d-flex.justify-content-end
+												+e.price.price--small За 1 пользователя:
+													+e.price-wrapper.bg-light от 1 200
+														span.i-font o
+														|/мес.
+											.col-auto
+												if or
+													+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") арендовать
+												else
+													+e.btn.btn--white.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") арендовать
+								.col.col-xl-12.order-xl-first
+									.row
+										.col.d-flex.justify-content-end
+											+e.price Цена:
+												+e.price-wrapper 38 500
+													span.i-font o
+										.col-auto
+											if or
+												+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
+											else
+												+e.btn.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
+				// /+e.item
+			+item('1','1С:Бухгалтерия 8 КОРП (USB)','оптово-розничная торговля','d')
+			+item('2','1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)','бухгалтерский учёт','','ep')
+			+item('3','1С:Бухгалтерия 8. Комплект на 5 пользователей','учёт зарплаты и кадров')
+			+item('4','1С:Бухгалтерия государственного учреждения 8 ПРОФ','информационно-технологическое сопровождение (итс)')
+			+item('5','1С:Бухгалтерия 8 КОРП (USB)','сопровождение 1с')
+			+item('6','1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)','доработка существующей системы учёта')
+			+item('7','1С:Бухгалтерия 8. Комплект на 5 пользователей1С:Бухгалтерия 8. Комплект на 5 пользователей','автоматизация производства')
+			+item('8','1С:Бухгалтерия государственного учреждения 8 ПРОФ','торгово-кассовое оборудование')
+			+item('9','1С:Бухгалтерия 8 КОРП (USB)','учёт автотранспорта и транспортная логистика')
+			+item('10','1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)','учёт автотранспорта и транспортная логистика')
+			+item('11','1С:Бухгалтерия 8. Комплект на 5 пользователей','учёт автотранспорта и транспортная логистика')
+			+item('12','1С:Бухгалтерия государственного учреждения 8 ПРОФ','учёт автотранспорта и транспортная логистика')
+			+item('13','1С:Бухгалтерия 8 КОРП (USB)','учёт автотранспорта и транспортная логистика')
+			+item('14','1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)','учёт автотранспорта и транспортная логистика')
+			+item('15','1С:Бухгалтерия 8. Комплект на 5 пользователей','учёт автотранспорта и транспортная логистика')
+			+item('16','1С:Бухгалтерия государственного учреждения 8 ПРОФ','учёт автотранспорта и транспортная логистика')
+			//- +control-sl()
+	// end s-competences

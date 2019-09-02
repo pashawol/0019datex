@@ -4,9 +4,11 @@
 @include font-face ("Gotham Pro", "../fonts/GothamPro-Bold/GothamPro-Bold", bold, $file-formats: woff2);
 @include font-face ("Gotham Pro", "../fonts/GothamPro-Medium/GothamPro-Medium", 500, $file-formats: woff2);
 @include font-face ("Gotham Pro", "../fonts/GothamPro-Black/GothamPro-Black", 900, $file-formats: woff2);
+@include font-face ("ALSRubl", "../fonts/ALSRubl/ALSRubl", $file-formats: woff2 woff ttf);
 
 
 $default-font: "Gotham Pro";
+$i-font: "ALSRubl";
 
 $def: #373a41;
 $em-base: 18px;

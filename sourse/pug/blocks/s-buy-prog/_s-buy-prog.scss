@@ -1,4 +1,10 @@
 .s-buy-prog {
+	@include media-breakpoint-up(md) {
+		padding: rem(87);
+	}
+	.section-title{
+		padding-bottom: rem(50);
+	}
 	&__col{
 		margin-bottom: rem(20);
 		// flex-grow: 1;
@@ -27,6 +33,7 @@
 		}
 	}
 	&__svg-wrapper{
+		flex-shrink: 0;
 		margin-right: rem(19);
 		width: rem(40);
 		height: rem(40);
@@ -36,6 +43,7 @@
 		border-radius: 3px;
 		background-color: #fdd058;
 		.icon{
+			flex-shrink: 0;
 			color: $primary;
 			font-size: rem(20);
 		}

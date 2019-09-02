@@ -134,6 +134,16 @@
 		width: rem(172);
  
 	}
+	.btn--white{
+		margin-top: rem(10);
+		color: $primary !important;
+		box-shadow: 0 10px 15px rgba(41, 41, 41, 0.1);
+		background-color: #ffffff;
+		border: 2px solid $primary;
+		&:hover{
+			color: #ffffff !important;	
+		}
+	}
  
 	.control-wrap{
 		display: none;
@@ -141,7 +151,69 @@
 
 		}
 	}
-		 
+	
+	&__img-wrapper{
+		img{
+			width: rem(66);
+			height: auto;
+		}
+	}
+	&__item-title{
+		font-size: 16px;
+		font-weight: 500;
+		margin-bottom: rem(10);
+		a{
+			color: $body-color;
+			display: inline;
+			border-bottom: 1px solid #C5C5C5;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	&__descr{
+		font-size: $small;
+		color: #6f7378;
+		margin-bottom: rem(10);
+	}
+	&__demo{
+		color: #00c257;
+		font-size: 12px;
+		font-weight: 500;
+		padding-left: rem(24);
+		position: relative;
+		&::before{
+			content: "";
+			width: rem(16);
+			height: rem(16);
+			background-image: url(../img/demo.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			@include a-cent(y);
+			left: 0;
+		}
+	}
+	&__price{
+		font-size: 16px;
+		font-weight: 500;
+	}
+	&__price-wrapper{
+		font-size: 16px;
+		font-weight: 500;
+		display: inline;
+		border-radius: 3px;
+		background-color: #fdd058;
+		padding: rem(3);
+		span{
+			border-radius: 3px;
+		}
+	}
+	.price--small{
+		font-size: $small;
+		font-weight: 400;
+	}
+
 	@include media-breakpoint-up(xl) {
 		padding-top: rem(85);
 	}

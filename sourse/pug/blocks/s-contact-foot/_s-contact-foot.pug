@@ -1,0 +1,20 @@
+mixin s-contact-foot()
+	// start s-contact-foot
+	+b.SECTION.s-contact-foot.section.lazy-background#s-contact-foot&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Свяжитесь с нами
+				+e.text Заинтересованы в&nbsp;сотрудничестве? Нужна консультация? Напишите нам!
+			+form-wrap
+				.row
+					.col-lg-6
+						input.order(type="hidden")
+						+input("text","name","Введите имя")
+						+input("tel","tel","Введите телефон")( required)
+						+input("email","email","Ваш e-mail")
+					.col-lg-6
+						+ta("Ваше сообщение")
+						+e.btn(type="submit") отправить
+				+polite()
+			.row
+	// end s-contact-foot

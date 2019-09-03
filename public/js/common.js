@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
 		// JSCCommon.mobileMenu();
 	}, 100); 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Card.jpg);"></div>')
+ 
 	parent.on('mouseenter', 'li', function () {
 		// $(".s-segments picture  ").html($(this).find("picture").html)
 		// $(this).find("picture").removeClass('active');
@@ -70,12 +70,13 @@ jQuery(document).ready(function ($) {
 	});
 
 
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/psd.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Contacts.png);"></div>')
 
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
+		$(".page-top-block").css("margin-top",$(".top-line").height());
 		var topH = $(".header-block").height();
 
 		function fixedMenu() {
@@ -147,7 +148,7 @@ jQuery(document).ready(function ($) {
 				$("body, html").removeClass("fixed");
 				return false;
 			} 
-			$(".page-top-block").css("margin-top",$(".top-line").height());
+	
 	}
 
 	$(window).resize(function () {
@@ -210,6 +211,47 @@ jQuery(document).ready(function ($) {
 		}
 		var swiper2 = new Swiper($(this).find('.slider--js'), slider);
 		var swiper3 = new Swiper($(this).find('.slider--js2'), slider);
+
+		var sliderLogo = new Swiper($(this).find('.s-logos__slider--js'), {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			breakpointsInverse: true,
+			speed: 400,
+			loop: true,
+			lazy: {
+				loadPrevNext: true,
+			},
+			// pagination: {
+			// 	el: $(this).find('.swiper-pagination'),
+			// 	clickable: true,
+			// },
+			navigation: {
+				nextEl: $(this).find('.s-logos__slider-next'),
+				prevEl: $(this).find('.s-logos__slider-prev'),
+			},
+			breakpoints: {
+	
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+	
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 30
+				},
+				
+				992: {
+					slidesPerView: 4, 
+				},
+				
+				1200: {
+					slidesPerView: 6,
+					spaceBetween: 20
+				}
+			}
+		})
+		
 	});
 
 
@@ -272,17 +314,13 @@ jQuery(document).ready(function ($) {
 				spaceBetween: 30
 			},
 
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 20
-			},
-
-			1100: {
+			1200: {
 				slidesPerView: 4,
 				spaceBetween: 20
 			}
 		}
 	})
+
 
 
 

@@ -1,0 +1,56 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-competences/_s-competences.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-segments/_s-segments.pug
+include ../blocks/s-digilization/_s-digilization.pug
+include ../blocks/s-steps/_s-steps.pug
+include ../blocks/s-start/_s-start.pug
+include ../blocks/s-ways/_s-ways.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-doc/_s-doc.pug
+include ../blocks/s-consultation/_s-consultation.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-search-line/_s-search-line.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/mobile-menu/_mobile-menu.pug
+include ../blocks/s-catalog-slider/_s-catalog-slider.pug
+include ../blocks/s-buy-prog/_s-buy-prog.pug
+include ../blocks/s-product/_s-product.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-contact-us/_s-contact-us.pug
+include ../blocks/s-contact-head/_s-contact-head.pug
+include ../blocks/s-contact-body/_s-contact-body.pug
+include ../blocks/s-contact-foot/_s-contact-foot.pug
+
+block variables
+	- let  mainPage= null
+	
+block title
+	- let title= "Контакты"
+	title= title
+
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-line-2()
+		//- +top-nav()
+	//- +s-search-line()
+	
+	
+	+b.page-head.page-top-block
+		.container
+			+b.section-title.text-center
+				+breadcrumb("Главная", title)
+				h1= title 
+	+s-contact-head
+	+s-contact-body
+	+s-contact-foot
+	//- +s-logos()
+	//- +s-team()
+	//- +s-contact-us()
+	+footer()
+

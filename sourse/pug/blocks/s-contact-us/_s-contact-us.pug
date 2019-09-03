@@ -1,0 +1,13 @@
+mixin s-contact-us()
+	// start s-contact-us
+	+b.SECTION.s-contact-us.section.lazy-background#s-contact-us&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Заинтересованы в&nbsp;сотрудничестве? 
+					| 
+					| 
+					span.text-primary Свяжитесь с&nbsp;нами.
+				
+			+e.btn.popup-with-move-anim(href="#modal-call" data-title="заказать звонок" data-order="заказать звонок"   data-btn="заказать звонок") заказать звонок
+				span
+	// end s-contact-us

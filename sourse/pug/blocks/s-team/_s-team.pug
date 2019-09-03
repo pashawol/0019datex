@@ -15,12 +15,13 @@ mixin s-team()
 								+e.logo
 									+icon('1c')
 									| Сертифицированные партнеры 1С
-								picture 
-									source.lazy-sourse(srcset="#" data-srcset=`img/team.webp` media="(min-width: 390px)" type="image/webp" )
-									source.lazy-sourse(srcset="#" data-srcset=`img/team.png` media="(min-width: 390px)" type="image/png" )
+								picture.lazy
+									source(srcset="#" data-srcset=`img/team.webp` media="(min-width: 390px)" type="image/webp" )
+									source(srcset="#" data-srcset=`img/team.png` media="(min-width: 390px)" type="image/png" )
 									// тут сделай кроп шириной   200px или чуть больше, какой там стандартный
-									source.lazy-sourse(srcset="#" data-srcset=`img/team-sm.webp` type="image/webp" )
-									img.object-fit-js.lazy(src="#" data-src=`img/team-sm.png`, alt='')
+									source(srcset="#" data-srcset=`img/team-sm.webp` type="image/webp" )
+									source(srcset="#" data-srcset=`img/team-sm.png` type="image/png" )
+									img.object-fit-js(src="#" data-src=`img/team.png`, alt='')
 							block
 							p= p
 							+e.btn.btn-outline-secondary.popup-with-move-anim(href="#modal-team" data-title= t data-prof= p  data-text="1990 года рождения – в 2013 году окончил Аэрокосмический университет и начал свою карьеру как программист 1С. С тех пор поучаствовал в более чем 300 проектах автоматизации, как программист и не меньшим числом как управленец. В послужном списке Всеволода есть крупнейшие корпорации РФ. С 2015 года руководит крупными командами по автоматизации. С 2019 года является руководителем офиса Datex в Самаре. "   data-btn=`Обсудить проект с ${t}`)  подробнее

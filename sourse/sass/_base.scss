@@ -55,6 +55,7 @@ body {
 	font-family: $i-font;
 	font-size: $small;
 	font-weight: 400;
+	text-transform: none;
 }
 
 .small {
@@ -98,7 +99,9 @@ body {
 }
 
 .section {
-
+	&__inner{
+		background-color: #ffffff;
+	}
 	@include bgs;
 	padding-bottom: rem(60);
 
@@ -122,7 +125,7 @@ body {
 	span {
 		display: inline-block;
 	}
-
+ h1,
 	>h2 {
 		font-size: inherit;
 
@@ -508,17 +511,17 @@ input::-webkit-inner-spin-button {
 	overflow: hidden;
 }
 
-.lazy-bg,
-img.lazy {
-	-webkit-filter: blur(5px);
-	filter: blur(5px);
-	transition: filter 400ms, -webkit-filter 400ms;
+// .lazy-bg,
+// img.lazy {
+// 	-webkit-filter: blur(5px);
+// 	filter: blur(5px);
+// 	transition: filter 400ms, -webkit-filter 400ms;
 
-}
+// }
 
-.lazyloaded {
-	filter: blur(0);
-}
+// .lazyloaded {
+// 	filter: blur(0);
+// }
 
 picture {
 	display: block;
@@ -860,3 +863,34 @@ a {
 @include media-breakpoint-up(sm) {}
 
 @include media-breakpoint-up(xs) {}
+
+.page-head{
+	background-color: #ffffff;
+	padding-top: rem(45);
+	.breadcrumb{
+		margin-bottom: rem(2);
+	}
+	.section-title{
+		padding-bottom: rem(20);
+	}
+}
+
+
+.cat-slider-nav{
+	z-index: 200;
+	position: absolute;
+	@include a-cent(y);
+	width: rem(60);
+	height: rem(60);
+	border-radius: 50%;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	outline: none;
+	.icon{
+		font-size: rem(15);
+		color: $primary;
+	}
+}

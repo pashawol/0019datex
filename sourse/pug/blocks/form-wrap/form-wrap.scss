@@ -16,8 +16,14 @@
 
 .form-wrap {
 	&__input-wrap {
-
 		// max-width: 466px;
+	}
+	&__input{
+		padding-left: rem(26);
+
+	}
+	textarea{
+		height: rem(162);
 	}
 
 	&__btn {

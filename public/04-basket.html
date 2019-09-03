@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>Моя корзина</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -22,7 +22,7 @@
       
     </style>
   </head>
-  <body>
+  <body class="body-basket">
     <div class="main-wrapper">
       <!-- start HEADER.header-->
       <header class="header block-with-lazy">
@@ -351,293 +351,160 @@
         <!-- end .top-line-->
       </header>
       <!-- end HEADER.header-->
-      <!-- start s-product-->
-      <section class="s-product section lazy-background page-top-block" id="s-product">
+      <div class="page-head page-top-block">
         <div class="container">
           <div class="section-title text-center">
-            <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Программы «1С»</a><a class="breadcrumb-item" href="#">Бухгалтерский учет</a><span class="breadcrumb-item active">1С:Бухгалтерия 8 ПРОФ</span>
+            <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><span class="breadcrumb-item active">Моя корзина</span>
             </nav>
-            <h1>1С:Бухгалтерия 8 ПРОФ</h1>
-          </div>
-          <div class="row">
-            <div class="col-3">
-              <div class="s-product__product-img"><img src="img/product.png" alt="#"/>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="form-wrap" id="product-radio">
-                <form>
-                  <label class="radio-prod">
-                    <input type="radio" name="additional" checked="checked"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">Основная поставка</span><span class="radio-prod__price col-auto">9 000 000<span class="i-font">o</span></span></span></span>
-                  </label>
-                  <label class="radio-prod">
-                    <input type="radio" name="additional"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">Электронная поставка</span><span class="radio-prod__price col-auto">10 000<span class="i-font">o</span></span></span></span>
-                  </label>
-                  <label class="radio-prod">
-                    <input type="radio" name="additional"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">USB поставка</span><span class="radio-prod__price col-auto">8 900<span class="i-font">o</span></span></span></span>
-                  </label>
-                </form>
-              </div>
-              <div class="s-product__art">Артикул: 4601546041654
-              </div>
-              <div class="row">
-                <div class="s-product__col col-auto">
-                  <div class="s-product__price">Цена:<span class="s-product__price-wrapper">9 000 000<span class="i-font">o</span></span>
-                  </div>
-                </div>
-                <div class="s-product__col col-auto"><a class="s-product__btn main-btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку">Купить</a>
-                </div>
-                <div class="s-product__col col">
-                  <div class="s-product__one-click"><a href="#">Купить в 1 клик</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-3 text-center align-items-center d-flex justify-content-center">
-              <div class="row">
-                <div class="col-12 d-flex justify-content-center">
-                  <div class="s-product__price-light bg-light">от 1 200<span class="i-font">o</span>/мес.
-                  </div>
-                </div>
-                <div class="col-12"><a class="s-product__btn btn btn--white btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку">Арендовать</a>
-                </div>
-                <div class="col-12">
-                  <div class="s-product__title s-product__title--green">Бесплатно на 30 дней
-                  </div><a class="s-product__btn btn btn--green btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку">Арендовать</a>
-                </div>
-              </div>
-            </div>
+            <h1>Моя корзина</h1>
           </div>
         </div>
-        <div class="s-product__tabs tabs">
-          <div class="tabs__caption">
-            <div class="container">
-              <div class="row">
-                <div class="col-10 d-flex">
-                  <div class="tabs__btn active"> <span>Назначение</span></div>
-                  <div class="tabs__btn"> <span>Описание</span></div>
-                  <div class="tabs__btn"> <span>Сравнение версий</span></div>
-                  <div class="tabs__btn"> <span>Комплект поставки</span></div>
-                  <div class="tabs__btn"> <span>Лицензии</span></div>
-                  <div class="tabs__btn"> <span>Услуги</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="s-product__content-block bg-light">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <div class="tabs__wrap">
-                    <div class="tabs__content2 active"> 
-                      <div class="s-product__content">
-                        <h4>Общая характеристика конфигурации «Бухгалтерия КОРП»</h4>
-                        <p>Программный продукт <strong>«1С:Бухгалтерия 8 КОРП» </strong>предназначен для автоматизации бухгалтерского и&nbsp;налогового учета, включая подготовку обязательной (регламентированной) отчетности в&nbsp;организациях, осуществляющих любые виды коммерческой деятельности: оптовую и&nbsp;розничную торговлю, комиссионную торговлю (включая субкомиссию), оказание услуг, производство и&nbsp;т.&nbsp;д. Программа предоставляет возможность вести бухгалтерский и&nbsp;налоговый учет сразу нескольких организаций (юридических лиц) в&nbsp;общей информационной базе.</p>
-                        <h6>Маркированный список:</h6>
-                        <ul>
-                          <li>Авизо по ОС.</li>
-                          <li>Авизо по МПЗ.</li>
-                          <li> <a href="#">Авизо по расчетам.</a></li>
-                          <li>Авизо по прочим операциям.</li>
-                        </ul>
-                        <h6>Нумированный список:</h6>
-                        <ol>
-                          <li>Разработана специализированная подсистема подготовки уведомления о контролируемых сделках</li>
-                          <li>При подготовке уведомления не&nbsp;требуется повторно вводить или изменять данные в&nbsp;хозяйственных операциях, отраженных в&nbsp;информационной базе. Сформированное уведомление можно распечатать.</li>
-                          <li>Авизо по прочим операциям.</li>
-                        </ol><img src="img/content-img.jpg" alt=""/>
-                        <h6>Двухуровневый маркированный список:</h6>
-                        <ul>
-                          <li>Авизо по ОС.</li>
-                          <li>Авизо по МПЗ.
-                            <ul>
-                              <li><a href="#">Авизо по расчетам.</a></li>
-                              <li>Авизо по прочим операциям.</li>
-                            </ul>
-                          </li>
-                          <li>Авизо по МПЗ.</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="tabs__content2">
-                      <div class="s-product__content">
-                        <h4>Общая характеристика конфигурации «Бухгалтерия КОРП»</h4>
-                        <p>Программный продукт <strong>«1С:Бухгалтерия 8 КОРП» </strong>предназначен для автоматизации бухгалтерского и&nbsp;налогового учета, включая подготовку обязательной (регламентированной) отчетности в&nbsp;организациях, осуществляющих любые виды коммерческой деятельности: оптовую и&nbsp;розничную торговлю, комиссионную торговлю (включая субкомиссию), оказание услуг, производство и&nbsp;т.&nbsp;д. Программа предоставляет возможность вести бухгалтерский и&nbsp;налоговый учет сразу нескольких организаций (юридических лиц) в&nbsp;общей информационной базе.</p>
-                        <h6>Маркированный список:</h6>
-                        <ul>
-                          <li>Авизо по ОС.</li>
-                          <li>Авизо по МПЗ.</li>
-                          <li> <a href="#">Авизо по расчетам.</a></li>
-                          <li>Авизо по прочим операциям.</li>
-                        </ul>
-                        <h6>Нумированный список:</h6>
-                        <ol>
-                          <li>Разработана специализированная подсистема подготовки уведомления о контролируемых сделках</li>
-                          <li>При подготовке уведомления не&nbsp;требуется повторно вводить или изменять данные в&nbsp;хозяйственных операциях, отраженных в&nbsp;информационной базе. Сформированное уведомление можно распечатать.</li>
-                          <li>Авизо по прочим операциям.</li>
-                        </ol><img src="img/content-img.jpg" alt=""/>
-                        <h6>Двухуровневый маркированный список:</h6>
-                        <ul>
-                          <li>Авизо по ОС.</li>
-                          <li>Авизо по МПЗ.
-                            <ul>
-                              <li><a href="#">Авизо по расчетам.</a></li>
-                              <li>Авизо по прочим операциям.</li>
-                            </ul>
-                          </li>
-                          <li>Авизо по МПЗ.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="s-product__extra-block">
-                        <div class="s-product__extra-title"><span>Бесплатно </span>при&nbsp;покупке вы&nbsp;получаете:
-                        </div>
-                        <ul class="s-product__extra-list">
-                          <li class="s-product__extra-item">Доставка и установка
-                          </li>
-                          <li class="s-product__extra-item">Обновления через интернет
-                          </li>
-                          <li class="s-product__extra-item">Линия консультаций 24/7
-                          </li>
-                          <li class="s-product__extra-item">Доступ к 1С:Отчетность
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="s-product__help-block">
-                        <div class="form-wrap">
-                          <form>
-                            <div class="help-title">Нужна консультация?</div>
-                            <div class="help-subtitle">Закажите консультацию в&nbsp;один&nbsp;клик!</div>
-                            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="+7 (___)-___-__-__" required="required"/>
+      </div>
+      <!-- start s-basket-->
+      <div class="s-basket section">
+        <div class="container">
+          <div class="section__inner">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Наименование</th>
+                  <th>Цена</th>
+                  <th>Количество</th>
+                  <th>Итог</th>
+                </tr>
+              </thead>
+              <tbody>
+                        <tr>
+                          <td>
+                            <!-- picture-->
+                            <picture class="lazy"> 
+                              <source srcset="#" data-srcset="img/@2x/webp/basket-img.webp" type="image/webp"/>
+                              <!-- /webp images  --><img src="#" data-src="img/@2x/basket-img.jpg" alt=""/>
+                            </picture>
+                            <!-- /picture-->
+                          </td>
+                          <td>
+                            <div class="s-basket__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
                             </div>
-                            <!-- +e.input-wrap-->
-                            <button class="form-wrap__btn" type="submit">отправить
-                            </button>
-                            <div class="form-wrap__polite">
-                              <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</small>
-                              </label>
+                            <div class="s-basket__text"> Артикул: 4601546041654
                             </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                          </td>
+                          <td>
+                            <div class="s-basket__price s-basket__price--color">
+                              16 200<span class="i-font">o</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="add-block">
+                              <button class="add-block__btn add-block__btn--minus">
+                              </button><input class="add-block__input" type="number" value="1"/>
+                              <button class="add-block__btn add-block__btn--plus">
+                              </button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="s-basket__price">
+                              16 200<span class="i-font">o</span>
+                            </div>
+                            <div class="s-basket__delete">
+                              <svg class="icon icon-close-basket ">
+                                <use xlink:href="img/svg/sprite.svg#close-basket"></use>
+                              </svg>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <!-- picture-->
+                            <picture class="lazy"> 
+                              <source srcset="#" data-srcset="img/@2x/webp/basket-img.webp" type="image/webp"/>
+                              <!-- /webp images  --><img src="#" data-src="img/@2x/basket-img.jpg" alt=""/>
+                            </picture>
+                            <!-- /picture-->
+                          </td>
+                          <td>
+                            <div class="s-basket__title"><a href="#">1С:Бухгалтерия 8. ПРОФ</a>
+                            </div>
+                            <div class="s-basket__text"> Артикул: 4601546041654
+                            </div>
+                          </td>
+                          <td>
+                            <div class="s-basket__price s-basket__price--color">
+                              16 200<span class="i-font">o</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="add-block">
+                              <button class="add-block__btn add-block__btn--minus">
+                              </button><input class="add-block__input" type="number" value="1"/>
+                              <button class="add-block__btn add-block__btn--plus">
+                              </button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="s-basket__price">
+                              16 200<span class="i-font">o</span>
+                            </div>
+                            <div class="s-basket__delete">
+                              <svg class="icon icon-close-basket ">
+                                <use xlink:href="img/svg/sprite.svg#close-basket"></use>
+                              </svg>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <!-- picture-->
+                            <picture class="lazy"> 
+                              <source srcset="#" data-srcset="img/@2x/webp/basket-img.webp" type="image/webp"/>
+                              <!-- /webp images  --><img src="#" data-src="img/@2x/basket-img.jpg" alt=""/>
+                            </picture>
+                            <!-- /picture-->
+                          </td>
+                          <td>
+                            <div class="s-basket__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
+                            </div>
+                            <div class="s-basket__text"> Артикул: 4601546041654
+                            </div>
+                          </td>
+                          <td>
+                            <div class="s-basket__price s-basket__price--color">
+                              16 200<span class="i-font">o</span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="add-block">
+                              <button class="add-block__btn add-block__btn--minus">
+                              </button><input class="add-block__input" type="number" value="1"/>
+                              <button class="add-block__btn add-block__btn--plus">
+                              </button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="s-basket__price">
+                              16 200<span class="i-font">o</span>
+                            </div>
+                            <div class="s-basket__delete">
+                              <svg class="icon icon-close-basket ">
+                                <use xlink:href="img/svg/sprite.svg#close-basket"></use>
+                              </svg>
+                            </div>
+                          </td>
+                        </tr>
+              </tbody>
+            </table>
+            <div class="s-basket__footer row">
+              <div class="s-basket__total col-lg-auto col-sm">
+                Итого: 96 750<span class="i-font">p</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end s-product-->
-      <!-- start s-consultation-->
-      <section class="s-consultation section block-with-lazy" id="s-consultation">
-        <div class="container"> 
-          <div class="section-title"> 
-            <h2 class="wow fadeInUp" data-wow-duration="0.3s">Получите консультацию</h2><strong class="wow fadeInUp" data-wow-duration="0.3s">бесплатно</strong>
-            <picture class="wow fadeIn" data-wow-duration="0.3s" data-wow-delay="0.075s"> 
-              <source srcset="img/form.webp" media="(min-width: 768px)" type="image/webp"/>
-              <source srcset="img/form.png" media="(min-width: 768px)" type="image/png"/>
-              <!-- тут сделай кроп шириной   140px или чуть больше, какой там стандартный -->
-              <source srcset="img/form-sm.webp" type="image/webp"/><img class="lazy object-fit-js" src="#" data-src="img/form-sm.png" alt=""/>
-            </picture>
-            <p class="wow fadeInUp" data-wow-duration="0.3s">Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.</p>
-            <h6 class="wow fadeInUp" data-wow-duration="0.3s">нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию" lass="wow fadeInUp" data-wow-duration="0.3s">получить консультацию<span></span></a>
-          </div>
-        </div>
-      </section>
-      <!-- end s-consultation-->
-      <!-- start s-contact-->
-      <div class="s-contact section block-with-lazy visible" id="s-contact">
-        <div class="container"> 
-          <div class="row">
-            <div class="col">
-              <div class="s-contact__group">
-                <h6 class="wow fadeInUp" data-wow-duration="0.3s">свяжитесь с нами:</h6>
-                <div class="wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.15s"><a class="text-body h2 fw-900" href="tel:88463004840">
-                    <svg class="icon icon-phone-receiver ">
-                      <use xlink:href="img/svg/sprite.svg#phone-receiver"></use>
-                    </svg>8 846 300 48 40</a>
-                  <div class="h4 strong d-lg-none fw-400">Партизанская ул, дом № 86, офис 723</div>
-                  <div class="h4 strong"><a class="text-body" href="mailto:info@datexsoft.ru">info@datexsoft.ru</a></div>
-                  <div class="d-none d-lg-block"><a class="s-contact__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок" data-btn="Заказать звонок">заказать звонок<span></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-auto">
-              <div class="s-contact__group">
-                <div class="d-none d-lg-block">
-                  <h6 class="wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.075s">мы находимся по адресу:</h6>
-                </div>
-                <div class="wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.15s">
-                  <div class="h2 fw-900 d-none d-lg-block">
-                    <svg class="icon icon-flag ">
-                      <use xlink:href="img/svg/sprite.svg#flag"></use>
-                    </svg>г. Самара,
-                  </div>
-                  <div class="h4 strong d-none d-lg-block">Партизанская ул, дом № 86, офис 723</div><a class="s-contact__btn btn-primary popup-with-move-anim" href="#modal-map">посмотреть на карте<span></span></a>
-                </div>
+              <div class="col-sm-auto"><a class="s-basket__btn" href="#">оформить заказ<span></span></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- end s-contact-->
-      <footer class="footer block-with-lazy">
-        <div class="footer__body">
-          <div class="container">
-            <div class="row">
-              <div class="col"><a class="scroll-link" href="#header-block">
-                  <div class="row row--sm align-items-center">
-                    <div class="col-sm-auto"><img class="lazy" src="#" data-src="img/logo.png" alt=""/></div>
-                    <div class="col samll d-none d-lg-block">Лучшая проектная команда в Самаре</div>
-                  </div></a></div>
-              <div class="col-sm-auto">
-                <div class="soc"><a class="soc__item" href="" target="_blank">
-                  <svg class="icon icon-vk ">
-                    <use xlink:href="img/svg/sprite.svg#vk"></use>
-                  </svg></a><a class="soc__item" href="" target="_blank">
-                  <svg class="icon icon-fb ">
-                    <use xlink:href="img/svg/sprite.svg#fb"></use>
-                  </svg></a><a class="soc__item" href="" target="_blank">
-                  <svg class="icon icon-inst ">
-                    <use xlink:href="img/svg/sprite.svg#inst"></use>
-                  </svg></a><a class="soc__item" href="" target="_blank">
-                  <svg class="icon icon-youtube ">
-                    <use xlink:href="img/svg/sprite.svg#youtube"></use>
-                  </svg></a>
-                </div>
-              </div>
-              <div class="col">
-                <div class="footer__logo">
-                  <svg class="icon icon-1c ">
-                    <use xlink:href="img/svg/sprite.svg#1c"></use>
-                  </svg>Сертифицированные партнеры 1С
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer__foot">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm">© Datexsoft 2019. Все&nbsp;права&nbsp;защищены.</div>
-              <div class="footer__col col-sm-auto text-center"><a href="#" target="_blank">Политика конфиденциальности</a><a href="#" target="_blank">Пользовательское соглашение</a>
-              </div>
-              <div class="col text-sm-right"><a class="footer__developer" href="http://thepackers.ru/" target="_blank"> <span>Разработка сайта – </span> 
-                ThePackers.ru</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <!-- end s-basket-->
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
       <form>

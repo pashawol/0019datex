@@ -55,6 +55,7 @@ body {
 	font-family: $i-font;
 	font-size: $small;
 	font-weight: 400;
+	text-transform: none;
 }
 
 .small {
@@ -98,7 +99,9 @@ body {
 }
 
 .section {
-
+	&__inner{
+		background-color: #ffffff;
+	}
 	@include bgs;
 	padding-bottom: rem(60);
 
@@ -122,7 +125,7 @@ body {
 	span {
 		display: inline-block;
 	}
-
+ h1,
 	>h2 {
 		font-size: inherit;
 
@@ -860,3 +863,14 @@ a {
 @include media-breakpoint-up(sm) {}
 
 @include media-breakpoint-up(xs) {}
+
+.page-head{
+	background-color: #ffffff;
+	padding-top: rem(45);
+	.breadcrumb{
+		margin-bottom: rem(2);
+	}
+	.section-title{
+		padding-bottom: rem(20);
+	}
+}

@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
 		// JSCCommon.mobileMenu();
 	}, 100); 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Card.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/basket.png);"></div>')
 	parent.on('mouseenter', 'li', function () {
 		// $(".s-segments picture  ").html($(this).find("picture").html)
 		// $(this).find("picture").removeClass('active');
@@ -76,6 +76,7 @@ jQuery(document).ready(function ($) {
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
+		$(".page-top-block").css("margin-top",$(".top-line").height());
 		var topH = $(".header-block").height();
 
 		function fixedMenu() {
@@ -147,7 +148,7 @@ jQuery(document).ready(function ($) {
 				$("body, html").removeClass("fixed");
 				return false;
 			} 
-			$(".page-top-block").css("margin-top",$(".top-line").height());
+	
 	}
 
 	$(window).resize(function () {

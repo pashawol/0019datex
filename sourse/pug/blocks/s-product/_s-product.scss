@@ -1,7 +1,18 @@
 .s-product {
+	@include media-breakpoint-up(md) {
+		padding: rem(35) 0;
+	}
+	.breadcrumb{
+		margin-bottom: rem(5);
+	}
 	.section-title{
 		margin: 0;
-		padding-bottom: rem(35);
+		padding-bottom: rem(52);
+	}
+	&__product-img{
+		margin-top: rem(-25);
+		display: flex;
+		justify-content: center;
 	}
 	.custom-input {
 		padding: 20px 16px 20px 50px;
@@ -23,7 +34,7 @@
 		}
 	}
 	.form-wrap{
-		margin-bottom: rem(20);
+		margin-bottom: rem(13);
 	}
 	.radio-prod {
 		position: relative;
@@ -37,7 +48,7 @@
 		
 		&__wrapper{
 			border: 1px solid transparent;
-			padding: 20px 16px 20px 50px;
+			padding: 13px 16px 13px 48px;
 			display: block;
 		}
 
@@ -134,23 +145,218 @@
 		font-size: $h4-font-size;
 		font-weight: 500;
 		padding: 6px 12px;
-		margin-bottom: rem(20);
+		margin-bottom: rem(5);
 		span{
 			font-size: $h4-font-size;
 			font-weight: 500;
 		}
 	}
-
+	.btn--white{
+		margin-bottom: rem(20);
+	}
 	&__title--green{
 		font-size: $h6-font-size;
 		font-weight: 500;
 		color: #00c257;
+		margin-bottom: rem(8);
 	}
 	.btn--green{
 		margin-bottom: 0;
 	}
-
-
+	.tabs{
+		margin-top: rem(50);
+		&__caption{
+			padding: rem(20) 0;
+			margin: 0;
+			max-width: none;
+			display: block;
+			border-top: 1px solid #dadde2;
+			border-bottom: 1px solid #dadde2;
+			.active{
+				border: 2px solid $primary;
+				span{
+					border-color: #fff;
+				}
+			}
+		}
+		&__btn{
+			max-height: rem(50);
+			// flex-grow: 0;
+			border: none;
+			border: 2px solid #fff;
+			span{
+				display: inline;
+				border-bottom: 1px solid #a8aaae;
+			}
+		}
+		&__wrap{
+			background-color: #fff;
+			max-width: rem(932);
+		}
+	}
+	&__content-block{
+		padding: rem(50) 0 rem(100);
+	}
+	&__content{
+		padding: rem(45) rem(50) rem(15);
+		h4{
+			font-weight: 500;
+			margin-bottom: rem(25);
+		}
+		h6{
+			margin-bottom: rem(16);
+		}
+		strong{
+			font-weight: 700;
+		}
+		p{
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 26px;
+			margin-bottom: rem(40);
+		}
+		ul{
+			padding-left: rem(11);
+			list-style: none;
+			font-size: 16px;
+			line-height: 30px;
+			margin-bottom: rem(28);
+			ul{
+				margin-bottom: 0;
+			}
+			li{
+				a{
+					display: inline;
+					border-bottom: 1px solid;
+				}
+			}
+			> li{
+				position: relative;
+				&::before{
+					content: "•";
+					position: absolute;
+					left: rem(-10);
+					top: 0;
+					color: $primary;
+				}
+				ul > li{
+					&::before{
+						content: "";
+						top: rem(12);
+						width: 5px;
+						height: 5px;
+						border-radius: 50%;
+						border: 1px solid $primary;
+					}
+				}
+			}
+		}
+		img{
+			margin-bottom: rem(46);
+		}
+		ol{
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 26px;
+			padding-left: rem(20);
+			list-style: none;
+			counter-reset:  item;
+			margin-bottom: rem(40);
+			li{
+				margin-bottom: rem(6);
+				position: relative;
+				&::before{
+					content: counter(item) '.';
+					counter-increment: item;
+					color: $primary;
+					font-weight: 700;
+					position: absolute;
+					top: 0;
+					left: rem(-18);
+				}
+			}
+		}
+	}
+	&__extra{
+		&-block{
+			border: 2px solid #dadde2;
+			background-color: #ffffff;
+			padding: rem(25) rem(20) rem(20);
+			margin-bottom: rem(50);
+			
+		}
+		&-title{
+			text-align: center;
+			font-size: $h6-font-size;
+			font-weight: 700;
+			margin-bottom: rem(10);
+			span{
+				color: $primary;
+			}
+		}
+		&-list{
+			padding-left: rem(16);
+			list-style: none;
+			font-size: 16px;
+			line-height: 30px;
+			margin-bottom: 0;
+		}
+		&-item{
+			position: relative;
+			margin-bottom: rem(3);
+			&::before{
+				content: "•";
+				position: absolute;
+				left: rem(-10);
+				top: 0;
+				color: $primary;
+			}
+		}
+	}
+	&__help-block{
+		border: 2px solid $primary;
+		background-color: #ffffff;
+		padding: rem(20) rem(25) rem(5);
+		.form-wrap{
+			&__btn{
+				padding-top: rem(20);
+				padding-bottom: rem(20);
+				margin-bottom: rem(15);
+			}
+			&__input-wrap{
+				margin-bottom: rem(10);
+			}
+			&__input{
+				border: none;
+				padding-top: rem(18);
+				padding-bottom: rem(18);
+			}
+			&__polite{
+				.custom-input{
+					padding: 0 0 0 rem(40);
+					line-height: $em-base;
+					&__text{
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+	.help{
+		&-title{
+			text-align: center;
+			font-size: $h6-font-size;
+			font-weight: 700;
+			margin-bottom: rem(5);
+		}
+		&-subtitle{
+			text-align: center;
+			font-size: 16px;
+			// font-weight: 400;
+			line-height: 26px;
+			margin-bottom: rem(15);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

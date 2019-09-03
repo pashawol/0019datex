@@ -7,9 +7,10 @@ mixin s-catalog-slider()
 				h2 Программы «1С»
 		+e.main-block.bg-wrap
 			+pic("slider-bg","jpg","bg")(class="picture-bg")
-			+e.slider-title.text-center Популярные программы «1С»
+			.container
+				+e.slider-title.text-center Популярные программы&nbsp;«1С»
 			+e.slider-wrapper
-				+e.slider-nav
+				+e.slider-nav.d-none.d-md-block
 					+e.slider-prev.cat-slider-nav
 						+icon("slider-prev")
 					+e.slider-next.cat-slider-nav

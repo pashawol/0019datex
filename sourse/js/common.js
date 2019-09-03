@@ -45,6 +45,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.tabscostume('tabs2');
 
 	JSCCommon.mobileMenu();
+	
 	JSCCommon.inlineSVG();
 
 	JSCCommon.inputMask();

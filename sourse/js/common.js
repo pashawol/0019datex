@@ -134,6 +134,20 @@ jQuery(document).ready(function ($) {
 			}
 		});
  
+			// закрыть/открыть мобильное меню
+			if (window.matchMedia("(max-width: 1200px)").matches) {
+				$("menu-item-has-children").removeClass("active");
+				$(".top-line-search").removeClass("d-none"); 
+				$(".top-submenu--js").hide();
+			}
+			if (window.matchMedia("(min-width: 1200px)").matches) { 
+				btnToggle.removeClass("on");
+				// $("body").toggleClass("fixed");
+				menu.removeClass("active");
+				$("body, html").removeClass("fixed");
+				return false;
+			} 
+			$(".page-top-block").css("margin-top",$(".top-line").height());
 	}
 
 	$(window).resize(function () {
@@ -150,7 +164,7 @@ jQuery(document).ready(function ($) {
 
 	
 	// листалка по стр
-	$(" .menu-mobile ul a, .scroll-link").click(function () {
+	$("  .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
 	 
 				var destination = $(elementClick).offset().top;
@@ -168,12 +182,12 @@ jQuery(document).ready(function ($) {
 	});
 	
 	
-	$(" .menu-item-has-children").click(function (e) {
-		e.preventDefault();
-		$(".top-line-search").toggleClass("search-disable");
-		$(".top-submenu--js").slideToggle(1000);
-		$(this).toggleClass("active")
-	});
+	// $(" .menu-item-has-children > a").click(function (e) {
+	// 	e.preventDefault();
+	// 	// $(".top-line-search").toggleClass("search-disable");
+	// 	$(".top-submenu--js").slideToggle();
+	// 	// $(this).toggleClass("active")
+	// });
 
 	// slider
 	$(".section").each(function () {
@@ -489,16 +503,27 @@ JSCCommon = {
 	// /magnificPopupCall
 	mobileMenu: function () {
 		// закрыть/открыть мобильное меню
+		$(".menu-item-has-children > a").click(function(e){
+			e.preventDefault();
+			$(this).parent().toggleClass("active");
+			$(".top-line-search").toggleClass("d-none");
+			$(".top-submenu--js").slideToggle(0);
+			// toggleMenu();
 
-		btnToggle.click(function () {
+		})
+
+		function toggleMenu(){
 
 			btnToggle.toggleClass("on");
 			// $("body").toggleClass("fixed");
 			menu.toggleClass("active");
 			$("body, html").toggleClass("fixed");
 			return false;
+		}
+		btnToggle.click(function () {
+			toggleMenu();
 		});
-		$('.menu-item a').on('click', function (e) {
+		menu.find('.menu-item a').on('click', function (e) {
 			// e.preventDefault();
 			btnToggle.removeClass("on");
 			menu.removeClass("active");

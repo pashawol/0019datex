@@ -58,6 +58,7 @@
 		margin-bottom: rem(25);
 	}
 	&__item{
+	
 		background-color: #fff;
 		padding: rem(20) rem(30);
 		display: flex;
@@ -109,10 +110,11 @@
 		display: flex;
 	}
 	&__slide{
-		height: auto;
-		&:not(:last-child){
+		@include media-breakpoint-up(lg) {
+			width: rem(417);
 			margin-right: rem(20);
 		}
+		height: auto;
 	}
 	#catalog-slider-2--js{
 		.s-catalog-slider__item{

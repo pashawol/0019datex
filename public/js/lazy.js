@@ -7,7 +7,7 @@
 // delete window.IntersectionObserver; // Fallback Testing
 
 document.addEventListener('DOMContentLoaded', function() {
-	var rootMargin =  "200px 0px 500px 0px"
+	var rootMargin =  "500px 0px 500px 0px"
 	var lazyImages = [].slice.call(document.querySelectorAll("picture.lazy img, picture.lazy source, img.lazy"));
 	var lazyBackgrounds = [].slice.call(document.querySelectorAll('.lazy-background'));
 	var lazyBackgroundsData = [].slice.call(document.querySelectorAll('[data-bg]'));

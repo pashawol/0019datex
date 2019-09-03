@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
 		// JSCCommon.mobileMenu();
 	}, 100); 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/category.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Card.jpg);"></div>')
 	parent.on('mouseenter', 'li', function () {
 		// $(".s-segments picture  ").html($(this).find("picture").html)
 		// $(this).find("picture").removeClass('active');
@@ -551,7 +551,7 @@ JSCCommon = {
 	// /CustomYoutubeBlock
 	inputMask: function () {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)]-[0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)-999-99-99");
+		$('input[type="tel"]').attr("pattern", "[+][0-9]{1} [(][0-9]{3}[)]-[0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7 (999)-999-99-99");
 	},
  
 	// /inputMask

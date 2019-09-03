@@ -368,13 +368,13 @@
               <div class="form-wrap" id="product-radio">
                 <form>
                   <label class="radio-prod">
-                    <input type="radio" name="additional" checked="checked"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">Основная поставка</span><span class="radio-prod__price col-auto">1 000 000<span class="i-font">o</span></span></span></span>
+                    <input type="radio" name="additional" checked="checked"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">Основная поставка</span><span class="radio-prod__price col-auto">9 000 000<span class="i-font">o</span></span></span></span>
                   </label>
                   <label class="radio-prod">
-                    <input type="radio" name="additional"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">Электронная поставка</span><span class="radio-prod__price col-auto">1 000 000<span class="i-font">o</span></span></span></span>
+                    <input type="radio" name="additional"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">Электронная поставка</span><span class="radio-prod__price col-auto">10 000<span class="i-font">o</span></span></span></span>
                   </label>
                   <label class="radio-prod">
-                    <input type="radio" name="additional"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">USB поставка</span><span class="radio-prod__price col-auto">1 000 000<span class="i-font">o</span></span></span></span>
+                    <input type="radio" name="additional"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">USB поставка</span><span class="radio-prod__price col-auto">8 900<span class="i-font">o</span></span></span></span>
                   </label>
                 </form>
               </div>
@@ -393,7 +393,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3 text-center align-items-end d-flex justify-content-center">
+            <div class="col-3 text-center align-items-center d-flex justify-content-center">
               <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                   <div class="s-product__price-light bg-light">от 1 200<span class="i-font">o</span>/мес.
@@ -409,44 +409,122 @@
             </div>
           </div>
         </div>
-      </section>
-      <!-- end s-product-->
-      <!-- start s-competences-->
-      <section class="s-competences section block-with-lazy" id="s-competences">
-        <div class="container">
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.075s">
+        <div class="s-product__tabs tabs">
+          <div class="tabs__caption">
+            <div class="container">
               <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
+                <div class="col-10 d-flex">
+                  <div class="tabs__btn active"> <span>Назначение</span></div>
+                  <div class="tabs__btn"> <span>Описание</span></div>
+                  <div class="tabs__btn"> <span>Сравнение версий</span></div>
+                  <div class="tabs__btn"> <span>Комплект поставки</span></div>
+                  <div class="tabs__btn"> <span>Лицензии</span></div>
+                  <div class="tabs__btn"> <span>Услуги</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-product__content-block bg-light">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="tabs__wrap">
+                    <div class="tabs__content2 active"> 
+                      <div class="s-product__content">
+                        <h4>Общая характеристика конфигурации «Бухгалтерия КОРП»</h4>
+                        <p>Программный продукт <strong>«1С:Бухгалтерия 8 КОРП» </strong>предназначен для автоматизации бухгалтерского и&nbsp;налогового учета, включая подготовку обязательной (регламентированной) отчетности в&nbsp;организациях, осуществляющих любые виды коммерческой деятельности: оптовую и&nbsp;розничную торговлю, комиссионную торговлю (включая субкомиссию), оказание услуг, производство и&nbsp;т.&nbsp;д. Программа предоставляет возможность вести бухгалтерский и&nbsp;налоговый учет сразу нескольких организаций (юридических лиц) в&nbsp;общей информационной базе.</p>
+                        <h6>Маркированный список:</h6>
+                        <ul>
+                          <li>Авизо по ОС.</li>
+                          <li>Авизо по МПЗ.</li>
+                          <li> <a href="#">Авизо по расчетам.</a></li>
+                          <li>Авизо по прочим операциям.</li>
+                        </ul>
+                        <h6>Нумированный список:</h6>
+                        <ol>
+                          <li>Разработана специализированная подсистема подготовки уведомления о контролируемых сделках</li>
+                          <li>При подготовке уведомления не&nbsp;требуется повторно вводить или изменять данные в&nbsp;хозяйственных операциях, отраженных в&nbsp;информационной базе. Сформированное уведомление можно распечатать.</li>
+                          <li>Авизо по прочим операциям.</li>
+                        </ol><img src="img/content-img.jpg" alt=""/>
+                        <h6>Двухуровневый маркированный список:</h6>
+                        <ul>
+                          <li>Авизо по ОС.</li>
+                          <li>Авизо по МПЗ.
+                            <ul>
+                              <li><a href="#">Авизо по расчетам.</a></li>
+                              <li>Авизо по прочим операциям.</li>
+                            </ul>
+                          </li>
+                          <li>Авизо по МПЗ.</li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия 8 КОРП (USB)</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                      <div class="s-competences__demo">Бесплатный демо-доступ
+                    <div class="tabs__content2">
+                      <div class="s-product__content">
+                        <h4>Общая характеристика конфигурации «Бухгалтерия КОРП»</h4>
+                        <p>Программный продукт <strong>«1С:Бухгалтерия 8 КОРП» </strong>предназначен для автоматизации бухгалтерского и&nbsp;налогового учета, включая подготовку обязательной (регламентированной) отчетности в&nbsp;организациях, осуществляющих любые виды коммерческой деятельности: оптовую и&nbsp;розничную торговлю, комиссионную торговлю (включая субкомиссию), оказание услуг, производство и&nbsp;т.&nbsp;д. Программа предоставляет возможность вести бухгалтерский и&nbsp;налоговый учет сразу нескольких организаций (юридических лиц) в&nbsp;общей информационной базе.</p>
+                        <h6>Маркированный список:</h6>
+                        <ul>
+                          <li>Авизо по ОС.</li>
+                          <li>Авизо по МПЗ.</li>
+                          <li> <a href="#">Авизо по расчетам.</a></li>
+                          <li>Авизо по прочим операциям.</li>
+                        </ul>
+                        <h6>Нумированный список:</h6>
+                        <ol>
+                          <li>Разработана специализированная подсистема подготовки уведомления о контролируемых сделках</li>
+                          <li>При подготовке уведомления не&nbsp;требуется повторно вводить или изменять данные в&nbsp;хозяйственных операциях, отраженных в&nbsp;информационной базе. Сформированное уведомление можно распечатать.</li>
+                          <li>Авизо по прочим операциям.</li>
+                        </ol><img src="img/content-img.jpg" alt=""/>
+                        <h6>Двухуровневый маркированный список:</h6>
+                        <ul>
+                          <li>Авизо по ОС.</li>
+                          <li>Авизо по МПЗ.
+                            <ul>
+                              <li><a href="#">Авизо по расчетам.</a></li>
+                              <li>Авизо по прочим операциям.</li>
+                            </ul>
+                          </li>
+                          <li>Авизо по МПЗ.</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-3">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
+                    <div class="col-12">
+                      <div class="s-product__extra-block">
+                        <div class="s-product__extra-title"><span>Бесплатно </span>при&nbsp;покупке вы&nbsp;получаете:
                         </div>
+                        <ul class="s-product__extra-list">
+                          <li class="s-product__extra-item">Доставка и установка
+                          </li>
+                          <li class="s-product__extra-item">Обновления через интернет
+                          </li>
+                          <li class="s-product__extra-item">Линия консультаций 24/7
+                          </li>
+                          <li class="s-product__extra-item">Доступ к 1С:Отчетность
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="оптово-розничная торговля" data-btn="Оставить заявку">заказать</a>
+                    <div class="col-12">
+                      <div class="s-product__help-block">
+                        <div class="form-wrap">
+                          <form>
+                            <div class="help-title">Нужна консультация?</div>
+                            <div class="help-subtitle">Закажите консультацию в&nbsp;один&nbsp;клик!</div>
+                            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="+7 (___)-___-__-__" required="required"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <button class="form-wrap__btn" type="submit">отправить
+                            </button>
+                            <div class="form-wrap__polite">
+                              <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</small>
+                              </label>
+                            </div>
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -454,603 +532,10 @@
                 </div>
               </div>
             </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.15s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-lg-last">
-                          <div class="s-competences__price price price--small">За 1 пользователя:
-                            <div class="s-competences__price-wrapper bg-light">от 1 200<span class="i-font">o</span>/мес.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-last"><a class="s-competences__btn btn btn--white btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="бухгалтерский учёт" data-btn="Оставить заявку">арендовать</a>
-                        </div>
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="бухгалтерский учёт" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.22499999999999998s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия 8. Комплект на 5 пользователей</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт зарплаты и кадров" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="информационно-технологическое сопровождение (итс)" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.375s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия 8 КОРП (USB)</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="сопровождение 1с" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.44999999999999996s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="доработка существующей системы учёта" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.525s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия 8. Комплект на 5 пользователей1С:Бухгалтерия 8. Комплект на 5 пользователей</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="автоматизация производства" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.6s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="торгово-кассовое оборудование" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.6749999999999999s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия 8 КОРП (USB)</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.75s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.825s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия 8. Комплект на 5 пользователей</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.8999999999999999s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.975s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия 8 КОРП (USB)</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="1.05s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="1.125s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия 8. Комплект на 5 пользователей</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
-            <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="1.2s">
-              <div class="row">
-                <div class="col-xl-7 col-6">
-                  <div class="row">
-                    <div class="col-auto d-none d-xl-block">
-                      <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
-                      </div>
-                      <div class="s-competences__descr">Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-xl">
-                  <div class="row">
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
-                          <div class="s-competences__price">Цена:
-                            <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /+e.item-->
+          </div>
         </div>
       </section>
-      <!-- end s-competences-->
+      <!-- end s-product-->
       <!-- start s-consultation-->
       <section class="s-consultation section block-with-lazy" id="s-consultation">
         <div class="container"> 

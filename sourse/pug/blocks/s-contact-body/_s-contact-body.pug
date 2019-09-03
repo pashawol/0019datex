@@ -1,0 +1,30 @@
+mixin s-contact-body()
+	// start s-contact-body
+	+b.s-contact-body.section.lazy-background#s-contact-body&attributes(attributes)
+		.container
+			.row
+				mixin item(t)
+					+e.col.col-4
+						+e.title= t
+						block
+				+item('телефон:')
+					+e.lg
+						a(href="tel:88463004840") 
+							+icon("phone-receiver")
+							| 8 846 300 48 40
+					+e.text Пн-Пт с 9:00 до 18:00
+				+item('телефон:')
+					+e.lg
+						a(href="mailto:info@datexsoft.ru") 
+							+icon("mail")
+							| info@datexsoft.ru
+					+e.text Пн-Пт с 9:00 до 18:00
+				+item('телефон:')
+					+e.lg
+						+icon("flag")
+						|  г. Самара,
+					+e.text
+						.fw-500 Партизанская ул, дом № 86, офис 723
+						| Пн-Пт с 9:00 до 18:00
+
+	// end s-contact-body

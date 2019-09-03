@@ -511,17 +511,17 @@ input::-webkit-inner-spin-button {
 	overflow: hidden;
 }
 
-.lazy-bg,
-img.lazy {
-	-webkit-filter: blur(5px);
-	filter: blur(5px);
-	transition: filter 400ms, -webkit-filter 400ms;
+// .lazy-bg,
+// img.lazy {
+// 	-webkit-filter: blur(5px);
+// 	filter: blur(5px);
+// 	transition: filter 400ms, -webkit-filter 400ms;
 
-}
+// }
 
-.lazyloaded {
-	filter: blur(0);
-}
+// .lazyloaded {
+// 	filter: blur(0);
+// }
 
 picture {
 	display: block;

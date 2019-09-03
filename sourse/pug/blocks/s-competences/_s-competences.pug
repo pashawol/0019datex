@@ -90,7 +90,7 @@ mixin s-competences-2()
 					//- .before 0
 					//- 	= i
 					.row
-						.col-xl-7.col-6
+						.col-md-6.col-12.col-xl-7.text-left
 							.row
 								.col-auto.d-none.d-xl-block
 									+e.img-wrapper
@@ -102,33 +102,35 @@ mixin s-competences-2()
 									if d
 										+e.demo Бесплатный демо-доступ
 						//- h6= or
-						.col-6.col-xl
+						.col-12.col-md
 							.row
-								.col-xl-6.col-12
+								.col-xl.col-6.col-md-12.d-flex.d-md-block.justify-content-center
 									.row.justify-content-end
 										if ep
-											.col-xl-12.col-6.order-lg-last
+											+e.price-col.col-xl-12.col-12.col-md-6.order-last.order-md-first.order-xl-last.d-flex.d-md-block.align-items-center.justify-content-center
 												+e.price.price--small За 1 пользователя:
 													+e.price-wrapper.bg-light от 1 200
 														span.i-font o
 														|/мес.
-										.col-xl-12.col-6.order-xl-first.align-self-end
+										+e.price-col.col-xl-12.col-12.col-md-6.col-xl-12.col-6.d-flex.d-md-block.align-items-center.justify-content-center
 											+e.price Цена:
 												+e.price-wrapper 38 500
 													span.i-font o
-								.col-xl-6.col-12
-									.row.justify-content-end
+								+e.btn-col-wrapper.col-xl-auto.col-6.col-md-12
+									+e.btn-row.row.justify-content-end
 										if ep
-											.col-xl-12.col-6.order-xl-last
+											+e.btn-col.col-xl-12.col-12.col-md-6.order-last.order-md-first.order-xl-last
 												if or
 													+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") арендовать
 												else
 													+e.btn.btn--white.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") арендовать
-										.col-xl-12.col-6
+										+e.btn-col.col-xl-12.col-12.col-md-6
 											if or
 												+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
+													span
 											else
 												+e.btn.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
+													span
 				// /+e.item
 			+item('1','1С:Бухгалтерия 8 КОРП (USB)','оптово-розничная торговля','d')
 			+item('2','1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)','бухгалтерский учёт','','ep')

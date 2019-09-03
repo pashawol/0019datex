@@ -30,7 +30,7 @@
           <div class="menu-mobile__inner">
             <!-- start mobile-menu-->
             <div class="mobile-menu section block-with-lazy" id="mobile-menu">
-              <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title">Интернет-магазин «1С»</span></a>
+              <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title"><span>Интернет-магазин «1С»</span></span></a>
                 <ul>
                       <li><a class="mobile-menu__item" href="#"><span class="mobile-menu__svg-wrapper">
                         <svg class="icon icon-mob-m1 ">
@@ -107,6 +107,11 @@
                           <use xlink:href="img/svg/sprite.svg#mob-m15"></use>
                         </svg></span><span class="mobile-menu__item-title"><span>CRM</span></span></a>
                       </li>
+                </ul>
+                <ul class="mobile-menu__mobile-links d-xl-none">
+                  <li><a href="#"><span>Проектное направление</span></a></li>
+                  <li><a href="#"><span>О компании</span></a></li>
+                  <li><a href="#"><span>Контакты</span></a></li>
                 </ul>
               </div>
             </div>
@@ -241,7 +246,7 @@
           </div>
           <!-- start mobile-menu-->
           <div class="mobile-menu section block-with-lazy top-submenu top-submenu--js" id="mobile-menu">
-            <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title">Интернет-магазин «1С»</span></a>
+            <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title"><span>Интернет-магазин «1С»</span></span></a>
               <ul>
                     <li><a class="mobile-menu__item" href="#"><span class="mobile-menu__svg-wrapper">
                       <svg class="icon icon-mob-m1 ">
@@ -319,6 +324,11 @@
                       </svg></span><span class="mobile-menu__item-title"><span>CRM</span></span></a>
                     </li>
               </ul>
+              <ul class="mobile-menu__mobile-links d-xl-none">
+                <li><a href="#"><span>Проектное направление</span></a></li>
+                <li><a href="#"><span>О компании</span></a></li>
+                <li><a href="#"><span>Контакты</span></a></li>
+              </ul>
             </div>
           </div>
           <!-- end mobile-menu-->
@@ -327,11 +337,13 @@
               <div class="row">
                 <div class="col">
                   <div class="top-line-search__search">
-                    <svg class="icon icon-search ">
-                      <use xlink:href="img/svg/sprite.svg#search"></use>
-                    </svg>
                     <div class="form-wrap">
                       <form>
+                        <button class="form-wrap__btn-search" type="submit">
+                          <svg class="icon icon-search ">
+                            <use xlink:href="img/svg/sprite.svg#search"></use>
+                          </svg>
+                        </button>
                         <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="" placeholder="Начните поиск, например: Управление нашей фирмой"/>
                         </div>
                         <!-- +e.input-wrap-->
@@ -372,7 +384,7 @@
           <div class="s-catalog-slider__slider-title text-center container">При заказе любой программы «1С» <strong>для вас бесплатно:</strong>
           </div>
           <div class="s-catalog-slider__slider-wrapper">
-            <div class="s-catalog-slider__slider-nav">
+            <div class="s-catalog-slider__slider-nav d-none d-md-block">
               <div class="s-catalog-slider__slider-prev cat-slider-nav">
                 <svg class="icon icon-slider-prev ">
                   <use xlink:href="img/svg/sprite.svg#slider-prev"></use>
@@ -432,7 +444,7 @@
         <div class="container">
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.075s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -448,11 +460,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -460,9 +472,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="оптово-розничная торговля" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="оптово-розничная торговля" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -473,7 +485,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.15s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -487,17 +499,17 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-lg-last">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 order-last order-md-first order-xl-last d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price price price--small">За 1 пользователя:
                             <div class="s-competences__price-wrapper bg-light">от 1 200<span class="i-font">o</span>/мес.
                             </div>
                           </div>
                         </div>
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -505,11 +517,11 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-last"><a class="s-competences__btn btn btn--white btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="бухгалтерский учёт" data-btn="Оставить заявку">арендовать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6 order-last order-md-first order-xl-last"><a class="s-competences__btn btn btn--white btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="бухгалтерский учёт" data-btn="Оставить заявку">арендовать</a>
                         </div>
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="бухгалтерский учёт" data-btn="Оставить заявку">заказать</a>
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="бухгалтерский учёт" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -520,7 +532,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.22499999999999998s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -534,11 +546,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -546,9 +558,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт зарплаты и кадров" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт зарплаты и кадров" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -559,7 +571,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -573,11 +585,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -585,9 +597,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="информационно-технологическое сопровождение (итс)" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="информационно-технологическое сопровождение (итс)" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -598,7 +610,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.375s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -612,11 +624,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -624,9 +636,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="сопровождение 1с" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="сопровождение 1с" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -637,7 +649,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.44999999999999996s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -651,11 +663,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -663,9 +675,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="доработка существующей системы учёта" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="доработка существующей системы учёта" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -676,7 +688,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.525s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -690,11 +702,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -702,9 +714,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="автоматизация производства" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="автоматизация производства" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -715,7 +727,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.6s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -729,11 +741,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -741,9 +753,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="торгово-кассовое оборудование" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="торгово-кассовое оборудование" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -754,7 +766,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.6749999999999999s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -768,11 +780,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -780,9 +792,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -793,7 +805,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.75s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -807,11 +819,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -819,9 +831,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -832,7 +844,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.825s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -846,11 +858,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -858,9 +870,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -871,7 +883,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.8999999999999999s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -885,11 +897,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -897,9 +909,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -910,7 +922,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.975s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -924,11 +936,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -936,9 +948,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -949,7 +961,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="1.05s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -963,11 +975,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -975,9 +987,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -988,7 +1000,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="1.125s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -1002,11 +1014,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -1014,9 +1026,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>
@@ -1027,7 +1039,7 @@
             <!-- /+e.item-->
             <div class="s-competences__item wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="1.2s">
               <div class="row">
-                <div class="col-xl-7 col-6">
+                <div class="col-md-6 col-12 col-xl-7 text-left">
                   <div class="row">
                     <div class="col-auto d-none d-xl-block">
                       <div class="s-competences__img-wrapper"><img src="img/product-box.png" alt=""/>
@@ -1041,11 +1053,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-xl">
+                <div class="col-12 col-md">
                   <div class="row">
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xl col-6 col-md-12 d-flex d-md-block justify-content-center">
                       <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6 order-xl-first align-self-end">
+                        <div class="s-competences__price-col col-xl-12 col-12 col-md-6 col-xl-12 col-6 d-flex d-md-block align-items-center justify-content-center">
                           <div class="s-competences__price">Цена:
                             <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                             </div>
@@ -1053,9 +1065,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 col-12">
-                      <div class="row justify-content-end">
-                        <div class="col-xl-12 col-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать</a>
+                    <div class="s-competences__btn-col-wrapper col-xl-auto col-6 col-md-12">
+                      <div class="s-competences__btn-row row justify-content-end">
+                        <div class="s-competences__btn-col col-xl-12 col-12 col-md-6"><a class="s-competences__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-order="учёт автотранспорта и транспортная логистика" data-btn="Оставить заявку">заказать<span></span></a>
                         </div>
                       </div>
                     </div>

@@ -109,7 +109,8 @@ mixin mobile-menu()
 			+e.A.main-item(href="#")
 				+e.logo-wrapper
 					img(src="img/1C-logo.png" alt="")
-				+e.item-title Интернет-магазин «1С»
+				+e.item-title
+					span Интернет-магазин «1С»
 			ul
 				mixin mob-item(i, t)
 					li
@@ -137,6 +138,16 @@ mixin mobile-menu()
 				+mob-item("13","ИТС")
 				+mob-item("14","Отраслевые решения")
 				+mob-item("15","CRM")
+			+e.UL.mobile-links.d-xl-none
+				li
+					a(href="#")
+						span Проектное направление
+				li
+					a(href="#")
+						span О компании
+				li
+					a(href="#")
+						span Контакты
 	// end mobile-menu
 
 mixin pic( i,exp="jpg", bg, lazy="lazy", media='576px')

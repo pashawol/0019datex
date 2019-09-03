@@ -24,15 +24,22 @@
 			font-size: rem(16);
 			font-weight: 500;
 			line-height: $h5-font-size;
-			a{
-				color: $body-color;
-				display: inline;
-				border-bottom: 1px solid #C5C5C5;
-				&:hover{
-					text-decoration: none;
-					color: $primary;
-					border-color: $primary;
-				}
+			color: $body-color;
+		}
+	}
+	&__link{
+		@include mt;
+		display: inline;
+		border-bottom: 1px solid #C5C5C5;
+	}
+	a{
+		&:hover{
+			text-decoration: none;
+			color: $primary;
+			border-color: $primary;
+			.s-buy-prog__link{
+				color: $primary;
+				border-color: $primary;
 			}
 		}
 	}

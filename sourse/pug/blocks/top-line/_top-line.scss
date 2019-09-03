@@ -593,8 +593,10 @@
   max-width: em(1030);
   list-style-type: none;
   text-transform: none;
-  letter-spacing: 1px;
   @include rfs(rem(16));
+  @include media-breakpoint-up(xl) {
+    @include rfs(rem(14));
+  }
   align-items: center;
   
   &-item {

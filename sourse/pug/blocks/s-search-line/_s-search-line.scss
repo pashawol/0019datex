@@ -36,15 +36,25 @@
 	}
 	.form-wrap{
 		flex-grow: 1;
+		position: relative;
 		&__input{
 			border: none;
 			background-color: $light;
 			text-align: left;
-			padding: 0 rem(16);
+			padding: 0 rem(16) 0 rem(35);
 			font-size: rem(16);
+			color: $body-color;
 		}
 		.form-group{
 			margin: 0;
+		}
+		&__btn-search{
+			position: absolute;
+			top: rem(-3);
+			left: 0;
+			background-color: $light;
+			border: none;
+			outline: none;
 		}
 	}
 	.icon{

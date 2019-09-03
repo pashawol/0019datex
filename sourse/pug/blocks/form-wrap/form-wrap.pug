@@ -7,11 +7,9 @@ mixin input( t , n, pl)
 		+e.INPUT.input.form-control(type= t name= n placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
 
-mixin ta(p , pl)
+mixin ta(pl)
 	+e.input-wrap.form-group
-		label
-			+e.SPAN.title= p
-			+e.TEXTAREA.input.form-control( placeholder= pl)&attributes(attributes)
+		+e.TEXTAREA.input.form-control( placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
 
 mixin form-wrap()

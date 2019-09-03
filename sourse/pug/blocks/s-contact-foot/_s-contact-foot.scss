@@ -1,9 +1,43 @@
 .s-contact-foot {
-		 
+	background-color: $light;
+	.section-title{ 
+		padding-bottom: rem(20);
+		h2{
+			@include rfs(rem(48));
+			padding-bottom: rem(10);
+		}
+		&__text{
+			@extend .h5;
+			font-weight: normal;
+		}
+	}
+	.form-control{
+		background-color: #ffffff;
+		text-align: left;
+	}
+	.form-wrap__polite {
+		max-width: rem(640);
+		.wpcf7-list-item-label{
+
+			 min-height: rem(40);
+		display: flex;
+		align-items: center;
+	}
+	}
+	.form-wrap__polite .wpcf7-list-item-label::before {
+		background-color: #ffffff;
+		border: 2px solid $secondary;
+	}
 	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+		.container{
+			max-width: 893px;
+		}
+	}
 	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+		padding-top: rem(62);
+	}
 	@include media-breakpoint-up(xs) {}
 	
 	//

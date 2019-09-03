@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
 		// JSCCommon.mobileMenu();
 	}, 100); 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/About.png);"></div>')
+ 
 	parent.on('mouseenter', 'li', function () {
 		// $(".s-segments picture  ").html($(this).find("picture").html)
 		// $(this).find("picture").removeClass('active');
@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
 	});
 
 
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/psd.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Contacts.png);"></div>')
 
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню

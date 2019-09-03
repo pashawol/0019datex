@@ -5,25 +5,42 @@
 		font-weight: 900;
 		color: $primary;
 		letter-spacing: rem(2.88);
+		font-size: rem(16);
+		margin-bottom: rem(15);
 	}
 	.icon{
-		font-size: rem(24);
+		font-size: rem(28);
 		margin-right: rem(14);
 		color: $primary;
 	}
 	&__lg{
 		@extend .h3;
 		font-weight: 900;
+		padding-bottom: rem(5);
 		a{
 		color: $body-color !important;
 		text-decoration: none 	!important;
 		}
 	}
+	&__col{
+		padding-bottom: rem(40);
+	}
 		 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xl) {
+		text-align: left;
+	}
+	text-align: center;
+	@include media-breakpoint-up(xxl) {
+		.container{
+			max-width: rem(1270);
+		}
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+		padding-top: rem(45);
+		padding-bottom: rem(15);
+	}
 	@include media-breakpoint-up(xs) {}
 	
 	//

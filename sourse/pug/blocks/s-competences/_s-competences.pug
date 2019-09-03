@@ -90,7 +90,7 @@ mixin s-competences-2()
 					//- .before 0
 					//- 	= i
 					.row
-						.col-7
+						.col-xl-7.col-6
 							.row
 								.col-auto.d-none.d-xl-block
 									+e.img-wrapper
@@ -101,40 +101,34 @@ mixin s-competences-2()
 									+e.descr Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
 									if d
 										+e.demo Бесплатный демо-доступ
-
-
-									
 						//- h6= or
-						.col-auto.col-xl
+						.col-6.col-xl
 							.row
-								if ep
-									.col-auto.col-xl-12
-										.row
-											.col-12.col-xl.d-flex.justify-content-end
+								.col-xl-6.col-12
+									.row.justify-content-end
+										if ep
+											.col-xl-12.col-6.order-lg-last
 												+e.price.price--small За 1 пользователя:
 													+e.price-wrapper.bg-light от 1 200
 														span.i-font o
 														|/мес.
-											.col-12.col-xl-auto
+										.col-xl-12.col-6.order-xl-first.align-self-end
+											+e.price Цена:
+												+e.price-wrapper 38 500
+													span.i-font o
+								.col-xl-6.col-12
+									.row.justify-content-end
+										if ep
+											.col-xl-12.col-6.order-xl-last
 												if or
 													+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") арендовать
 												else
 													+e.btn.btn--white.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") арендовать
-								.col.col-xl-12.order-xl-first
-									.row
-										.col-6.col-xl.d-flex.justify-content-end
-											.row
-												.col-xl-12.col-6
-													+e.price Цена:
-														+e.price-wrapper 38 500
-															span.i-font o
-										.col-6.col-xl-auto
-											.row
-												.col-xl-12.col-6
-													if or
-														+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
-													else
-														+e.btn.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
+										.col-xl-12.col-6
+											if or
+												+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
+											else
+												+e.btn.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
 				// /+e.item
 			+item('1','1С:Бухгалтерия 8 КОРП (USB)','оптово-розничная торговля','d')
 			+item('2','1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)','бухгалтерский учёт','','ep')

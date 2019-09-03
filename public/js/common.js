@@ -449,7 +449,7 @@ JSCCommon = {
 		});
 
 		// / modal window
-
+		$("#product-radio a")
 		// modal галерея
 		$(".gal").each(function () {
 

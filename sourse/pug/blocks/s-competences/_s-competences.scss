@@ -134,16 +134,7 @@
 		width: rem(172);
  
 	}
-	.btn--white{
-		margin-top: rem(10);
-		color: $primary !important;
-		box-shadow: 0 10px 15px rgba(41, 41, 41, 0.1);
-		background-color: #ffffff;
-		border: 2px solid $primary;
-		&:hover{
-			color: #ffffff !important;	
-		}
-	}
+
  
 	.control-wrap{
 		display: none;
@@ -245,4 +236,25 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+}
+.btn--white{
+	margin-top: rem(10);
+	color: $primary !important;
+	box-shadow: 0 10px 15px rgba(41, 41, 41, 0.1);
+	background-color: #ffffff;
+	border: 2px solid $primary;
+	&:hover{
+		color: #ffffff !important;	
+	}
+}
+
+.btn--green{
+	margin-top: rem(10);
+	color: #00c257 !important;
+	box-shadow: 0 10px 15px rgba(41, 41, 41, 0.1);
+	background-color: #ffffff;
+	border: 2px solid #00c257;
+	&:hover{
+		color: #ffffff !important;	
+	}
 }

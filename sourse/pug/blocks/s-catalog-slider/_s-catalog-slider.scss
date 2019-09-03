@@ -16,7 +16,9 @@
 		// background-color: #f5c33e;
 	}
 	&__slider-nav{
-		position: relative;
+		position: absolute;
+		@include a-cent(y);
+		width: 100%;
 		max-width: rem(1820);
 		margin: 0 auto; 
 	}
@@ -61,6 +63,7 @@
 		padding: rem(20) rem(30);
 		display: flex;
 		align-items: center;
+		height: 100%;
 		&-title{
 			font-size: rem(16);
 			font-weight: 500;
@@ -107,6 +110,7 @@
 		display: flex;
 	}
 	&__slide{
+		height: auto;
 		&:not(:last-child){
 			margin-right: rem(20);
 		}

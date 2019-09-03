@@ -1,17 +1,42 @@
 
 
-@include font-face ("Gotham Pro", "../fonts/GothamPro/GothamPro", $file-formats: woff2 woff ttf);
-@include font-face ("Gotham Pro", "../fonts/GothamPro-Bold/GothamPro-Bold", bold, $file-formats: woff2 woff ttf);
-@include font-face ("Gotham Pro", "../fonts/GothamPro-Medium/GothamPro-Medium", 500, $file-formats: woff2 woff ttf);
-@include font-face ("Gotham Pro", "../fonts/GothamPro-Black/GothamPro-Black", 900, $file-formats: woff2 woff ttf);
+@include font-face ("Gotham Pro", "../fonts/GothamPro/GothamPro", $file-formats: woff2);
+@include font-face ("Gotham Pro", "../fonts/GothamPro-Bold/GothamPro-Bold", bold, $file-formats: woff2);
+@include font-face ("Gotham Pro", "../fonts/GothamPro-Medium/GothamPro-Medium", 500, $file-formats: woff2);
+@include font-face ("Gotham Pro", "../fonts/GothamPro-Black/GothamPro-Black", 900, $file-formats: woff2);
+@include font-face ("ALSRubl", "../fonts/ALSRubl/ALSRubl", $file-formats: woff2 woff ttf);
 
 
 $default-font: "Gotham Pro";
+$i-font: "ALSRubl";
 
 $def: #373a41;
 $em-base: 18px;
 $small: rem(14);
  
+
+
+@mixin bg($src,$media:xy , $path:xy){
+  @if $media == xy{
+    @if $path == xy{ 
+      background-image: url(#{$url}#{$path2}#{$src});
+    }
+    @else if $path == 1{
+      background-image: url(#{$url}#{$path1}#{$src}); 
+    } 
+    @else{
+      background-image: url(#{$url}#{$path}/#{$src});  
+    } 
+  }
+  @else{
+    @include media-breakpoint-up($media) {
+      background-image: url(#{$url}#{$path2}#{$src});
+    }
+    background-image: url(#{$url}#{$path1}#{$src});
+
+  }
+} 
+
 // обсалютное центрирование
  
 @mixin  a-cent($xy:xy) {

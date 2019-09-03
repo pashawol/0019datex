@@ -1,184 +1,204 @@
-.form-control{
- //  outline: 0 !important;
- text-align: center;
+.form-control {
+	//  outline: 0 !important;
+	text-align: center;
 	resize: none;
 	@include mt;
 	// @extend .form-control-lg; 
 	box-shadow: none !important;
 	border-width: 2px;
-	&:focus{
+
+	&:focus {
 		border-color: #f2f6fa;
 		outline: none;
 		background-color: #f2f6fa;
 	}
 }
-.form-wrap{
-	&__input-wrap{
+
+.form-wrap {
+	&__input-wrap {
 
 		// max-width: 466px;
 	}
-	&__btn{
+
+	&__btn {
 		cursor: pointer;
 	}
-	label{
+
+	label {
 		width: 100%;
 		display: block;
 	}
-	
-	&__inner{
-		
-		background-position: left center ;
-		background-repeat: no-repeat; 
+
+	&__inner {
+
+		background-position: left center;
+		background-repeat: no-repeat;
 		margin-top: em(35);
+
 		@include media-breakpoint-up(sm) {
 
 			padding: 25px 68px;
-		 }
-		 padding: 35px 15px 20px;
+		}
+
+		padding: 35px 15px 20px;
 	}
-	&__inner-title{
-	 //  @extend .mono; 
- 
+
+	&__inner-title {
+		//  @extend .mono; 
+
 		text-align: center;
+
 		@include media-breakpoint-up(xl) {
 
 			font-size: 36px;
-		 }
-		 // font-size: 32px;
-		 font-size: calc(.8rem + 1.5vw);
-		 margin-bottom: em(8);
+		}
+
+		// font-size: 32px;
+		font-size: calc(.8rem + 1.5vw);
+		margin-bottom: em(8);
 	}
-	&__btn{ 
+
+	&__btn {
 		@extend .btn-block;
 		@extend .btn-primary;
 		@extend .btn-lg;
 	}
-	&__small{
-	 font-size: 12px; 
-	 text-align: center;
-	 margin-top: em(20);
- }
 
- &__title{
-	 // @include rfs
-	//  font-size: rem(32);
-	@extend .h3;
-	font-weight: 900;
+	&__small {
+		font-size: 12px;
+		text-align: center;
+		margin-top: em(20);
+	}
+
+	&__title {
+		// @include rfs
+		//  font-size: rem(32);
+		@extend .h3;
+		font-weight: 900;
 		//  font-weight: bold;
-	 line-height: 1;
-	 margin-bottom: em(5);
+		line-height: 1;
+		margin-bottom: em(5);
 
- }
- &__title-sub{
-	 // color: $gray; 
-	 // font-size: $h6-font-size;
-	 font-size: rem(18);
-	 margin-left: auto;
-	 margin-right: auto;
-	 max-width: rem(480);
-	 margin-bottom: em(30);
-	 color: #7a7a7a;
- }
- &__polite{
-	 margin-left: auto;
-	 margin-right: auto;
-	 max-width: rem(400); 
-	 .wpcf7-list-item-label{
+	}
 
-		 font-size: rem(13);
-		position: relative;
-		display: block;
-		margin: auto; 
-		margin-top: rem(15);
-		color: #6f7378;
-	 //  @include media-breakpoint-up(md) {
+	&__title-sub {
+		// color: $gray; 
+		// font-size: $h6-font-size;
+		font-size: rem(18);
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(480);
+		margin-bottom: em(30);
+		color: #7a7a7a;
+	}
+
+	&__polite {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(400);
+
+		.wpcf7-list-item-label {
+
+			font-size: rem(13);
+			position: relative;
+			display: block;
+			margin: auto;
+			margin-top: rem(15);
+			color: #6f7378;
+			//  @include media-breakpoint-up(md) {
 			text-align: left;
 			padding-left: rem(55);
-	 //  }
-	 //  text-align: center;
-		margin-bottom: rem(20);
-		cursor: pointer;
-		position: relative; 
-		 &::before{ 
-			content:  '';
-			// background-image:  url("../img/check.svg");
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 70%;
-			height: 70%;
-			position: absolute;
-		 background-size: 70%; 
-			left: 0;
-			display: block;
-			top: rem(5px);
-			// display: inline-block;
-			@include media-breakpoint-up(sm) {
- 
-				width: rem(30px);
-				height: rem(30px);
-			 }
-			 width: rem(35px);
-			 height: rem(35px);
-			 background-color: $light;
-			// @include mt;
-			position: absolute; 
-			margin-right: 10px; 
+			//  }
+			//  text-align: center;
+			margin-bottom: rem(20);
+			cursor: pointer;
+			position: relative;
+
+			&::before {
+				content: '';
+				// background-image:  url("../img/check.svg");
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				width: 70%;
+				height: 70%;
+				position: absolute;
+				background-size: 70%;
+				left: 0;
+				display: block;
+				top: rem(5px);
+
+				// display: inline-block;
+				@include media-breakpoint-up(sm) {
+
+					width: rem(30px);
+					height: rem(30px);
+				}
+
+				width: rem(35px);
+				height: rem(35px);
+				background-color: $light;
+				// @include mt;
+				position: absolute;
+				margin-right: 10px;
+			}
+
+
+			&::after {
+				content: '';
+				background-image: url("../img/check.svg");
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				opacity: 0;
+				@include mt;
+
+				@include media-breakpoint-up(sm) {
+
+					width: rem(30px);
+					height: rem(30px);
+				}
+
+				width: rem(35px);
+				height: rem(35px);
+				position: absolute;
+				background-size: 70%;
+				left: 0;
+				display: block;
+				top: rem(5px);
+
+			}
+
 		}
-		
-		
-		&::after{ 
-			content:  '';
-			background-image:  url("../img/check.svg");
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			opacity: 0;
-			@include mt;
-			@include media-breakpoint-up(sm) {
- 
-				width: rem(30px);
-				height: rem(30px);
-			 }
-			 width: rem(35px);
-			 height: rem(35px);
+
+
+		input {
 			position: absolute;
-			background-size: 70%; 
-			left: 0;
-			display: block;
-			top: rem(5px);
-			
+			// opacity: 0;
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			border: 0;
+			padding: 0;
+			clip: rect(0 0 0 0);
+			overflow: hidden;
 		}
- 
+
+
+		input:checked~.wpcf7-list-item-label {
+			&::after {
+				opacity: 1;
+			}
+
+			//  }
+		}
+
+
+	}
 }
 
-	
- input{
-	 position: absolute;
-	 // opacity: 0;
-	 width: 1px;
-	 height: 1px;
-	 margin: -1px;
-	 border: 0;
-	 padding: 0;
-	 clip: rect(0 0 0 0 );
-	 overflow: hidden;
- }
- 
-
-	 input:checked ~ .wpcf7-list-item-label{
-		 &::after{ 
-			 opacity: 1;
-		 }
-	//  }
- }
- 
-
- }
-}
 
 
- 
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -216,120 +236,139 @@
 @include media-breakpoint-down(xs) {}
 
 
-.border-primary{
- border-color: $primary;
+.border-primary {
+	border-color: $primary;
 }
 
 
 
-.custom-input{
- display: block;
- margin: auto;
- margin-left: auto;
- margin-right: auto; 
- margin-top: rem(15);
- color: #6f7378;
-//  @include media-breakpoint-up(md) {
-	 text-align: left;
-	 padding-left: rem(55);
-//  }
-//  text-align: center;
- margin-bottom: rem(20);
- cursor: pointer;
- position: relative;
- display: inline-block;
- font-size: rem(16);
- &__input{
-	 position: absolute;
-	 // opacity: 0;
-	 width: 1px;
-	 height: 1px;
-	 margin: -1px;
-	 border: 0;
-	 padding: 0;
-	 clip: rect(0 0 0 0 );
-	 overflow: hidden;
- }
- &__lab{
+.custom-input {
+	display: block;
+	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: rem(15);
+	color: #6f7378;
+	//  @include media-breakpoint-up(md) {
+	text-align: left;
+	padding-left: rem(55);
+	//  }
+	//  text-align: center;
+	margin-bottom: rem(20);
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	font-size: rem(16);
+
+	&__input {
+		position: absolute;
+		// opacity: 0;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+	}
+
+	&__lab {
+		//  @include media-breakpoint-up(md) {
+
+		left: 0;
+		display: block;
+		top: rem(5px);
+
+		// display: inline-block;
+		@include media-breakpoint-up(sm) {
+
+			width: rem(30px);
+			height: rem(30px);
+		}
+
+		width: rem(35px);
+		height: rem(35px);
+		background-color: $light;
+		@include mt;
+		position: absolute;
+		margin-right: 10px;
+		//  }
+	}
+
 	//  @include media-breakpoint-up(md) {
 
-		 left: 0;
-		 display: block;
-		 top: rem(5px);
-		 // display: inline-block;
-		 @include media-breakpoint-up(sm) {
+	&__input[type="checkbox"]+&__lab {
+		&::after {
+			content: '';
+			background-image: url("../img/check.svg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 70%;
+			height: 70%;
+			position: absolute;
+			@include a-cent;
+			opacity: 0;
+		}
 
-			 width: rem(30px);
-			 height: rem(30px);
-			}
-			width: rem(35px);
-			height: rem(35px);
-			background-color: $light;
-		 @include mt;
-		 position: absolute; 
-		 margin-right: 10px; 
-	//  }
- }
-//  @include media-breakpoint-up(md) {
+		//  }
+	}
 
-	 &__input[type="checkbox"] + &__lab{
-		 &::after{ 
-			 content:  '';
-			 background-image:  url("../img/check.svg");
-			 background-position: center center;
-			 background-repeat: no-repeat;
-			 background-size: contain;
-			 width: 70%;
-			 height: 70%;
-			 position: absolute;
-			 @include a-cent; 
-			 opacity: 0;
-		 }
-	//  }
- }
-	 &__input[type="radio"] + &__lab{
-		 
-		 border-radius: 50%;
-	 &::after{ 
-		 content: '';
-		 position: absolute;
-		 @include a-cent;
-		 background-color: $success;
-		 opacity: 0;
-		 width: 10px;
-		 height: 10px;
-		 border-radius: 50%;
-	 }
- }
+	&__input[type="radio"]+&__lab {
+		width: 20px;
+		height: 20px;
+		background-color: #fff;
+		border: 2px solid #dadde2;
+		@include a-cent(y);
+		left: 16px;
+		border-radius: 50%;
 
- &__input:checked + &__lab{ 
-	 &::after{
+		&::after {
+			@include mt;
+			content: '';
+			position: absolute;
+			@include a-cent;
+			//  background-color: $success;
+			width: 20px;
+			height: 20px;
+			border: 7px solid $primary;
+			opacity: 0;
+			border-radius: 50%;
+		}
+	}
 
-		 opacity: 1 !important;
-	 }
- }
+	&__input:checked+&__lab {
+		&::after {
+
+			opacity: 1 !important;
+		}
+	}
 
 }
 
 
 
-.manager-block{
+.manager-block {
 	max-width: rem(450);
 	padding-bottom: rem(30);
-	.row{
+
+	.row {
 		align-items: center;
 		@include roww(10)
 	}
-	p{
+
+	p {
 		color: #6f7378;
 		font-size: rem(16);
 		margin-bottom: 0;
 	}
-	h6{
+
+	h6 {
 		// margin-bottom: 0 !important;
 		padding-bottom: 0 !important;
 	}
-	&__img-wrap{
+
+	&__img-wrap {
 		width: rem(100px);
 		height: rem(100px);
 		background-color: $light;
@@ -337,11 +376,11 @@
 		position: relative;
 		overflow: hidden;
 		// padding-top: rem(15);
-	 
-		img{
+
+		img {
 			@extend .res-i;
 			// object-fit: contain !important;
-		 
+
 			// width: 80%;
 			// height: auto;
 			background-size: contain !important;
@@ -349,10 +388,13 @@
 		}
 	}
 }
+
 span.wpcf7-not-valid-tip,
-div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
 	display: none !important;
 }
-.form-control.wpcf7-not-valid{
+
+.form-control.wpcf7-not-valid {
 	border-color: $primary;
 }

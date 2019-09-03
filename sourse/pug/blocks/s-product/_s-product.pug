@@ -1,0 +1,52 @@
+mixin s-product()
+	// start s-product
+	+b.SECTION.s-product.section.lazy-background#s-product&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				+breadcrumb("Главная","Программы «1С»","Бухгалтерский учет","1С:Бухгалтерия 8 ПРОФ")
+				h2 1С:Бухгалтерия 8 ПРОФ
+				
+			.row
+				.col-3
+					+e.product-img
+						img(src="img/product.png" alt="#")
+				.col-6
+					+form-wrap(id="product-radio")
+						mixin product-radio(t)
+							+b.LABEL.radio-prod
+								input(type='radio' name="additional" )&attributes(attributes)
+								+e.SPAN.wrapper
+									+e.SPAN.lab
+									span.row
+										+e.SPAN.title.col=t
+										+e.SPAN.price.col-auto 1 000 000
+											span.i-font o
+						+product-radio("Основная поставка")(checked)
+						+product-radio("Электронная поставка")
+						+product-radio("USB поставка")
+					+e.art Артикул: 4601546041654
+					.row
+						+e.col.col-auto
+							+e.price Цена:
+								+e.SPAN.price-wrapper 9 000 000
+									span.i-font o
+						+e.col.col-auto
+							+e.btn.main-btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") Купить
+						+e.col.col
+							+e.one-click
+								a(href="#") Купить в 1 клик
+
+							
+				.col-3.text-center.align-items-end.d-flex.justify-content-center
+					.row
+						.col-12.d-flex.justify-content-center
+							+e.price-light.bg-light от 1 200
+								span.i-font o
+								|/мес.
+						.col-12
+							+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") Арендовать
+						.col-12
+							+e.title--green Бесплатно на 30 дней
+							+e.btn.btn--green.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") Арендовать
+	// end s-product
+

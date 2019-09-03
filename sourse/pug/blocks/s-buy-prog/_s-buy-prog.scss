@@ -16,6 +16,10 @@
 		background-color: #fff;
 		padding: rem(19) rem(20);
 		height: 100%;
+		@include mt;
+		&:hover{
+			box-shadow: 0 10px 15px rgba(41, 41, 41, 0.1);
+		}
 		&-title{
 			font-size: rem(16);
 			font-weight: 500;

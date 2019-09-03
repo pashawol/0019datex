@@ -10,7 +10,8 @@ mixin s-buy-prog()
 					+e.col.col-12.col-sm-6.col-lg-4.col-xxl-3
 						+e.item
 							+e.svg-wrapper
-								+icon(`mob-m${i}`)
+								img(src=`mob-m${i}` alt="")
+								//- +icon(`mob-m${i}`)
 							+e.item-title
 								if t
 									a(href="#")=t

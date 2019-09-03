@@ -256,6 +256,7 @@
 	}
 
 	&__price-col {
+		align-items: center;
 		@include media-breakpoint-up(md) {
 			display: flex;
 			align-items: flex-end;

@@ -874,3 +874,23 @@ a {
 		padding-bottom: rem(20);
 	}
 }
+
+
+.cat-slider-nav{
+	z-index: 200;
+	position: absolute;
+	@include a-cent(y);
+	width: rem(60);
+	height: rem(60);
+	border-radius: 50%;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	outline: none;
+	.icon{
+		font-size: rem(15);
+		color: $primary;
+	}
+}

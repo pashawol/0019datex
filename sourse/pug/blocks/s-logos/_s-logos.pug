@@ -1,0 +1,33 @@
+mixin s-logos()
+	// start s-logos
+	+b.SECTION.s-logos.section.lazy-background#s-logos&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши клиенты
+				
+		+e.slider-wrapper
+			.container
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin slide(i)
+							+e.slide.swiper-slide
+								img(  class="swiper-lazy" src="#"   data-src=`img/@2x/logo-${i}.png` alt="#")
+								//- .swiper-lazy-preloader
+						+slide(1)
+						+slide(2)
+						+slide(3)
+						+slide(4)
+						+slide(5)
+						+slide(6)
+						+slide(4)
+						+slide(5)
+						+slide(6)
+			+e.slider-nav
+				+e.slider-prev.cat-slider-nav
+					+icon("slider-prev")
+				+e.slider-next.cat-slider-nav
+					+icon("slider-next")
+		.container
+			+e.btn.popup-with-move-anim(href="#modal-call" data-title="стать клиентом" data-order="стать клиентом"   data-btn="стать клиентом")  стать клиентом
+				span
+	// end s-logos

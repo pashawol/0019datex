@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
 		// JSCCommon.mobileMenu();
 	}, 100); 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Card.jpg);"></div>')
+ 
 	parent.on('mouseenter', 'li', function () {
 		// $(".s-segments picture  ").html($(this).find("picture").html)
 		// $(this).find("picture").removeClass('active');
@@ -46,8 +46,6 @@ jQuery(document).ready(function ($) {
 
 	JSCCommon.mobileMenu();
 	
-	JSCCommon.inlineSVG();
-
 	JSCCommon.inputMask();
 	
 	var $d3 = $(".input-range-js");
@@ -72,12 +70,13 @@ jQuery(document).ready(function ($) {
 	});
 
 
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/psd.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Contacts.png);"></div>')
 
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
+		$(".page-top-block").css("margin-top",$(".top-line").height());
 		var topH = $(".header-block").height();
 
 		function fixedMenu() {
@@ -149,7 +148,7 @@ jQuery(document).ready(function ($) {
 				$("body, html").removeClass("fixed");
 				return false;
 			} 
-			$(".page-top-block").css("margin-top",$(".top-line").height());
+	
 	}
 
 	$(window).resize(function () {
@@ -212,6 +211,47 @@ jQuery(document).ready(function ($) {
 		}
 		var swiper2 = new Swiper($(this).find('.slider--js'), slider);
 		var swiper3 = new Swiper($(this).find('.slider--js2'), slider);
+
+		var sliderLogo = new Swiper($(this).find('.s-logos__slider--js'), {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			breakpointsInverse: true,
+			speed: 400,
+			loop: true,
+			lazy: {
+				loadPrevNext: true,
+			},
+			// pagination: {
+			// 	el: $(this).find('.swiper-pagination'),
+			// 	clickable: true,
+			// },
+			navigation: {
+				nextEl: $(this).find('.s-logos__slider-next'),
+				prevEl: $(this).find('.s-logos__slider-prev'),
+			},
+			breakpoints: {
+	
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+	
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 30
+				},
+				
+				992: {
+					slidesPerView: 4, 
+				},
+				
+				1200: {
+					slidesPerView: 6,
+					spaceBetween: 20
+				}
+			}
+		})
+		
 	});
 
 
@@ -274,12 +314,13 @@ jQuery(document).ready(function ($) {
 				spaceBetween: 30
 			},
 
-			1100: {
+			1200: {
 				slidesPerView: 4,
 				spaceBetween: 20
 			}
 		}
 	})
+
 
 
 
@@ -446,37 +487,37 @@ JSCCommon = {
 
 	// /LazyFunction
 
-	inlineSVG: function () {
-    //Replace all SVG images with inline SVG
-		$('img.img-svg').each(function(){
-			var $img = $(this);
-			var imgClass = $img.attr('class');
-			var imgURL = $img.attr('src');
+	// inlineSVG: function () {
+  //   //Replace all SVG images with inline SVG
+	// 	$('img.img-svg').each(function(){
+	// 		var $img = $(this);
+	// 		var imgClass = $img.attr('class');
+	// 		var imgURL = $img.attr('src');
 	
-			$.get(imgURL, function(data) {
-					// Get the SVG tag, ignore the rest
-					var $svg = $(data).find('svg');
+	// 		$.get(imgURL, function(data) {
+	// 				// Get the SVG tag, ignore the rest
+	// 				var $svg = $(data).find('svg');
 	
-					// Add replaced image's classes to the new SVG
-					if(typeof imgClass !== 'undefined') {
-						$svg = $svg.attr('class', imgClass+' replaced-svg');
-					}
+	// 				// Add replaced image's classes to the new SVG
+	// 				if(typeof imgClass !== 'undefined') {
+	// 					$svg = $svg.attr('class', imgClass+' replaced-svg');
+	// 				}
 	
-					// Remove any invalid XML tags as per http://validator.w3.org
-					$svg = $svg.removeAttr('xmlns:a');
+	// 				// Remove any invalid XML tags as per http://validator.w3.org
+	// 				$svg = $svg.removeAttr('xmlns:a');
 	
-					// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-					if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-						$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-					}
+	// 				// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+	// 				if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+	// 					$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+	// 				}
 	
-					// Replace image with new SVG
-					$img.replaceWith($svg);
+	// 				// Replace image with new SVG
+	// 				$img.replaceWith($svg);
 	
-				}, 'xml');
+	// 			}, 'xml');
 	
-		});
-	},
+	// 	});
+	// },
 	magnificPopupCall: function () {
 		$('.popup-with-move-anim').magnificPopup({
 			type: 'inline',

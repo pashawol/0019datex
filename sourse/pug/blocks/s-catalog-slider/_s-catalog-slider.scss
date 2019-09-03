@@ -28,24 +28,7 @@
 		// top: rem(5);
 		margin-top: rem(20);
 	}
-	.cat-slider-nav{
-		z-index: 2;
-		position: absolute;
-		@include a-cent(y);
-		width: rem(60);
-		height: rem(60);
-		border-radius: 50%;
-		background-color: #fff;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		outline: none;
-		.icon{
-			font-size: rem(15);
-			color: $primary;
-		}
-	}
+
 	&__slider-prev{
 		left: rem(5);
 	}
@@ -58,6 +41,7 @@
 		margin-bottom: rem(25);
 	}
 	&__item{
+	
 		background-color: #fff;
 		padding: rem(20) rem(30);
 		display: flex;
@@ -109,10 +93,11 @@
 		display: flex;
 	}
 	&__slide{
-		height: auto;
-		&:not(:last-child){
+		@include media-breakpoint-up(lg) {
+			width: rem(417);
 			margin-right: rem(20);
 		}
+		height: auto;
 	}
 	#catalog-slider-2--js{
 		.s-catalog-slider__item{

@@ -1,0 +1,49 @@
+mixin s-basket()
+	// start s-basket
+	+b.s-basket.section&attributes(attributes)
+		.container
+			.section__inner
+				table
+					thead
+						tr
+							th
+							th Наименование
+							th Цена
+							th Количество
+							th Итог
+					tbody
+						mixin tr(t)
+							tr
+								td
+									+pic("basket-img",'jpg','','lazy',0)
+								td
+									+e.title
+										a(href="#")= t
+									+e.text  Артикул: 4601546041654
+								td
+									+e.price--color 16 200
+										|
+										span.i-font o
+								td
+									+b.add-block
+										+e.BUTTON.btn--minus
+										+e.INPUT.input(type="number" value="1")
+										+e.BUTTON.btn--plus
+								td
+									+e.price 16 200
+										|
+										span.i-font o
+									+e.delete
+										+icon("close-basket")
+						+tr("1С:Бухгалтерия государственного учреждения 8 ПРОФ")
+						+tr("1С:Бухгалтерия 8. ПРОФ")
+						+tr("1С:Бухгалтерия государственного учреждения 8 ПРОФ")
+				+e.footer.row
+					+e.total.col-lg-auto.col-sm Итого: 96 750
+						|
+						span.i-font p
+
+					.col-sm-auto
+						+e.btn(href="#") оформить заказ
+							span
+	// end s-basket

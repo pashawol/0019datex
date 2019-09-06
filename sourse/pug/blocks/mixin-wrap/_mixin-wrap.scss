@@ -43,6 +43,13 @@
 		color: #000000;
 		font-size: 16px;
 	}
+	a{
+		height: 100%;
+		@include mt;
+		&:hover{
+			background-color: #fff;
+		}
+	}
 	.icon{
 		font-size: rem(11);
 		color: $primary;
@@ -98,6 +105,16 @@
 
 
 .search-results{
+	.breadcrumb{
+		display: inline-block;
+		&-item{
+			&:nth-last-child(2){
+				&::after{
+					content: none;
+				}
+			}
+		}
+	}
 	padding: rem(55) 0 rem(100);
 	&__wrapper{
 		margin-bottom: rem(50);

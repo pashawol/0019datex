@@ -95,8 +95,8 @@ mixin s-home-slider()
 					+e.slider-next.cat-slider-nav
 						+icon("slider-next")
 				.container
+					.swiper-pagination
 					+e.slider.swiper-container#home-slider--js
-						.swiper-pagination
 						.swiper-wrapper
 							mixin home-slide(i)
 								+e.slide.swiper-slide

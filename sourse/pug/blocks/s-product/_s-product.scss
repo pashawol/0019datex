@@ -86,15 +86,30 @@
 		}
 	
 		&__title {
+			font-size: 12px;
+			display: flex;
+			align-items: center;
+			@include media-breakpoint-up(sm){
+				font-size: 16px;
+				display: block;
+			}
 			color: $body-color;
-			font-size: 16px;
 		}
 	
 		&__price {
-			font-weight: 500;
-			font-size: 16px;
-			span{
+			font-size: 12px;
+			display: flex;
+			align-items: center;
+			@include media-breakpoint-up(sm){
 				font-size: 16px;
+				display: block;
+				span{
+					font-size: 16px;
+				}
+			}
+			font-weight: 500;
+			span{
+				font-size: 12px;
 			}
 		}
 	}
@@ -121,15 +136,31 @@
 		align-items: center;
 	}
 	&__btn{
+		height: rem(60);
 		width: 232px;
-		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
+		}
+	}
+	.demo-btn{
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+		}
+		@include media-breakpoint-up(lg) {
+			display: block;
+		}
 	}
 	.main-btn{
 		margin: 0;
 	}
 	&__one-click{
 		font-size: 16px;
-		max-width: rem(65);
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(65);
+		}
 		text-align: center;
 		a{
 			color: #6f7378;
@@ -140,19 +171,39 @@
 			}
 		}
 	}
+	.one-click-col{
+		@include media-breakpoint-up(md) {
+			display: flex;
+			margin-left: auto;
+			margin-top: rem(10);
+			justify-content: center;
+		}
+		@include media-breakpoint-up(xxl) {
+			display: block;
+			margin-left: unset;
+			margin-top: 0;
+		}
+	}
 	&__price-light{
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(20);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(5);
+		}
 		border-radius: 3px;
 		font-size: $h4-font-size;
 		font-weight: 500;
 		padding: 6px 12px;
-		margin-bottom: rem(5);
 		span{
 			font-size: $h4-font-size;
 			font-weight: 500;
 		}
 	}
 	.btn--white{
-		margin-bottom: rem(20);
+		@include media-breakpoint-up(xxl) {
+			margin-bottom: rem(20);
+		}
 	}
 	&__title--green{
 		font-size: $h6-font-size;
@@ -199,6 +250,10 @@
 	}
 	&__content{
 		padding: rem(45) rem(50) rem(15);
+		img{
+			width: 100%;
+			height: auto;
+		}
 		h4{
 			font-weight: 500;
 			margin-bottom: rem(25);

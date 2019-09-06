@@ -897,3 +897,44 @@ a {
 		color: $primary;
 	}
 }
+
+.main-search-line{
+	&__wrapper{
+		max-width: rem(893);
+		margin: 0 auto;
+		margin-top: rem(40);
+	}
+	.form-wrap{
+		position: relative;
+		&__input{
+			height: rem(59);
+			text-align: left;
+			border: none;
+			background-color: $light;
+			&::placeholder{
+				font-size: 16px;
+				font-weight: 500;
+			}
+		}
+		&__btn-search{
+			height: rem(20);
+			display: flex;
+			align-items: center;
+			position: absolute;
+			@include a-cent(y);
+			right: 20px;
+			// top: rem(-3);
+			// left: 0;
+			background-color: $light;
+			border: none;
+			outline: none;
+		}
+		.icon{
+			// position: absolute;
+			// right: 0;
+			// @include a-cent(y);
+			font-size: rem(20);
+			color: $primary;
+		}
+	}
+}

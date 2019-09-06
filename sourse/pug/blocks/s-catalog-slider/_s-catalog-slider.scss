@@ -139,3 +139,26 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
+
+.home-slider{
+	padding: 0 !important;
+	.s-catalog-slider{
+		&__main-block{
+			padding: rem(35) 0;
+		}
+		&__image{
+			width: 100%;
+			height: auto;
+		}
+		.slider-wrapper{
+			position: relative;
+		}
+		.swiper-pagination{
+			position: absolute;
+			bottom: 0;
+			@include a-cent(x);
+			z-index: 2;
+			width: 100%;
+		}
+	}
+}

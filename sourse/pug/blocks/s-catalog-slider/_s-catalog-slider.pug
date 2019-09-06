@@ -81,3 +81,32 @@ mixin s-catalog-slider-2()
 				
 
 	// end s-catalog-slider
+
+
+mixin s-home-slider()
+	// start s-home-slider
+	+b.SECTION.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
+		+e.main-block.bg-wrap
+			+pic("slider-bg","jpg","bg")(class="picture-bg")
+			+e.slider-wrapper
+				+e.slider-nav.d-none.d-md-block
+					+e.slider-prev.cat-slider-nav
+						+icon("slider-prev")
+					+e.slider-next.cat-slider-nav
+						+icon("slider-next")
+				.container
+					+e.slider.swiper-container#home-slider--js
+						.swiper-pagination
+						.swiper-wrapper
+							mixin home-slide(i)
+								+e.slide.swiper-slide
+									+e.IMG.image(src=`img/home-slide${i}.png` alt="")
+							+home-slide("1")
+							+home-slide("1")
+							+home-slide("1")
+
+
+			
+				
+
+	// end s-home-slider

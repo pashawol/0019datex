@@ -100,7 +100,8 @@ mixin s-home-slider()
 						.swiper-wrapper
 							mixin home-slide(i)
 								+e.slide.swiper-slide
-									+e.IMG.image(src=`img/home-slide${i}.png` alt="")
+									a(href="#")
+										+e.IMG.image(src=`img/home-slide${i}.png` alt="")
 							+home-slide("1")
 							+home-slide("1")
 							+home-slide("1")

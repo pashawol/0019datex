@@ -117,7 +117,10 @@
 		&:hover {
 			z-index: 2;
 			box-shadow: 0 rem(3) rem(20) rgba($color: #000000, $alpha: .1);
-
+			.s-competences__item-title a{
+				color: $primary;
+				border-color: $primary;
+			}
 		}
 
 		.row {
@@ -277,6 +280,18 @@
 			display: flex;
 			justify-content: center;
 		}
+		@include media-breakpoint-down(md) {
+			align-items: center;
+			&:not(:last-child){
+				margin-top: rem(20);
+			}
+		}
+	}
+	
+	.price-light-col{
+		@include media-breakpoint-down(md) {
+			align-items: flex-end;	
+		}
 	}
 
 	&__price-wrapper {
@@ -295,10 +310,10 @@
 		}
 	}
 	.btn-primary{
-		margin-bottom: rem(20);
-		@include media-breakpoint-up(md){
-			margin-bottom: 0;
-		}
+		// margin-bottom: rem(20);
+		// @include media-breakpoint-up(md){
+		// 	margin-bottom: 0;
+		// }
 	}
 	.price--small {
 		font-size: $small;

@@ -77,7 +77,8 @@
 		position: relative;
 		color: #6f7378;
 		&:hover{
-			color: $body-color;
+			color: #000;
+			text-decoration: none;
 		}
 		&:not(:last-child){
 			margin-right: rem(26);

@@ -86,7 +86,7 @@ mixin s-competences-2()
 			//- 	.h4(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * .5}s`)  Автоматизируя процессы в&nbsp;вашем бизнесе, мы&nbsp;делаем его эффективнее.
 		 
 			mixin item(i, t,  or, d, ep) 
-				+e.item(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (i * .5) }s`)
+				+e.item
 					//- .before 0
 					//- 	= i
 					.row
@@ -107,7 +107,7 @@ mixin s-competences-2()
 								.col-xl.col-6.col-md-12.d-flex.d-md-block.justify-content-center
 									.row.justify-content-end
 										if ep
-											+e.price-col.col-xl-12.col-12.col-md-6.order-last.order-md-first.order-xl-last.d-flex.d-lg-block.justify-content-center
+											+e.price-col.price-light-col.col-xl-12.col-12.col-md-6.order-last.order-md-first.order-xl-last.d-flex.d-lg-block.justify-content-center
 												+e.price.price--small За 1 пользователя:
 													+e.price-wrapper.bg-light от 1 200
 														span.i-font o
@@ -121,15 +121,15 @@ mixin s-competences-2()
 										if ep
 											+e.btn-col.col-xl-12.col-12.col-md-6.order-last.order-md-first.order-xl-last
 												if or
-													+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") арендовать
+													+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#arend" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") арендовать
 												else
-													+e.btn.btn--white.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") арендовать
+													+e.btn.btn--white.btn-primary(href="#arend" data-title="заказать" data-order="заказать"   data-btn="заказать") арендовать
 										+e.btn-col.col-xl-12.col-12.col-md-6
 											if or
-												+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
+												+e.btn.btn-primary.popup-with-move-anim(href="#order" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
 													span
 											else
-												+e.btn.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
+												+e.btn.btn-primary(href="#order" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
 													span
 				// /+e.item
 			+item('1','1С:Бухгалтерия 8 КОРП (USB)','оптово-розничная торговля','d')

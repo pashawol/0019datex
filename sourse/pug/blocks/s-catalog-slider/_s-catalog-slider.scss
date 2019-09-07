@@ -19,8 +19,15 @@
 		padding: rem(40) 0 rem(105);
 		background-color: #f5c33e;
 	}
-
+	#catalog-slider-2--js{
+		.s-catalog-slider__item-title{
+			cursor: default;
+		}
+	}
 	&__slider-nav {
+		@media (max-width: 1100px){
+			display: none;
+		}
 		position: absolute;
 		@include a-cent;
 		width: 100%;
@@ -71,7 +78,7 @@
 				&:hover {
 					text-decoration: none;
 					color: $primary;
-					border-bottom: none;
+					border-color: $primary;
 				}
 			}
 		}

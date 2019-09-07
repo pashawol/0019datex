@@ -10,7 +10,7 @@ mixin icon(name,mod)
 
 
 mixin breadcrumb(...items)
-	nav.breadcrumb
+	nav.breadcrumb&attributes(attributes)
 		-for (var i = 0; i < items.length - 1; i++)
 			a.breadcrumb-item(href='#')= items[i]
 		span.breadcrumb-item.active=  items[items.length - 1]

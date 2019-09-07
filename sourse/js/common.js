@@ -218,6 +218,9 @@ jQuery(document).ready(function ($) {
 			breakpointsInverse: true,
 			speed: 400,
 			loop: true,
+			autoplay: {
+				delay: 3000,
+			},
 			lazy: {
 				loadPrevNext: true,
 			},

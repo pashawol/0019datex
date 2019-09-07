@@ -90,6 +90,23 @@ mixin modal()
 			//- 		+e.info Мы свяжемся с Вами в течение часа после оформления заказа.
 
 	// #modal-call
+
+
+	+b.order-modal.arend-modal(id="basket-modal" class="zoom-anim-dialog mfp-hide modal-win modal-form")
+		+e.modal-title.text-center Оформить заказ
+			+e.modal-subtitle.text-center Заполните форму и мы свяжемся с Вами в течение 20 минут.
+		+e.footer.text-center
+			+form-wrap
+				+input("text","name","Ваше имя")
+				+input("tel","tel","Ваш телефон")( required)
+				+e.btn.btn-primary(type="submit" href="#arend-thanks") отправить заявку
+				+polite
+			//- .row
+			//- 	.col-12.col-sm-auto
+			//- 	.col-12.col-sm
+			//- 		+e.info Мы свяжемся с Вами в течение часа после оформления заказа.
+
+	// #modal-call
 	
  
 	 

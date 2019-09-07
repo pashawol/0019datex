@@ -336,7 +336,12 @@ button.mfp-close,
 			// margin: 0 auto rem(10);
 		}
 	}
-
+	&__modal-subtitle{
+		font-size: rem(16);
+		max-width: 350px;
+		margin: 0 auto;
+		margin-top: rem(10);
+	}
 }
 
 .arend-modal{

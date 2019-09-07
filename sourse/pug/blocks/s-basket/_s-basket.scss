@@ -1,5 +1,8 @@
 .s-basket {
 	background-color: $light;
+	@include media-breakpoint-down(sm){
+		padding-top: rem(40);
+	}
 	table{
 		width: 100%;
 	}
@@ -76,6 +79,7 @@
 	&__footer{
 		@include media-breakpoint-up(sm ){
 			text-align: left;
+			padding: rem(30);
 		}
 		text-align: center;
 		@include media-breakpoint-up(lg) {
@@ -84,7 +88,7 @@
 			justify-content: flex-end;
 		}
 		font-weight: 500;
-		padding: rem(30);
+		padding: rem(30) rem(30) rem(45);
 		align-items: center;
 
 		@extend .h5;

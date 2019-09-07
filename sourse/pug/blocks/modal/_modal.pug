@@ -55,7 +55,7 @@ mixin modal()
 		+e.footer
 			.row
 				.col-12.col-sm-auto
-					+e.btn.btn-primary(type="submit") оформить заказ
+					+e.btn.btn-primary( href="#order-thanks") оформить заказ
 				.col-12.col-sm
 					+e.info Мы свяжемся с Вами в течение часа после оформления заказа.
 
@@ -82,7 +82,7 @@ mixin modal()
 				+input("text","name","Ваше имя")
 				+input("tel","tel","Ваш телефон")( required)
 				+input("email","email","Ваш e-mail")
-				+e.btn.btn-primary(type="submit") отправить заявку
+				+e.btn.btn-primary(type="submit" href="#arend-thanks") отправить заявку
 				+polite
 			//- .row
 			//- 	.col-12.col-sm-auto
@@ -96,6 +96,18 @@ mixin modal()
 	+b.form-wrap(id="thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form text-center" )
 		+e.title Спасибо за обращение!
 		+e.title-sub Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей
+	// modal
+
+
+	+b.form-wrap(id="order-thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form text-center" )
+		+e.title Спасибо за обращение!
+		+e.title-sub Мы свяжемся с Вами в течение&nbsp;часа и&nbsp;проконсультируем по любому вопросу.
+	// modal
+
+
+	+b.form-wrap(id="arend-thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form text-center" )
+		+e.title Спасибо за обращение!
+		+e.title-sub Мы свяжемся с Вами в течение рабочего дня.
 	// modal
 
 

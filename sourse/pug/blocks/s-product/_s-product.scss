@@ -2,18 +2,22 @@
 	@include media-breakpoint-up(md) {
 		padding: rem(35) 0;
 	}
-	.breadcrumb{
+
+	.breadcrumb {
 		margin-bottom: rem(5);
 	}
-	.section-title{
+
+	.section-title {
 		margin: 0;
 		padding-bottom: rem(52);
 	}
-	&__product-img{
+
+	&__product-img {
 		margin-top: rem(-25);
 		display: flex;
 		justify-content: center;
 	}
+
 	.custom-input {
 		padding: 20px 16px 20px 50px;
 		margin: 0;
@@ -33,20 +37,22 @@
 			}
 		}
 	}
-	.form-wrap{
+
+	.form-wrap {
 		margin-bottom: rem(13);
 	}
+
 	.radio-prod {
 		position: relative;
-		
+
 		margin: 0;
 		cursor: pointer;
-		
+
 		input {
 			display: none;
 		}
-		
-		&__wrapper{
+
+		&__wrapper {
 			border: 1px solid transparent;
 			padding: 13px 16px 13px 48px;
 			display: block;
@@ -80,167 +86,294 @@
 				opacity: 1 !important;
 			}
 		}
-		input:checked+.radio-prod__wrapper{
+
+		input:checked+.radio-prod__wrapper {
 			border: 1px solid #dadde2;
 			border-radius: 3px;
 		}
-	
+
 		&__title {
-			color: $body-color;
-			font-size: 16px;
-		}
-	
-		&__price {
-			font-weight: 500;
-			font-size: 16px;
-			span{
+			font-size: 12px;
+			display: flex;
+			align-items: center;
+
+			@include media-breakpoint-up(sm) {
 				font-size: 16px;
+				display: block;
+			}
+
+			color: $body-color;
+		}
+
+		&__price {
+			font-size: 12px;
+			display: flex;
+			align-items: center;
+
+			@include media-breakpoint-up(sm) {
+				font-size: 16px;
+				display: block;
+
+				span {
+					font-size: 16px;
+				}
+			}
+
+			font-weight: 500;
+
+			span {
+				font-size: 12px;
 			}
 		}
 	}
-	&__art{
+
+	&__art {
 		font-size: $small;
 		color: #6f7378;
 		margin-bottom: rem(25);
 	}
-	&__price{
+
+	&__price {
 		font-weight: 500;
 		font-size: $h4-font-size;
-		span{
+
+		span {
 			font-size: $h4-font-size;
 		}
 	}
-	&__price-wrapper{
+
+	&__price-wrapper {
 		margin-left: rem(10);
 		padding: 5px;
 		border-radius: 3px;
 		background-color: #fdd058;
 	}
-	&__col{
+
+	&__col {
 		display: flex;
 		align-items: center;
 	}
-	&__btn{
+
+	&__btn {
+		height: rem(60);
 		width: 232px;
-		margin-bottom: rem(30);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
+		}
 	}
-	.main-btn{
+
+	.demo-btn {
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+		}
+
+		@include media-breakpoint-up(lg) {
+			display: block;
+		}
+	}
+
+	.main-btn {
 		margin: 0;
 	}
-	&__one-click{
+
+	&__one-click {
 		font-size: 16px;
-		max-width: rem(65);
+
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(65);
+		}
+
 		text-align: center;
-		a{
+
+		a {
 			color: #6f7378;
 			display: inline;
 			border-bottom: 1px solid #6f7378;
-			&:hover{
+
+			&:hover {
 				text-decoration: none;
 			}
 		}
 	}
-	&__price-light{
+
+	.one-click-col {
+		@include media-breakpoint-up(md) {
+			display: flex;
+			margin-left: auto;
+			margin-top: rem(10);
+			justify-content: center;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			display: block;
+			margin-left: unset;
+			margin-top: 0;
+		}
+	}
+
+	&__price-light {
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(20);
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(5);
+		}
+
 		border-radius: 3px;
 		font-size: $h4-font-size;
 		font-weight: 500;
 		padding: 6px 12px;
-		margin-bottom: rem(5);
-		span{
+
+		span {
 			font-size: $h4-font-size;
 			font-weight: 500;
 		}
 	}
-	.btn--white{
-		margin-bottom: rem(20);
+
+	.btn--white {
+		@include media-breakpoint-up(xxl) {
+			margin-bottom: rem(20);
+		}
 	}
-	&__title--green{
+
+	&__title--green {
 		font-size: $h6-font-size;
 		font-weight: 500;
 		color: #00c257;
 		margin-bottom: rem(8);
 	}
-	.btn--green{
+
+	.btn--green {
 		margin-bottom: 0;
 	}
-	.tabs{
+	&__tabs-col{
+		@include media-breakpoint-up(sm){
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	.tabs {
 		margin-top: rem(50);
-		&__caption{
+
+		&__caption {
 			padding: rem(20) 0;
 			margin: 0;
 			max-width: none;
 			display: block;
 			border-top: 1px solid #dadde2;
 			border-bottom: 1px solid #dadde2;
-			.active{
+
+			.active {
 				border: 2px solid $primary;
-				span{
+
+				span {
 					border-color: #fff;
 				}
 			}
 		}
-		&__btn{
+
+		&__btn {
 			max-height: rem(50);
 			// flex-grow: 0;
 			border: none;
 			border: 2px solid #fff;
-			span{
+			@include media-breakpoint-down(md){
+				justify-content: start;
+				padding-left: rem(10);
+			}
+
+			span {
 				display: inline;
 				border-bottom: 1px solid #a8aaae;
 			}
 		}
-		&__wrap{
+
+		&__wrap {
 			background-color: #fff;
-			max-width: rem(932);
+			margin-bottom: rem(20);
+
+			@include media-breakpoint-up(xl) {
+				max-width: rem(932);
+				margin-bottom: 0;
+			}
 		}
 	}
-	&__content-block{
+
+	&__content-block {
+		@include media-breakpoint-up(md) {
+			background-color: $light;
+		}
+
 		padding: rem(50) 0 rem(100);
 	}
-	&__content{
-		padding: rem(45) rem(50) rem(15);
-		h4{
+
+	&__content {
+		@include media-breakpoint-up(md){
+			padding: rem(45) rem(50) rem(15);
+		}
+		min-height: 850px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		h4 {
 			font-weight: 500;
 			margin-bottom: rem(25);
 		}
-		h6{
+
+		h6 {
 			margin-bottom: rem(16);
 		}
-		strong{
+
+		strong {
 			font-weight: 700;
 		}
-		p{
+
+		p {
 			font-size: 16px;
 			font-weight: 400;
 			line-height: 26px;
 			margin-bottom: rem(40);
 		}
-		ul{
+
+		ul {
 			padding-left: rem(11);
 			list-style: none;
 			font-size: 16px;
 			line-height: 30px;
 			margin-bottom: rem(28);
-			ul{
+
+			ul {
 				margin-bottom: 0;
 			}
-			li{
-				a{
+
+			li {
+				a {
 					display: inline;
 					border-bottom: 1px solid;
 				}
 			}
-			> li{
+
+			>li {
 				position: relative;
-				&::before{
+
+				&::before {
 					content: "•";
 					position: absolute;
 					left: rem(-10);
 					top: 0;
 					color: $primary;
 				}
-				ul > li{
-					&::before{
+
+				ul>li {
+					&::before {
 						content: "";
 						top: rem(12);
 						width: 5px;
@@ -251,21 +384,25 @@
 				}
 			}
 		}
-		img{
+
+		img {
 			margin-bottom: rem(46);
 		}
-		ol{
+
+		ol {
 			font-size: 16px;
 			font-weight: 400;
 			line-height: 26px;
 			padding-left: rem(20);
 			list-style: none;
-			counter-reset:  item;
+			counter-reset: item;
 			margin-bottom: rem(40);
-			li{
+
+			li {
 				margin-bottom: rem(6);
 				position: relative;
-				&::before{
+
+				&::before {
 					content: counter(item) '.';
 					counter-increment: item;
 					color: $primary;
@@ -276,35 +413,175 @@
 				}
 			}
 		}
+
+		.table-wrapper{
+			position: relative;
+			overflow-x: auto;
+		}
+
+		.functional {
+			min-width: 430px;
+			width: 100%;
+			border-radius: 3px;
+			border: 1px solid #dadde2;
+			margin-bottom: rem(30);
+
+			.icon {
+				font-size: 14px;
+
+				&-yes {
+					color: #00c257;
+				}
+
+				&-no {
+					color: $primary;
+				}
+			}
+
+			tr {
+				&:not(:last-child) {
+					border-bottom: 1px solid #dadde2;
+				}
+
+				&:not(:first-child) {
+					border-bottom: 1px solid #dadde2;
+				}
+
+			}
+
+			thead{
+				background-color: #fdd058;
+			}
+
+			th{
+				border-bottom: 1px solid #dadde2;
+				padding: rem(20) 0;
+				// text-align: center;
+				&:not(:first-child) {
+					text-align: center;
+					width: rem(150);
+				}
+				&:first-child {
+					// max-width: 385px;
+					padding: rem(20) rem(30);
+				}
+				&:not(:last-child) {
+					border-right: 1px solid #dadde2;
+				}
+				span {
+					display: inline;
+					border-bottom: 1px solid #C3A248;
+					font-size: rem(16);
+				}
+			}
+			
+			td {
+				padding: rem(20) 0;
+
+				a {
+					display: inline;
+					border-bottom: 1px solid #6f7378;
+					font-size: rem(16);
+					color: #6f7378;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+
+				// padding: rem(20) rem(30);
+				&:not(:first-child) {
+					text-align: center;
+					width: rem(150);
+				}
+
+				&:first-child {
+					// max-width: 385px;
+					padding: rem(20) rem(30);
+				}
+
+				&:not(:last-child) {
+					border-right: 1px solid #dadde2;
+				}
+
+			}
+
+		}
+
+		.composition{
+			border-top: 1px solid #dadde2;
+			width: 100%;
+			margin-bottom: rem(50);
+			tr{
+				border-bottom: 1px solid #dadde2;
+				position: relative;
+				.icon{
+					position: absolute;
+					@include a-cent(y);
+					left: 30px;
+					font-size: 14px;
+					&-no{
+						color: $primary;
+					}
+					&-yes{
+						color: #00c257;
+					}
+					// margin-right: rem(15);
+				}
+			}
+			td{
+				position: relative;
+				padding: rem(30) rem(30) rem(30) rem(75);
+			}
+		}
+
 	}
-	&__extra{
-		&-block{
+
+	&__extra {
+		&-block {
 			border: 2px solid #dadde2;
 			background-color: #ffffff;
 			padding: rem(25) rem(20) rem(20);
-			margin-bottom: rem(50);
-			
+			margin-bottom: rem(20);
+
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(50);
+			}
+
 		}
-		&-title{
+
+		&-title {
 			text-align: center;
 			font-size: $h6-font-size;
 			font-weight: 700;
 			margin-bottom: rem(10);
-			span{
+
+			span {
 				color: $primary;
 			}
 		}
-		&-list{
+
+		&-list {
 			padding-left: rem(16);
 			list-style: none;
 			font-size: 16px;
 			line-height: 30px;
 			margin-bottom: 0;
+
+			@include media-breakpoint-up(md) {
+				column-count: 2;
+			}
+
+			@include media-breakpoint-up(xl) {
+				column-count: 1;
+			}
 		}
-		&-item{
+
+		&-item {
 			position: relative;
 			margin-bottom: rem(3);
-			&::before{
+
+			&::before {
 				content: "•";
 				position: absolute;
 				left: rem(-10);
@@ -313,43 +590,59 @@
 			}
 		}
 	}
-	&__help-block{
+
+	&__help-block {
 		border: 2px solid $primary;
 		background-color: #ffffff;
-		padding: rem(20) rem(25) rem(5);
-		.form-wrap{
-			&__btn{
+		padding: rem(30) rem(20);
+
+		@include media-breakpoint-up(xl) {
+			padding: rem(20) rem(25) rem(5);
+		}
+
+		.form-wrap {
+			&__btn {
 				padding-top: rem(20);
 				padding-bottom: rem(20);
 				margin-bottom: rem(15);
 			}
-			&__input-wrap{
+
+			&__input-wrap {
 				margin-bottom: rem(10);
 			}
-			&__input{
+
+			&__input {
 				border: none;
 				padding-top: rem(18);
 				padding-bottom: rem(18);
 			}
-			&__polite{
-				.custom-input{
+
+			&__polite {
+				@include media-breakpoint-down(lg) {
+					max-width: unset;
+				}
+
+				.custom-input {
 					padding: 0 0 0 rem(40);
 					line-height: $em-base;
-					&__text{
+
+					&__text {
 						font-size: 12px;
 					}
 				}
 			}
 		}
 	}
-	.help{
-		&-title{
+
+	.help {
+		&-title {
 			text-align: center;
 			font-size: $h6-font-size;
 			font-weight: 700;
 			margin-bottom: rem(5);
 		}
-		&-subtitle{
+
+		&-subtitle {
 			text-align: center;
 			font-size: 16px;
 			// font-weight: 400;
@@ -357,6 +650,7 @@
 			margin-bottom: rem(15);
 		}
 	}
+
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

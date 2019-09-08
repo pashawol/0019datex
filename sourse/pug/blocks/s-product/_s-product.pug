@@ -7,10 +7,10 @@ mixin s-product()
 				h1 1С:Бухгалтерия 8 ПРОФ
 				
 			.row
-				.col-3
+				.d-none.d-md-block.col-4.col-xl-3
 					+e.product-img
 						img(src="img/product.png" alt="#")
-				.col-6
+				.col-12.col-md-8.col-xl-6
 					+form-wrap(id="product-radio")
 						mixin product-radio(t, p)
 							+b.LABEL.radio-prod
@@ -26,36 +26,43 @@ mixin s-product()
 						+product-radio("USB поставка","8 900")
 					+e.art Артикул: 4601546041654
 					.row
-						+e.col.col-auto
-							+e.price Цена:
-								+e.SPAN.price-wrapper 9 000 000
-									span.i-font o
-						+e.col.col-auto
-							+e.btn.main-btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") Купить
-						+e.col.col
-							+e.one-click
-								a(href="#") Купить в 1 клик
+						.d-md-none.col-auto
+							+e.product-img
+								img(src="img/product.png" alt="#")
+						.col
+							.row
+								+e.col.col-md-6.col-xxl-auto
+									+e.price Цена:
+										+e.SPAN.price-wrapper 9 000 000
+											span.i-font o
+								+e.col.col-6.col-xl-6.col-xxl-auto
+									+e.btn.main-btn.btn-primary.popup-with-move-anim(href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Купить
+								+e.col.one-click-col.col-md-6.col-xxl
+									+e.one-click
+										a.popup-with-move-anim(href="#one-click") Купить в 1 клик
 
 							
-				.col-3.text-center.align-items-center.d-flex.justify-content-center
+				.col-12.col-xl-3.text-center.align-items-center.d-flex.justify-content-center
 					.row
-						.col-12.d-flex.justify-content-center
-							+e.price-light.bg-light от 1 200
-								span.i-font o
-								|/мес.
-						.col-12
-							+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") Арендовать
-						.col-12
+						.col-xl-12.col-6
+							.row
+								.col-12.d-flex.justify-content-center
+									+e.price-light.bg-light от 1 200
+										span.i-font o
+										|/мес.
+								.col-12
+									+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#arend" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Арендовать
+						.col-xl-12.col-6.demo-btn
 							+e.title--green Бесплатно на 30 дней
-							+e.btn.btn--green.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") Арендовать
+							+e.btn.btn--green.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") демо-доступ
 		+e.tabs.tabs
 			.tabs__caption
 				.container
 					.row
-						.col-10.d-flex
+						+e.tabs-col.col-12.col-xl-10
 							.tabs__btn.active 
 								span Назначение
-							.tabs__btn 
+							.tabs__btn
 								span Описание
 							.tabs__btn 
 								span Сравнение версий
@@ -65,13 +72,13 @@ mixin s-product()
 								span Лицензии
 							.tabs__btn 
 								span Услуги
-			+e.content-block.bg-light
+			+e.content-block
 				.container
 					.row
-						.col
+						.col-12.col-xl
 							.tabs__wrap
-								.tabs__content2.active 
-									+e.content
+								.tabs__content2
+									+e.content.active
 										h4 Общая характеристика конфигурации «Бухгалтерия КОРП»
 										p Программный продукт 
 											strong «1С:Бухгалтерия 8 КОРП» 
@@ -88,7 +95,7 @@ mixin s-product()
 											li Разработана специализированная подсистема подготовки уведомления о контролируемых сделках
 											li При подготовке уведомления не&nbsp;требуется повторно вводить или изменять данные в&nbsp;хозяйственных операциях, отраженных в&nbsp;информационной базе. Сформированное уведомление можно распечатать.
 											li Авизо по прочим операциям.
-										img(src="img/content-img.jpg" alt="")
+										img(src="img/content-img.jpg" alt="" style="max-width: 500px")
 										h6 Двухуровневый маркированный список:
 										ul
 											li Авизо по ОС.
@@ -126,7 +133,100 @@ mixin s-product()
 														a(href="#") Авизо по расчетам.
 													li Авизо по прочим операциям.
 											li Авизо по МПЗ.
-						.col-3
+								.tabs__content2
+									+e.content
+										h4 Сравнение функционала
+										p С этой целью при разработке конфигурации были выполнены:
+										.table-wrapper
+											table.functional
+												thead
+													tr
+														th 1С:Бухгалтерия
+														th 
+															span Базовая
+														th
+															span ПРОФ 8
+														th
+															span КОРП 8
+												tbody
+													tr
+														td
+														td
+															a(href="#") Подробнее
+														td
+															a(href="#") Подробнее
+														td
+															a(href="#") Подробнее
+													tr
+														td Готовое решение для ведения бухгалтерского&nbsp;и налогового учета
+														td 
+															+icon("yes")
+														td 
+															+icon("yes")
+														td 
+															+icon("yes")
+													tr
+														td Подготовка бухгалтерской и налоговой
+														td 
+															+icon("no")
+														td 
+															+icon("yes")
+														td 
+															+icon("yes")
+													tr
+														td Готовое решение для ведения бухгалтерского и налогового учета
+														td 
+															+icon("no")
+														td 
+															+icon("yes")
+														td 
+															+icon("yes")
+													tr
+														td Подготовка бухгалтерской и налоговой 
+														td 
+															+icon("no")
+														td 
+															+icon("no")
+														td 
+															+icon("yes")
+														
+								.tabs__content2
+									+e.content
+										h4 Состав продукта
+										p Программный продукт «1С:Бухгалтерия 8 КОРП» включает:
+										table.composition
+											tbody
+												tr
+													td
+														+icon("yes")
+														|платформу «1С:Предприятие 8.2»
+												tr
+													td
+														+icon("yes")
+														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
+												tr
+													td
+														+icon("yes")
+														|платформу «1С:Предприятие 8.2»
+												tr
+													td
+														+icon("yes")
+														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
+										
+								.tabs__content2
+									+e.content
+										h4 Список лицензий
+										p Программный продукт «1С:Бухгалтерия 8 КОРП» обеспечивает работу прикладного решения на одном рабочем месте в один момент времени. 
+										+s-competences-card()(class="competences-card")
+								.tabs__content2
+									+e.content
+										h4 Список лицензий
+										p Программный продукт «1С:Бухгалтерия 8 КОРП» обеспечивает работу прикладного решения на одном рабочем месте в один момент времени. 
+										+s-competences-card-2()(class="competences-card license-card")
+										
+														
+										
+						.col-12.col-xl-3
 							.row
 								.col-12
 									+e.extra-block
@@ -143,8 +243,12 @@ mixin s-product()
 										+form-wrap
 											.help-title Нужна консультация?
 											.help-subtitle Закажите консультацию в&nbsp;один&nbsp;клик!
-											+input("tel","tel","+7 (___)-___-__-__")( required)
-											+e.btn(type="submit") отправить
-											+help-polite
+											.row
+												.col-md-6.col-xl-12
+													+input("tel","tel","+7 (___)-___-__-__")( required class="bg-light")
+												.col-md-6.col-xl-12
+													+e.btn(type="submit") отправить
+												.col-12
+													+help-polite
 	// end s-product
 

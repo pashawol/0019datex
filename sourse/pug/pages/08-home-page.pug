@@ -22,12 +22,15 @@ include ../blocks/s-buy-prog/_s-buy-prog.pug
 include ../blocks/s-product/_s-product.pug
 include ../blocks/s-logos/_s-logos.pug
 include ../blocks/s-contact-us/_s-contact-us.pug
+include ../blocks/s-contact-head/_s-contact-head.pug
+include ../blocks/s-contact-body/_s-contact-body.pug
+include ../blocks/s-contact-foot/_s-contact-foot.pug
 
 block variables
 	- let  mainPage= null
 	
 block title
-	- let title= "О компании"
+	- let title= "Поиск по сайту"
 	title= title
 
 block pagecontent
@@ -38,25 +41,23 @@ block pagecontent
 	//- +s-search-line()
 	
 	
-	+s-about(class="page-top-block") 
-				+breadcrumb("Главная", title)(class="about-bread")
-	
-	//- +s-buy-prog()
-
-	//- +header-block()
-	//- +s-segments
-	//- +s-competences-2
-	//- +s-digilization
-	//- +s-steps
-	//- +s-start
-	//- +s-rews
-	//- +s-why
-	//- //- +s-team
-	//- +s-doc
-	//- +s-ways
-	//- +s-consultation
-	+s-logos()
-	+s-team()
-	+s-contact-us()
+	//- +b.page-head
+	//- 	.container
+	//- 		+b.section-title.text-center
+	//- 			+breadcrumb("Главная", title)
+	//- 			h1= title
+	+s-home-slider()(class="home-slider page-top-block")
+	+s-buy-prog()
+	+s-rews
+	+s-doc
+	//- +s-contact-head
+	//- +s-contact-body
+	//- +s-contact-foot
+	//- +s-logos()
+	//- +s-team()
+	//- +s-contact-us()
+	//- +search-results
+	+s-consultation
+	+s-contact()
 	+footer()
 

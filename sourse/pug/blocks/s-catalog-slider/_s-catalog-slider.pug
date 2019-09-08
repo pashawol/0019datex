@@ -10,7 +10,7 @@ mixin s-catalog-slider()
 			.container
 				+e.slider-title.text-center Популярные программы&nbsp;«1С»
 			+e.slider-wrapper
-				+e.slider-nav.d-none.d-md-block
+				+e.slider-nav
 					+e.slider-prev.cat-slider-nav
 						+icon("slider-prev")
 					+e.slider-next.cat-slider-nav
@@ -66,8 +66,7 @@ mixin s-catalog-slider-2()
 									+e.item
 										+e.svg-wrapper
 											img(src=`img/slider-icon${i}.png` alt="#")
-										+e.item-title 
-											a(href="#")=t
+										+e.item-title=t
 											//- +e.item-price 33 600
 											//- 	span.i-font o
 							+catalog-slider-2("1","Доставка по городу")
@@ -81,3 +80,33 @@ mixin s-catalog-slider-2()
 				
 
 	// end s-catalog-slider
+
+
+mixin s-home-slider()
+	// start s-home-slider
+	+b.SECTION.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
+		+e.main-block.bg-wrap
+			+pic("slider-bg","jpg","bg")(class="picture-bg")
+			+e.slider-wrapper
+				+e.slider-nav.d-none.d-md-block
+					+e.slider-prev.cat-slider-nav
+						+icon("slider-prev")
+					+e.slider-next.cat-slider-nav
+						+icon("slider-next")
+				.container
+					.swiper-pagination
+					+e.slider.swiper-container#home-slider--js
+						.swiper-wrapper
+							mixin home-slide(i)
+								+e.slide.swiper-slide
+									a(href="#")
+										+e.IMG.image(src=`img/home-slide${i}.png` alt="")
+							+home-slide("1")
+							+home-slide("1")
+							+home-slide("1")
+
+
+			
+				
+
+	// end s-home-slider

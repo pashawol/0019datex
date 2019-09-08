@@ -82,7 +82,7 @@ mixin top-line-2()
 						//- .col.d-xl-none
 						.col-auto.d-none.d-sm-block
 							.row
-								.col
+								.col-auto
 									+e.city
 										+e.city-name
 											+icon("flag")
@@ -112,9 +112,10 @@ mixin top-line-2()
 				.row
 					.col
 						+e.search
-							+icon("search")
 							+form-wrap
-								+input("text","","Начните поиск, например: Управление нашей фирмой")
+								+e.btn-search(type="submit")
+									+icon("search")
+								+input("text","","Начните поиск")
 					.col-auto
 						+e.A.basket(href="#")
 							+icon("search-line-basket")

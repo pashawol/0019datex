@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
 	});
 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Contacts.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Card.jpg);"></div>')
 
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
@@ -218,6 +218,9 @@ jQuery(document).ready(function ($) {
 			breakpointsInverse: true,
 			speed: 400,
 			loop: true,
+			autoplay: {
+				delay: 3000,
+			},
 			lazy: {
 				loadPrevNext: true,
 			},
@@ -314,11 +317,33 @@ jQuery(document).ready(function ($) {
 				spaceBetween: 30
 			},
 
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+
 			1200: {
 				slidesPerView: 4,
 				spaceBetween: 20
 			}
 		}
+	})
+	
+	
+	var swiper6 = new Swiper('#home-slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpointsInverse: true,
+		speed: 400,
+		loop: true,
+		pagination: {
+			el: $(this).find('.swiper-pagination'),
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ('.s-catalog-slider__slider-next'),
+			prevEl: ('.s-catalog-slider__slider-prev'),
+		},
 	})
 
 

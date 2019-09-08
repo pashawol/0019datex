@@ -10,38 +10,62 @@ mixin icon(name,mod)
 
 
 mixin breadcrumb(...items)
-	nav.breadcrumb
+	nav.breadcrumb&attributes(attributes)
 		-for (var i = 0; i < items.length - 1; i++)
 			a.breadcrumb-item(href='#')= items[i]
 		span.breadcrumb-item.active=  items[items.length - 1]
 
 		
 mixin pugin()
-	nav(aria-label='...')
-		ul.pagination.justify-content-center
-			li.page-item.disabled
-				a.page-link(href='#', tabindex='-1') 
-					i(class="fas fa-chevron-left")
-			li.page-item.disabled
-				a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
+	.pagination-wrapper
+			ul.page-numbers
+				mixin li(n)
+					li
+						if block
+							block
+						else
+							a.page-numbers(href='#')= n 
+				+li()
+					span.prev.page-numbers( )
+						+icon("pag-prev")
+				+li()
+					span.page-numbers.current  1
+				+li("2")
+				+li("3")
+				+li("...")
+				+li("7")
+				+li("8")
+				+li("9")
+				+li()
+					a.next.page-numbers(href='#')
+						+icon("pag-next")
+	//- nav(aria-label='...')
+	//- 	ul.pagination.justify-content-center
+	//- 		li.page-item.disabled
+	//- 			a.page-link(href='#', tabindex='-1') 
+	//- 				i(class="fas fa-chevron-left")
+	//- 		li.page-item.disabled
+	//- 			a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
 
-			li.page-item
-				a.page-link(href='#') 1
-			li.page-item.active
-				a.page-link(href='#')
-					| 2 
-					span.sr-only (current)
-			li.page-item
-				a.page-link.page-link-more(href='#') ...
-			li.page-item
-				a.page-link(href='#') 3
+	//- 		li.page-item
+	//- 			a.page-link(href='#') 1
+	//- 		li.page-item.active
+	//- 			a.page-link(href='#')
+	//- 				| 2 
+	//- 				span.sr-only (current)
+	//- 		li.page-item
+	//- 			a.page-link.page-link-more(href='#') ...
+	//- 		li.page-item
+	//- 			a.page-link(href='#') 3
 
-			li.page-item
-				a.page-link.d-none.d-md-block(href='#') Дальше
-			li.page-item
-				a.page-link(href='#') 
-					i(class="fas fa-chevron-right")
+	//- 		li.page-item
+	//- 			a.page-link.d-none.d-md-block(href='#') Дальше
+	//- 		li.page-item
+	//- 			a.page-link(href='#') 
+	//- 				i(class="fas fa-chevron-right")
 //- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
+
+
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
 	 
@@ -109,7 +133,8 @@ mixin mobile-menu()
 			+e.A.main-item(href="#")
 				+e.logo-wrapper
 					img(src="img/1C-logo.png" alt="")
-				+e.item-title Интернет-магазин «1С»
+				+e.item-title
+					span Интернет-магазин «1С»
 			ul
 				mixin mob-item(i, t)
 					li
@@ -137,6 +162,16 @@ mixin mobile-menu()
 				+mob-item("13","ИТС")
 				+mob-item("14","Отраслевые решения")
 				+mob-item("15","CRM")
+			+e.UL.mobile-links.d-xl-none
+				li
+					a(href="#")
+						span Проектное направление
+				li
+					a(href="#")
+						span О компании
+				li
+					a(href="#")
+						span Контакты
 	// end mobile-menu
 
 mixin pic( i,exp="jpg", bg, lazy="lazy", media='576px')
@@ -163,6 +198,28 @@ mixin pic( i,exp="jpg", bg, lazy="lazy", media='576px')
 				+src(i,'webp',smpath2+`/webp`,lazy,"source")
 				// /webp images  
 			+src(i, exp,smpath2, lazy,"",bg) 
+	// /picture
+
+
+mixin search-results
+	+b.search-results.bg-light
+		.container
+			+e.wrapper
+				mixin s-res-i
+					a(href="#")
+						+e.item
+							+e.item-title
+								span 1С:Бухгалтерия 8 КОРП (USB)
+							+e.item-text &laquo;1С: Бухгалтерия&nbsp;8&raquo;&nbsp;&mdash; это универсальное решение для автоматизации бухгалтерского, налогового учета и&nbsp;подготовки отчетности в&nbsp;компаниях любого масштаба.
+							+breadcrumb("Главная", "Программы “1С”","")
+							//- +e.item-breadcrumb
+							//- 	+e.bread-item Главная
+							//- 	+e.bread-item Программы “1С”
+				+s-res-i
+				+s-res-i
+				+s-res-i
+				+s-res-i
+			+pugin()
 	// /picture
 
 

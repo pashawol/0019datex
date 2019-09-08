@@ -30,7 +30,7 @@
           <div class="menu-mobile__inner">
             <!-- start mobile-menu-->
             <div class="mobile-menu section block-with-lazy" id="mobile-menu">
-              <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title">Интернет-магазин «1С»</span></a>
+              <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title"><span>Интернет-магазин «1С»</span></span></a>
                 <ul>
                       <li><a class="mobile-menu__item" href="#"><span class="mobile-menu__svg-wrapper">
                         <svg class="icon icon-mob-m1 ">
@@ -108,6 +108,11 @@
                         </svg></span><span class="mobile-menu__item-title"><span>CRM</span></span></a>
                       </li>
                 </ul>
+                <ul class="mobile-menu__mobile-links d-xl-none">
+                  <li><a href="#"><span>Проектное направление</span></a></li>
+                  <li><a href="#"><span>О компании</span></a></li>
+                  <li><a href="#"><span>Контакты</span></a></li>
+                </ul>
               </div>
             </div>
             <!-- end mobile-menu-->
@@ -142,7 +147,7 @@
                 </div>
                 <div class="col-auto d-none d-sm-block">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-auto">
                       <div class="top-line__city">
                         <div class="top-line__city-name">
                           <svg class="icon icon-flag ">
@@ -202,7 +207,7 @@
                 </div>
                 <div class="col-auto d-none d-sm-block">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-auto">
                       <div class="top-line__city">
                         <div class="top-line__city-name">
                           <svg class="icon icon-flag ">
@@ -241,7 +246,7 @@
           </div>
           <!-- start mobile-menu-->
           <div class="mobile-menu section block-with-lazy top-submenu top-submenu--js" id="mobile-menu">
-            <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title">Интернет-магазин «1С»</span></a>
+            <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title"><span>Интернет-магазин «1С»</span></span></a>
               <ul>
                     <li><a class="mobile-menu__item" href="#"><span class="mobile-menu__svg-wrapper">
                       <svg class="icon icon-mob-m1 ">
@@ -319,6 +324,11 @@
                       </svg></span><span class="mobile-menu__item-title"><span>CRM</span></span></a>
                     </li>
               </ul>
+              <ul class="mobile-menu__mobile-links d-xl-none">
+                <li><a href="#"><span>Проектное направление</span></a></li>
+                <li><a href="#"><span>О компании</span></a></li>
+                <li><a href="#"><span>Контакты</span></a></li>
+              </ul>
             </div>
           </div>
           <!-- end mobile-menu-->
@@ -327,12 +337,14 @@
               <div class="row">
                 <div class="col">
                   <div class="top-line-search__search">
-                    <svg class="icon icon-search ">
-                      <use xlink:href="img/svg/sprite.svg#search"></use>
-                    </svg>
                     <div class="form-wrap">
                       <form>
-                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="" placeholder="Начните поиск, например: Управление нашей фирмой"/>
+                        <button class="form-wrap__btn-search" type="submit">
+                          <svg class="icon icon-search ">
+                            <use xlink:href="img/svg/sprite.svg#search"></use>
+                          </svg>
+                        </button>
+                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="" placeholder="Начните поиск"/>
                         </div>
                         <!-- +e.input-wrap-->
                       </form>
@@ -374,7 +386,7 @@
             </div>
           </div>
           <div class="s-catalog-slider__slider-wrapper">
-            <div class="s-catalog-slider__slider-nav d-none d-md-block">
+            <div class="s-catalog-slider__slider-nav">
               <div class="s-catalog-slider__slider-prev cat-slider-nav">
                 <svg class="icon icon-slider-prev ">
                   <use xlink:href="img/svg/sprite.svg#slider-prev"></use>
@@ -460,125 +472,35 @@
             <h2>Купить программы «1С»</h2>
           </div>
           <div class="row">
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m1.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Бухгалтерский учет</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m1.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Бухгалтерский учет</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m2.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Торговый и складской учет</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m2.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Торговый и складской учет</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m3.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Розница</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m3.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Розница</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m4.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Расчет зарплаты и&nbsp;кадры</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m4.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Расчет зарплаты и&nbsp;кадры</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m5.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Общепит и гостиничный бизнес</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m5.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Общепит и гостиничный бизнес</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m6.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Медицина</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m6.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Медицина</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m7.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Автотранспорт и логистика</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m7.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Автотранспорт и логистика</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m8.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Дополнительные лицензии</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m8.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Дополнительные лицензии</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m9.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Документооборот</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m9.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Документооборот</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m10.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Комплексная автоматизация</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m10.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Комплексная автоматизация</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m11.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Серверные лицензии</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m11.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Серверные лицензии</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m12.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Производственные предприятия и ERP</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m12.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Производственные предприятия и ERP</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m13.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">ИТС</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m13.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">ИТС</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m14.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">Отраслевые решения</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m14.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">Отраслевые решения</span></span></a>
                 </div>
-                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3">
-                  <div class="s-buy-prog__item">
-                    <div class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m15.svg" alt=""/>
-                    </div>
-                    <div class="s-buy-prog__item-title"><a href="#">CRM</a>
-                    </div>
-                  </div>
+                <div class="s-buy-prog__col col-12 col-sm-6 col-lg-4 col-xxl-3"><a class="s-buy-prog__item" href="#"><span class="s-buy-prog__svg-wrapper"><img class="img-svg" src="img/svg/mob-m15.svg" alt=""/></span><span class="s-buy-prog__item-title"><span class="s-buy-prog__link">CRM</span></span></a>
                 </div>
           </div>
         </div>
@@ -712,10 +634,159 @@
       </form>
     </div>
     <!-- #modal-call-->
+    <div class="order-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="order">
+      <div class="order-modal__modal-title">Товар добавлен в корзину
+      </div>
+      <div class="order-modal__body">
+        <div class="row">
+          <div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
+          <div class="col">
+            <div class="order-modal__title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</span>
+            </div>
+            <div class="order-modal__art">Артикул: 4601546041654
+            </div>
+            <div class="order-modal__price">Цена:
+              <div class="order-modal__price-block">16 200<span class="i-font">o</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-modal__footer">
+        <div class="row">
+          <div class="col-12 col-sm-auto"><a class="order-modal__btn btn-primary" href="#order-thanks">оформить заказ</a>
+          </div>
+          <div class="col-12 col-sm">
+            <div class="order-modal__info">Мы свяжемся с Вами в течение часа после оформления заказа.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #modal-call-->
+    <div class="order-modal arend-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="arend">
+      <div class="order-modal__modal-title text-center">Арендовать
+      </div>
+      <div class="order-modal__body">
+        <div class="row">
+          <div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
+          <div class="col">
+            <div class="order-modal__title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ</span>
+            </div>
+            <div class="order-modal__art">Артикул: 4601546041654
+            </div>
+            <div class="order-modal__price">Цена:
+              <div class="order-modal__price-block bg-light">от 1 200<span class="i-font">o</span>/мес.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-modal__footer text-center">
+        <div class="form-wrap">
+          <form>
+            <div class="form-wrap__modal-title">Заполните форму и мы свяжемся с Вами в&nbsp;течение рабочего дня.
+            </div>
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="name" placeholder="Ваше имя"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Ваш телефон" required="required"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <button class="form-wrap__btn btn-primary" type="submit" href="#arend-thanks">отправить заявку
+            </button>
+            <div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- #modal-call-->
+    <div class="order-modal arend-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="one-click">
+      <div class="order-modal__modal-title text-center">Купить в один клик
+      </div>
+      <div class="order-modal__body">
+        <div class="row">
+          <div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
+          <div class="col">
+            <div class="order-modal__title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ</span>
+            </div>
+            <div class="order-modal__art">Артикул: 4601546041654
+            </div>
+            <div class="order-modal__price">Цена:
+              <div class="order-modal__price-block">16 200<span class="i-font">o</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-modal__footer text-center">
+        <div class="form-wrap">
+          <form>
+            <div class="form-wrap__modal-title">Заполните форму и мы свяжемся с Вами в&nbsp;течение рабочего дня.
+            </div>
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="name" placeholder="Ваше имя"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Ваш телефон" required="required"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <button class="form-wrap__btn btn-primary" type="submit" href="#arend-thanks">оформить заказ
+            </button>
+            <div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- #modal-call-->
+    <div class="order-modal arend-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="basket-modal">
+      <div class="order-modal__modal-title text-center">Оформить заказ
+        <div class="order-modal__modal-subtitle text-center">Заполните форму и мы свяжемся с Вами в течение 20 минут.
+        </div>
+      </div>
+      <div class="order-modal__footer text-center">
+        <div class="form-wrap">
+          <form>
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="name" placeholder="Ваше имя"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Ваш телефон" required="required"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <button class="form-wrap__btn btn-primary" type="submit" href="#arend-thanks">отправить заявку
+            </button>
+            <div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- #modal-call-->
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form text-center" id="thanks">
       <div class="form-wrap__title">Спасибо за обращение!
       </div>
       <div class="form-wrap__title-sub">Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей
+      </div>
+    </div>
+    <!-- modal-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form text-center" id="order-thanks">
+      <div class="form-wrap__title">Спасибо за обращение!
+      </div>
+      <div class="form-wrap__title-sub">Мы свяжемся с Вами в течение&nbsp;часа и&nbsp;проконсультируем по любому вопросу.
+      </div>
+    </div>
+    <!-- modal-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form text-center" id="arend-thanks">
+      <div class="form-wrap__title">Спасибо за обращение!
+      </div>
+      <div class="form-wrap__title-sub">Мы свяжемся с Вами в течение рабочего дня.
       </div>
     </div>
     <!-- modal-->

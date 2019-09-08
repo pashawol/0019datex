@@ -75,6 +75,106 @@ mixin s-competences()
 	// end s-competences
 
 
+mixin s-competences-card()
+	// start s-competences
+	+b.SECTION.s-competences.section.block-with-lazy#s-competences&attributes(attributes)
+		mixin item(t) 
+			+e.item
+				//- .before 0
+				//- 	= i
+				.row
+					.col-md-6.col-12.col-lg-8.col-xl-7.text-left
+						.row
+							.col-auto.d-none.d-xl-block
+								+e.img-wrapper
+									img(src="img/product.png" alt="")
+							.col
+								+e.item-title
+									a(href="#")=t
+								+e.descr Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
+					//- h6= or
+					.col-12.col-md
+						.row
+							.col-6.col-md-6.d-flex.d-lg-block.justify-content-center.align-items-center.text-center
+								+e.price.d-md-none.d-xl-inline-block.text-center Цена:
+									+e.price-wrapper 38 500
+										span.i-font o
+								+e.price.d-none.d-md-inline-block.d-xl-none
+									+e.price-wrapper 38 500
+										span.i-font o
+							//- +e.btn-col-wrapper.col-xl-auto.col-6.col-md-12
+							//- 	+e.btn-row.row.justify-content-end
+							+e.btn-col.col-6.col-md-6
+								+e.btn.btn-primary.popup-with-move-anim(href="#order" data-title="купить" data-order=t data-btn="купить") купить
+									span
+			// /+e.item
+		+item('1С:Бухгалтерия 8 КОРП (USB)')
+		+item('1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)')
+		+item('1С:Бухгалтерия 8. Комплект на 5 пользователей')
+		+item('1С:Бухгалтерия государственного учреждения 8 ПРОФ')
+		+item('1С:Бухгалтерия 8 КОРП (USB)')
+			//- +control-sl()
+	// end s-competences
+
+
+mixin s-competences-card-2()
+	// start s-competences
+	+b.SECTION.s-competences.section.block-with-lazy#s-competences&attributes(attributes)
+		mixin item(t) 
+			+e.item
+				//- .before 0
+				//- 	= i
+				.row
+					.col-md-6.col-12.col-lg-8.col-xl-7.text-left
+						.row
+							.col-auto.d-none.d-xl-block
+								+e.img-wrapper
+									img(src="img/product.png" alt="")
+							.col
+								+e.item-title
+									a(href="#")=t
+					//- h6= or
+					
+					.col-12.col-md
+						.row
+							.col-6.col-md-6.d-flex.d-lg-block.justify-content-center.align-items-center.text-center
+								+e.price.d-md-none.d-xl-inline-block.text-center Цена:
+									+e.price-wrapper 38 500
+										span.i-font o
+								+e.price.d-none.d-md-inline-block.d-xl-none
+									+e.price-wrapper 38 500
+										span.i-font o
+							//- +e.btn-col-wrapper.col-xl-auto.col-6.col-md-12
+							//- 	+e.btn-row.row.justify-content-end
+							+e.btn-col.col-6.col-md-6
+								+e.btn.btn-primary.popup-with-move-anim(href="#order" data-title="купить" data-order=t data-btn="купить") купить
+									span
+					
+					//- .col-12.col-md
+					//- 	.row
+					//- 		.col-xl.col-6.col-md-12.d-flex.d-md-block.justify-content-center
+					//- 			.row.justify-content-end
+					//- 				+e.price-col.col-xl-12.col-12.col-md-6.col-xl-12.col-6.d-flex.d-lg-block.justify-content-center
+					//- 					+e.price Цена:
+					//- 						+e.price-wrapper 38 500
+					//- 							span.i-font o
+					//- 		+e.btn-col-wrapper.col-xl-auto.col-6.col-md-12
+					//- 			+e.btn-row.row.justify-content-end
+					//- 				+e.btn-col.col-xl-12.col-12.col-md-6
+					//- 					+e.btn.btn-primary.popup-with-move-anim(href="#order" data-title="купить" data-order=t   data-btn="купить") купить
+					//- 						span
+			// /+e.item
+		+item('1С:Бухгалтерия 8 КОРП (USB)')
+		+item('1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)')
+		+item('1С:Бухгалтерия 8. Комплект на 5 пользователей')
+		+item('1С:Бухгалтерия государственного учреждения 8 ПРОФ')
+		+item('1С:Бухгалтерия 8 КОРП (USB)')
+			//- +control-sl()
+	// end s-competences
+
+
+
+
 mixin s-competences-2()
 	// start s-competences
 	+b.SECTION.s-competences.section.block-with-lazy#s-competences&attributes(attributes)

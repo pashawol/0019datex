@@ -63,7 +63,7 @@ mixin modal()
 
 
 	+b.order-modal.arend-modal(id="arend" class="zoom-anim-dialog mfp-hide modal-win modal-form")
-		+e.modal-title Товар добавлен в корзину
+		+e.modal-title.text-center Арендовать
 		+e.body
 			.row
 				.col-auto.d-flex.align-items-center
@@ -83,6 +83,35 @@ mixin modal()
 				+input("tel","tel","Ваш телефон")( required)
 				+input("email","email","Ваш e-mail")
 				+e.btn.btn-primary(type="submit" href="#arend-thanks") отправить заявку
+				+polite
+			//- .row
+			//- 	.col-12.col-sm-auto
+			//- 	.col-12.col-sm
+			//- 		+e.info Мы свяжемся с Вами в течение часа после оформления заказа.
+
+	// #modal-call
+	
+	
+	+b.order-modal.arend-modal(id="one-click" class="zoom-anim-dialog mfp-hide modal-win modal-form")
+		+e.modal-title.text-center Купить в один клик
+		+e.body
+			.row
+				.col-auto.d-flex.align-items-center
+					img(src="img/order-img.jpg" alt="")
+				.col
+					+e.title
+						span 1С:Бухгалтерия государственного учреждения 8 ПРОФ
+					+e.art Артикул: 4601546041654
+					+e.price Цена:
+						+e.price-block 16 200
+							span.i-font o
+		+e.footer.text-center
+			+form-wrap
+				+e.modal-title Заполните форму и мы свяжемся с Вами в&nbsp;течение рабочего дня.
+				+input("text","name","Ваше имя")
+				+input("tel","tel","Ваш телефон")( required)
+				+input("email","email","Ваш e-mail")
+				+e.btn.btn-primary(type="submit" href="#arend-thanks") оформить заказ
 				+polite
 			//- .row
 			//- 	.col-12.col-sm-auto

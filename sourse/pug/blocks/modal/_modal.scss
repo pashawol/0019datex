@@ -278,7 +278,7 @@ button.mfp-close,
 		padding: rem(15);
 		border-bottom: 1px solid #C5C5C5;
 		@include media-breakpoint-up(md) {
-			padding: rem(30);
+			padding: rem(30) rem(5) rem(30) rem(30);
 		}
 		img{
 			width: 100%;

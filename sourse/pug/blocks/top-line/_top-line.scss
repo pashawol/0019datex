@@ -498,11 +498,13 @@
 
   &__inner {
     // background-color: #fff;
+    @include media-breakpoint-up(md){
+      display: flex;
+    }
     width: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     max-height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;

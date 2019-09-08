@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
 	});
 
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Search_Results.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Card.jpg);"></div>')
 
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню

@@ -402,3 +402,36 @@
 		color: #ffffff !important;
 	}
 }
+
+.competences-card{
+	padding: 0 !important;
+	 img{
+		margin-bottom: 0 !important;
+		max-width: 52px;
+		height: auto;
+	}
+	.s-competences__item{
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+}
+
+.license-card{
+	.s-competences__item{
+		&:hover{
+			.s-competences__item-title a{
+				border-color: #fff;
+				color: #000;
+				border-color: #000;
+			}
+		}
+	}
+	.s-competences__item-title a{
+		border-color: #fff;
+		&:hover{
+			color: #000;
+			border-color: #000;
+		}
+	}
+}

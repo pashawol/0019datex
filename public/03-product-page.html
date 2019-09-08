@@ -393,17 +393,25 @@
               <div class="s-product__art">Артикул: 4601546041654
               </div>
               <div class="row">
-                <div class="d-md-none col-auto">
-                  <div class="s-product__product-img"><img src="img/product.png" alt="#"/>
+                <div class="d-md-none col-sm-auto col-6">
+                  <div class="s-product__product-img">
+                    <!-- picture-->
+                    <picture> 
+                      <source srcset="img/@2x/webp/product.webp" type="image/webp" media="(min-width:576px)"/>
+                      <source srcset="img/@1x/webp/product.webp" type="image/webp"/>
+                      <source srcset="img/@2x/product.png" type="image/png" media="(min-width:576px)"/>
+                      <source srcset="img/@1x/product.png" type="image/png"/><img src="img/@2x/product.png" alt=""/>
+                    </picture>
+                    <!-- /picture-->
                   </div>
                 </div>
-                <div class="col">
+                <div class="s-product__order-col col-sm col-6">
                   <div class="row">
                     <div class="s-product__col col-md-6 col-xxl-auto">
-                      <div class="s-product__price">Цена:<span class="s-product__price-wrapper">9 000 000<span class="i-font">o</span></span>
+                      <div class="s-product__price">Цена:<span class="s-product__price-wrapper">90 000<span class="i-font">o</span></span>
                       </div>
                     </div>
-                    <div class="s-product__col col-6 col-xl-6 col-xxl-auto"><a class="s-product__btn main-btn btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Купить</a>
+                    <div class="s-product__col col-md-6 col-xl-6 col-xxl-auto"><a class="s-product__btn main-btn btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Купить</a>
                     </div>
                     <div class="s-product__col one-click-col col-md-6 col-xxl">
                       <div class="s-product__one-click"><a class="popup-with-move-anim" href="#one-click">Купить в 1 клик</a>
@@ -413,12 +421,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-xl-3 text-center align-items-center d-flex justify-content-center">
+            <div class="s-product__btn-wrap-right col-12 col-xl-3 text-center align-items-center d-flex justify-content-center">
               <div class="row">
                 <div class="col-xl-12 col-6">
                   <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                      <div class="s-product__price-light bg-light">от 1 200<span class="i-font">o</span>/мес.
+                      <div class="s-product__price-light bg-light fw-500">от 1 200<span class="i-font">o</span>/мес.
                       </div>
                     </div>
                     <div class="col-12"><a class="s-product__btn btn btn--white btn-primary popup-with-move-anim" href="#arend" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Арендовать</a>
@@ -426,8 +434,8 @@
                   </div>
                 </div>
                 <div class="col-xl-12 col-6 demo-btn">
-                  <div class="s-product__title s-product__title--green">Бесплатно на 30 дней
-                  </div><a class="s-product__btn btn btn--green btn-primary popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку">демо-доступ</a>
+                  <div class="s-product__title s-product__title--green">Бесплатно на&nbsp;30&nbsp;дней
+                  </div><a class="s-product__btn btn btn--green btn-outline-success popup-with-move-anim" href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку">демо-доступ</a>
                 </div>
               </div>
             </div>
@@ -453,8 +461,8 @@
               <div class="row">
                 <div class="col-12 col-xl">
                   <div class="tabs__wrap">
-                    <div class="tabs__content2">
-                      <div class="s-product__content active">
+                    <div class="tabs__content2 active">
+                      <div class="s-product__content">
                         <h4>Общая характеристика конфигурации «Бухгалтерия КОРП»</h4>
                         <p>Программный продукт <strong>«1С:Бухгалтерия 8 КОРП» </strong>предназначен для автоматизации бухгалтерского и&nbsp;налогового учета, включая подготовку обязательной (регламентированной) отчетности в&nbsp;организациях, осуществляющих любые виды коммерческой деятельности: оптовую и&nbsp;розничную торговлю, комиссионную торговлю (включая субкомиссию), оказание услуг, производство и&nbsp;т.&nbsp;д. Программа предоставляет возможность вести бухгалтерский и&nbsp;налоговый учет сразу нескольких организаций (юридических лиц) в&nbsp;общей информационной базе.</p>
                         <h6>Маркированный список:</h6>
@@ -1590,7 +1598,6 @@
     <!-- #modal-map-->
     <script src="js/lazy.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="libs/wow.min.js"> </script>
     <script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
     <script src="libs/picturefill.min.js"></script>
     <script src="libs/object-fit-images/dist/ofi.min.js"></script>

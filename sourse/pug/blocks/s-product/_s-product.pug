@@ -26,35 +26,37 @@ mixin s-product()
 						+product-radio("USB поставка","8 900")
 					+e.art Артикул: 4601546041654
 					.row
-						.d-md-none.col-auto
+						.d-md-none.col-sm-auto.col-6
 							+e.product-img
-								img(src="img/product.png" alt="#")
-						.col
+								+pic('product','png','','')
+								//- img.res-i(src="img/product.png" alt="#")
+						+e.order-col.col-sm.col-6
 							.row
 								+e.col.col-md-6.col-xxl-auto
 									+e.price Цена:
-										+e.SPAN.price-wrapper 9 000 000
+										+e.SPAN.price-wrapper 90 000
 											span.i-font o
-								+e.col.col-6.col-xl-6.col-xxl-auto
+								+e.col.col-md-6.col-xl-6.col-xxl-auto
 									+e.btn.main-btn.btn-primary.popup-with-move-anim(href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Купить
 								+e.col.one-click-col.col-md-6.col-xxl
 									+e.one-click
 										a.popup-with-move-anim(href="#one-click") Купить в 1 клик
 
 							
-				.col-12.col-xl-3.text-center.align-items-center.d-flex.justify-content-center
+				+e.btn-wrap-right.col-12.col-xl-3.text-center.align-items-center.d-flex.justify-content-center
+					
 					.row
 						.col-xl-12.col-6
 							.row
 								.col-12.d-flex.justify-content-center
-									+e.price-light.bg-light от 1 200
+									+e.price-light.bg-light.fw-500 от 1 200
 										span.i-font o
 										|/мес.
 								.col-12
 									+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#arend" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Арендовать
 						.col-xl-12.col-6.demo-btn
-							+e.title--green Бесплатно на 30 дней
-							+e.btn.btn--green.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") демо-доступ
+							+e.title--green Бесплатно на&nbsp;30&nbsp;дней
+							+e.btn.btn--green.btn-outline-success.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") демо-доступ
 		+e.tabs.tabs
 			.tabs__caption
 				.container
@@ -77,8 +79,8 @@ mixin s-product()
 					.row
 						.col-12.col-xl
 							.tabs__wrap
-								.tabs__content2
-									+e.content.active
+								.tabs__content2.active
+									+e.content
 										h4 Общая характеристика конфигурации «Бухгалтерия КОРП»
 										p Программный продукт 
 											strong «1С:Бухгалтерия 8 КОРП» 

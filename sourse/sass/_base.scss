@@ -562,6 +562,29 @@ picture {
 	}
 
 }
+.btn-outline-success {
+	@extend .btn;
+	background-color: $success;
+	color: #ffffff;
+	// border-color: $primary;
+	border: none;
+
+	&::before {
+
+		background-color: darken($color: $success, $amount: .01);
+		// background-color: #c4182a;
+	}
+	
+	&::after {
+		background-color: darken($color: $success, $amount: 3);
+		// background-color: #ac1424;
+	}
+	&:hover{
+		border-color: darken($color: $success, $amount: 3);
+	}
+
+}
+
 
 .btn-dark {
 	@extend .btn;
@@ -781,7 +804,7 @@ a {
 @include media-breakpoint-up(lg) {
 
 	.wow {
-		visibility: hidden;
+		// visibility: hidden;
 
 	}
 }
@@ -816,7 +839,7 @@ a {
 	position: relative;
 	z-index: 2;
 }
-
+ 
 .btn-primary {
 	position: relative;
 	span {

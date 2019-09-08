@@ -282,6 +282,10 @@
 			// flex-grow: 0;
 			border: none;
 			border: 2px solid #fff;
+			@include media-breakpoint-down(md){
+				justify-content: start;
+				padding-left: rem(10);
+			}
 
 			span {
 				display: inline;

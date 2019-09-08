@@ -72,10 +72,10 @@ mixin s-product()
 								span Лицензии
 							.tabs__btn 
 								span Услуги
-			+e.content-block.bg-light
+			+e.content-block
 				.container
 					.row
-						.col
+						.col-12.col-xl
 							.tabs__wrap
 								.tabs__content2.active 
 									+e.content
@@ -133,7 +133,7 @@ mixin s-product()
 														a(href="#") Авизо по расчетам.
 													li Авизо по прочим операциям.
 											li Авизо по МПЗ.
-						.col-3
+						.col-12.col-xl-3
 							.row
 								.col-12
 									+e.extra-block
@@ -150,8 +150,12 @@ mixin s-product()
 										+form-wrap
 											.help-title Нужна консультация?
 											.help-subtitle Закажите консультацию в&nbsp;один&nbsp;клик!
-											+input("tel","tel","+7 (___)-___-__-__")( required)
-											+e.btn(type="submit") отправить
-											+help-polite
+											.row
+												.col-md-6.col-xl-12
+													+input("tel","tel","+7 (___)-___-__-__")( required class="bg-light")
+												.col-md-6.col-xl-12
+													+e.btn(type="submit") отправить
+												.col-12
+													+help-polite
 	// end s-product
 

@@ -242,10 +242,17 @@
 		}
 		&__wrap{
 			background-color: #fff;
-			max-width: rem(932);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(xl){
+				max-width: rem(932);
+				margin-bottom: 0;
+			}
 		}
 	}
 	&__content-block{
+		@include media-breakpoint-up(md){
+			background-color: $light;
+		}
 		padding: rem(50) 0 rem(100);
 	}
 	&__content{
@@ -337,7 +344,10 @@
 			border: 2px solid #dadde2;
 			background-color: #ffffff;
 			padding: rem(25) rem(20) rem(20);
-			margin-bottom: rem(50);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(50);
+			}
 			
 		}
 		&-title{
@@ -355,6 +365,12 @@
 			font-size: 16px;
 			line-height: 30px;
 			margin-bottom: 0;
+			@include media-breakpoint-up(md){
+				column-count: 2;
+			}
+			@include media-breakpoint-up(xl){
+				column-count: 1;
+			}
 		}
 		&-item{
 			position: relative;
@@ -371,7 +387,10 @@
 	&__help-block{
 		border: 2px solid $primary;
 		background-color: #ffffff;
-		padding: rem(20) rem(25) rem(5);
+		padding: rem(30) rem(20);
+		@include media-breakpoint-up(xl){
+			padding: rem(20) rem(25) rem(5);
+		}
 		.form-wrap{
 			&__btn{
 				padding-top: rem(20);
@@ -387,6 +406,9 @@
 				padding-bottom: rem(18);
 			}
 			&__polite{
+				@include media-breakpoint-down(lg){
+					max-width: unset;
+				}
 				.custom-input{
 					padding: 0 0 0 rem(40);
 					line-height: $em-base;

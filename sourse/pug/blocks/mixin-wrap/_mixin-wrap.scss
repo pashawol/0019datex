@@ -81,17 +81,19 @@
 			text-decoration: none;
 		}
 		&:not(:last-child){
-			margin-right: rem(26);
+			margin-right: rem(6);
 			&::after{
 				content: "";
 				background-image: url(../img/svg/breadcrumb-arrow.svg);
-				background-size: cover;
+				background-size: 100% 100%;
 				background-repeat: no-repeat;
-				position: absolute;
-				@include a-cent(y);
-				right: rem(-15);
-				width: 6px;
-				height: 11px;
+				// position: absolute;
+				// @include a-cent(y);
+				position: relative;
+				display: inline-block; 
+				margin-left: rem(10);
+				width: rem(6px);
+				height: rem(11px);
 				@include media-breakpoint-up(xxl) {
 					top: rem(10);
 				}

@@ -15,14 +15,14 @@ var parent = $(".s-segments  ")
 // });
 
 jQuery(document).ready(function ($) {
-	var wow = new WOW({
-		mobile: false
-	});
-	wow.init();
-	setTimeout(function () {
+	// var wow = new WOW({
+	// 	mobile: false
+	// });
+	// wow.init();
+	// setTimeout(function () {
 	
-		// JSCCommon.mobileMenu();
-	}, 100); 
+	// 	// JSCCommon.mobileMenu();
+	// }, 100); 
 
  
 	parent.on('mouseenter', 'li', function () {
@@ -330,10 +330,9 @@ jQuery(document).ready(function ($) {
 	})
 	
 	
-	var swiper6 = new Swiper('#home-slider--js', {
+	var swiper6 = new Swiper('.slider-js', {
 		slidesPerView: 1,
-		spaceBetween: 10,
-		breakpointsInverse: true,
+		spaceBetween: 10, 
 		speed: 400,
 		loop: true,
 		pagination: {

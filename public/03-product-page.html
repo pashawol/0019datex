@@ -423,15 +423,9 @@
             </div>
             <div class="s-product__btn-wrap-right col-12 col-xl-3 text-center align-items-center d-flex justify-content-center">
               <div class="row">
-                <div class="col-xl-12 col-6">
-                  <div class="row">
-                    <div class="col-12 d-flex justify-content-center">
-                      <div class="s-product__price-light bg-light fw-500">от 1 200<span class="i-font">o</span>/мес.
-                      </div>
-                    </div>
-                    <div class="col-12"><a class="s-product__btn btn btn--white btn-primary popup-with-move-anim" href="#arend" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Арендовать</a>
-                    </div>
-                  </div>
+                <div class="col-xl-12 col-6 text-center">
+                  <div class="s-product__price-light bg-light fw-500">от 1 200<span class="i-font">o</span>/мес. 
+                  </div><a class="s-product__btn btn btn--white btn-primary popup-with-move-anim" href="#arend" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Арендовать</a>
                 </div>
                 <div class="col-xl-12 col-6 demo-btn">
                   <div class="s-product__title s-product__title--green">Бесплатно на&nbsp;30&nbsp;дней
@@ -662,12 +656,12 @@
                         <h4>Список лицензий</h4>
                         <p>Программный продукт «1С:Бухгалтерия 8 КОРП» обеспечивает работу прикладного решения на одном рабочем месте в один момент времени. </p>
                         <!-- start s-competences-->
-                        <section class="s-competences section block-with-lazy competences-card" id="s-competences">
+                        <div class="s-competences competences-card" id="s-competences">
                           <div class="s-competences__item">
-                            <div class="row">
+                            <div class="s-competences__tabs-row row">
                               <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
                                 <div class="row">
-                                  <div class="col-auto d-none d-xl-block">
+                                  <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
                                     </div>
                                   </div>
@@ -699,10 +693,10 @@
                           </div>
                           <!-- /+e.item-->
                           <div class="s-competences__item">
-                            <div class="row">
+                            <div class="s-competences__tabs-row row">
                               <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
                                 <div class="row">
-                                  <div class="col-auto d-none d-xl-block">
+                                  <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
                                     </div>
                                   </div>
@@ -734,10 +728,10 @@
                           </div>
                           <!-- /+e.item-->
                           <div class="s-competences__item">
-                            <div class="row">
+                            <div class="s-competences__tabs-row row">
                               <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
                                 <div class="row">
-                                  <div class="col-auto d-none d-xl-block">
+                                  <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
                                     </div>
                                   </div>
@@ -769,10 +763,10 @@
                           </div>
                           <!-- /+e.item-->
                           <div class="s-competences__item">
-                            <div class="row">
+                            <div class="s-competences__tabs-row row">
                               <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
                                 <div class="row">
-                                  <div class="col-auto d-none d-xl-block">
+                                  <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
                                     </div>
                                   </div>
@@ -804,10 +798,10 @@
                           </div>
                           <!-- /+e.item-->
                           <div class="s-competences__item">
-                            <div class="row">
+                            <div class="s-competences__tabs-row row">
                               <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
                                 <div class="row">
-                                  <div class="col-auto d-none d-xl-block">
+                                  <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
                                     </div>
                                   </div>
@@ -838,7 +832,7 @@
                             </div>
                           </div>
                           <!-- /+e.item-->
-                        </section>
+                        </div>
                         <!-- end s-competences-->
                       </div>
                     </div>
@@ -1081,7 +1075,8 @@
               <source srcset="img/form.webp" media="(min-width: 768px)" type="image/webp"/>
               <source srcset="img/form.png" media="(min-width: 768px)" type="image/png"/>
               <!-- тут сделай кроп шириной   140px или чуть больше, какой там стандартный -->
-              <source srcset="img/form-sm.webp" type="image/webp"/><img class="lazy object-fit-js" src="#" data-src="img/form-sm.png" alt=""/>
+              <source srcset="img/form-sm.webp" type="image/webp"/>
+              <source srcset="img/form-sm.png" type="image/png"/><img class="lazy object-fit-js" src="#" data-src="img/form.png" alt=""/>
             </picture>
             <p class="wow fadeInUp" data-wow-duration="0.3s">Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.</p>
             <h6 class="wow fadeInUp" data-wow-duration="0.3s">нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию" lass="wow fadeInUp" data-wow-duration="0.3s">получить консультацию<span></span></a>

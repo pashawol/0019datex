@@ -62,7 +62,7 @@ mixin s-catalog-slider-2()
 					+e.slider.swiper-container#catalog-slider-2--js
 						.swiper-wrapper
 							mixin catalog-slider-2(i, t)
-								+e.slide.swiper-slide
+								+e.slide--prod.swiper-slide
 									+e.item
 										+e.svg-wrapper
 											img(src=`img/slider-icon${i}.png` alt="#")
@@ -95,14 +95,14 @@ mixin s-home-slider()
 						+icon("slider-next")
 				.container
 					.swiper-pagination
-					+e.slider.swiper-container#home-slider--js
+					+e.slider.slider-js.swiper-container#home-slider
 						.swiper-wrapper
 							mixin home-slide(i)
 								+e.slide.swiper-slide
 									a(href="#")
 										+e.IMG.image(src=`img/home-slide${i}.png` alt="")
-							+home-slide("1")
-							+home-slide("1")
+							+home-slide("2")
+							+home-slide("3")
 							+home-slide("1")
 
 

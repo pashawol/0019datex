@@ -26,9 +26,9 @@ mixin s-rews()
 													+e.img-wrap
 														+e.logo
 															img.lazy(src="#" data-src="img/rew-logo.jpg", alt="")
-														picture 
-															source.lazy-sourse(type="image/webp" srcset="#" data-srcset=`img/rew-img.webp` )
-															img.object-fit-js.lazy(src="#" data-src=`img/rew-img.jpg`, alt='')
+														picture
+															source(type="image/webp"  srcset=`img/rew-img.webp` )
+															img.object-fit-js(src=`img/rew-img.jpg`, alt='')
 												.col
 													h6 николаев 
 														span.text-primary пётр

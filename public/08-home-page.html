@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Поиск по сайту</title>
+    <title>Главная</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -389,11 +389,11 @@
             </div>
             <div class="container">
               <div class="swiper-pagination"></div>
-              <div class="s-catalog-slider__slider swiper-container" id="home-slider--js">
+              <div class="s-catalog-slider__slider slider-js swiper-container" id="home-slider">
                 <div class="swiper-wrapper">
-                    <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide1.png" alt="" role="presentation"/></a>
+                    <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide2.png" alt="" role="presentation"/></a>
                     </div>
-                    <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide1.png" alt="" role="presentation"/></a>
+                    <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide3.png" alt="" role="presentation"/></a>
                     </div>
                     <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide1.png" alt="" role="presentation"/></a>
                     </div>
@@ -484,8 +484,8 @@
                               <div class="s-rews__img-wrap">
                                 <div class="s-rews__logo"><img class="lazy" src="#" data-src="img/rew-logo.jpg" alt=""/>
                                 </div>
-                                <picture> 
-                                  <source class="lazy-sourse" type="image/webp" srcset="#" data-srcset="img/rew-img.webp"/><img class="object-fit-js lazy" src="#" data-src="img/rew-img.jpg" alt=""/>
+                                <picture>
+                                  <source type="image/webp" srcset="img/rew-img.webp"/><img class="object-fit-js" src="img/rew-img.jpg" alt=""/>
                                 </picture>
                               </div>
                             </div>
@@ -516,8 +516,8 @@
                               <div class="s-rews__img-wrap">
                                 <div class="s-rews__logo"><img class="lazy" src="#" data-src="img/rew-logo.jpg" alt=""/>
                                 </div>
-                                <picture> 
-                                  <source class="lazy-sourse" type="image/webp" srcset="#" data-srcset="img/rew-img.webp"/><img class="object-fit-js lazy" src="#" data-src="img/rew-img.jpg" alt=""/>
+                                <picture>
+                                  <source type="image/webp" srcset="img/rew-img.webp"/><img class="object-fit-js" src="img/rew-img.jpg" alt=""/>
                                 </picture>
                               </div>
                             </div>
@@ -564,7 +564,8 @@
               <source srcset="img/form.webp" media="(min-width: 768px)" type="image/webp"/>
               <source srcset="img/form.png" media="(min-width: 768px)" type="image/png"/>
               <!-- тут сделай кроп шириной   140px или чуть больше, какой там стандартный -->
-              <source srcset="img/form-sm.webp" type="image/webp"/><img class="lazy object-fit-js" src="#" data-src="img/form-sm.png" alt=""/>
+              <source srcset="img/form-sm.webp" type="image/webp"/>
+              <source srcset="img/form-sm.png" type="image/png"/><img class="lazy object-fit-js" src="#" data-src="img/form.png" alt=""/>
             </picture>
             <p class="wow fadeInUp" data-wow-duration="0.3s">Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.</p>
             <h6 class="wow fadeInUp" data-wow-duration="0.3s">нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию" lass="wow fadeInUp" data-wow-duration="0.3s">получить консультацию<span></span></a>
@@ -1081,7 +1082,6 @@
     <!-- #modal-map-->
     <script src="js/lazy.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="libs/wow.min.js"> </script>
     <script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
     <script src="libs/picturefill.min.js"></script>
     <script src="libs/object-fit-images/dist/ofi.min.js"></script>

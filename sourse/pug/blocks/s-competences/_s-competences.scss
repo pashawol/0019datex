@@ -1,6 +1,12 @@
 .s-competences {
 	background-color: $light;
+	&__tabs-row{
+		@include roww(10);
+		.row{
+			@include roww(10);
 
+		}
+	}
 	img {
 		height: rem(72);
 	}
@@ -324,6 +330,18 @@
 
 		@include media-breakpoint-up(xl) {
 			margin-top: rem(35);
+		}
+	}
+
+	&__item--prod{
+		.s-competences__btn{
+			padding-top: rem(15);
+			padding-bottom: rem(15);
+		}
+		@include media-breakpoint-up(xl) {
+
+			padding-left: rem(30);
+			padding-right: rem(30);
 		}
 	}
 

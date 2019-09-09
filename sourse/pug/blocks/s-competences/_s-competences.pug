@@ -77,15 +77,15 @@ mixin s-competences()
 
 mixin s-competences-card()
 	// start s-competences
-	+b.SECTION.s-competences.section.block-with-lazy#s-competences&attributes(attributes)
+	+b.s-competences#s-competences&attributes(attributes)
 		mixin item(t) 
 			+e.item
 				//- .before 0
 				//- 	= i
-				.row
+				+e.tabs-row.row
 					.col-md-6.col-12.col-lg-8.col-xl-7.text-left
 						.row
-							.col-auto.d-none.d-xl-block
+							+e.col-img.col-auto.d-none.d-xl-block
 								+e.img-wrapper
 									img(src="img/product.png" alt="")
 							.col
@@ -202,9 +202,9 @@ mixin s-competences-2()
 									if d
 										+e.demo Бесплатный демо-доступ
 						//- h6= or
-						.col-12.col-md
+						.col-12.col-md-6.col-lg-4.col-xl-5
 							.row
-								.col-xl.col-6.col-md-12.d-flex.d-md-block.justify-content-center
+								.col-xl-7.col-xs-6.col-md-12.d-flex.d-md-block.justify-content-center
 									.row.justify-content-end
 										if ep
 											+e.price-col.price-light-col.col-xl-12.col-12.col-md-6.order-last.order-md-first.order-xl-last.d-flex.d-lg-block.justify-content-center
@@ -216,7 +216,7 @@ mixin s-competences-2()
 											+e.price Цена:
 												+e.price-wrapper 38 500
 													span.i-font o
-								+e.btn-col-wrapper.col-xl-auto.col-6.col-md-12
+								+e.btn-col-wrapper.col-xl-auto.col-xs-6.col-md-12
 									+e.btn-row.row.justify-content-end
 										if ep
 											+e.btn-col.col-xl-12.col-12.col-md-6.order-last.order-md-first.order-xl-last

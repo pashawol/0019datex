@@ -32,13 +32,13 @@ mixin s-product()
 								//- img.res-i(src="img/product.png" alt="#")
 						+e.order-col.col-sm.col-6
 							.row
-								+e.col.col-md-6.col-xxl-auto
+								+e.col.col-md-6.col-lg-auto
 									+e.price Цена:
 										+e.SPAN.price-wrapper 90 000
 											span.i-font o
-								+e.col.col-md-6.col-xl-6.col-xxl-auto
+								+e.col.col-md-6.col-lg-auto
 									+e.btn.main-btn.btn-primary.popup-with-move-anim(href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Купить
-								+e.col.one-click-col.col-md-6.col-xxl
+								+e.col.one-click-col.col-md-6.col-lg
 									+e.one-click
 										a.popup-with-move-anim(href="#one-click") Купить в 1 клик
 
@@ -61,17 +61,23 @@ mixin s-product()
 					.row
 						+e.tabs-col.col-12.col-xl-10
 							.tabs__btn.active 
-								span Назначение
-							.tabs__btn
-								span Описание
+								.tabs-btn-wrapper
+									span Назначение
 							.tabs__btn 
-								span Сравнение версий
+								.tabs-btn-wrapper
+									span Описание
 							.tabs__btn 
-								span Комплект поставки
+								.tabs-btn-wrapper
+									span Сравнение версий
 							.tabs__btn 
-								span Лицензии
+								.tabs-btn-wrapper
+									span Комплект поставки
 							.tabs__btn 
-								span Услуги
+								.tabs-btn-wrapper
+									span Лицензии
+							.tabs__btn 
+								.tabs-btn-wrapper
+									span Услуги
 			+e.content-block
 				.container
 					.row
@@ -143,11 +149,11 @@ mixin s-product()
 													tr
 														th 1С:Бухгалтерия
 														th 
-															span Базовая
+															a(href="#") Базовая
 														th
-															span ПРОФ 8
+															a(href="#") ПРОФ 8
 														th
-															span КОРП 8
+															a(href="#") КОРП 8
 												tbody
 													tr
 														td
@@ -220,7 +226,7 @@ mixin s-product()
 										+s-competences-card()(class="competences-card")
 								.tabs__content2
 									+e.content
-										h4 Список лицензий
+										h4 Список услуг
 										p Программный продукт «1С:Бухгалтерия 8 КОРП» обеспечивает работу прикладного решения на одном рабочем месте в один момент времени. 
 										+s-competences-card-2()(class="competences-card license-card")
 										

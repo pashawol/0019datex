@@ -57,10 +57,10 @@
 		padding: rem(80px) rem(60px) rem(70px);
 	}
 	padding: rem(80px) rem(20px) rem(70px);
-	.modal-content {
-		// max-width: 485px;
-		// padding-right: 40px 15px;
-	}
+	// .modal-content {
+	// 	// max-width: 485px;
+	// 	// padding-right: 40px 15px;
+	// }
 
 }
 
@@ -294,9 +294,15 @@ button.mfp-close,
 		@include media-breakpoint-up(md) {
 			
 		}
-		span{
+		a{
+			color: $body-color;
 			display: inline;
 			border-bottom: 1px solid #C5C5C5;
+			&:hover{
+				border-color: $primary;
+				color: $primary;
+				text-decoration: none;
+			}
 		}
 	}
 	&__art{

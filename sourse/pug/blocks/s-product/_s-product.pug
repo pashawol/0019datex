@@ -46,14 +46,12 @@ mixin s-product()
 				+e.btn-wrap-right.col-12.col-xl-3.text-center.align-items-center.d-flex.justify-content-center
 					
 					.row
-						.col-xl-12.col-6
-							.row
-								.col-12.d-flex.justify-content-center
-									+e.price-light.bg-light.fw-500 от 1 200
-										span.i-font o
-										|/мес.
-								.col-12
-									+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#arend" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Арендовать
+						.col-xl-12.col-6.text-center
+						 
+							+e.price-light.bg-light.fw-500 от 1 200
+								span.i-font o
+								|/мес. 
+							+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#arend" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Арендовать
 						.col-xl-12.col-6.demo-btn
 							+e.title--green Бесплатно на&nbsp;30&nbsp;дней
 							+e.btn.btn--green.btn-outline-success.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") демо-доступ

@@ -65,7 +65,7 @@ mixin s-catalog-slider-2()
 								+e.slide--prod.swiper-slide
 									+e.item
 										+e.svg-wrapper
-											img(src=`img/slider-icon${i}.png` alt="#")
+											img(src=`img/svg/slide-svg${i}.svg` alt="#")
 										+e.item-title=t
 											//- +e.item-price 33 600
 											//- 	span.i-font o
@@ -101,9 +101,9 @@ mixin s-home-slider()
 								+e.slide.swiper-slide
 									a(href="#")
 										+e.IMG.image(src=`img/home-slide${i}.png` alt="")
-							+home-slide("2")
-							+home-slide("3")
 							+home-slide("1")
+							+home-slide("3")
+							+home-slide("2")
 
 
 			

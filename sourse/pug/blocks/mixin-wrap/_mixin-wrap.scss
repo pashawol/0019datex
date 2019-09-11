@@ -128,6 +128,7 @@
 		margin-bottom: rem(50);
 	}
 	a{
+		color: $body-color;
 		&:hover{
 			.search-results__item-title{
 				color: $primary;
@@ -146,6 +147,14 @@
 		margin-bottom: 2px;
 		@include mt;
 		&:hover{
+			a{
+				.search-results__item-title{
+					color: $primary;
+					span{
+						border-color: $primary;
+					}
+				}
+			}
 			z-index: 2;
 			box-shadow: 0 10px 15px rgba(41, 41, 41, 0.1);
 		}

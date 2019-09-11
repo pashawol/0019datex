@@ -206,11 +206,11 @@ mixin search-results
 		.container
 			+e.wrapper
 				mixin s-res-i
-					a(href="#")
 						+e.item
-							+e.item-title
-								span 1С:Бухгалтерия 8 КОРП (USB)
-							+e.item-text &laquo;1С: Бухгалтерия&nbsp;8&raquo;&nbsp;&mdash; это универсальное решение для автоматизации бухгалтерского, налогового учета и&nbsp;подготовки отчетности в&nbsp;компаниях любого масштаба.
+							a(href="#")
+								+e.item-title
+									span 1С:Бухгалтерия 8 КОРП (USB)
+								+e.item-text &laquo;1С: Бухгалтерия&nbsp;8&raquo;&nbsp;&mdash; это универсальное решение для автоматизации бухгалтерского, налогового учета и&nbsp;подготовки отчетности в&nbsp;компаниях любого масштаба.
 							+breadcrumb("Главная", "Программы “1С”","")
 							//- +e.item-breadcrumb
 							//- 	+e.bread-item Главная

@@ -1,0 +1,72 @@
+mixin mob-mnu() 
+	+b.menu-mobile-page--js 
+		+e.inner
+			+mobile-menu 
+	//  мобильное меню
+
+
+mixin top-line-page-2()
+	span
+	+mob-mnu()
+	// start .top-line-page
+	a.top-line-page__tel.top-line-page__tel--mob.d-sm-none(href="tel:+7(846)3004840") 
+		+icon("phone-receiver")
+		| ПОЗВОНИТЬ СЕЙЧАС
+	+b.top-line-page.--page.--js.block-with-lazy
+		mixin body()
+			+e.body&attributes(attributes)
+				.container
+					.row
+						.col-xl-auto.col
+							a(href="/")
+								img(src="img/logo.png", alt="")
+						+e.tagline-col.col-auto
+							+e.tagline Программы 1С, внедрение и&nbsp;сопровождение
+						.col.d-none.d-xl-block
+							+mnu
+						//- .col.d-xl-none
+						.col-auto.d-none.d-sm-block
+							.row
+								.col-auto
+									+e.city
+										+e.city-name
+											+icon("flag")
+											| САМАРА
+						+e.col.col-auto
+							.row.justify-content-end
+								.col-auto
+									+e.tel--page(href="tel:+7(846)3004840")
+
+										+icon("phone-receiver")
+										| +7 (846) 300 48 40 
+								//- .col-auto.d-none.d-xl-block
+								//- 	+e.btn.btn-outline.popup-with-move-anim(href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок"   data-btn="Заказать звонок") заказать звонок
+						.col-auto.d-xl-none
+							+b.toggle-menu-mobile--js
+								+b.line-wrap.hamburger
+									+e.item.line
+									+e.item.line
+									+e.item.line
+								+e.text.d-none.d-md-block  меню
+				block
+		+body()(class="wow fadeIn body-1" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 1}s`) 
+		+body()(class="body-2")
+		+mobile-menu()(class="top-submenu--js")
+		+b.top-line-page-search.bg-light
+			.container
+				.row
+					.col
+						+e.search
+							+form-wrap
+								+e.btn-search(type="submit")
+									+icon("search")
+								+input("text","","Начните поиск")
+					.col-auto
+						+e.A.basket(href="#")
+							+icon("search-line-basket")
+							|Корзина
+							+e.counter-wrapper
+								+e.counter 56
+	// end .top-line-page
+
+

@@ -8,20 +8,21 @@ mixin s-buy-prog()
 			.row
 				mixin buy-prog-i(i, t)
 					+e.col.col-12.col-sm-6.col-lg-4.col-xxl-3
-						+e.item
+						+e.A.item(href="#")
 							+e.svg-wrapper
 								img.img-svg(src=`img/svg/mob-m${i}.svg` alt="")
 								//- +icon(`mob-m${i}`)
 							+e.item-title
 								if t
-									a(href="#")=t
+									+e.link=t
+									//- a(href="#")=t
 								else 
 									block
 				+buy-prog-i("1","Бухгалтерский учет")
 				+buy-prog-i("2","Торговый и складской учет")
 				+buy-prog-i("3","Розница")
 				+buy-prog-i("4")
-					a(href="#") Расчет зарплаты и&nbsp;кадры
+					+e.link Расчет зарплаты и&nbsp;кадры
 				+buy-prog-i("5","Общепит и гостиничный бизнес")
 				+buy-prog-i("6","Медицина")
 				+buy-prog-i("7","Автотранспорт и логистика")

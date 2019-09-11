@@ -1,6 +1,6 @@
 mixin s-competences()
 	// start s-competences
-	+b.SECTION.s-competences.section.block-with-lazy#s-competences&attributes(attributes)
+	+b.s-competences.section.block-with-lazy&attributes(attributes)
 		.container
 			+b.section-title
 				h2(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )  Ключевые компетенции 
@@ -75,9 +75,114 @@ mixin s-competences()
 	// end s-competences
 
 
+mixin s-competences-card()
+	// start s-competences
+	+b.s-competences&attributes(attributes)
+		mixin item(t) 
+			+e.item
+				//- .before 0
+				//- 	= i
+				+e.tabs-row.row
+					.col-md-6.col-12.col-lg-8.col-xl-6.text-left
+						.row
+							+e.col-img.col-auto.d-none.d-xl-block
+								+e.img-wrapper
+									img(src="img/product.png" alt="")
+							.col
+								+e.item-title
+									a(href="#")=t
+								+e.descr Автоматизация процессов управления на предприятиях до&nbsp;20 мест.
+					//- h6= or
+					.col-12.col-md
+						.row
+							+e.main-price.col-6.col-md-6.d-flex.d-lg-block.align-items-center.text-center
+								+e.price.d-md-none.d-xl-inline-block.text-center Цена:
+									+e.price-wrapper 38 500
+										span.i-font o
+								+e.price.d-none.d-md-inline-block.d-xl-none
+									+e.price-wrapper 38 500
+										span.i-font o
+							//- +e.btn-col-wrapper.col-xl-auto.col-6.col-md-12
+							//- 	+e.btn-row.row.justify-content-end
+							+e.btn-col.col-6.col-md-6
+								+e.btn.btn-primary.popup-with-move-anim(href="#order" data-title="купить" data-order=t data-btn="купить") купить
+									span
+			// /+e.item
+		+item('1С:Бухгалтерия 8 КОРП (USB)')
+		+item('1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)')
+		+item('1С:Бухгалтерия 8. Комплект на 5 пользователей')
+		+item('1С:Бухгалтерия государственного учреждения 8 ПРОФ')
+		+item('1С:Бухгалтерия 8 КОРП (USB)')
+			//- +control-sl()
+	// end s-competences
+
+
+mixin s-competences-card-2()
+	// start s-competences
+	+b.s-competences.section.block-with-lazy&attributes(attributes)
+		mixin item(t, a) 
+			+e.item
+				//- .before 0
+				//- 	= i
+				.row
+					.col-md-6.col-12.col-lg-8.col-xl-6.text-left
+						.row
+							.col-auto.d-none.d-xl-block
+								+e.img-wrapper
+									img(src="img/product.png" alt="")
+							.col
+								if a
+									+e.item-title
+										a(href="#")=t
+								else
+									+e.item-title
+										span=t
+
+					//- h6= or
+					
+					.col-12.col-md
+						.row
+							+e.main-price.col-6.col-md-6.d-flex.d-lg-block.align-items-center.text-center
+								+e.price.d-md-none.d-xl-inline-block.text-center Цена:
+									+e.price-wrapper 38 500
+										span.i-font o
+								+e.price.d-none.d-md-inline-block.d-xl-none
+									+e.price-wrapper 38 500
+										span.i-font o
+							//- +e.btn-col-wrapper.col-xl-auto.col-6.col-md-12
+							//- 	+e.btn-row.row.justify-content-end
+							+e.btn-col.col-6.col-md-6
+								+e.btn.btn-primary.popup-with-move-anim(href="#order" data-title="купить" data-order=t data-btn="купить") купить
+									span
+					
+					//- .col-12.col-md
+					//- 	.row
+					//- 		.col-xl.col-6.col-md-12.d-flex.d-md-block.justify-content-center
+					//- 			.row.justify-content-end
+					//- 				+e.price-col.col-xl-12.col-12.col-md-6.col-xl-12.col-6.d-flex.d-lg-block.justify-content-center
+					//- 					+e.price Цена:
+					//- 						+e.price-wrapper 38 500
+					//- 							span.i-font o
+					//- 		+e.btn-col-wrapper.col-xl-auto.col-6.col-md-12
+					//- 			+e.btn-row.row.justify-content-end
+					//- 				+e.btn-col.col-xl-12.col-12.col-md-6
+					//- 					+e.btn.btn-primary.popup-with-move-anim(href="#order" data-title="купить" data-order=t   data-btn="купить") купить
+					//- 						span
+			// /+e.item
+		+item('1С:Бухгалтерия 8 КОРП (USB)',"a")
+		+item('1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)')
+		+item('1С:Бухгалтерия 8. Комплект на 5 пользователей',"a")
+		+item('1С:Бухгалтерия государственного учреждения 8 ПРОФ')
+		+item('1С:Бухгалтерия 8 КОРП (USB)',"a")
+			//- +control-sl()
+	// end s-competences
+
+
+
+
 mixin s-competences-2()
 	// start s-competences
-	+b.SECTION.s-competences.section.block-with-lazy#s-competences&attributes(attributes)
+	+b.s-competences.section.block-with-lazy&attributes(attributes)
 		.container
 			//- +b.section-title
 			//- 	h2(class="wow fadeInUp" data-wow-duration=`${dur * 1}s`  )  Ключевые компетенции 
@@ -86,11 +191,11 @@ mixin s-competences-2()
 			//- 	.h4(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * .5}s`)  Автоматизируя процессы в&nbsp;вашем бизнесе, мы&nbsp;делаем его эффективнее.
 		 
 			mixin item(i, t,  or, d, ep) 
-				+e.item(class="wow fadeInUp" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay  * (i * .5) }s`)
+				+e.item
 					//- .before 0
 					//- 	= i
 					.row
-						.col-xl-7.col-6
+						.col-md-6.col-12.col-lg-8.col-xl-7.text-left
 							.row
 								.col-auto.d-none.d-xl-block
 									+e.img-wrapper
@@ -102,33 +207,35 @@ mixin s-competences-2()
 									if d
 										+e.demo Бесплатный демо-доступ
 						//- h6= or
-						.col-6.col-xl
+						.col-12.col-md-6.col-lg-4.col-xl-5
 							.row
-								.col-xl-6.col-12
+								.col-xl-7.col-6.col-md-12.d-flex.d-md-block.justify-content-center
 									.row.justify-content-end
 										if ep
-											.col-xl-12.col-6.order-lg-last
+											+e.price-col.price-light-col.col-xl-12.col-12.col-md-6.order-last.order-md-first.order-xl-last.d-flex.d-lg-block.justify-content-center
 												+e.price.price--small За 1 пользователя:
 													+e.price-wrapper.bg-light от 1 200
 														span.i-font o
 														|/мес.
-										.col-xl-12.col-6.order-xl-first.align-self-end
+										+e.price-col.col-xl-12.col-12.col-md-6.col-xl-12.col-6.d-flex.d-lg-block.justify-content-center
 											+e.price Цена:
 												+e.price-wrapper 38 500
 													span.i-font o
-								.col-xl-6.col-12
-									.row.justify-content-end
+								+e.btn-col-wrapper.col-xl-auto.col-6.col-md-12
+									+e.btn-row.row.justify-content-end
 										if ep
-											.col-xl-12.col-6.order-xl-last
+											+e.btn-col.col-xl-12.col-12.col-md-6.order-last.order-md-first.order-xl-last
 												if or
-													+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") арендовать
+													+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#arend" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") арендовать
 												else
-													+e.btn.btn--white.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") арендовать
-										.col-xl-12.col-6
+													+e.btn.btn--white.btn-primary(href="#arend" data-title="заказать" data-order="заказать"   data-btn="заказать") арендовать
+										+e.btn-col.col-xl-12.col-12.col-md-6
 											if or
-												+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
+												+e.btn.btn-primary.popup-with-move-anim(href="#order" data-title="Оставить заявку" data-order= or   data-btn="Оставить заявку") заказать
+													span
 											else
-												+e.btn.btn-primary(href="#" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
+												+e.btn.btn-primary(href="#order" data-title="заказать" data-order="заказать"   data-btn="заказать") заказать
+													span
 				// /+e.item
 			+item('1','1С:Бухгалтерия 8 КОРП (USB)','оптово-розничная торговля','d')
 			+item('2','1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)','бухгалтерский учёт','','ep')

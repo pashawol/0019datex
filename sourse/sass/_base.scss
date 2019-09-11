@@ -21,6 +21,9 @@ html {
 		position: absolute;
 	}
 }
+.body-basket{
+	background-color: #f2f5f9;
+}
 
 .screen {
 	top: 0;
@@ -559,6 +562,29 @@ picture {
 	}
 
 }
+.btn-outline-success {
+	@extend .btn;
+	background-color: $success;
+	color: #ffffff;
+	// border-color: $primary;
+	border: none;
+
+	&::before {
+
+		background-color: darken($color: $success, $amount: .01);
+		// background-color: #c4182a;
+	}
+	
+	&::after {
+		background-color: darken($color: $success, $amount: 3);
+		// background-color: #ac1424;
+	}
+	&:hover{
+		border-color: darken($color: $success, $amount: 3);
+	}
+
+}
+
 
 .btn-dark {
 	@extend .btn;
@@ -778,7 +804,7 @@ a {
 @include media-breakpoint-up(lg) {
 
 	.wow {
-		visibility: hidden;
+		// visibility: hidden;
 
 	}
 }
@@ -813,7 +839,7 @@ a {
 	position: relative;
 	z-index: 2;
 }
-
+ 
 .btn-primary {
 	position: relative;
 	span {
@@ -892,5 +918,46 @@ a {
 	.icon{
 		font-size: rem(15);
 		color: $primary;
+	}
+}
+
+.main-search-line{
+	&__wrapper{
+		max-width: rem(893);
+		margin: 0 auto;
+		margin-top: rem(40);
+	}
+	.form-wrap{
+		position: relative;
+		&__input{
+			height: rem(59);
+			text-align: left;
+			border: none;
+			background-color: $light;
+			&::placeholder{
+				font-size: 16px;
+				font-weight: 500;
+			}
+		}
+		&__btn-search{
+			height: rem(20);
+			display: flex;
+			align-items: center;
+			position: absolute;
+			@include a-cent(y);
+			right: 20px;
+			// top: rem(-3);
+			// left: 0;
+			background-color: $light;
+			border: none;
+			outline: none;
+		}
+		.icon{
+			// position: absolute;
+			// right: 0;
+			// @include a-cent(y);
+			font-size: rem(20);
+			color: $primary;
+		}
 	}
 }

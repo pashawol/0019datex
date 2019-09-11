@@ -1,16 +1,16 @@
 mixin s-product()
 	// start s-product
-	+b.SECTION.s-product.section.lazy-background#s-product&attributes(attributes)
+	+b.s-product.section.lazy-background#s-product&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				+breadcrumb("Главная","Программы «1С»","Бухгалтерский учет","1С:Бухгалтерия 8 ПРОФ")
 				h1 1С:Бухгалтерия 8 ПРОФ
 				
 			.row
-				.col-3
+				.d-none.d-md-block.col-4.col-xl-3
 					+e.product-img
 						img(src="img/product.png" alt="#")
-				.col-6
+				.col-12.col-md-8.col-xl-6
 					+form-wrap(id="product-radio")
 						mixin product-radio(t, p)
 							+b.LABEL.radio-prod
@@ -26,51 +26,64 @@ mixin s-product()
 						+product-radio("USB поставка","8 900")
 					+e.art Артикул: 4601546041654
 					.row
-						+e.col.col-auto
-							+e.price Цена:
-								+e.SPAN.price-wrapper 9 000 000
-									span.i-font o
-						+e.col.col-auto
-							+e.btn.main-btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") Купить
-						+e.col.col
-							+e.one-click
-								a(href="#") Купить в 1 клик
+						.d-md-none.col-sm-auto.col-6
+							+e.product-img
+								+pic('product','png','','')
+								//- img.res-i(src="img/product.png" alt="#")
+						+e.order-col.col-sm.col-6
+							.row
+								+e.col.col-md-6.col-lg-auto
+									+e.price Цена:
+										+e.SPAN.price-wrapper 90 000
+											span.i-font o
+								+e.col.col-md-6.col-lg-auto
+									+e.btn.main-btn.btn-primary.popup-with-move-anim(href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Купить
+								+e.col.one-click-col.col-md-6.col-lg
+									+e.one-click
+										a.popup-with-move-anim(href="#one-click") Купить в 1 клик
 
 							
-				.col-3.text-center.align-items-center.d-flex.justify-content-center
+				+e.btn-wrap-right.col-12.col-xl-3.text-center.align-items-center.d-flex.justify-content-center
+					
 					.row
-						.col-12.d-flex.justify-content-center
-							+e.price-light.bg-light от 1 200
+						.col-xl-12.col-6.text-center
+						 
+							+e.price-light.bg-light.fw-500 от 1 200
 								span.i-font o
-								|/мес.
-						.col-12
-							+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") Арендовать
-						.col-12
-							+e.title--green Бесплатно на 30 дней
-							+e.btn.btn--green.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") Арендовать
+								|/мес. 
+							+e.btn.btn--white.btn-primary.popup-with-move-anim(href="#arend" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Арендовать
+						.col-xl-12.col-6.demo-btn
+							+e.title--green Бесплатно на&nbsp;30&nbsp;дней
+							+e.btn.btn--green.btn-outline-success.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-btn="Оставить заявку") демо-доступ
 		+e.tabs.tabs
 			.tabs__caption
 				.container
 					.row
-						.col-10.d-flex
+						+e.tabs-col.col-12.col-xl-10
 							.tabs__btn.active 
-								span Назначение
+								.tabs-btn-wrapper
+									span Назначение
 							.tabs__btn 
-								span Описание
+								.tabs-btn-wrapper
+									span Описание
 							.tabs__btn 
-								span Сравнение версий
+								.tabs-btn-wrapper
+									span Сравнение версий
 							.tabs__btn 
-								span Комплект поставки
+								.tabs-btn-wrapper
+									span Комплект поставки
 							.tabs__btn 
-								span Лицензии
+								.tabs-btn-wrapper
+									span Лицензии
 							.tabs__btn 
-								span Услуги
-			+e.content-block.bg-light
+								.tabs-btn-wrapper
+									span Услуги
+			+e.content-block
 				.container
 					.row
-						.col
+						.col-12.col-xl
 							.tabs__wrap
-								.tabs__content2.active 
+								.tabs__content2.active
 									+e.content
 										h4 Общая характеристика конфигурации «Бухгалтерия КОРП»
 										p Программный продукт 
@@ -88,7 +101,7 @@ mixin s-product()
 											li Разработана специализированная подсистема подготовки уведомления о контролируемых сделках
 											li При подготовке уведомления не&nbsp;требуется повторно вводить или изменять данные в&nbsp;хозяйственных операциях, отраженных в&nbsp;информационной базе. Сформированное уведомление можно распечатать.
 											li Авизо по прочим операциям.
-										img(src="img/content-img.jpg" alt="")
+										img(src="img/content-img.jpg" alt="" style="max-width: 500px")
 										h6 Двухуровневый маркированный список:
 										ul
 											li Авизо по ОС.
@@ -126,7 +139,100 @@ mixin s-product()
 														a(href="#") Авизо по расчетам.
 													li Авизо по прочим операциям.
 											li Авизо по МПЗ.
-						.col-3
+								.tabs__content2
+									+e.content
+										h4 Сравнение функционала
+										p С этой целью при разработке конфигурации были выполнены:
+										.table-wrapper
+											table.functional
+												thead
+													tr
+														th 1С:Бухгалтерия
+														th 
+															a(href="#") Базовая
+														th
+															a(href="#") ПРОФ 8
+														th
+															a(href="#") КОРП 8
+												tbody
+													tr
+														td
+														td
+															a(href="#") Подробнее
+														td
+															a(href="#") Подробнее
+														td
+															a(href="#") Подробнее
+													tr
+														td Готовое решение для ведения бухгалтерского&nbsp;и налогового учета
+														td 
+															+icon("yes")
+														td 
+															+icon("yes")
+														td 
+															+icon("yes")
+													tr
+														td Подготовка бухгалтерской и налоговой
+														td 
+															+icon("no")
+														td 
+															+icon("yes")
+														td 
+															+icon("yes")
+													tr
+														td Готовое решение для ведения бухгалтерского и налогового учета
+														td 
+															+icon("no")
+														td 
+															+icon("yes")
+														td 
+															+icon("yes")
+													tr
+														td Подготовка бухгалтерской и налоговой 
+														td 
+															+icon("no")
+														td 
+															+icon("no")
+														td 
+															+icon("yes")
+														
+								.tabs__content2
+									+e.content
+										h4 Состав продукта
+										p Программный продукт «1С:Бухгалтерия 8 КОРП» включает:
+										table.composition
+											tbody
+												tr
+													td
+														+icon("yes")
+														|платформу «1С:Предприятие 8.2»
+												tr
+													td
+														+icon("yes")
+														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
+												tr
+													td
+														+icon("yes")
+														|платформу «1С:Предприятие 8.2»
+												tr
+													td
+														+icon("yes")
+														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
+										
+								.tabs__content2
+									+e.content
+										h4 Список лицензий
+										p Программный продукт «1С:Бухгалтерия 8 КОРП» обеспечивает работу прикладного решения на одном рабочем месте в один момент времени. 
+										+s-competences-card()(class="competences-card")
+								.tabs__content2
+									+e.content
+										h4 Список услуг
+										p Программный продукт «1С:Бухгалтерия 8 КОРП» обеспечивает работу прикладного решения на одном рабочем месте в один момент времени. 
+										+s-competences-card-2()(class="competences-card license-card")
+										
+														
+										
+						.col-12.col-xl-3
 							.row
 								.col-12
 									+e.extra-block
@@ -143,8 +249,12 @@ mixin s-product()
 										+form-wrap
 											.help-title Нужна консультация?
 											.help-subtitle Закажите консультацию в&nbsp;один&nbsp;клик!
-											+input("tel","tel","+7 (___)-___-__-__")( required)
-											+e.btn(type="submit") отправить
-											+help-polite
+											.row
+												.col-md-6.col-xl-12
+													+input("tel","tel","+7 (___)-___-__-__")( required class="bg-light")
+												.col-md-6.col-xl-12
+													+e.btn(type="submit") отправить
+												.col-12
+													+help-polite
 	// end s-product
 

@@ -29,7 +29,7 @@
         <div class="menu-mobile menu-mobile--js"> 
           <div class="menu-mobile__inner">
             <!-- start mobile-menu-->
-            <div class="mobile-menu section block-with-lazy" id="mobile-menu">
+            <div class="mobile-menu section block-with-lazy">
               <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title"><span>Интернет-магазин «1С»</span></span></a>
                 <ul>
                       <li><a class="mobile-menu__item" href="#"><span class="mobile-menu__svg-wrapper">
@@ -245,7 +245,7 @@
             </div>
           </div>
           <!-- start mobile-menu-->
-          <div class="mobile-menu section block-with-lazy top-submenu top-submenu--js" id="mobile-menu">
+          <div class="mobile-menu section block-with-lazy top-submenu top-submenu--js">
             <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title"><span>Интернет-магазин «1С»</span></span></a>
               <ul>
                     <li><a class="mobile-menu__item" href="#"><span class="mobile-menu__svg-wrapper">
@@ -344,7 +344,7 @@
                             <use xlink:href="img/svg/sprite.svg#search"></use>
                           </svg>
                         </button>
-                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="" placeholder="Начните поиск"/>
+                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="search" placeholder="Начните поиск"/>
                         </div>
                         <!-- +e.input-wrap-->
                       </form>
@@ -364,16 +364,8 @@
       </header>
       <!-- end HEADER.header-->
       <!-- start s-home-slider-->
-      <section class="s-catalog-slider section block-with-lazy home-slider page-top-block" id="s-catalog-slider">
+      <div class="s-catalog-slider section block-with-lazy home-slider page-top-block" id="s-catalog-slider">
         <div class="s-catalog-slider__main-block bg-wrap">
-          <!-- picture-->
-          <picture class="lazy picture-bg"> 
-            <source srcset="#" data-srcset="img/@2x/webp/slider-bg.webp" type="image/webp" media="(min-width:576px)"/>
-            <source srcset="#" data-srcset="img/@1x/webp/slider-bg.webp" type="image/webp"/>
-            <source srcset="#" data-srcset="img/@2x/slider-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
-            <source srcset="#" data-srcset="img/@1x/slider-bg.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/slider-bg.jpg" alt=""/>
-          </picture>
-          <!-- /picture-->
           <div class="s-catalog-slider__slider-wrapper">
             <div class="s-catalog-slider__slider-nav d-none d-md-block">
               <div class="s-catalog-slider__slider-prev cat-slider-nav">
@@ -391,18 +383,18 @@
               <div class="swiper-pagination"></div>
               <div class="s-catalog-slider__slider slider-js swiper-container" id="home-slider">
                 <div class="swiper-wrapper">
-                    <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide2.png" alt="" role="presentation"/></a>
+                    <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide1.png" alt="" role="presentation"/></a>
                     </div>
                     <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide3.png" alt="" role="presentation"/></a>
                     </div>
-                    <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide1.png" alt="" role="presentation"/></a>
+                    <div class="s-catalog-slider__slide swiper-slide"><a href="#"><img class="s-catalog-slider__image" src="img/home-slide2.png" alt="" role="presentation"/></a>
                     </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <!-- end s-home-slider-->
       <!-- start s-buy-prog-->
       <section class="s-buy-prog bg-light section lazy-background" id="s-buy-prog">
@@ -568,7 +560,7 @@
               <source srcset="img/form-sm.png" type="image/png"/><img class="lazy object-fit-js" src="#" data-src="img/form.png" alt=""/>
             </picture>
             <p class="wow fadeInUp" data-wow-duration="0.3s">Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.</p>
-            <h6 class="wow fadeInUp" data-wow-duration="0.3s">нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию" lass="wow fadeInUp" data-wow-duration="0.3s">получить консультацию<span></span></a>
+            <h6 class="wow fadeInUp" data-wow-duration="0.3s">нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim wow fadeInUp" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию" data-wow-duration="0.3s">получить консультацию<span></span></a>
           </div>
         </div>
       </section>
@@ -691,7 +683,7 @@
         <div class="row">
           <div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
           <div class="col">
-            <div class="order-modal__title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</span>
+            <div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</a>
             </div>
             <div class="order-modal__art">Артикул: 4601546041654
             </div>
@@ -721,7 +713,7 @@
         <div class="row">
           <div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
           <div class="col">
-            <div class="order-modal__title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ</span>
+            <div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
             </div>
             <div class="order-modal__art">Артикул: 4601546041654
             </div>
@@ -745,9 +737,7 @@
             <!-- +e.input-wrap-->
             <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
             </div>
-            <!-- +e.input-wrap-->
-            <button class="form-wrap__btn btn-primary" type="submit" href="#arend-thanks">отправить заявку
-            </button>
+            <!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">отправить заявку</a>
             <div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
             </div>
           </form>
@@ -762,7 +752,7 @@
         <div class="row">
           <div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
           <div class="col">
-            <div class="order-modal__title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ</span>
+            <div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
             </div>
             <div class="order-modal__art">Артикул: 4601546041654
             </div>
@@ -786,9 +776,7 @@
             <!-- +e.input-wrap-->
             <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
             </div>
-            <!-- +e.input-wrap-->
-            <button class="form-wrap__btn btn-primary" type="submit" href="#arend-thanks">оформить заказ
-            </button>
+            <!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">оформить заказ</a>
             <div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
             </div>
           </form>
@@ -809,9 +797,7 @@
             <!-- +e.input-wrap-->
             <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Ваш телефон" required="required"/>
             </div>
-            <!-- +e.input-wrap-->
-            <button class="form-wrap__btn btn-primary" type="submit" href="#arend-thanks">отправить заявку
-            </button>
+            <!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">отправить заявку</a>
             <div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
             </div>
           </form>

@@ -1,5 +1,11 @@
 .s-competences {
 	background-color: $light;
+	@include media-breakpoint-down(sm){
+		padding: rem(40) 0;
+	}
+	&__main-price{
+
+	}
 	&__tabs-row{
 		@include roww(10);
 		.row{
@@ -189,7 +195,9 @@
 		font-size: 16px;
 		font-weight: 500;
 		margin-bottom: rem(10);
-
+		span{
+			font-weight: normal;
+		}
 		a {
 			color: $body-color;
 			display: inline;

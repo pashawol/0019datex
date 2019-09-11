@@ -1,6 +1,6 @@
 mixin s-catalog-slider()
 	// start s-catalog-slider
-	+b.SECTION.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
+	+b.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
 		+b.section-title.text-center
 			.container
 				+breadcrumb("Главная","Программы «1С»")
@@ -44,7 +44,7 @@ mixin s-catalog-slider()
 
 mixin s-catalog-slider-2()
 	// start s-catalog-slider
-	+b.SECTION.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
+	+b.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
 		+b.section-title.text-center
 			.container
 				+breadcrumb("Главная","Программы «1С»","Бухгалтерский учет")
@@ -65,7 +65,7 @@ mixin s-catalog-slider-2()
 								+e.slide--prod.swiper-slide
 									+e.item
 										+e.svg-wrapper
-											img(src=`img/slider-icon${i}.png` alt="#")
+											img(src=`img/svg/slide-svg${i}.svg` alt="#")
 										+e.item-title=t
 											//- +e.item-price 33 600
 											//- 	span.i-font o
@@ -84,9 +84,9 @@ mixin s-catalog-slider-2()
 
 mixin s-home-slider()
 	// start s-home-slider
-	+b.SECTION.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
+	+b.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
 		+e.main-block.bg-wrap
-			+pic("slider-bg","jpg","bg")(class="picture-bg")
+			//- +pic("slider-bg","jpg","bg")(class="picture-bg")
 			+e.slider-wrapper
 				+e.slider-nav.d-none.d-md-block
 					+e.slider-prev.cat-slider-nav
@@ -101,9 +101,9 @@ mixin s-home-slider()
 								+e.slide.swiper-slide
 									a(href="#")
 										+e.IMG.image(src=`img/home-slide${i}.png` alt="")
-							+home-slide("2")
-							+home-slide("3")
 							+home-slide("1")
+							+home-slide("3")
+							+home-slide("2")
 
 
 			

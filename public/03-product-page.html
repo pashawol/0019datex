@@ -29,7 +29,7 @@
         <div class="menu-mobile menu-mobile--js"> 
           <div class="menu-mobile__inner">
             <!-- start mobile-menu-->
-            <div class="mobile-menu section block-with-lazy" id="mobile-menu">
+            <div class="mobile-menu section block-with-lazy">
               <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title"><span>Интернет-магазин «1С»</span></span></a>
                 <ul>
                       <li><a class="mobile-menu__item" href="#"><span class="mobile-menu__svg-wrapper">
@@ -245,7 +245,7 @@
             </div>
           </div>
           <!-- start mobile-menu-->
-          <div class="mobile-menu section block-with-lazy top-submenu top-submenu--js" id="mobile-menu">
+          <div class="mobile-menu section block-with-lazy top-submenu top-submenu--js">
             <div class="container"><a class="mobile-menu__main-item" href="#"><span class="mobile-menu__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu__item-title"><span>Интернет-магазин «1С»</span></span></a>
               <ul>
                     <li><a class="mobile-menu__item" href="#"><span class="mobile-menu__svg-wrapper">
@@ -344,7 +344,7 @@
                             <use xlink:href="img/svg/sprite.svg#search"></use>
                           </svg>
                         </button>
-                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="" placeholder="Начните поиск"/>
+                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="search" placeholder="Начните поиск"/>
                         </div>
                         <!-- +e.input-wrap-->
                       </form>
@@ -364,7 +364,7 @@
       </header>
       <!-- end HEADER.header-->
       <!-- start s-product-->
-      <section class="s-product section lazy-background page-top-block" id="s-product">
+      <div class="s-product section lazy-background page-top-block" id="s-product">
         <div class="container">
           <div class="section-title text-center">
             <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Программы «1С»</a><a class="breadcrumb-item" href="#">Бухгалтерский учет</a><span class="breadcrumb-item active">1С:Бухгалтерия 8 ПРОФ</span>
@@ -407,13 +407,13 @@
                 </div>
                 <div class="s-product__order-col col-sm col-6">
                   <div class="row">
-                    <div class="s-product__col col-md-6 col-xxl-auto">
+                    <div class="s-product__col col-md-6 col-lg-auto">
                       <div class="s-product__price">Цена:<span class="s-product__price-wrapper">90 000<span class="i-font">o</span></span>
                       </div>
                     </div>
-                    <div class="s-product__col col-md-6 col-xl-6 col-xxl-auto"><a class="s-product__btn main-btn btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Купить</a>
+                    <div class="s-product__col col-md-6 col-lg-auto"><a class="s-product__btn main-btn btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Купить</a>
                     </div>
-                    <div class="s-product__col one-click-col col-md-6 col-xxl">
+                    <div class="s-product__col one-click-col col-md-6 col-lg">
                       <div class="s-product__one-click"><a class="popup-with-move-anim" href="#one-click">Купить в 1 клик</a>
                       </div>
                     </div>
@@ -440,12 +440,24 @@
             <div class="container">
               <div class="row">
                 <div class="s-product__tabs-col col-12 col-xl-10">
-                  <div class="tabs__btn active"> <span>Назначение</span></div>
-                  <div class="tabs__btn"><span>Описание</span></div>
-                  <div class="tabs__btn"> <span>Сравнение версий</span></div>
-                  <div class="tabs__btn"> <span>Комплект поставки</span></div>
-                  <div class="tabs__btn"> <span>Лицензии</span></div>
-                  <div class="tabs__btn"> <span>Услуги</span></div>
+                  <div class="tabs__btn active"> 
+                    <div class="tabs-btn-wrapper"><span>Назначение</span></div>
+                  </div>
+                  <div class="tabs__btn"> 
+                    <div class="tabs-btn-wrapper"><span>Описание</span></div>
+                  </div>
+                  <div class="tabs__btn"> 
+                    <div class="tabs-btn-wrapper"><span>Сравнение версий</span></div>
+                  </div>
+                  <div class="tabs__btn"> 
+                    <div class="tabs-btn-wrapper"><span>Комплект поставки</span></div>
+                  </div>
+                  <div class="tabs__btn"> 
+                    <div class="tabs-btn-wrapper"><span>Лицензии</span></div>
+                  </div>
+                  <div class="tabs__btn"> 
+                    <div class="tabs-btn-wrapper"><span>Услуги</span></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -524,9 +536,9 @@
                             <thead>
                               <tr>
                                 <th>1С:Бухгалтерия</th>
-                                <th> <span>Базовая</span></th>
-                                <th><span>ПРОФ 8</span></th>
-                                <th><span>КОРП 8</span></th>
+                                <th> <a href="#">Базовая</a></th>
+                                <th><a href="#">ПРОФ 8</a></th>
+                                <th><a href="#">КОРП 8</a></th>
                               </tr>
                             </thead>
                             <tbody>
@@ -656,10 +668,10 @@
                         <h4>Список лицензий</h4>
                         <p>Программный продукт «1С:Бухгалтерия 8 КОРП» обеспечивает работу прикладного решения на одном рабочем месте в один момент времени. </p>
                         <!-- start s-competences-->
-                        <div class="s-competences competences-card" id="s-competences">
+                        <div class="s-competences competences-card">
                           <div class="s-competences__item">
                             <div class="s-competences__tabs-row row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
@@ -675,7 +687,7 @@
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -694,7 +706,7 @@
                           <!-- /+e.item-->
                           <div class="s-competences__item">
                             <div class="s-competences__tabs-row row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
@@ -710,7 +722,7 @@
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -729,7 +741,7 @@
                           <!-- /+e.item-->
                           <div class="s-competences__item">
                             <div class="s-competences__tabs-row row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
@@ -745,7 +757,7 @@
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -764,7 +776,7 @@
                           <!-- /+e.item-->
                           <div class="s-competences__item">
                             <div class="s-competences__tabs-row row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
@@ -780,7 +792,7 @@
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -799,7 +811,7 @@
                           <!-- /+e.item-->
                           <div class="s-competences__item">
                             <div class="s-competences__tabs-row row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="s-competences__col-img col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
@@ -815,7 +827,7 @@
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -838,13 +850,13 @@
                     </div>
                     <div class="tabs__content2">
                       <div class="s-product__content">
-                        <h4>Список лицензий</h4>
+                        <h4>Список услуг</h4>
                         <p>Программный продукт «1С:Бухгалтерия 8 КОРП» обеспечивает работу прикладного решения на одном рабочем месте в один момент времени. </p>
                         <!-- start s-competences-->
-                        <section class="s-competences section block-with-lazy competences-card license-card" id="s-competences">
+                        <div class="s-competences section block-with-lazy competences-card license-card">
                           <div class="s-competences__item">
                             <div class="row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
@@ -858,7 +870,7 @@
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -877,21 +889,21 @@
                           <!-- /+e.item-->
                           <div class="s-competences__item">
                             <div class="row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
                                     </div>
                                   </div>
                                   <div class="col">
-                                    <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</a>
+                                    <div class="s-competences__item-title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</span>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -910,7 +922,7 @@
                           <!-- /+e.item-->
                           <div class="s-competences__item">
                             <div class="row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
@@ -924,7 +936,7 @@
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -943,21 +955,21 @@
                           <!-- /+e.item-->
                           <div class="s-competences__item">
                             <div class="row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
                                     </div>
                                   </div>
                                   <div class="col">
-                                    <div class="s-competences__item-title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
+                                    <div class="s-competences__item-title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ</span>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -976,7 +988,7 @@
                           <!-- /+e.item-->
                           <div class="s-competences__item">
                             <div class="row">
-                              <div class="col-md-6 col-12 col-lg-8 col-xl-7 text-left">
+                              <div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
                                 <div class="row">
                                   <div class="col-auto d-none d-xl-block">
                                     <div class="s-competences__img-wrapper"><img src="img/product.png" alt=""/>
@@ -990,7 +1002,7 @@
                               </div>
                               <div class="col-12 col-md">
                                 <div class="row">
-                                  <div class="col-6 col-md-6 d-flex d-lg-block justify-content-center align-items-center text-center">
+                                  <div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
                                     <div class="s-competences__price d-md-none d-xl-inline-block text-center">Цена:
                                       <div class="s-competences__price-wrapper">38 500<span class="i-font">o</span>
                                       </div>
@@ -1007,7 +1019,7 @@
                             </div>
                           </div>
                           <!-- /+e.item-->
-                        </section>
+                        </div>
                         <!-- end s-competences-->
                       </div>
                     </div>
@@ -1064,7 +1076,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <!-- end s-product-->
       <!-- start s-consultation-->
       <section class="s-consultation section block-with-lazy" id="s-consultation">
@@ -1079,7 +1091,7 @@
               <source srcset="img/form-sm.png" type="image/png"/><img class="lazy object-fit-js" src="#" data-src="img/form.png" alt=""/>
             </picture>
             <p class="wow fadeInUp" data-wow-duration="0.3s">Проконсультирую Вас по&nbsp;любым направлениям удобным для Вас способом: по&nbsp;телефону, почте или мессенджеру, а&nbsp;также если вы&nbsp;находитесь в&nbsp;Самаре то&nbsp;можете приехать в&nbsp;наш офис или я&nbsp;подъеду к&nbsp;вам.</p>
-            <h6 class="wow fadeInUp" data-wow-duration="0.3s">нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию" lass="wow fadeInUp" data-wow-duration="0.3s">получить консультацию<span></span></a>
+            <h6 class="wow fadeInUp" data-wow-duration="0.3s">нестеров <span class="text-primary">андрей</span><small>Коммерческий директор</small></h6><a class="section-title__btn btn-primary popup-with-move-anim wow fadeInUp" href="#modal-call" data-title="Получить консультацию" data-order="Получить консультацию" data-btn="Получить консультацию" data-wow-duration="0.3s">получить консультацию<span></span></a>
           </div>
         </div>
       </section>
@@ -1202,7 +1214,7 @@
         <div class="row">
           <div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
           <div class="col">
-            <div class="order-modal__title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</span>
+            <div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</a>
             </div>
             <div class="order-modal__art">Артикул: 4601546041654
             </div>
@@ -1232,7 +1244,7 @@
         <div class="row">
           <div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
           <div class="col">
-            <div class="order-modal__title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ</span>
+            <div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
             </div>
             <div class="order-modal__art">Артикул: 4601546041654
             </div>
@@ -1256,9 +1268,7 @@
             <!-- +e.input-wrap-->
             <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
             </div>
-            <!-- +e.input-wrap-->
-            <button class="form-wrap__btn btn-primary" type="submit" href="#arend-thanks">отправить заявку
-            </button>
+            <!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">отправить заявку</a>
             <div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
             </div>
           </form>
@@ -1273,7 +1283,7 @@
         <div class="row">
           <div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
           <div class="col">
-            <div class="order-modal__title"><span>1С:Бухгалтерия государственного учреждения 8 ПРОФ</span>
+            <div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
             </div>
             <div class="order-modal__art">Артикул: 4601546041654
             </div>
@@ -1297,9 +1307,7 @@
             <!-- +e.input-wrap-->
             <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
             </div>
-            <!-- +e.input-wrap-->
-            <button class="form-wrap__btn btn-primary" type="submit" href="#arend-thanks">оформить заказ
-            </button>
+            <!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">оформить заказ</a>
             <div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
             </div>
           </form>
@@ -1320,9 +1328,7 @@
             <!-- +e.input-wrap-->
             <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Ваш телефон" required="required"/>
             </div>
-            <!-- +e.input-wrap-->
-            <button class="form-wrap__btn btn-primary" type="submit" href="#arend-thanks">отправить заявку
-            </button>
+            <!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">отправить заявку</a>
             <div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
             </div>
           </form>

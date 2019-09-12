@@ -104,12 +104,12 @@
   }
   
   &.top-ready{
-    transform: translateY(-110%);
+    // transform: translateY(-110%);
     .body-1{
-      display: none;
+      // display: none;
     }
     .body-2{
-      display: block;
+      // display: block;
     }
   }
   &.fixed-ready {

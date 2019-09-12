@@ -301,6 +301,9 @@
 			display: flex;
 			flex-wrap: wrap;
 		}
+		@include media-breakpoint-down(md){
+			justify-content: space-around;
+		}
 	}
 	.tabs {
 		margin-top: rem(50);
@@ -332,6 +335,10 @@
 				margin-bottom: rem(10);
 				padding: rem(5) rem(10);
 				max-height: unset;
+				justify-content: center;
+			}
+			@include media-breakpoint-down(xs){
+				justify-content: start;
 			}
 			max-height: rem(50);
 			// flex-grow: 0;

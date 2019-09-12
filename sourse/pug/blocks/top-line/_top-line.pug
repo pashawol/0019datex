@@ -1,4 +1,4 @@
-mixin mob-mnu-2() 
+mixin mob-mnu() 
 	+b.menu-mobile--js 
 		+e.inner 
 			- var nav= {"Главная":"#header-block","Компетенции":"#s-competences","Команда":"#s-team","Этапы работ":"#s-steps","Отзывы":"#s-rews"," Сопровождение":"#s-doc","Консультация":"#s-consultation","Контакты":"#s-contact"}
@@ -18,7 +18,7 @@ mixin mob-mnu-2()
 						.col.d-none.d-lg-block
 	//  мобильное меню
 mixin top-line()
-	+mob-mnu-2()
+	+mob-mnu()
 	// start .top-line
 	a.top-line__tel.top-line__tel--mob.d-sm-none(href="tel:+7(846)3004840") 
 		+icon("phone-receiver")
@@ -56,22 +56,6 @@ mixin top-line()
 										+e.text.d-none.d-md-block  меню
 		+body()(class="wow fadeIn body-1" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 1}s`) 
 		+body()(class="body-2")
-		+mobile-menu()(class="top-submenu--js")
-		+b.top-line-search.bg-light
-			.container
-				.row
-					.col
-						+e.search
-							+form-wrap
-								+e.btn-search(type="submit")
-									+icon("search")
-								+input("text","search","Начните поиск")
-					.col-auto
-						+e.A.basket(href="#")
-							+icon("search-line-basket")
-							|Корзина
-							+e.counter-wrapper
-								+e.counter 56
 	// end .top-line
 
 

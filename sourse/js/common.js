@@ -1,6 +1,6 @@
 var $ = jQuery;
 var btnToggle = $(".toggle-menu-mobile--js"),
-	menu = $(".menu-mobile--js")
+	menu = $(".menu-mobile--js, .menu-mobile-page--js")
 	body = $('body')
 html = $('html')
 var parent = $(".s-segments  ")
@@ -76,11 +76,11 @@ jQuery(document).ready(function ($) {
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
-		$(".page-top-block").css("margin-top",$(".top-line").height());
+		$(".page-top-block").css("margin-top",$(".top-line, .top-line-page").height());
 		var topH = $(".header-block").height();
 
 		function fixedMenu() {
-			var topNav = $('.top-line--js  ');
+			var topNav = $('.top-line--js, .top-line-page--js  ');
 			if ($(this).scrollTop() > topNav.height()) {
 				setTimeout(function () {
 					topNav.addClass('top-ready');
@@ -115,9 +115,9 @@ jQuery(document).ready(function ($) {
 			}
 			
 			if ($(this).scrollTop() > (topH )) {
-				$(".top-line__tel--mob").addClass('active');
+				$(".top-line__tel--mob, .top-line-page__tel--mob").addClass('active');
 			} else {
-				$(".top-line__tel--mob").removeClass('active');
+				$(".top-line__tel--mob, .top-line-page__tel--mob").removeClass('active');
 			}
 
 		}
@@ -138,7 +138,7 @@ jQuery(document).ready(function ($) {
 			// закрыть/открыть мобильное меню
 			if (window.matchMedia("(max-width: 1200px)").matches) {
 				$("menu-item-has-children").removeClass("active");
-				$(".top-line-search").removeClass("d-none"); 
+				$(".top-line-page-search").removeClass("d-none"); 
 				$(".top-submenu--js").hide();
 			}
 			if (window.matchMedia("(min-width: 1200px)").matches) { 
@@ -179,13 +179,13 @@ jQuery(document).ready(function ($) {
 
 
 	$(" .toggle-menu-mobile--js").click(function () {
-		$(".top-line-search").toggleClass("search-disable")
+		$(".top-line-page-search").toggleClass("search-disable")
 	});
 	
 	
 	// $(" .menu-item-has-children > a").click(function (e) {
 	// 	e.preventDefault();
-	// 	// $(".top-line-search").toggleClass("search-disable");
+	// 	// $(".top-line-page-search").toggleClass("search-disable");
 	// 	$(".top-submenu--js").slideToggle();
 	// 	// $(this).toggleClass("active")
 	// });
@@ -604,7 +604,7 @@ JSCCommon = {
 		$(".menu-item-has-children > a").click(function(e){
 			e.preventDefault();
 			$(this).parent().toggleClass("active");
-			$(".top-line-search").toggleClass("d-none");
+			$(".top-line-page-search").toggleClass("d-none");
 			$(".top-submenu--js").slideToggle(0);
 			// toggleMenu();
 

@@ -64,53 +64,9 @@
     z-index: 1000;
     background-color: #171718;
     
-    // .top-line__body {
-    //   padding-top: em(23.1px);
-    //   padding-bottom: em(23.1px);
-    // }
-    
-  }
-  &__tagline-col{
-    display: none;
-    @media (min-width: 1600px){
-      display: block;
-    }
-  }
-  &__tagline{
-    @media (min-width: 1600px){
-      display: block;
-      font-size: $small;
-      font-weight: 400;
-      color: #c4c4c4;
-      text-transform: none;
-      max-width: rem(220);
-    }
-  }
-
-  &__nav{
-    list-style: none;
-    display: flex;
-    margin: 0;
-    // justify-content: space-between;
-    border-left: 1px solid #313132;
-    // border-right: 1px solid #313132;
-  }
-  
-  &__nav-item{
-    font-size: rem(16);
-    text-transform: none;
-    // letter-spacing: normal;
-    padding: rem(38) 0;
-    flex-grow: 1;
-    // display: flex;
-    text-align: center;
-    .icon-top-nav-arrow{
-      font-size: rem(10) !important;
-    }
-    a{
-      font-weight: 500;
-      color: #fff;
-      display: block;
+    .top-line__body {
+      padding-top: em(23.1px);
+      padding-bottom: em(23.1px);
     }
     
   }
@@ -169,7 +125,6 @@
 
   &__tel {
     @extend .text-white;
-    letter-spacing: 2.52px;
     text-decoration: none !important;
   }
 
@@ -180,7 +135,6 @@
   }
 
   &__city-name {
-    letter-spacing: 2.52px;
     display: flex;
     cursor: pointer;
 
@@ -489,7 +443,7 @@
   }
 }
 
-.menu-mobile .menu {
+.menu {
 
   //  display: flex;
   @include media-breakpoint-down(xs) {}

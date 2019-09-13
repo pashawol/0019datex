@@ -1,25 +1,24 @@
-mixin mob-mnu() 
+mixin mob-mnu-2() 
 	+b.menu-mobile--js 
-		+e.inner
-			+mobile-menu
-			//- - var nav= {"Главная":"#header-block","Компетенции":"#s-competences","Команда":"#s-team","Этапы работ":"#s-steps","Отзывы":"#s-rews"," Сопровождение":"#s-doc","Консультация":"#s-consultation","Контакты":"#s-contact"}
-			//- 	+e.nav-wrap
-			//- 		ul.menu
-			//- 			each linkPatch, linkName in nav
-			//- 				li.menu-item: a(href= linkPatch)= linkName
-			//- +e.foot
-			//- 	.container
-					//- .row
-					//- 	.col.d-none.d-sm-block
-					//- 		+e.logo
-					//- 			+icon('1c')
-					//- 			| Сертифицированные партнеры 1С
-					//- 	+e.col.col-sm-auto
-					//- 		+soc()
-					//- 	.col.d-none.d-lg-block
+		+e.inner 
+			- var nav= {"Главная":"#header-block","Компетенции":"#s-competences","Команда":"#s-team","Этапы работ":"#s-steps","Отзывы":"#s-rews"," Сопровождение":"#s-doc","Консультация":"#s-consultation","Контакты":"#s-contact"}
+				+e.nav-wrap
+					ul.menu
+						each linkPatch, linkName in nav
+							li.menu-item: a(href= linkPatch)= linkName
+			+e.foot
+				.container
+					.row
+						.col.d-none.d-sm-block
+							+e.logo
+								+icon('1c')
+								| Сертифицированные партнеры 1С
+						+e.col.col-sm-auto
+							+soc()
+						.col.d-none.d-lg-block
 	//  мобильное меню
 mixin top-line()
-	+mob-mnu()
+	+mob-mnu-2()
 	// start .top-line
 	a.top-line__tel.top-line__tel--mob.d-sm-none(href="tel:+7(846)3004840") 
 		+icon("phone-receiver")
@@ -55,55 +54,6 @@ mixin top-line()
 											+e.item.line
 											+e.item.line
 										+e.text.d-none.d-md-block  меню
-			block
-		+body()(class="wow fadeIn body-1" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 1}s`) 
-		+body()(class="body-2")
-	// end .top-line
-
-
-mixin top-line-2()
-	+mob-mnu()
-	// start .top-line
-	a.top-line__tel.top-line__tel--mob.d-sm-none(href="tel:+7(846)3004840") 
-		+icon("phone-receiver")
-		| ПОЗВОНИТЬ СЕЙЧАС
-	+b.top-line.--page.--js.block-with-lazy
-		mixin body()
-			+e.body&attributes(attributes)
-				.container
-					.row
-						.col-xl-auto.col
-							a(href="/")
-								img(src="img/logo.png", alt="")
-						+e.tagline-col.col-auto
-							+e.tagline Программы 1С, внедрение и&nbsp;сопровождение
-						.col.d-none.d-xl-block
-							+mnu
-						//- .col.d-xl-none
-						.col-auto.d-none.d-sm-block
-							.row
-								.col-auto
-									+e.city
-										+e.city-name
-											+icon("flag")
-											| САМАРА
-						+e.col.col-auto
-							.row.justify-content-end
-								.col-auto
-									+e.tel--page(href="tel:+7(846)3004840")
-
-										+icon("phone-receiver")
-										| +7 (846) 300 48 40 
-								//- .col-auto.d-none.d-xl-block
-								//- 	+e.btn.btn-outline.popup-with-move-anim(href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок"   data-btn="Заказать звонок") заказать звонок
-						.col-auto.d-xl-none
-							+b.toggle-menu-mobile--js
-								+b.line-wrap.hamburger
-									+e.item.line
-									+e.item.line
-									+e.item.line
-								+e.text.d-none.d-md-block  меню
-				block
 		+body()(class="wow fadeIn body-1" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 1}s`) 
 		+body()(class="body-2")
 		+mobile-menu()(class="top-submenu--js")

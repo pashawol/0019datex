@@ -106,11 +106,7 @@
 	}
 }
 
-.about-bread{
-	a:hover{
-		color: #fff;
-	}
-}
+
 
 .search-results{
 	.breadcrumb{
@@ -118,12 +114,12 @@
 		&-item{
 			&:nth-last-child(2){
 				&::after{
-					content: none;
+					// content: none;
 				}
 			}
 		}
 	}
-	padding: rem(55) 0 rem(100);
+	padding: rem(55) 0 0;
 	&__wrapper{
 		margin-bottom: rem(50);
 	}
@@ -207,6 +203,9 @@
 				height: 11px;
 			}
 		}
+	}
+	.pagination-wrapper{
+		padding-bottom: rem(100);
 	}
 }
 

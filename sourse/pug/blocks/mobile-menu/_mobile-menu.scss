@@ -126,6 +126,7 @@
 			margin-bottom: rem(15) !important;
 
 			span {
+				@include mt;
 				display: inline;
 				border-bottom: 1px solid #C6C6C6;
 			}
@@ -165,6 +166,10 @@
 		&:hover {
 			.icon {
 				color: $primary;
+			}
+
+			span {
+				border-color: $primary;
 			}
 
 			.mobile-menu__svg-wrapper {

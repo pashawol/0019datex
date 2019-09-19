@@ -1,4 +1,7 @@
 .s-product {
+	@include media-breakpoint-down(sm){
+		padding-bottom: 0;
+	}
 	h1 {
 		margin: 0 !important;
 	}
@@ -44,6 +47,7 @@
 		justify-content: center;
 
 		img {
+			width: 100%;
 			max-width: 240px;
 			height: auto;
 		}
@@ -331,7 +335,9 @@
 
 	.tabs {
 		margin-top: rem(50);
-
+		&__wrap{
+			min-height: 100%;
+		}
 		&__caption {
 			.active:hover {
 				span {
@@ -390,7 +396,9 @@
 				border-bottom: 1px solid #a8aaae;
 			}
 		}
-
+		&__content2{
+			min-height: 100%;
+		}
 		&__wrap {
 			background-color: #fff;
 			margin-bottom: rem(20);
@@ -403,11 +411,20 @@
 	}
 
 	&__content-block {
+		padding: rem(50) 0 0;
 		@include media-breakpoint-up(md) {
 			background-color: $light;
+			padding-bottom: rem(100);
 		}
-
-		padding: rem(50) 0 rem(100);
+		.row > .col-12 > .row{
+			@include media-breakpoint-up(xl){
+				height: 100%;
+				display: block;
+				// align-items: flex-start;
+				flex-direction: column;
+				flex-wrap: nowrap
+			}
+		}
 	}
 
 	&__content {
@@ -679,7 +696,7 @@
 
 			td {
 				position: relative;
-				padding: rem(30) rem(30) rem(30) rem(75);
+				padding: rem(15) rem(30) rem(15) rem(75);
 			}
 		}
 

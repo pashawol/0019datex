@@ -195,7 +195,11 @@
 		}
 
 	}
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		.btn_cartupdate{
+			margin-bottom: 1.46667rem;
+		}
+	}
 	@include media-breakpoint-down(xs) {
 		tr{
 			padding: rem(30) rem(10) rem(30);

@@ -106,11 +106,7 @@
 	}
 }
 
-.about-bread{
-	a:hover{
-		color: #fff;
-	}
-}
+
 
 .search-results{
 	.breadcrumb{
@@ -118,7 +114,7 @@
 		&-item{
 			&:nth-last-child(2){
 				&::after{
-					content: none;
+					// content: none;
 				}
 			}
 		}

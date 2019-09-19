@@ -447,17 +447,17 @@
 	.s-competences__item{
 		&:hover{
 			.s-competences__item-title a{
-				border-color: #fff;
-				color: #000;
-				border-color: #000;
+				// border-color: #fff;
+				// color: #000;
+				// border-color: #000;
 			}
 		}
 	}
 	.s-competences__item-title a{
-		border-color: #fff;
+		// border-color: #fff;
 		&:hover{
-			color: #000;
-			border-color: #000;
+			// color: #000;
+			// border-color: #000;
 		}
 	}
 }

@@ -1,4 +1,9 @@
 .s-about {
+	.about-bread{
+		a:hover{
+			color: #fff;
+		}
+	}
 	&__inner{
 		// @include bg("");
 		background-image: url(../img/@2x/workplace.jpg);

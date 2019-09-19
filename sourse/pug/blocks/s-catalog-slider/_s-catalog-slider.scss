@@ -119,8 +119,8 @@
 		flex-shrink: 0;
 		img{
 			color: #fff;
-			width: 18px;
-			height: 18px;
+			max-width: rem(20px);
+			// height: 18px;
 		}
 	}
 

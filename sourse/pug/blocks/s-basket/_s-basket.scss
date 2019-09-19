@@ -1,4 +1,21 @@
 .s-basket {
+	.woocommerce-notices-wrapper{
+		padding-top: rem(20) !important;
+	}
+	.woocommerce-message{
+		font-weight: 700;
+		a{
+			font-weight: normal;
+			display: inline;
+			@include mt;
+			border-bottom: 1px solid #fff;
+			&:hover{
+				color: $primary;
+				border-color: $primary;
+				text-decoration: none;
+			}
+		}
+	}
 	background-color: $light;
 	@include media-breakpoint-down(sm){
 		padding-top: rem(40);

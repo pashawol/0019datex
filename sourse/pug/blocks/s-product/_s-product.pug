@@ -6,7 +6,7 @@ mixin s-product()
 				+breadcrumb("Главная","Программы «1С»","Бухгалтерский учет","1С:Бухгалтерия 8 ПРОФ")
 				h1 1С:Бухгалтерия 8 ПРОФ
 				
-			.row
+			.row.justify-content-center
 				.d-none.d-md-block.col-4.col-xl-3
 					+e.product-img
 						img(src="img/product.png" alt="#")
@@ -166,35 +166,35 @@ mixin s-product()
 													tr
 														td Готовое решение для ведения бухгалтерского&nbsp;и налогового учета
 														td 
-															+icon("yes")
+															img.table-svg(src="img/svg/yes.svg")
 														td 
-															+icon("yes")
+															img.table-svg(src="img/svg/yes.svg")
 														td 
-															+icon("yes")
+															img.table-svg(src="img/svg/yes.svg")
 													tr
 														td Подготовка бухгалтерской и налоговой
 														td 
-															+icon("no")
+															img.table-svg(src="img/svg/no.svg")
 														td 
-															+icon("yes")
+															img.table-svg(src="img/svg/yes.svg")
 														td 
-															+icon("yes")
+															img.table-svg(src="img/svg/yes.svg")
 													tr
 														td Готовое решение для ведения бухгалтерского и налогового учета
 														td 
-															+icon("no")
+															img.table-svg(src="img/svg/no.svg")
 														td 
-															+icon("yes")
+															img.table-svg(src="img/svg/yes.svg")
 														td 
-															+icon("yes")
+															img.table-svg(src="img/svg/yes.svg")
 													tr
 														td Подготовка бухгалтерской и налоговой 
 														td 
-															+icon("no")
+															img.table-svg(src="img/svg/no.svg")
 														td 
-															+icon("no")
+															img.table-svg(src="img/svg/no.svg")
 														td 
-															+icon("yes")
+															img.table-svg(src="img/svg/yes.svg")
 														
 								.tabs__content2
 									+e.content
@@ -204,19 +204,19 @@ mixin s-product()
 											tbody
 												tr
 													td
-														+icon("yes")
+														img.table-svg(src="img/svg/yes.svg")
 														|платформу «1С:Предприятие 8.2»
 												tr
 													td
-														+icon("yes")
+														img.table-svg(src="img/svg/yes.svg")
 														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
 												tr
 													td
-														+icon("yes")
+														img.table-svg(src="img/svg/yes.svg")
 														|платформу «1С:Предприятие 8.2»
 												tr
 													td
-														+icon("yes")
+														img.table-svg(src="img/svg/yes.svg")
 														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
 										
 								.tabs__content2
@@ -244,7 +244,7 @@ mixin s-product()
 											+e.LI.extra-item Обновления через интернет
 											+e.LI.extra-item Линия консультаций 24/7
 											+e.LI.extra-item Доступ к 1С:Отчетность
-								.col-12
+								.col-12.sticky-block--js
 									+e.help-block
 										+form-wrap
 											.help-title Нужна консультация?

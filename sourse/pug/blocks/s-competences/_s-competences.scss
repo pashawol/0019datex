@@ -1,7 +1,7 @@
 .s-competences {
 	background-color: $light;
 	@include media-breakpoint-down(sm){
-		padding: rem(40) 0;
+		padding: rem(35) 0;
 	}
 	&__main-price{
 
@@ -83,7 +83,7 @@
 		text-align: center;
 
 		@include media-breakpoint-up(lg) {
-			padding-bottom: rem(55);
+			padding-bottom: rem(35);
 		}
 
 		h2 {
@@ -99,7 +99,7 @@
 
 				margin-left: auto;
 				margin-right: auto;
-				padding-bottom: rem(25);
+				padding-bottom: rem(20);
 			}
 
 			text-align: center;
@@ -354,10 +354,10 @@
 	}
 
 	@include media-breakpoint-up(xl) {
-		padding-top: rem(85);
+		padding-top: rem(60);
 	}
 
-	padding-bottom: rem(105);
+	padding-bottom: rem(65);
 
 	// padding-bottom: rem(80);
 	@include media-breakpoint-up(lg) {}

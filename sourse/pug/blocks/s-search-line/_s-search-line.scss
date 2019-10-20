@@ -25,10 +25,11 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
-
+.rent-page .top-line-page-search{
+	display: none !important;
+}
 .top-line-page-search{
 	// background-color: #fff;
-	padding: rem(15) 0;
 	// border-bottom: 1px solid $light;
 	border-bottom: 1px solid #dadde2;
 	background-color: $light;
@@ -52,10 +53,11 @@
 		flex-grow: 1;
 		position: relative;
 		&__input{
+			// padding: rem(9) 0;
 			border: none;
 			background-color: $light;
 			text-align: left;
-			padding: 0 rem(16) 0 rem(55);
+			padding: rem(9) rem(16) rem(9) rem(55);
 			font-size: rem(16);
 			color: $body-color;
 		}
@@ -63,8 +65,9 @@
 			margin: 0;
 		}
 		&__btn-search{
-			position: absolute;
-			top: rem(-3);
+			@include a-cent(y);
+			// position: absolute;
+			// top: rem(-3);
 			left: 0;
 			background-color: $light;
 			border: none;

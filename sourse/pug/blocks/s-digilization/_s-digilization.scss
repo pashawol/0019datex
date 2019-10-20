@@ -54,7 +54,7 @@
 			line-height: 1.8;
 			@include media-breakpoint-up(lg) {
 
-				padding-bottom: rem(50);
+				padding-bottom: rem(20);
 			}
 		}
 		h6{
@@ -106,10 +106,10 @@
 	}
 		 
 	@include media-breakpoint-up(xl) {
-		padding-bottom: rem(22);
-		padding-top: rem(85);
+		padding-bottom: rem(12);
+		padding-top: rem(50);
 	}
-	padding-bottom: rem(80);
+	padding-bottom: rem(10);
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

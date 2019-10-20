@@ -1,10 +1,12 @@
 .s-catalog-slider {
 	padding-top: rem(35) !important;
 	padding-bottom: 0 !important;
-
+	.swiper-pagination{
+		display: none;
+	}
 	.section-title {
 		padding: 0;
-		margin-bottom: rem(38);
+		margin-bottom: rem(25);
 	}
 
 	&__slide {
@@ -16,11 +18,11 @@
 	}
 
 	&__main-block {
-		padding: rem(40) 0 rem(70);
+		// padding: rem(40) 0 rem(70);
 		background-color: #f5c33e;
 		@include media-breakpoint-up(md){
-			padding: rem(40) 0 rem(105);
 		}
+		padding: rem(30) 0 rem(45);
 	}
 	#catalog-slider-2--js{
 		.s-catalog-slider__item-title{
@@ -57,7 +59,7 @@
 	&__slider-title {
 		color: $body-color;
 		font-size: rem(28);
-		margin-bottom: rem(25);
+		margin-bottom: rem(15);
 	}
 
 	&__item {
@@ -105,6 +107,10 @@
 
 	&__img-wrapper {
 		margin-right: rem(20);
+		img{
+			@extend .res-i;
+			max-width: rem(60);
+		}
 	}
 
 	&__svg-wrapper {
@@ -154,7 +160,9 @@
 			}
 		}
 	}
-
+	&__item-text{
+		display: none;
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
@@ -208,7 +216,7 @@
 	}
 	.s-catalog-slider {
 		&__main-block {
-			padding: rem(35) 0;
+			padding:  0;
 		}
 
 		&__image {

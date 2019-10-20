@@ -1,0 +1,58 @@
+mixin s-saving()
+	// start s-saving
+	+b.SECTION.s-saving.section.lazy-background#s-saving&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Считаем 
+					|
+					span.text-primary экономию
+				+e.text на&nbsp;примере 1С:Зарплата и&nbsp;управление персоналом ПРОФ
+			.row
+				mixin item(t,p)
+					+e.col.col-md-4.text-center
+						+e.item&attributes(attributes)
+							+e.title= t
+							+e.price= p
+							br
+							block
+				
+					// /+e.col.col-4
+				+item('Покупка','64 344 ₽')
+					
+						| Покупка 1С:ЗУП ПРОФ - 
+						| 
+						strong 22 600 ₽
+						br
+						| ИТС ПРОФ - 
+						| 
+						strong 22 544 ₽/год
+						br
+						| Обслуживание - 
+						| 
+						strong 19 200 ₽/год
+
+				+item('Аренда','33 816 ₽') 
+					.text-gray Стоимость в год по тарифу «ПРОФ» 
+					br
+					| ИТС ПРОФ - 
+					|
+					strong.text-success включено
+					br
+					| Обслуживание - 
+					|
+					strong.text-success включено
+
+
+				+item('Экономия 47%','30 528 ₽')
+					.text-gray Экономия в первый год
+					br
+					strong 7 928 ₽ 
+					| 
+					| &mdash;&nbsp;экономия составит 
+					br
+					| со&nbsp;второго года
+			+e.btn.popup-with-move-anim(href="#modal-rent2"  data-title="Попробовать 30 дней бесплатно" data-order="Попробовать 30 дней бесплатно"   data-btn="Попробовать 30 дней бесплатно") 
+				span
+				| Попробовать 30 дней бесплатно
+
+	// end s-saving

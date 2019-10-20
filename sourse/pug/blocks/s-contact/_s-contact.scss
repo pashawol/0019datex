@@ -12,10 +12,10 @@
 	background-position: center center;
 	@include media-breakpoint-up(xl) {
 
-		padding-top: rem(170);
-		padding-bottom: rem(180);
+		padding-top: rem(90);
+		padding-bottom: rem(90);
 	}
-	padding-bottom: rem(100);
+	padding-bottom: rem(50);
 	.icon{
 		font-size: rem(36);
 		color: $primary;

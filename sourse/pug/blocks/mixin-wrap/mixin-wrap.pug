@@ -15,7 +15,34 @@ mixin breadcrumb(...items)
 			a.breadcrumb-item(href='#')= items[i]
 		span.breadcrumb-item.active=  items[items.length - 1]
 
+mixin pic2( i, bg, lazy="lazy", media='576px')
+	- const smpath2 = "2x"
+	- const smpath1 = "1x"
+	- let expArr = i.split(".")
+	- let exp = (expArr[1] || 'jpg')
+	mixin src(i, exp, path , lazy, source, bg)
 		
+		-const url= `img/@${path}/${expArr[0]}.${exp}`
+		-const ifLazy = (lazy== "lazy")
+		-const src = ( ifLazy ? "#" : url)
+		-const data = (ifLazy ?  url  : null)
+
+		if source
+			source( srcset=src data-srcset= data  type=`image/${exp}`   )&attributes(attributes)
+		else
+			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+	
+	// picture
+	picture( class= lazy)&attributes(attributes) 
+		if media !== 0 
+			each val in [exp] 
+				each val2 in [smpath2,smpath1] 
+					+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
+		else 
+			//- +src(i,'webp',smpath2+`/webp`,lazy,"source")
+			//- // /webp images  
+		+src(i, exp,smpath2, lazy,"",bg) 
+	// /picture
 mixin pugin()
 	.pagination-wrapper
 			ul.page-numbers
@@ -100,13 +127,16 @@ mixin mnu()
 		li.menu-item.menu-item-has-children
 			a(href="#") Программы «1С»
 			+icon("top-nav-arrow")
-			ul.sub-menu
+			//- ul.sub-menu
 				//- li.menu-item: a(href="#") Строительство загородных домов
 				//- li.menu-item: a(href="#") Отделка загородных домов
 				//- li.menu-item: a(href="#") Покраска деревянных домов
 				//- li.menu-item: a(href="#") Штукатурные фасады загородных домов
 		each linkPatch, linkName in nav
 			li.menu-item: a(href="#")= linkName
+		li.menu-item.menu-item--rent: a(href="#") 
+			img(src="img/svg/cloud.svg", alt="") 
+			| Аренда «1С»
 
 //- mixin mnu()
 //- 	- var nav= {"Продукция ":"#","Услуги  ":"#","Подбор септика   ":"#","Акции ":"#"," О компании  ":"#"," Доставка и оплата ":"#"," Клиентам  ":"#"," Наши работы   ":"#","Контакты ":"#"}
@@ -130,11 +160,19 @@ mixin mobile-menu()
 	// start mobile-menu
 	+b.mobile-menu-page.section.block-with-lazy#mobile-menu&attributes(attributes)
 		.container
-			+e.A.main-item(href="#")
-				+e.logo-wrapper
-					img(src="img/1C-logo.png" alt="")
-				+e.item-title
-					span Интернет-магазин «1С»
+			.row
+				.col-lg-4
+					+e.A.main-item(href="#")
+						+e.logo-wrapper
+							img(src="img/1C-logo.png" alt="")
+						+e.item-title
+							span Интернет-магазин «1С»
+				.col-lg-4.order-md-0.order-first
+					+e.A.main-item(href="#")
+						+e.logo-wrapper--rent
+							img(src="img/svg/cloud.svg" alt="")
+						+e.item-title
+							span Аренда «1С» в облаке
 			ul
 				mixin mob-item(i, t)
 					li
@@ -174,28 +212,29 @@ mixin mobile-menu()
 						span Контакты
 	// end mobile-menu
 
+mixin src(i, exp, path , lazy, source, bg)
+	-const url= `img/@${path}/${i}.${exp}`
+	-const ifLazy = (lazy== "lazy")
+	-const src = ( ifLazy ? "#" : url)
+	-const data = (ifLazy ?  url  : null)
+
+	if source
+		source( srcset=src data-srcset= data  type=`image/${exp}`   )&attributes(attributes)
+	else
+		img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+		
 mixin pic( i,exp="jpg", bg, lazy="lazy", media='576px')
 	- const smpath2 = "2x"
 	- const smpath1 = "1x"
-	mixin src(i, exp, path , lazy, source, bg)
-		-const url= `img/@${path}/${i}.${exp}`
-		-const ifLazy = (lazy== "lazy")
-		-const src = ( ifLazy ? "#" : url)
-		-const data = (ifLazy ?  url  : null)
-
-		if source
-			source( srcset=src data-srcset= data  type=`image/${exp}`   )&attributes(attributes)
-		else
-			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
 	
 	// picture
 	picture( class= lazy)&attributes(attributes) 
 			if media !== 0 
-				each val in ["webp",exp] 
+				each val in [exp] 
 					each val2 in [smpath2,smpath1] 
 						+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
 			else 
-				+src(i,'webp',smpath2+`/webp`,lazy,"source")
+				//- +src(i,'webp',smpath2+`/webp`,lazy,"source")
 				// /webp images  
 			+src(i, exp,smpath2, lazy,"",bg) 
 	// /picture

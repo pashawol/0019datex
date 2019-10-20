@@ -1,4 +1,8 @@
 .s-content {
+	border-bottom: 1px solid #dadde2;
+	p{
+		font-size: rem(16);
+	}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

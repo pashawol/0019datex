@@ -39,6 +39,11 @@ html {
 	// opacity: 0.7;
 }
 
+.s-header-rent {
+ 
+	.container{ 
+		min-height: 1000px !important;
+	}}
 .header-block {
 	@include media-breakpoint-up(xl) {
 		// height: 1000px;
@@ -108,11 +113,11 @@ body {
 	@include bgs;
 	padding-bottom: rem(60);
 
-	@include media-breakpoint-up(sm) {
-		padding-top: rem(95);
-	}
+	// @include media-breakpoint-up(sm) {
+	// }
+	padding-top: rem(58);
 
-	padding-top: rem(80);
+	// padding-top: rem(80);
 }
 
 .section-title {
@@ -120,10 +125,10 @@ body {
 
 	@include media-breakpoint-up(sm) {
 
-		padding-bottom: em(28);
+		// padding-bottom: em(28);
 	}
 
-	padding-bottom: em(28);
+	padding-bottom: rem(30);
 
 	span {
 		display: inline-block;
@@ -810,14 +815,14 @@ a {
 }
 
 .page-top-block {
-	margin-top: 66px;
+	margin-top: 46px;
 
 	@include media-breakpoint-up(xxl) {
-		margin-top: 153px;
+		margin-top: 123px;
 	}
 
 	@include media-breakpoint-up(md) {
-		margin-top: 90px;
+		margin-top: 70px;
 	}
 
 	@include media-breakpoint-up(sm) {
@@ -892,12 +897,12 @@ a {
 
 .page-head{
 	background-color: #ffffff;
-	padding-top: rem(45);
+	padding-top: rem(30);
 	.breadcrumb{
 		margin-bottom: rem(2);
 	}
 	.section-title{
-		padding-bottom: rem(20);
+		padding-bottom: rem(5);
 	}
 }
 
@@ -925,7 +930,7 @@ a {
 	&__wrapper{
 		max-width: rem(893);
 		margin: 0 auto;
-		margin-top: rem(40);
+		margin-top: rem(20);
 	}
 	.form-wrap{
 		position: relative;

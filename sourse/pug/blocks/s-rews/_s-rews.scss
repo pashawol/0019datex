@@ -151,10 +151,10 @@
 		max-width: rem(560);
 	}
 	@include media-breakpoint-up(xl) {
-		padding-top: rem(80);
-		padding-bottom: rem(100);
+		// padding-top: rem(60);
+		// padding-bottom: rem(60);
 		.section-title {
-			padding-bottom:  em(15);
+			// padding-bottom:  em(10);
 	}
 	}
 	@include media-breakpoint-up(lg) {}

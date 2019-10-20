@@ -1,0 +1,71 @@
+mixin s-tariffs()
+	// start s-tariffs
+	+b.SECTION.s-tariffs.section.lazy-background#s-tariffs&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Тарифы 
+					| 
+					span.text-primary  1С в облаке
+			
+			.tabs: .row
+				.col-lg-3.col-md-4
+					.tabs-slider--js.swiper-container
+						.swiper-wrapper.tabs__caption
+							.slide.swiper-slide
+								.tabs__btn.active ПРОФ
+							
+							.slide.swiper-slide
+								.tabs__btn Базовый
+							
+							.slide.swiper-slide
+								.tabs__btn 1С:CRM
+							
+							.slide.swiper-slide
+								.tabs__btn Садовод
+							
+							.slide.swiper-slide
+								.tabs__btn 1С:ГРМ
+							
+							.slide.swiper-slide
+								.tabs__btn СПЕЦ
+						
+				.col
+					.tabs__wrap
+						mixin capt(t)
+							.tabs__content&attributes(attributes)
+								.tabs__content-group.tabs__content-head
+									+e.title= t
+									+e.title-sub Конфигурации
+									ul
+										li 1C:Бухгалтерия
+										li 1С-КАМИН: Зарплата
+										li 1С:Пред­приниматель
+										li 1С:Бухгалтерия государственного учреждения
+										li 1С:Управление нашей фирмой
+										li 1С:Управление нашей фирмой
+										li 1С:Управление нашей фирмой
+										li 1С:Зарплата и кадры государственного учреждения
+										li 1С:Зарплата и управление персоналом
+										li 1С-КАМИН: Зарплата для бюджетных учреждений
+										li 1С-КАМИН: Зарплата для бюджетных учреждений
+										li 1С-КАМИН: Зарплата для бюджетных учреждений
+								.tabs__content-group.tabs__content-body
+									+e.more 
+										+icon('plus')
+										span Подробное описание
+								.tabs__content-foot
+									.row
+										.col
+											+e.price Стоимость: от 2 537 ₽/месяц
+											+e.label Доступное количество баз: 10
+										.col-sm-auto
+											+e.btn.popup-with-move-anim(href="#modal-rent2"  data-title="Арендовать" data-order="Арендовать"   data-btn="Арендовать") 
+												span
+												| Арендовать
+						+capt('ПРОФ')(class="active")
+						+capt('Базовый')
+						+capt('1С:CRM')
+						+capt('Садовод')
+						+capt('1С:ГРМ')
+						+capt('СПЕЦ')
+	// end s-tariffs

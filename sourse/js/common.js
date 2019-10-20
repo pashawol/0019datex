@@ -1,16 +1,11 @@
 var $ = jQuery;
-var btnToggle = $(".toggle-menu-mobile--js"),
-    menu = $(".menu-mobile--js, .menu-mobile-page--js")
-body = $('body')
-html = $('html')
-var parent = $(".s-segments  ")
+var btnToggle = $(".toggle-menu-mobile--js");
+var 	menu = $(".menu-mobile--js, .menu-mobile-page--js");
+var body = $('body');
+var html = $('html');
+var parent = $(".s-segments  ");
 
 jQuery(document).ready(function($) {
-
-    // Sticky block
-    $(".sticky-block--js").stick_in_parent({
-		offset_top: 170,
-	});
 
     parent.on('mouseenter', 'li', function() {
         $(this).parents(".tabs__content2").find("picture").eq($(this).index()).addClass('active').siblings().removeClass('active')
@@ -23,6 +18,7 @@ jQuery(document).ready(function($) {
     JSCCommon.magnificPopupCall();
     // JSCCommon.tabscostume('tabs');
     JSCCommon.tabscostume('tabs2');
+    JSCCommon.tabscostumeSl('tabs');
     JSCCommon.mobileMenu();
     JSCCommon.inputMask();
     var $d3 = $(".input-range-js");
@@ -38,7 +34,7 @@ jQuery(document).ready(function($) {
         var from = $inp.prop("value"); // reading input value
         $('.counter-js').text(from); // FROM value
     });
-    $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/Card.jpg);"></div>')
+    $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/Arenda.jpg);"></div>')
     // / закрыть меню при горизонтальном свайпе
     // /закрыть/открыть мобильное меню
     function heightses() {
@@ -181,6 +177,9 @@ jQuery(document).ready(function($) {
         breakpointsInverse: true,
         speed: 400,
         loop: true,
+        autoplay: {
+            delay: 6000,
+          },
         pagination: {
             el: $(this).find('.swiper-pagination'),
             clickable: true,
@@ -210,6 +209,9 @@ jQuery(document).ready(function($) {
         breakpointsInverse: true,
         speed: 400,
         loop: true,
+        autoplay: {
+            delay: 6000,
+          },
         pagination: {
             el: $(this).find('.swiper-pagination'),
             clickable: true,
@@ -242,6 +244,9 @@ jQuery(document).ready(function($) {
         spaceBetween: 10,
         speed: 400,
         loop: true,
+        autoplay: {
+            delay: 6000,
+          },
         pagination: {
             el: $(this).find('.swiper-pagination'),
             clickable: true,
@@ -250,7 +255,29 @@ jQuery(document).ready(function($) {
             nextEl: ('.s-catalog-slider__slider-next'),
             prevEl: ('.s-catalog-slider__slider-prev'),
         },
-    })
+		})
+		
+		
+		var swipertabs = new Swiper('.tabs-slider--js', {
+			slidesPerView: 'auto',
+			freeMode: true,
+			spaceBetween: 10,
+			speed: 400,
+			// loop: true,
+			// autoplay: {
+			//     delay: 6000,
+			//   },
+			// pagination: {
+			//     el: $(this).find('.swiper-pagination'),
+			//     clickable: true,
+			// },
+			// navigation: {
+			//     nextEl: ('.s-catalog-slider__slider-next'),
+			//     prevEl: ('.s-catalog-slider__slider-prev'),
+			// },
+	})
+	
+		
     $('.popup-with-move-anim').click(function() {
         var th = $(this);
         $(th.attr('href')).find(".order").val(th.data('order'));
@@ -287,8 +314,22 @@ jQuery(document).ready(function($) {
             scrollTop: $(".s-ways__wrapper").offset().top - 100
         }, 500);
     })
+
+       // Sticky block
+       $(".sticky-block--js").stick_in_parent({
+        offset_top: 170,
+        parent: '.aside-block-js',
+        recalc_every: 1
+	});
+
+
+
+	$(".s-tariffs__more").click(function(){
+		console.log(1)
+		$(this).parent().prev().find('li:hidden').slideDown();
+	})
 });
-JSCCommon = {
+let JSCCommon = {
 
     magnificPopupCall: function() {
         $('.popup-with-move-anim').magnificPopup({
@@ -369,6 +410,16 @@ JSCCommon = {
             $(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content2').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
         });
     },
+    tabscostumeSl: function (tab) {
+
+
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			console.log(1)
+			$(this).addClass('active').parent().siblings().find('.' + tab + '__btn')
+			.removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide()
+			.removeClass('active').eq($(this).parent().index()).fadeIn().addClass('active');
+		});
+	},
     // /табы  . 
     inputMask: function() {
         // mask for input

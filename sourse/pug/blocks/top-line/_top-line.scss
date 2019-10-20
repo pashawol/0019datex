@@ -65,8 +65,8 @@
     background-color: #171718;
     
     .top-line__body {
-      padding-top: em(23.1px);
-      padding-bottom: em(23.1px);
+      padding-top: em(15px);
+      padding-bottom: em(15px);
     }
     
   }
@@ -85,7 +85,7 @@
   &__body {
     @include media-breakpoint-up(sm) {
 
-      padding-top: rem(42);
+      // padding-top: rem(42);
     }
 
     padding-top: rem(20);

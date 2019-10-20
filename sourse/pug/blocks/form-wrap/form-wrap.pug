@@ -6,6 +6,14 @@ mixin input( t , n, pl)
 	+e.input-wrap.form-group
 		+e.INPUT.input.form-control(type= t name= n placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
+mixin select( pl)
+	+e.input-wrap.form-group
+		+e.SELECT.input.form-control(  )&attributes(attributes)
+			option(value="#")= pl
+			option(value="#")= pl
+			option(value="#")= pl
+			option(value="#")= pl
+	// +e.input-wrap
 
 mixin ta(pl)
 	+e.input-wrap.form-group

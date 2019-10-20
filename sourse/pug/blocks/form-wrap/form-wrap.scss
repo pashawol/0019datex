@@ -14,6 +14,7 @@
 	}
 }
 
+
 .form-wrap {
 	&__input-wrap {
 		// max-width: 466px;
@@ -203,7 +204,17 @@
 	}
 }
 
-
+.form-wrap__title--sm{
+	@extend .h4;
+	font-weight: 500;
+	border-bottom: 1px solid #dadde2;
+	padding-bottom: rem(20);
+	margin-left: -3.33333rem;
+	margin-right: -3.33333rem;
+	padding-left: 3.33333rem;
+	padding-right: 3.33333rem;
+ 
+}
 
 // 
 @include media-breakpoint-up(xl) {}

@@ -1,0 +1,24 @@
+mixin s-header-rent()
+	// start s-header-rent
+	+b.SECTION.s-header-rent.lazy-background#s-header-rent.bg-wrap&attributes(attributes)
+		+pic2("rent-bg.jpg",'bg')(class="picture-bg")
+		.container
+			h1 1C&nbsp;в облаке&nbsp;&mdash; быстрый старт для вашего бизнеса
+			+e.sub-title Начните пользоваться 1С&nbsp;уже сегодня бесплатно на&nbsp;30&nbsp;дней
+			ul
+				li Быстрый старт 
+					br
+					| за&nbsp;1&nbsp;минуту
+				li Привычный интерфейс 1С
+					br
+					|  теперь и&nbsp;в&nbsp;браузере
+				li Доступ к&nbsp;сервисам
+					br
+					|  1С:ИТС
+			+e.btn.popup-with-move-anim(href="#modal-rent2"  data-title="Попробовать 30 дней бесплатно" data-order="Попробовать 30 дней бесплатно"   data-btn="Попробовать 30 дней бесплатно") 
+				span
+				| Попробовать 30 дней бесплатно
+			+e.more.more-js
+				+icon("arrow-down")
+				|  Подробнее
+	// end s-header-rent

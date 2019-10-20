@@ -3,7 +3,7 @@
 	.section-title{ 
 		padding-bottom: rem(20);
 		h2{
-			@include rfs(rem(48));
+			@include rfs(rem(42));
 			padding-bottom: rem(10);
 		}
 		&__text{
@@ -36,8 +36,9 @@
 	}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {
-		padding-top: rem(62);
+		padding-top: rem(52);
 	}
+	padding-bottom: rem(30);
 	@include media-breakpoint-up(xs) {}
 	
 	//

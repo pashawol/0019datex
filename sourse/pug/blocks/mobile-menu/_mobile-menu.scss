@@ -72,6 +72,17 @@
 		justify-content: center;
 		border-radius: rem(3);
 		margin-right: rem(14);
+		&--rent{
+			background-color: #6fb6fd;
+			@include media-breakpoint-up(xxl)  {
+
+				margin-left: -10px;
+			}
+			img{
+				// height: 10px;
+				width: 15px;
+			}
+		}
 	}
 
 	ul {

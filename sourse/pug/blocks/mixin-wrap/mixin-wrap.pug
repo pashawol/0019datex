@@ -160,11 +160,19 @@ mixin mobile-menu()
 	// start mobile-menu
 	+b.mobile-menu-page.section.block-with-lazy#mobile-menu&attributes(attributes)
 		.container
-			+e.A.main-item(href="#")
-				+e.logo-wrapper
-					img(src="img/1C-logo.png" alt="")
-				+e.item-title
-					span Интернет-магазин «1С»
+			.row
+				.col-lg-4
+					+e.A.main-item(href="#")
+						+e.logo-wrapper
+							img(src="img/1C-logo.png" alt="")
+						+e.item-title
+							span Интернет-магазин «1С»
+				.col-lg-4.order-md-0.order-first
+					+e.A.main-item(href="#")
+						+e.logo-wrapper--rent
+							img(src="img/svg/cloud.svg" alt="")
+						+e.item-title
+							span Аренда «1С» в облаке
 			ul
 				mixin mob-item(i, t)
 					li

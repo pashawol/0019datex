@@ -30,8 +30,8 @@
     max-width: (1820px + $grid-gutter-width);
   }
   &__body{
-    padding-top: rem(50);
-    padding-bottom: rem(50);
+    padding-top: rem(30);
+    padding-bottom: rem(30);
     border-bottom: 1px solid #303032;
   }
   .row--sm{
@@ -49,12 +49,12 @@
     @include roww(10);
   }
   &__foot{
-    padding-top: rem(25);
+    padding-top: rem(15);
     @include media-breakpoint-up(sm) {
 
-      padding-bottom: rem(25);
+      padding-bottom: rem(15);
     }
-    padding-bottom: rem(100);
+    padding-bottom: rem(10);
   }
       &__col {
         @include media-breakpoint-up(sm) {

@@ -14,7 +14,7 @@
 		padding-bottom: em(7);
 	}
 	h2{
-		margin-bottom: rem(30);
+		margin-bottom: rem(20);
 	}
 	h4{
 		font-weight: normal;
@@ -50,8 +50,14 @@
 	&__btn{
 		@extend .btn-lg;
 		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
 
 			min-width: rem(355);
+		}
+	}
+	.col-lg-6{
+		&:first-child{
+			align-self: center;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

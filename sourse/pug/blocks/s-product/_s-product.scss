@@ -2,6 +2,7 @@
 	@include media-breakpoint-down(sm){
 		padding-bottom: 0;
 	}
+	padding-bottom: 0 !important;
 	h1 {
 		margin: 0 !important;
 	}
@@ -9,7 +10,7 @@
 	padding-top: rem(25) !important;
 
 	@include media-breakpoint-up(md) {
-		padding-top: rem(50) !important;
+		padding-top: rem(40) !important;
 	}
 
 	.btn--white {
@@ -21,7 +22,7 @@
 	}
 
 	@include media-breakpoint-up(md) {
-		padding: rem(35) 0;
+		padding: rem(30) 0;
 	}
 
 	.breadcrumb {
@@ -33,7 +34,7 @@
 		padding-bottom: rem(25) !important;
 
 		@include media-breakpoint-up(md) {
-			padding-bottom: rem(50) !important;
+			padding-bottom: rem(30) !important;
 		}
 	}
 
@@ -420,7 +421,7 @@
 		padding: rem(50) 0 0;
 		@include media-breakpoint-up(md) {
 			background-color: $light;
-			padding-bottom: rem(100);
+			padding-bottom: rem(60);
 		}
 
 	}
@@ -433,16 +434,17 @@
 		// min-height: 850px;
 
 		img {
-			width: 100%;
-			height: auto;
+			@extend .res-i;
 		}
 
 		h4 {
 			font-weight: 500;
 			margin-bottom: rem(25);
+			line-height: 1.4;
 		}
-
+		
 		h6 {
+			line-height: 1.4;
 			margin-bottom: rem(16);
 		}
 
@@ -451,9 +453,9 @@
 		}
 
 		p {
-			font-size: 16px;
+			font-size: rem(16px);
 			font-weight: 400;
-			line-height: 26px;
+			line-height: (26 / 16);
 			margin-bottom: rem(40);
 		}
 

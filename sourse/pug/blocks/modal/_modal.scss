@@ -12,7 +12,13 @@
 		// height: 100%;
 	}
 }
-
+#modal-rent2{
+	padding-top: rem(25);
+	.text-center.strong{
+		padding-top: .5rem;
+		padding-bottom: 1rem;
+	}
+}
 .modal-win {
 	display: block;
 	position: relative;
@@ -158,7 +164,15 @@ button.mfp-close,
 		// @extend .btn-primary;
 	 
 		color: transparent !important;
+		// background-image: url(../img/close-white.svg) !important;
+		background-image: url(../img/svg/close-modal-white.svg) !important;
 		background-image: url(../img/svg/close-modal.svg) !important;
+		&:hover{
+			
+			// background-image: url(../img/close-white.svg) !important;
+			background-image: url(../img/svg/close-modal-white.svg) !important;
+		}
+
 		width: rem(60px);
 	height: rem(60px); 
 	}
@@ -363,5 +377,11 @@ button.mfp-close,
 		// font-weight: 400;
 			margin-bottom: rem(25) ;
 		}
+	}
+}
+
+.arend-modal{
+	.order-modal__price-block{
+		background-color: #f2f5f9
 	}
 }

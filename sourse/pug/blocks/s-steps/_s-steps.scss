@@ -1,7 +1,8 @@
 .s-steps {
 	background-color: $light;
+	padding-bottom: rem(60);
 	@include media-breakpoint-up(lg) {
-		padding-top: rem(90);
+		// padding-top: rem(60);
 	}
 	// &__col{
 	// 	background-color: #ffffff;
@@ -64,7 +65,7 @@
 	}
  
 	// padding-bottom: 238px;
-	padding-bottom: rem(96px);
+	// padding-bottom: rem(96px);
 		&__col{
 			margin-bottom: rem(20);
 		} 

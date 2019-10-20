@@ -38,7 +38,7 @@
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {
-		padding-top: rem(45);
+		padding-top: rem(35);
 		padding-bottom: rem(15);
 	}
 	@include media-breakpoint-up(xs) {}

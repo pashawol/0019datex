@@ -1,7 +1,11 @@
 mixin s-header-rent()
 	// start s-header-rent
 	+b.SECTION.s-header-rent.lazy-background#s-header-rent.bg-wrap&attributes(attributes)
-		+pic2("rent-bg.jpg",'bg')(class="picture-bg")
+		//- +pic2("rent-bg.jpg",'bg')(class="picture-bg")
+		picture.lazy.picture-bg
+			source(srcset='#', data-srcset='img/@2x/rent-bg.jpg', type='image/jpg', media='(min-width:576px)')
+			source(srcset='#', data-srcset='img/@2x/rent-bg-mobile.jpg', type='image/jpg')
+			img.object-fit-js(src='#', data-src='img/@2x/rent-bg.jpg', alt='')
 		.container
 			h1 1C&nbsp;в облаке&nbsp;&mdash; быстрый старт для вашего бизнеса
 			+e.sub-title Начните пользоваться 1С&nbsp;уже сегодня бесплатно на&nbsp;30&nbsp;дней

@@ -325,9 +325,18 @@ jQuery(document).ready(function($) {
 
 
 	$(".s-tariffs__more").click(function(){
-		console.log(1)
-		$(this).parent().prev().find('li:hidden').slideDown();
-	})
+		 
+		$(this).toggleClass("active").next().slideToggle();
+    })
+    $(".s-header-rent__more.more-js").click(function(){
+        console.log(1);
+        const destination = $('.s-header-rent').next().offset().top - 30;
+
+		$('html, body').animate({ scrollTop: destination }, 1100);
+
+        return false;
+        
+    })
 });
 let JSCCommon = {
 

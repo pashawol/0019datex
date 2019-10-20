@@ -1,3 +1,5 @@
+"use strict";
+
 var $ = jQuery;
 var btnToggle = $(".toggle-menu-mobile--js");
 var menu = $(".menu-mobile--js, .menu-mobile-page--js");
@@ -326,12 +328,19 @@ jQuery(document).ready(function ($) {
 		recalc_every: 1
 	});
 	$(".s-tariffs__more").click(function () {
+		$(this).toggleClass("active").next().slideToggle();
+	});
+	$(".s-header-rent__more.more-js").click(function () {
 		console.log(1);
-		$(this).parent().prev().find('li:hidden').slideDown();
+		var destination = $('.s-header-rent').next().offset().top - 30;
+		$('html, body').animate({
+			scrollTop: destination
+		}, 1100);
+		return false;
 	});
 });
-let JSCCommon = {
-	magnificPopupCall: function () {
+var JSCCommon = {
+	magnificPopupCall: function magnificPopupCall() {
 		$('.popup-with-move-anim').magnificPopup({
 			type: 'inline',
 			fixedContentPos: true,
@@ -382,7 +391,7 @@ let JSCCommon = {
 		});
 	},
 	// /magnificPopupCall
-	mobileMenu: function () {
+	mobileMenu: function mobileMenu() {
 		// закрыть/открыть мобильное меню
 		$(".menu-item-has-children > a,.addSvg>a").click(function (e) {
 			e.preventDefault();
@@ -409,19 +418,19 @@ let JSCCommon = {
 		});
 	},
 	// табы  . 
-	tabscostume: function (tab) {
+	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content2').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
 		});
 	},
-	tabscostumeSl: function (tab) {
+	tabscostumeSl: function tabscostumeSl(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			console.log(1);
 			$(this).addClass('active').parent().siblings().find('.' + tab + '__btn').removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).parent().index()).fadeIn().addClass('active');
 		});
 	},
 	// /табы  . 
-	inputMask: function () {
+	inputMask: function inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1} [(][0-9]{3}[)]-[0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7 (999)-999-99-99");
 	}

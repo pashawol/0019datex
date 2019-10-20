@@ -1,5 +1,3 @@
-"use strict";
-
 var $ = jQuery;
 var btnToggle = $(".toggle-menu-mobile--js");
 var menu = $(".menu-mobile--js, .menu-mobile-page--js");
@@ -36,8 +34,8 @@ jQuery(document).ready(function ($) {
 		var from = $inp.prop("value"); // reading input value
 
 		$('.counter-js').text(from); // FROM value
-	});
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/Arenda.jpg);"></div>'); // / закрыть меню при горизонтальном свайпе
+	}); // $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/Arenda.jpg);"></div>')
+	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -332,8 +330,8 @@ jQuery(document).ready(function ($) {
 		$(this).parent().prev().find('li:hidden').slideDown();
 	});
 });
-var JSCCommon = {
-	magnificPopupCall: function magnificPopupCall() {
+let JSCCommon = {
+	magnificPopupCall: function () {
 		$('.popup-with-move-anim').magnificPopup({
 			type: 'inline',
 			fixedContentPos: true,
@@ -384,7 +382,7 @@ var JSCCommon = {
 		});
 	},
 	// /magnificPopupCall
-	mobileMenu: function mobileMenu() {
+	mobileMenu: function () {
 		// закрыть/открыть мобильное меню
 		$(".menu-item-has-children > a,.addSvg>a").click(function (e) {
 			e.preventDefault();
@@ -411,19 +409,19 @@ var JSCCommon = {
 		});
 	},
 	// табы  . 
-	tabscostume: function tabscostume(tab) {
+	tabscostume: function (tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content2').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
 		});
 	},
-	tabscostumeSl: function tabscostumeSl(tab) {
+	tabscostumeSl: function (tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			console.log(1);
 			$(this).addClass('active').parent().siblings().find('.' + tab + '__btn').removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).parent().index()).fadeIn().addClass('active');
 		});
 	},
 	// /табы  . 
-	inputMask: function inputMask() {
+	inputMask: function () {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1} [(][0-9]{3}[)]-[0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7 (999)-999-99-99");
 	}

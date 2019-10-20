@@ -1,5 +1,3 @@
-"use strict";
-
 // Lazy loading img & background images using intersection observer
 // Reference: https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
 // Using example: <img class="lazy" src="thumb.gif" data-src="real-img.jpg" data-srcset="real-img@1x.jpg 1x, real-img@2x.jpg 2x">
@@ -13,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	var lazyBackgroundsData = [].slice.call(document.querySelectorAll('[data-bg]'));
 
 	if ('IntersectionObserver' in window) {
-		var lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+		let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
 			entries.forEach(function (entry) {
 				if (entry.isIntersecting) {
-					var lazyImage = entry.target;
+					let lazyImage = entry.target;
 
 					if (lazyImage.tagName == 'IMG') {
 						lazyImage.src = lazyImage.dataset.src;
@@ -38,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		lazyImages.forEach(function (lazyImage) {
 			lazyImageObserver.observe(lazyImage);
 		});
-		var lazyBackgroundObserver = new IntersectionObserver(function (entries, observer) {
+		let lazyBackgroundObserver = new IntersectionObserver(function (entries, observer) {
 			entries.forEach(function (entry) {
 				if (entry.isIntersecting) {
 					entry.target.classList.add('visible');
@@ -51,10 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		lazyBackgrounds.forEach(function (lazyBackground) {
 			lazyBackgroundObserver.observe(lazyBackground);
 		});
-		var lazyBackgroundDataObserver = new IntersectionObserver(function (entries, observer) {
+		let lazyBackgroundDataObserver = new IntersectionObserver(function (entries, observer) {
 			entries.forEach(function (entry) {
 				if (entry.isIntersecting) {
-					var lazyBackgroundData = entry.target;
+					let lazyBackgroundData = entry.target;
 					lazyBackgroundData.style.backgroundImage = 'url(' + lazyBackgroundData.dataset.bg + ')';
 					lazyBackgroundDataObserver.unobserve(lazyBackgroundData);
 				}

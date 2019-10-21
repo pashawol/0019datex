@@ -327,7 +327,7 @@ jQuery(document).ready(function ($) {
 		parent: '.aside-block-js',
 		recalc_every: 1
 	});
-	$(".s-tariffs__more").click(function () {
+	$(".s-tariffs__more, .s-tariffs__title-sub---js").click(function () {
 		$(this).toggleClass("active").next().slideToggle();
 	});
 	$(".s-header-rent__more.more-js").click(function () {

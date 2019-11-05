@@ -36,6 +36,18 @@
 				background-color: $primary;
 			}
 		}
+		&--rent:hover{
+			span {
+				border-color: #6fb6fd;
+			}
+
+			text-decoration: none;
+			color: #6fb6fd;
+
+			.mobile-menu__item-title::after {
+				background-color: #6fb6fd;
+			}
+		}
 	}
 
 	&__item-title {

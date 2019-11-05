@@ -88,6 +88,30 @@
 
 	}
 	ul{
+	 
+		// margin-bottom: 0;
+	}
+	li{
+		font-size: rem(16);
+		position: relative;
+		list-style-type: none;
+		margin-bottom: rem(7);
+ 
+		padding-left: rem(15);
+		&::before{
+			content: '• ';
+			position: absolute;
+		 
+			left: 0;
+			color: $primary;
+		}
+		// &:nth-child(n + 9) {
+		// 		display: none;
+		// }
+	}
+
+	
+	.tabs__content-head ul{
 		// columns: 2;
 		@include media-breakpoint-up(md)  {
 
@@ -96,15 +120,10 @@
 			margin-left: -10px;
 			margin-right: -10px;
 		}
-		margin-bottom: 0;
+		// margin-bottom: 0;
 	}
-	li{
-		font-size: rem(16);
-		position: relative;
-		list-style-type: none;
-		margin-bottom: rem(7);
-		// width: 50%;
-		// flex-grow: 1;
+	.tabs__content-head li{
+	 
 		@include media-breakpoint-up(md)  {
 
 			width: (450  * 100% / (375 + 450));
@@ -116,23 +135,22 @@
 			padding-right: 10px;
 		}
 		padding-left: rem(15);
-		&::before{
-			content: '• ';
-			position: absolute;
+		&::before{ 
 			@include media-breakpoint-up(md) {
 
 				left: 10px;
 			}
-			left: 0;
-			color: $primary;
+			left: 0; 
 		}
-		&:nth-child(n + 9) {
-				display: none;
-		}
+		// &:nth-child(n + 9) {
+		// 		display: none;
+		// }
 	}
+
+
 	.tabs__content-head{
 
-		padding-bottom: rem(30);
+		// padding-bottom: rem(10);
 	}
 	.tabs__content-group{
 		
@@ -145,13 +163,56 @@
 			color: $primary;
 		}
 	}
-	&__more{
-		cursor: pointer;
+ 
+	&__plus{
 		display: inline-block;
+		position: relative;
+		width: rem(16px);
+		height: rem(16px);
+		&::before,
+		&::after{
+			content: '';
+			position: absolute;
+			@include a-cent;
+			background-color: $primary;
+			background-color: #db1e32;
+			@include mt;
+		}
+		&::after{
+			
+			width: rem(16px);
+			height: 2px;
+		}
+		&::before{
+		 
+			height: rem(16px);
+			width: 2px; 
+		}
+	}
+	&__hidden-block {
+		display: none;
+	}
+	&__title-sub---js,
+	&__more{
+				&.active .s-tariffs__plus{
+					&::before{
+						opacity: 0;
+					}
+				}
+		cursor: pointer;
+		// display: inline-block;
+		display: block;
 		position: relative;
 		font-weight: 500; 
 		padding: rem(18) 0 rem(16);
 		text-decoration: none !important;
+		span{
+			display: inline-block;
+		}
+		&::before{
+			content: '';
+
+		}
 		span{
 			line-height: 1;
 			border-bottom: 1px dashed ;
@@ -164,6 +225,17 @@
 				border-color: transparent;
 			}
 		}
+	}
+	.hiiden-list{
+		display: none;
+	}
+	&__title-sub---js{
+		padding-top: 0;
+		// padding-bottom: 0;
+		margin-bottom: 0;
+		border-top: 1px solid #dadde2;
+		display: block;
+		padding-top: rem(15);
 	}
 	.tabs__content-foot{
 		@include media-breakpoint-up(md) {

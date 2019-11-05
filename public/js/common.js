@@ -36,8 +36,8 @@ jQuery(document).ready(function ($) {
 		var from = $inp.prop("value"); // reading input value
 
 		$('.counter-js').text(from); // FROM value
-	});
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/Arenda.jpg);"></div>'); // / закрыть меню при горизонтальном свайпе
+	}); // $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/Arenda.jpg);"></div>')
+	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -327,9 +327,16 @@ jQuery(document).ready(function ($) {
 		parent: '.aside-block-js',
 		recalc_every: 1
 	});
-	$(".s-tariffs__more").click(function () {
+	$(".s-tariffs__more, .s-tariffs__title-sub---js").click(function () {
+		$(this).toggleClass("active").next().slideToggle();
+	});
+	$(".s-header-rent__more.more-js").click(function () {
 		console.log(1);
-		$(this).parent().prev().find('li:hidden').slideDown();
+		var destination = $('.s-header-rent').next().offset().top - 30;
+		$('html, body').animate({
+			scrollTop: destination
+		}, 1100);
+		return false;
 	});
 });
 var JSCCommon = {

@@ -2,6 +2,7 @@
   background-color: #171718;
   color: #ffffff;
   font-size: $small;
+ 
   .scroll-link{
 
     color: #ffffff !important;
@@ -136,5 +137,6 @@
 
 @include media-breakpoint-down(xs) {
   text-align: center;
+  padding-bottom: rem(110);
 }
 }

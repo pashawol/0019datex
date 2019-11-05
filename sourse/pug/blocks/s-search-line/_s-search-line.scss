@@ -25,8 +25,12 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
-.rent-page .top-line-page-search{
-	display: none !important;
+.search-hidden,
+.rent-page {
+	.top-line-page-search {
+
+		display: none !important;
+	}
 }
 .top-line-page-search{
 	// background-color: #fff;

@@ -63,20 +63,125 @@ mixin s-artical-body()
 			p Если же устойчивость интернет-соединения на вашем рабочем месте – это что-то из области фантастики – тогда «коробочное» решение. Напрягает мысль, что Ваша программа 1С хранится не у Вас на компьютере – опять же коробочное решение. Ваша 1С находится в состоянии непрерывных доработок и переписывания бизнес-процессов «под Вас» – снова отдаем предпочтение «коробочному» решению.
 
 			p Выбирайте с умом. В конце концов не ошибается только тот, кто ничего не делает!
-			+e.slider.swiper-container
-				.swiper-wrapper
-					- for (var x = 0; x < 4; x++)
-						+e.slide.swiper-slide
-							+e.item
-								img(src="img/@2x/img-left.jpg", alt="")
-				
+			+e.slider-wrap
+				+e.slider--js.swiper-container.gal
+					.swiper-wrapper
+						- for (var x = 0; x < 4; x++)
+							+e.slide.swiper-slide
+								+e.item(href="img/@2x/img-left.jpg")
+									img.res-i(src="img/@2x/img-left.jpg", alt="")
+					+e.slider-nav
+						+e.slider-prev.cat-slider-nav
+							+icon("slider-prev")
+						+e.slider-next.cat-slider-nav
+							+icon("slider-next")
+				.swiper-pagination
 			p Что же в результате – ФРЕШ или Не ФРЕШ? А это зависит только от Вас! Никогда не работали с 1С и хотите попробовать – тогда, наверное, 1С:Fresh. Не хотите заморачиваться с сопровождением вашей одинсэки – тогда опять 1С:Fresh. Не можете себе позволить сразу тратить значительные суммы денег на оплату программы целиком – снова 1С:Fresh.
 
 			p Если же устойчивость интернет-соединения на вашем рабочем месте – это что-то из области фантастики – тогда «коробочное» решение. Напрягает мысль, что Ваша программа 1С хранится не у Вас на компьютере – опять же коробочное решение. Ваша 1С находится в состоянии непрерывных доработок и переписывания бизнес-процессов «под Вас» – снова отдаем предпочтение «коробочному» решению.
 
 			p Выбирайте с умом. В конце концов не ошибается только тот, кто ничего не делает!
-
-			table
+			+e.table-wrap
+				table.table-example
+					// удали класс .table-example
+					thead
+						tr
+							th(colspan="4")
+								.text-center 
+									strong Динамичная и легкая в построении таблица.
+					tbody
+						tr
+							td 
+								strong Ячейка 1
+							td
+								.text-right Ячейка 1
+							td
+								a.tdu(href="#")  Ячейка 1
+							td
+								.text-center
+									img.res-i(src="img/close-red.svg", alt="")
+							
+						
+						tr
+							td 
+								strong Ячейка 2
+							td
+								.text-right Ячейка 2
+							td
+								a.tdu(href="#")  Ячейка 2
+							td
+								.text-center
+									img.res-i(src="img/yes.svg", width="15" height="11" alt="")
+							
+						
+						tr
+							td 
+								strong Ячейка 3
+							td
+								.text-right Ячейка 3
+							td
+								a.tdu(href="#")  Ячейка 3
+							td(style="background-color: #eaeef3;")
+								.text-center Ячейка 1
+						
+						tr
+							td 
+								strong Ячейка 4
+							td
+								.text-right Ячейка 4
+							td
+								a.tdu(href="#")  Ячейка 4
+							td
+							
+						
+						tr
+							td 
+								strong Ячейка 5
+							td
+								.text-right Ячейка 5
+							td
+								a.tdu(href="#")  Ячейка 5
+							td(rowspan="4" style="width:225px")
+								.text-center
+									img(src="img/@2x/table-img.jpg", width="187" alt="")
+							
+						
+						tr
+							td 
+								strong Ячейка 6
+							td
+								.text-right Ячейка 6
+							td
+								a.tdu(href="#")  Ячейка 6 
+							
+						
+						tr
+							td 
+								strong Ячейка 7
+							td
+								.text-right Ячейка 7
+							td
+								a.tdu(href="#")  Ячейка 7 
+							
+						
+						tr
+							td 
+								strong Ячейка 8
+							td
+								.text-right Ячейка 8
+							td
+								a.tdu(href="#")  Ячейка 8 
+							
+						
+						tr
+							td 
+								strong Ячейка 9
+							td
+								.text-right Ячейка 9
+							td(colspan="2")
+								a.tdu(href="#")  Объединенные ячейки по горизонтали
+				.small Описание таблицы.
+						
 			h4  Скачать файлы:
 			+b.download
 				- for (var x = 0; x < 4; x++)

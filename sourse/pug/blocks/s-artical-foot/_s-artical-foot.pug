@@ -2,8 +2,19 @@ mixin s-artical-foot()
 	// start s-artical-foot
 	+b.SECTION.s-artical-foot.section#s-artical-foot&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-artical-foot
-				
 			.row
+				.col-auto
+					+b.share-block
+						+e.title Поделиться статьей:
+						+e.item--vk(href="#")
+							+icon("vk")
+						+e.item--fb(href="#")
+							+icon("fb")
+						+e.item--twitter(href="#")
+							+icon("twitter")
+				.col-auto.order-sm-first
+					+e.btn.btn-primary(href="/"  ) 
+						+icon('pag-prev')
+						| К списку статей
+						span
 	// end s-artical-foot

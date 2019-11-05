@@ -16,7 +16,10 @@ div.aligncenter {
 }
 
 .alignleft {
-  float: left;
+  @include media-breakpoint-up(lg) {
+
+    float: left;
+  }
   margin: 5px 20px 20px 0;
 }
 
@@ -26,7 +29,10 @@ div.aligncenter {
 }
 
 a img.alignright {
-  float: right;
+  @include media-breakpoint-up(lg) {
+
+    float: right;
+  }
   margin: 5px 0 20px 20px;
 }
 
@@ -70,12 +76,18 @@ a img.aligncenter {
 }
 .wp-caption.alignleft {
   margin: 5px rem(50) 20px 0;
-  float: left;
+  @include media-breakpoint-up(lg) {
+
+    float: left;
+  }
 }
 
 .wp-caption.alignright {
   margin: 5px 0 20px 20px;
-  float: right;
+  @include media-breakpoint-up(lg) {
+
+    float: right;
+  }
 }
 
 .wp-caption img {

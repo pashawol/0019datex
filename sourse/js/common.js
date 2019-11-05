@@ -35,6 +35,7 @@ jQuery(document).ready(function($) {
         $('.counter-js').text(from); // FROM value
     });
     $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/stat.png);"></div>')
+ 
     // / закрыть меню при горизонтальном свайпе
     // /закрыть/открыть мобильное меню
     function heightses() {
@@ -262,22 +263,44 @@ jQuery(document).ready(function($) {
 			slidesPerView: 'auto',
 			freeMode: true,
 			spaceBetween: 10,
-			speed: 400,
-			// loop: true,
-			// autoplay: {
-			//     delay: 6000,
-			//   },
-			// pagination: {
-			//     el: $(this).find('.swiper-pagination'),
-			//     clickable: true,
-			// },
-			// navigation: {
-			//     nextEl: ('.s-catalog-slider__slider-next'),
-			//     prevEl: ('.s-catalog-slider__slider-prev'),
-			// },
+			speed: 400, 
 	})
-	
-		
+    
+    $(".s-artical-body__slider-wrap").each(function(){ 
+        var swiperArticals4 = new Swiper($(this).find('.s-artical-body__slider--js'), {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpointsInverse: true,
+            speed: 400,
+            loop: true,
+            // autoplay: {
+                //     delay: 6000,
+                //   },
+                pagination: {
+                    el: $(this).find('.swiper-pagination'),
+                    clickable: true,
+        },
+        navigation: {
+            nextEl: $(this).find('.s-artical-body__slider-next'),
+            prevEl: $(this).find('.s-artical-body__slider-prev'),
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            }
+        }
+    })
+})
+    
     $('.popup-with-move-anim').click(function() {
         var th = $(this);
         $(th.attr('href')).find(".order").val(th.data('order'));

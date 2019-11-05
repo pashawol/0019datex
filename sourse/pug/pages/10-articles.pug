@@ -22,32 +22,33 @@ include ../blocks/s-buy-prog/_s-buy-prog.pug
 include ../blocks/s-product/_s-product.pug
 include ../blocks/s-logos/_s-logos.pug
 include ../blocks/s-contact-us/_s-contact-us.pug
-include ../blocks/s-artical-head/_s-artical-head.pug
-include ../blocks/s-artical-body/_s-artical-body.pug
-include ../blocks/s-artical-foot/_s-artical-foot.pug
-include ../blocks/s-comments/_s-comments.pug
+include ../blocks/s-contact-head/_s-contact-head.pug
+include ../blocks/s-contact-body/_s-contact-body.pug
+include ../blocks/s-contact-foot/_s-contact-foot.pug
+
+include ../blocks/s-header-rent/_s-header-rent.pug
+include ../blocks/s-tariffs/_s-tariffs.pug
+include ../blocks/s-saving/_s-saving.pug
 include ../blocks/s-articles/_s-articles.pug
 
 block variables
 	- let  mainPage= 'search-hidden'
 	
 block title
-	- let title= "Как подобрать эквайринг для своего бизнеса"
+	- let title= "Статьи"
 	title= title
 
 block pagecontent
 	//- +mob-mnu()
 	+header()
 		+top-line-page-2()
-		//- +top-nav()
-	//- +s-search-line()
-	
-	
-	+s-artical-head(class="page-top-block")
-		+breadcrumb("Главная","Статьи", title)(class="about-bread")
-	+s-artical-body
-	+s-artical-foot
-	+s-comments
-	+s-articles-11()
+
+	+b.page-head.page-top-block
+	.container
+		+b.section-title.text-center
+			+breadcrumb("Главная", title)
+			h1= title 
+	+s-articles
+	+s-contact()
 	+footer()
 

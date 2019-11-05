@@ -1000,3 +1000,15 @@ a {
 .order-modal__btn{
 	margin-bottom: 1rem;
 }
+
+.search-hidden{
+	.top-line-page-search{
+		display: none;
+	}
+}
+
+.mfp-gallery{
+	.mfp-content  .mfp-close{
+		display: none;
+	}
+}

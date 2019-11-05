@@ -1,4 +1,20 @@
 .s-artical-foot {
+	border-top: 1px solid #dadde2;
+	border-bottom: 1px solid #dadde2;
+	padding-top: rem(30);
+	padding-bottom: rem(30);
+	.row{
+		align-items: center;
+	}
+	&__btn{
+		margin-top: rem(10);
+		margin-bottom: rem(10);
+		.icon{
+			font-size: rem(11);
+			margin-right: rem(14);
+		}
+		width: rem(210);
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -22,6 +38,58 @@
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	.row{
+		justify-content: space-between;
+	@include media-breakpoint-down(xs) {
+			justify-content: center;
+		}
+	} 
 
+}
+
+.share-block{
+	margin-top: rem(10);
+		margin-bottom: rem(10);
+		flex-wrap: wrap;
+	.icon{
+		font-size: rem(18);
+		color: #ffffff;
+	}
+	display: flex;
+	align-items: center;
+	&__text{
+		margin-right: rem(10);
+	}
+	&__item{
+		width: rem(40px);
+		height: rem(40px);
+		border-radius: 50%;
+		text-align: center;
+		line-height: rem(40);
+		display: inline-block;
+		margin-left: rem(5px);
+		margin-right: rem(5px);
+		@include mt;
+		&--vk{ 
+			background-color: #4d76a1;
+			&:hover{
+				background-color: darken(#4d76a1, 10%);
+			}
+		} 
+		&--fb{ 
+			background-color: #3b5998;
+			&:hover{
+				background-color: darken(#3b5998, 10%);
+			}
+		}
+		
+		&--twitter{ 
+			background-color: #55acee;
+			&:hover{
+				background-color: darken(#55acee, 10%);
+			}
+		}
+
+
+	}
 }

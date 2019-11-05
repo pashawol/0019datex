@@ -36,8 +36,8 @@ jQuery(document).ready(function ($) {
 		var from = $inp.prop("value"); // reading input value
 
 		$('.counter-js').text(from); // FROM value
-	}); // $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/Arenda.jpg);"></div>')
-	// / закрыть меню при горизонтальном свайпе
+	});
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/art.jpg);"></div>'); // / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {

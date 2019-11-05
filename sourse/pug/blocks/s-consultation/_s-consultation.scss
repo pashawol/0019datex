@@ -21,13 +21,14 @@
 			height: 100px;
 			background-color: #f1f5f9;
 			margin-bottom: 1rem;
-			img{
-				background-size: contain !important;
-				// object-fit: contain !important;
-				object-position: top;
-			}
-
+			// object-fit: ;
+			
 		} 
+				img{
+					background-size: contain !important;
+					// object-fit: contain !important;
+					object-position: top;
+				}
 		@include media-breakpoint-up(xl) {
 
 			width: rem(530);

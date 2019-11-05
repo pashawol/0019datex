@@ -235,7 +235,6 @@ mixin pic( i,exp="jpg", bg, lazy="lazy", media='576px')
 						+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
 			else 
 				//- +src(i,'webp',smpath2+`/webp`,lazy,"source")
-				// /webp images  
 			+src(i, exp,smpath2, lazy,"",bg) 
 	// /picture
 

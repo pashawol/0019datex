@@ -1,14 +1,21 @@
 .s-header-rent {
 	color: #ffffff;
 	background-color: $body-color;
+	&__inner{
+		display: table-cell;
+		vertical-align: middle;
+	}
 	.container{	
 		position: relative;
 		padding-top: rem(120);
 		padding-bottom: rem(120);
 		// min-height: 1000px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: center;
+		// -ms-flex-pack: center;
+		display: table;
+		vertical-align: middle;
 		// padding-top: 340px;
 		// padding-top: rem(80);
 		// padding-bottom: rem(80);

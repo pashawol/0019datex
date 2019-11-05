@@ -385,3 +385,59 @@ button.mfp-close,
 		background-color: #f2f5f9
 	}
 }
+
+body .modal-city{
+	max-width: 854px;
+	.form-wrap__title{
+		@extend h4;
+		font-weight: bold;
+	}
+}
+
+.cityWrap ul{
+	/* width: 25%; */
+	@include media-breakpoint-up(sm) {
+
+		columns: 4;
+	}
+	columns: 2;
+}
+
+.modal-city .order-modal__modal-title {
+	@include media-breakpoint-up(sm) {
+
+		padding-left:rem(50);
+		padding-right:rem(50);
+	}
+	padding-left: rem(15) ;
+	padding-right: rem(15) ;
+}
+
+.cityWrap{
+	font-size: $small;
+	@include media-breakpoint-up(sm) {
+
+		padding: rem(40) rem(50);
+	}
+	padding: rem(20) rem(15) rem(40);
+	ul{
+		list-style-type: none;
+		li{
+			padding-left: 0;
+		&::before{
+			display: none;
+		}
+		}
+	}
+	a{
+		color: $body-color;
+		text-decoration: none;
+		&:hover,
+		&.active{
+			color: $primary !important;
+		}
+				&.active{
+					font-weight: 500;
+				}
+	}
+}

@@ -200,11 +200,15 @@
 					}
 				}
 		cursor: pointer;
-		display: inline-block;
+		// display: inline-block;
+		display: block;
 		position: relative;
 		font-weight: 500; 
 		padding: rem(18) 0 rem(16);
 		text-decoration: none !important;
+		span{
+			display: inline-block;
+		}
 		&::before{
 			content: '';
 

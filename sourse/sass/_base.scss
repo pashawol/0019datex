@@ -556,6 +556,7 @@ picture {
 	color: #ffffff;
 	// border-color: $primary;
 	border: none;
+	padding: 1.175rem .75rem;
 
 	&::before {
 
@@ -567,6 +568,29 @@ picture {
 	}
 
 }
+.btn-secondary {
+	@extend .btn;
+	background-color: $secondary; 
+	// border-color: $primary;
+	border: none;
+	color: $body-color !important;
+
+	&::before {
+
+		background-color: darken($color: $secondary, $amount: .01);
+		// background-color: #c4182a;
+	}
+	
+	&::after {
+		background-color: darken($color: $secondary, $amount: 3);
+		// background-color: #ac1424;
+	}
+	&:hover{
+		border-color: darken($color: $secondary, $amount: 3);
+	}
+
+}
+
 .btn-outline-success {
 	@extend .btn;
 	background-color: $success;
@@ -970,4 +994,9 @@ a {
 .term-description{
 	font-size: 1rem;
 	color: #6f7378;
+}
+
+
+.order-modal__btn{
+	margin-bottom: 1rem;
 }

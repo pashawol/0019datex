@@ -29,6 +29,12 @@
 			height: 100%;
 			object-fit: cover;
 			opacity: .7;
+			@include mt;
+		}
+		&:hover{
+			img{
+				opacity: 1;
+			}
 		}
 	}
 	&__text-wrap{
@@ -53,9 +59,9 @@
 		font-size: $em-base;
 		display: inline;
 		@include mt;
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid ;
 		&:hover{
-			border-color: #981523;
+			color: #db1e32;
 		}
 	}
 	&__item-descr{
@@ -72,6 +78,7 @@
 		position: relative;
 		&:hover{
 			text-decoration: none;
+			color: #db1e32;
 		}
 		&::after{
 			content: '';
@@ -81,6 +88,7 @@
 			width: rem(8);
 			height: rem(8);
 			border-radius: 50%;
+			display: block;
 		}
 		&--violet{
 			&::after{

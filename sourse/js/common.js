@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
         var from = $inp.prop("value"); // reading input value
         $('.counter-js').text(from); // FROM value
     });
-    $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/stat.png);"></div>')
+    // $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/stat.png);"></div>')
  
     // / закрыть меню при горизонтальном свайпе
     // /закрыть/открыть мобильное меню

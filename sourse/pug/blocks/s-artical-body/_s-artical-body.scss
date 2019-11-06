@@ -24,7 +24,7 @@
 			margin-bottom: rem(20);
 			
 		}
-		h6{
+		h5{
 			font-size: 1rem;
 			margin-bottom: rem(25);
 	}
@@ -178,7 +178,8 @@
 		@include mt;
 	}
 	&__link:hover &__link-title{
-			border-color: transparent;
+			// border-color: transparent;
+			color: $primary;
 	}
 	&__link{
 		display: inline-flex;
@@ -188,6 +189,7 @@
 		.icon{
 			font-size: rem(20);
 			margin-right: rem(13);
+			color: $primary;
 		}
 
 	}

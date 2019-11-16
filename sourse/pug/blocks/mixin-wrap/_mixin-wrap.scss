@@ -26,17 +26,28 @@
 	max-width: rem(935);
 	margin: 0 auto;
 	ul{
-		border: 1px solid #dadde2;
+		// border: 1px solid #dadde2;
 		list-style: none;
 		display: flex;
 		margin-bottom: 0;
+		justify-content: center;
 	}
 	li{
 		flex-grow: 1;
+		display: block;
 		text-align: center;
-		&:not(:last-child){
-			border-right: 1px solid #dadde2;
+		border-top: 1px solid  #dadde2;
+		border-bottom: 1px solid  #dadde2;
+		max-width: rem(110);
+		&:first-child{
+
+			border-left: 1px solid #dadde2;
 		}
+		border-right: 1px solid #dadde2;
+		a{
+			display: block;
+		}
+		 
 	}
 	span, a{
 		padding: rem(13) 0;

@@ -1,3 +1,4 @@
+.comments-area,
 .form-control {
 	//  outline: 0 !important;
 	text-align: center;
@@ -201,6 +202,113 @@
 		}
 
 
+	}
+}
+
+.comments-area{
+	text-align: left;
+	label{
+
+	}
+	@include media-breakpoint-up(md) {
+
+		.comment-form-author,
+		.comment-form-email {
+			float: left;
+			width: 50%;
+		}
+	}
+.comment-form-url{
+	display: none;
+}
+	.comment-form-comment,
+	.comment-form-author,
+	.comment-form-email, 
+	.comment-form-url
+
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+		text-align: left;
+		@extend .form-group;
+		
+		label{
+			text-align: left;
+			display: block;
+		}
+
+		textarea{
+			height: rem(120);
+		}
+		textarea,
+		input{
+			@extend .form-control;
+			text-align: left;
+			padding: .835rem .75rem;
+		}
+					// input{
+	}
+	.form-submit .submit{
+		@extend .btn;
+		@extend .btn-primary;
+	}
+}
+.comment-form-cookies-consent{
+	input{
+		@extend .invisible;
+	}
+	label{
+		position: relative;
+		padding-left: rem(40);
+		color: #6f7378; 
+		font-size: rem(12px);
+		font-weight: 400;
+		line-height: 1.5;
+		&::before {
+			content: '';
+			//  @include media-breakpoint-up(md) {
+	
+			left: 0;
+			display: block;
+			top: rem(-5px);
+			left: 0;
+			// display: inline-block;
+			@include media-breakpoint-up(sm) {
+	
+				width: rem(30px);
+				height: rem(30px);
+			}
+	
+			width: rem(35px);
+			height: rem(35px);
+			background-color: $light;
+			@include mt;
+			position: absolute;
+			margin-right: 10px;
+			
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-size: rem(15);
+			//  }
+		}
+	}
+			input:checked  + label{
+				&::before{
+					background-image: url("../img/check.svg");
+				}
+			}
+}
+.comment-form{
+	// display: flex;
+	margin-left: -15px;
+	margin-right: -15px;
+	>*{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.required{
+		color: $primary;
 	}
 }
 

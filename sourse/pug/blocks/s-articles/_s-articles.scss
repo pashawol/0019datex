@@ -1,5 +1,9 @@
 .s-articles {
 	padding-top: 0;
+	&--page{
+		padding-top: rem(70);
+		border-top: none;
+	}
 	padding-bottom: rem(80);
 
 	.row{

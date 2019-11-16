@@ -1,0 +1,5 @@
+JSCCommons-cloud();
+	s-cloud() {
+
+	}
+	

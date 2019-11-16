@@ -1,0 +1,40 @@
+mixin s-contact-new()
+	// start s-contact-new
+	+b.SECTION.s-contact-new.section#s-contact-new&attributes(attributes)
+		.container
+			.row
+				.col-xl-6.col-md-auto
+					+b.section-title
+						h2 Получить 
+							span.text-primary консультацию
+					+e.text Свяжитесь с&nbsp;нами любым удобным способом, по&nbsp;телефону, эл. почте или воспользуйтесь любым из&nbsp;мессенджеров:
+					+b.soc-block
+						+e.item--telegram(href="#")
+							+icon("telegram")
+						
+						+e.item--whatsapp(href="#")
+							+icon("whatsapp")
+						
+						+e.item--viber(href="#")
+							+icon("viber")
+						
+						+e.item--vk(href="#")
+							+icon("vk")
+						
+				.col
+					.row
+						.col-lg-auto
+							+e.img-wrap
+								img.res-i.lazy(src="#" data-src="img/@2x/man-circle.png", alt="")
+						.col
+							+e.name Нестеров Андрей
+							+e.prof Коммерческий директор
+							+e.tel(href="tel:8(800)500-57-48")
+								+icon("phone-receiver")
+								| 8 (800) 500-57-48
+							br
+							+e.mail(href="mailto:sale@datexsoft.ru") sale@datexsoft.ru
+							br
+							+e.btn.btn-primary.btn--white.popup-with-move-anim(href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок"   data-btn="Заказать звонок") Заказать звонок
+									span
+	// end s-contact-new

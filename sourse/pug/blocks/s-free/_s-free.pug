@@ -1,0 +1,19 @@
+mixin s-free()
+	// start s-free
+	+b.SECTION.s-free.section#s-free&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Попробуйте аренду 1С в облаке 
+					span.text-primary 30 дней бесплатно
+			.row
+				.col-lg-7
+					+e.img-wrap
+						+pic2("Mockup.png")
+						//- img.res-i.lazy(src="#" data-src='`', alt="")
+				.col
+					+e.text-block
+						+e.title Заголовок
+						p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации.
+
+						+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title=`Попробовать бесплатно ` data-order=`Попробовать бесплатно ${t}`   data-btn=`Попробовать бесплатно ` class="wow fadeInUp",  )  Попробовать бесплатно
+	// end s-free

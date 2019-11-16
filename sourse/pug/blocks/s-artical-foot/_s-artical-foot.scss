@@ -57,6 +57,10 @@
 	}
 	display: flex;
 	align-items: center;
+	&__title{
+		margin-right: rem(10);
+
+	}
 	&__text{
 		margin-right: rem(10);
 	}

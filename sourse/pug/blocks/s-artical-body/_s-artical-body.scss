@@ -1,6 +1,9 @@
 .s-artical-body {
 	padding-top: rem(48);
 	font-size: rem(16);
+	img{
+		@extend .res-i;
+	}
 	p{
 		font-size: rem(16);
 		line-height: 2;
@@ -128,20 +131,29 @@
 		 table{
 			 width: 100%;
 			 margin-bottom: .5rem;
+			 margin-left: auto;
+			 margin-right: auto;
 			 img{
 				 @extend .res-i;
 			 }
 		 }
 		 .table-example{ 
 			 min-width: 593px;
+			 max-width: 893px;
+			//  max
 			}
 			&__table-wrap{
 				position: relative;
 				overflow-x: auto;
-				max-width: 893px;
 				margin-left: auto;
 				margin-right: auto;
-			 margin-bottom: rem(50);
+			//  margin-bottom: rem(50);
+			}
+			.tablepress-table-description{
+				margin-bottom: rem(50);
+				text-align: center;
+				display: block;
+
 		 }
 
 	@include media-breakpoint-up(xl) {}

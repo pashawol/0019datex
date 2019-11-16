@@ -1,0 +1,36 @@
+mixin s-fresh-servises()
+	// start s-fresh-servises
+	+b.SECTION.s-fresh-servises.section#s-fresh-servises&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Сервисы 
+					span.text-primary 1С:Фреш 
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Контрагент
+					.tabs__btn Отчетность
+					.tabs__btn Спарк Риски
+					.tabs__btn 1С ЭДО
+					.tabs__btn ИТС
+					.tabs__btn 1С товары
+				div
+					mixin cont(t)
+						.tabs__content2&attributes(attributes)
+							.row
+								.col-md-6
+									+e.img-wrap.text-center
+										img.res-i.lazy(src="#" data-src="img/@2x/graf.jpg", alt="") 
+								.col
+									+e.text-block
+										+e.title= t
+										p Бухгалтерский и налоговый учет, сдача отчетности через Интернет - для ИП и организаций: все участки учета, любая система налогооблажения.
+
+										p Бухгалтерский и налоговый учет, сдача отчетности через Интернет - для ИП и организаций: все участки учета, любая система налогооблажения.
+										+e.btn.btn-primary.popup-with-move-anim(href="#modal-call" data-title=`Попробовать бесплатно ` data-order=`Попробовать бесплатно ${t}`   data-btn=`Попробовать бесплатно ` class="wow fadeInUp",  )  Попробовать бесплатно
+					+cont("Контрагент")(class="active")
+					+cont("Отчетность")
+					+cont("Спарк Риски")
+					+cont("1С ЭДО")
+					+cont("ИТС")
+					+cont("1С товары")
+	// end s-fresh-servises

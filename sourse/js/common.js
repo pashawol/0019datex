@@ -442,6 +442,23 @@ let JSCCommon = {
         $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
             $(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content2').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
         });
+        // $(".s-cloud").on('click', '.' + tab + '__btn(.active)', function(e) {
+        //     $(this).next().click();
+
+         setTimeout( function run() {
+             
+            $('.s-cloud .tabs__btn.active ').each(function(){
+                if (!$(this).is(":last-child")){
+                    $(this).next().click();
+                    setTimeout(run, 3000); 
+                }
+                else{
+                    $('.s-cloud .tabs__btn:first-child').click();
+                    setTimeout(run, 3000); 
+                }
+            }) 
+        }, 3000);
+
     },
     tabscostumeSl: function (tab) {
 

@@ -1,0 +1,28 @@
+mixin s-cloud()
+	// start s-cloud
+	+b.SECTION.s-cloud.section#s-cloud&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Арендуя 1С в облаке 
+					span.text-primary вы получаете:
+				
+			.row.tabs
+				.col-lg-6 
+					.tabs__caption
+						.tabs__btn.active 
+							+e.title Доступ из любого места
+							+e.text Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст  сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
+						.tabs__btn 
+							+e.title Экономия времени
+							+e.text Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст  сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
+						.tabs__btn 
+							+e.title Техническая поддержка 24/7
+							+e.text Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст  сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
+				+e.col.col-lg-6.align-self-end
+					mixin cont()
+						.tabs__content2.text-center&attributes(attributes)
+							+pic2("girl.png")
+					+cont()(class="active")
+					+cont()
+					+cont()
+	// end s-cloud

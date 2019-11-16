@@ -48,6 +48,7 @@
 
 	.btn--white{
 		background-color: transparent;
+		box-shadow: none;
 	}
 	&__prof{
 		color: #6f7378; 
@@ -102,10 +103,10 @@
 .soc-block{
 	max-width: rem(366);
 	display: flex;
-	margin-bottom: rem(30);
 	@include media-breakpoint-down(sm) {
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: rem(40);
 	}
 	&__item{
 		width: 25%;

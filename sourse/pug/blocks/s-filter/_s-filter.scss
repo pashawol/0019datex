@@ -1,0 +1,226 @@
+.s-filter {
+
+	&-wrap{
+		
+		// min-height: calc(100% - 28px);
+		// display: flex;
+		display: none;
+		flex-direction: column;
+		@include media-breakpoint-up(lg) {
+
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(20);
+	}
+	padding-bottom: rem(30);
+	flex-grow: 1; 
+	border: 1px solid #dadde2;
+	background-color: #ffffff;
+	// padding-top: rem(20);
+	margin-top: rem(20);
+	&__group{
+		// padding: rem(14) rem(12) 0;
+		&:not(:last-child) {
+
+			border-bottom: 1px solid #dadde2;
+		}
+	
+	}
+	.showhide-all
+	{
+		padding-right: rem(30);
+		padding-left: rem(30);
+		position: relative;
+		// overflow: hidden;
+		overflow-y: auto;
+		max-height: rem(285);
+	}
+	&__title{
+		font-weight: bold;
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			@include a-cent(y);
+			right: rem(30);
+			background-image: url(../img/svg/top-nav-arrow.svg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-size: contain;
+			width: 12px;
+			height: 7px;
+			@include mt;
+
+		}
+		background-position: 100% 30%;
+		// padding-bottom: rem(10);
+		padding: rem(14) rem(30);
+		padding-right: rem(30);
+		position: relative;
+		z-index: 4;
+		cursor: pointer;
+		font-size: rem(16);
+		border-bottom: 1px solid #dadde2;
+		&.active{
+			background-color: #fdd058;
+			border-bottom-color:#fdd058;
+			&::after{
+				transform: translateY(-50%) rotateX(180deg);
+			}
+		}
+	}
+	.custom-input{
+		display: flex;
+		align-items: center;
+		// margin-top: rem(15);
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+		padding-right: rem(30);
+		padding-left: rem(30 + 30);
+		margin-left: rem(-30);
+		margin-right: rem(-30);
+		margin-bottom: 0; 
+		margin-top: 0;
+		font-size: $small;
+		font-weight: 400;
+		min-height: rem(52);
+		// margin-bottom: rem(10);
+		border-bottom: 1px solid #dadde2;
+		color: $body-color;
+		line-height: 1.13;
+		width: calc(100% + #{rem(60)});
+		&__lab{
+			border: 1px solid #dadde2;
+			background-color: #ffffff;
+			width: rem(22px);
+			height:  rem(22px); 
+			left: rem(30);
+			top: 50%;
+			transform: translateY(-50%);
+			margin-top: 0;
+			border-radius: rem(5px);
+			&::after{
+				background-image: url(../img/svg/chevron-red.svg) !important;
+			}
+		}
+		// padding-left: rem(30);
+	}
+	.range-wrap{
+		padding-top: rem(30);
+		padding-bottom: rem(30);
+		.row{
+			@include roww(8);
+		}
+		input{
+			height: rem(50);
+			font-size: $small;
+			text-align: left;
+			border-radius: 3px;
+			border: 1px solid #dadde2;
+			padding: rem(10) rem(10) rem(10) rem(42);
+			color: #6f7378;
+		}
+		// margin-top: rem(-20);
+		strong{
+			position: absolute;
+			@include a-cent(y);
+			font-size: $small;
+			left: rem(16 + 15);
+			font-weight: normal;
+			// margin-right: rem(10);
+		}
+		.irs--round {
+			margin-top: rem(-10);
+		}
+		label{
+			margin-bottom: 0;
+			&:first-child{
+				&::after{
+					content: '-';
+					position: absolute;
+					left: 100%;
+					top: 30%;
+					margin-left: rem(-3);
+				}
+			}
+		}
+		.row{
+			// padding-top: rem(15);
+		}
+	}
+	&__btn-wrap{
+		padding: rem(30);
+		padding-bottom: 0;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-sm;
+		font-weight: 500;
+		font-size: rem(16);
+		padding: rem(14) rem(10);
+		// @extend .btn-dark;
+		@extend .btn-block;
+		&--outline{
+			border: 2px solid;
+			&:not(:hover) {
+				background-color: transparent;
+				border-color: $secondary;
+				border: 2px solid $secondary;
+				color: #6f7378 !important;
+			}
+		}
+	}
+	&__btn + &__btn{ 
+		margin-top: rem(15);
+	}
+	.showhide{
+		
+	}
+	.showhide-all{
+		// display: none;
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+	.irs--round .irs-bar {
+		height: 2px; 
+		background-color: $danger;
+		// top: rem(37px);
+	}
+	.irs--round .irs-line {
+		background-color: #dadde2;
+		 height: 2px; 
+	}
+	
+	.irs--round .irs-handle {
+		top: rem(25px);
+		width: $h6-font-size;
+		height: $h6-font-size;
+		box-shadow: 0 rem(3px) rem(5px) rgba(32, 22, 0, 0.45);
+		border: rem(2px) solid #ffffff;
+		background-color: $primary;
+		cursor: pointer;
+	}
+}

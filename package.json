@@ -40,6 +40,7 @@
   },
   "optionalDependencies": {},
   "dependencies": {
+    "gulp-group-css-media-queries": "^1.2.2",
     "@babel/core": "^7.7.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "gulp-newer": "^1.4.0",

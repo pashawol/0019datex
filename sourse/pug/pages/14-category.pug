@@ -1,0 +1,73 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-competences/_s-competences.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-segments/_s-segments.pug
+include ../blocks/s-digilization/_s-digilization.pug
+include ../blocks/s-steps/_s-steps.pug
+include ../blocks/s-start/_s-start.pug
+include ../blocks/s-ways/_s-ways.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-doc/_s-doc.pug
+include ../blocks/s-consultation/_s-consultation.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-search-line/_s-search-line.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/mobile-menu/_mobile-menu.pug
+include ../blocks/s-catalog-slider/_s-catalog-slider.pug
+include ../blocks/s-buy-prog/_s-buy-prog.pug
+include ../blocks/s-product/_s-product.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-contact-us/_s-contact-us.pug
+include ../blocks/s-contact-head/_s-contact-head.pug
+include ../blocks/s-contact-body/_s-contact-body.pug
+include ../blocks/s-contact-foot/_s-contact-foot.pug
+include ../blocks/s-trade-software/_s-trade-software.pug
+
+include ../blocks/s-articles/_s-articles.pug
+include ../blocks/s-contact-new/_s-contact-new.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-filter/_s-filter.pug
+include ../blocks/s-artical-body/_s-artical-body.pug
+
+block variables
+	- let  mainPage= null
+	
+block title
+	- let title= "Эквайринг (безналичная оплата)"
+	title= title
+
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-line-page-2()
+		//- +top-nav()
+	//- +s-search-line()
+
+	+b.page-head--bg.page-top-block.bg-wrap
+		+pic2("category-bg",'bg')(class="picture-bg")
+		.container
+			+b.section-title.text-center
+				+breadcrumb("Главная", "Торговое оборудование", title)
+				h1= title
+	//- +s-home-slider2()(class="home-slider page-top-block")
+	+s-category
+		+s-filter
+	+s-articles-13()
+		+s-artical-body()(class="p-0")
+			h2 <h2>Как подобрать эквайринг и не ошибиться?
+			p Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а&nbsp;также реальное распределение букв и&nbsp;пробелов в&nbsp;абзацах, которое не&nbsp;получается при простой дубликации &laquo;Здесь ваш текст..
+
+			p Здесь ваш текст.. Здесь ваш текст..&raquo; Многие программы электронной вёрстки и&nbsp;редакторы HTML используют Lorem Ipsum в&nbsp;качестве текста по&nbsp;умолчанию, так что поиск по&nbsp;ключевым словам &laquo;lorem ipsum raquo; сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За&nbsp;прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по&nbsp;ошибке, некоторые&nbsp;&mdash; намеренно (например, юмористические варианты).
+			
+
+			h3 <h3>Как пользоваться эквайрингом?
+			p Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а&nbsp;также реальное распределение букв и&nbsp;пробелов в&nbsp;абзацах, которое не&nbsp;получается при простой дубликации &laquo;Здесь ваш текст..
+
+			p Здесь ваш текст.. Здесь ваш текст..&raquo; Многие программы электронной вёрстки и&nbsp;редакторы HTML используют Lorem Ipsum в&nbsp;качестве текста по&nbsp;умолчанию, так что поиск по&nbsp;ключевым словам &laquo;lorem ipsum raquo; сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За&nbsp;прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по&nbsp;ошибке, некоторые&nbsp;&mdash; намеренно (например, юмористические варианты).
+	+s-contact-new
+	+footer()
+

@@ -214,7 +214,45 @@
 			padding-bottom: rem(30);
 		}
 	} 
-
+	.irs--round .irs-grid-text {
+		color: #6f7378;
+	 
+	font-size: rem(18px);
+	font-weight: 400;
+	line-height: 1.38;
+	font-family: $default-font;
+	// font-weight: bold;
+	}
+	
+	.irs--round .irs-handle{
+		background-color: $primary  !important;
+		border-color:$primary !important;
+		width: 30px;
+		height: 30px;
+		top: 22px;
+		box-shadow: none;
+		cursor: pointer;
+	}
+	.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single,
+	.irs--round .irs-bar{
+		background-color: $primary  !important;
+	
+	}
+	.irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before{
+		border-top-color: $primary  !important;
+	}
+	.irs-grid-pol.small{
+		display: none;
+	}
+	.irs-grid-text{
+		top: rem(20);
+	}
+	
+	.irs--round .irs-line{
+		background-color: $secondary;
+	
+	}
+	
 }
 .pb-0{
 	padding-bottom: 0 !important;
@@ -266,44 +304,6 @@
 	margin-top:  -14px;
 	margin-bottom: rem(75);
 	cursor: pointer;
-}
-.irs--round .irs-grid-text {
-	color: #6f7378;
- 
-font-size: rem(18px);
-font-weight: 400;
-line-height: 1.38;
-font-family: $default-font;
-// font-weight: bold;
-}
-
-.irs--round .irs-handle{
-	background-color: $primary  !important;
-	border-color:$primary !important;
-	width: 30px;
-	height: 30px;
-	top: 22px;
-	box-shadow: none;
-	cursor: pointer;
-}
-.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single,
-.irs--round .irs-bar{
-	background-color: $primary  !important;
-
-}
-.irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before{
-	border-top-color: $primary  !important;
-}
-.irs-grid-pol.small{
-	display: none;
-}
-.irs-grid-text{
-	top: rem(20);
-}
-
-.irs--round .irs-line{
-	background-color: $secondary;
-
 }
 
 

@@ -40,6 +40,14 @@ mixin in-ch()
 		+e.INPUT.input(type="checkbox" name= n)&attributes(attributes)
 		+e.SPAN.lab
 		block 
+mixin in-c2(typ="checkbox", text, name= typ )
+	+b.LABEL.custom-input
+		+e.INPUT.input(type= typ , name= name)&attributes(attributes)
+		+e.SPAN.lab
+		if block
+			block 
+		else
+			+e.SPAN.text= text
 mixin add-file(n)
 	+b.add-file
 		label

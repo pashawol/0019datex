@@ -1,0 +1,62 @@
+mixin s-category()
+	// start s-category
+	+b.s-category.section.bg-light#s-category&attributes(attributes)
+		.container
+			.row
+				.col-lg-3
+					block
+				+e.main-col.col-lg-9
+					+e.head.text-gray
+						.row
+							.col
+								.row
+									.col-auto.d-none.d-xl-block Сортировать по:
+									.col-auto: span.text-primary по популярности
+									.col-auto: span по новизне
+									.col-auto: span по убыванию цены
+									.col-auto: span по возрастанию цены
+
+							+e.total.col-auto  67 товаров
+					mixin item(t, pr, ne)
+						+b.s-category-item
+							+e.row.row
+								+e.img-wrap.col-auto(href="#").d-none.d-xl-block
+									img.res-i.lazy(src="#" data-src='img/@2x/category-prod.jpg', alt="")
+								.col
+									+e.row.row
+										+e.img-wrap.col-sm-auto(href="#").d-xl-none
+											img.res-i.lazy(src="#" data-src='img/@2x/category-prod.jpg', alt="")
+										.col
+											block
+											+e.title
+												a(href="#")= t
+											+e.caption  Verifone Vx820 (ПРИМИ КАРТУ)&nbsp;&mdash; эргономичный пин-пад с&nbsp;широкими возможностями для проведения платежей. Прими карту! &mdash;&nbsp;отличный выбор.
+									+e.foot.row
+										+e.price-wrap.col-md-6 
+											span.text-gray.d- Цена:
+											if !ne
+												span.h6.strong= pr
+											else
+												span.h6.text-gray.strike= pr
+												span.h6.strong.text-danger= ne
+										.col
+											+e.btn-wrap.row
+												.col-sm-6
+													+e.btn--outline.popup-with-move-anim(href="#one-click") Заказать в 1 клик
+												.col-sm-6
+													+e.btn(href="#") Купить
+					+item("Эквайринг Verifone VX820",'16 200 ₽')
+					+item("Эквайринг Verifone VX820",'3 345 ₽','3 200 ₽')
+						+e.label(style="background-color: #db1e32;") скидка 11%
+
+					+item("Эквайринг Verifone VX820",'16 200 ₽')
+						+e.label(style="background-color: #00c257;") новый товар
+					+item("Эквайринг Verifone VX820",'16 200 ₽')
+						+e.label(style="background-color: #f07f1e;") рекомендуем!
+					+item("Эквайринг Verifone VX820",'16 200 ₽')
+					+item("Эквайринг Verifone VX820",'16 200 ₽')
+						+e.label(style="background-color: #f07f1e;") рекомендуем!
+					+item("Эквайринг Verifone VX820",'16 200 ₽')
+					+item("Эквайринг Verifone VX820",'16 200 ₽')
+					+pugin()
+	// end s-category

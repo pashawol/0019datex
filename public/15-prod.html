@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Смарт-терминал Эвотор 5</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta property="og:image" content="path/to/image.jpg">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
+		<!-- Custom Browsers Color-->
+		<meta name="theme-color" content="#1e1e1e">
+		<link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+		<link rel="stylesheet" href="libs/swiper-4.2.0/swiper.min.css">
+		<link rel="stylesheet" href="libs/ion.rangeSlider/css/ion.rangeSlider.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+		<!-- этот скрипт грузит прелоэдэр- его не сжимать со всеми-->
+		<style>
+			.prld-on{overflow:hidden}.pace{user-select:none;z-index:10000;position:fixed;top:0;left:0;width:100%;height:100%;background-color:#fff;display:flex;justify-content:center;align-items:center;opacity:1}@media (min-width: 768px){.pace .pace-progress{background:#db1e32;position:fixed;z-index:2000;top:50%;margin-top:-1px;right:100%;width:100%;height:2px;transition:.05s ease-in transform}}.pace::after{content:''; background-image:  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAAApCAMAAABZV6Y4AAAAulBMVEUAAAAeHh4eHh4eHh4eHh4fHx8eHh4eHh4gICAeHh7bHjEeHh4eHh4eHh4eHh4eHh4eHh4eHh4PDw8dHR0eHh4eHh4eHh4eHh4bGxseHh4eHh4eHh4dHR0fHx8dHR0eHh4eHh4eHh4eHh4gICAiIiIeHh4dHR0eHh4dHR0eHh4eHh4dHR0dHR0eHh4eHh4aGhodHR0eHh4jIyMeHh4cHBzbHjIeHh4dHR3bHjMeHh7cHzPcHjMeHh7bHjIOrY0/AAAAPHRSTlMA7Z5VmDGpbhaF7vW9/J/58TwDNy3eo3QS5NC2rSgj1ZRlyR4Nw14/Sf6mWE+AQwl6awfZNaOLvt67ppfmC2+eAAAEZElEQVRYw7WZaXuiMBCAB48WFxWhWMQTxQPXs+q2e7D//29td3nMTEaOjU3fb5AIvE8yk0mErnGlBgAVQ2bSfAj9eOxCPkPsvYWU0ChnAPBa0sV77OCHmMCIA9EYjMBKrnz9+01JFla/tjEhm1EL+w0gpZ2UMwOolXR5Os34sxEzwLYpgCEungHgIckjCOuQRYPqjtN7laScRbmGA2MDr3w2CbClBuUaSKuWMSLuhHbxNWtAFa9sBwhHbOjPSzQ4wQY4qzXt0Hc1a0CIl10TBHucyp06lGpwjsBoszfr1jiQ8BhiYHTx7hLUNZIGCzRDbq7o1oBRB2+8ZARGGxQ1UB6ZslajB+98Tcrpl2us+Cusp/StPnlML71FEy7VmO7fiTd+OOgmlM4ICLOEMf335nYFecMcS+62j1RjUMniNu+d/320QwLDgxS6/FEN/NrD/qGVZCfwS4trvAEnJooUquFBAfN+Is2Y3jlnbiCoUZfy0TlBYrz/KnKYfU2LI2BgznzM1XiCIjyLjDYLDCUNiCZZw3HoiqeL2bXTrwEvdE6/0BVDUYMmDCu63tyKyD41RHY/6degOSOwaGCoasAuY0IOMTtcxDK4/QSN+Tk7aaprRJ2bGRlZ+OmnLi5S6hp1KGFl31o8AyFsX5kWasCAlxyYvg2TRLsVqWss67d4LiD4rpzAaOFaX6yBD+qkxc1pQlecJzGrfAWNAgyTVbQyFgYGW8WLNbZY6qZJ1RE3tlKpO3P1a+D+AguT+zQuCYvIUCSPuZQD1hftGljUYnzeqTG25WJnHtBtC4AnXhPq1EB84rE43KsRWbLGEi9ZfWX0PkXjQrJV0717NJhGU8ypA88By8/QmE9oa+Nejfpaig3PxjnFO7xp17it/rd3asSYqTyMaJxT4M4wlWnQsM3inU0ElPX/rhsvZN2g+XWSsbIcFTWO1Vu2J1blMn64oF6M0PVn4gLsxVXYu+LY2ENNw4MSMDCQxj0apiFtE59xbAwBZsRYV2lYcIDXiu/QeCQLKErl8VWvxpJ8PD3xUdWgtYA9xkDJoxPp1PDIZidekA2cqsZhQFZQTEr5PGrUOPTpTBiRibBT0xg3E2QDuEnKpa9RoyZP1iqZYatrn+9frvxCDTl5REeDHXA2kjJadW2ZakmioQc5B6Jffl/5KWnE43dGnrN5bRrS9zl4lFDEq4pGu5FFxAPDTkdtTv8vuNH4JmnY1jt2K+HspK2H0ZTB9B7MFTSyWWFgyA+g4XHM1ijhwZX2s35+Gbz5sIaDM4jt8jcJHSF1jfYprXUx9zJ+4HBr0aCBYWb+9Gyqatg79hdJEzhTsrxo0KCB4QBCw2OoqLFw+B9MPhRsrvyPa9A//3x+/IfPVdBYv1VdAMAzEDywzT0H+rBGmLti0/CwLjzhDnNqi8UOV6gKDk9xlt/j++7SqFeL6qcKbWTLX8WQCbr95vMujgDpnUXrFG4xu6I5TA+GcrqX/y++wTcFK+DMF6K1E/4BR1TWHBF4wt8AAAAASUVORK5CYII=); width: 10rem; background-position: center center; background-repeat: no-repeat; background-size: 9rem;display:block;background-color:#fff;position:fixed;z-index:2000;left:50%;transform:translateX(-50%);margin-top:-.5px;transition:.05s ease-in transform;padding:1rem;}.pace-before{display:block;margin-top:260px;left:50%;content:attr(data-progress-text);font-weight:100;font-size:1rem;line-height:1;text-align:center;color:#1d1b1d;font-weight:700}
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<!-- start HEADER.header-->
+			<header class="header block-with-lazy"><span></span>
+				<div class="menu-mobile-page menu-mobile-page--js"> 
+					<div class="menu-mobile-page__inner">
+						<!-- start mobile-menu-->
+						<div class="mobile-menu-page section block-with-lazy">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-4"><a class="mobile-menu-page__main-item" href="#"><span class="mobile-menu-page__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu-page__item-title"><span>Интернет-магазин «1С»</span></span></a>
+									</div>
+									<div class="col-lg-4 order-md-0 order-first"><a class="mobile-menu-page__main-item mobile-menu-page__main-item--rent" href="#"><span class="mobile-menu-page__logo-wrapper mobile-menu-page__logo-wrapper--rent"><img src="img/svg/cloud.svg" alt=""/></span><span class="mobile-menu-page__item-title"><span>Аренда «1С» в облаке</span></span></a>
+									</div>
+								</div>
+								<ul>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m1 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m1"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Бухгалтерский учет</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m2 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m2"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Торговый и складской учет</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m3 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m3"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Розница</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m4 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m4"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Расчет зарплаты и кадры</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m5 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m5"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Общепит и гостиничный бизнес</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m6 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m6"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Медицина</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m7 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m7"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Автотранспорт и логистика</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m8 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m8"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Дополнительные лицензии</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m9 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m9"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Документооборот</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m10 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m10"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Комплексная автоматизация</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m11 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m11"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Серверные лицензии</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m12 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m12"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Производственные предприятия и&nbsp;ERP</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m13 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m13"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>ИТС</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m14 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m14"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>Отраслевые решения</span></span></a>
+											</li>
+											<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+												<svg class="icon icon-mob-m15 ">
+													<use xlink:href="img/svg/sprite.svg#mob-m15"></use>
+												</svg></span><span class="mobile-menu-page__item-title"><span>CRM</span></span></a>
+											</li>
+								</ul>
+								<ul class="mobile-menu-page__mobile-links d-xl-none">
+									<li><a href="#"><span>Проектное направление</span></a></li>
+									<li><a href="#"><span>О компании</span></a></li>
+									<li><a href="#"><span>Контакты</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- end mobile-menu-->
+					</div>
+				</div>
+				<!--  мобильное меню-->
+				<!-- start .top-line-page--><a class="top-line-page__tel top-line-page__tel--mob d-sm-none" href="tel:+7(846)3004840"> 
+					<svg class="icon icon-phone-receiver ">
+						<use xlink:href="img/svg/sprite.svg#phone-receiver"></use>
+					</svg>ПОЗВОНИТЬ СЕЙЧАС</a>
+				<div class="top-line-page top-line-page--page top-line-page--js block-with-lazy">
+					<div class="top-line-page__body wow fadeIn body-1" data-wow-duration="0.3s" data-wow-delay="0.15s">
+						<div class="container">
+							<div class="row">
+								<div class="col-xl-auto col"><a href="/"><img src="img/logo.png" alt=""/></a></div>
+								<div class="top-line-page__tagline-col col-auto">
+									<div class="top-line-page__tagline">Программы 1С, внедрение и&nbsp;сопровождение
+									</div>
+								</div>
+								<div class="col d-none d-xl-block">
+									<ul class="menu">
+										<li class="menu-item menu-item-has-children menu-item-has-children--1c"><a href="#">Программы «1С»</a>
+											<svg class="icon icon-top-nav-arrow ">
+												<use xlink:href="img/svg/sprite.svg#top-nav-arrow"></use>
+											</svg>
+										</li>
+										<li class="menu-item menu-item-has-children"><a href="#">Торговое оборудование</a>
+											<ul class="sub-menu">
+												<li class="menu-item menu-item-has-children"><a href="#"><span class="link-text">Торговое оборудование</span></a>
+													<ul class="sub-menu">
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-1.jpg" alt=""/></span><span class="link-text"><span>Онлайн-кассы</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-2.jpg" alt=""/></span><span class="link-text"><span>Сканеры штрих-кода</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-3.jpg" alt=""/></span><span class="link-text"><span>Терминалы сбора данных</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-4.jpg" alt=""/></span><span class="link-text"><span>Принтеры этикеток</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-5.jpg" alt=""/></span><span class="link-text"><span>ПОС-Перифирия</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-6.jpg" alt=""/></span><span class="link-text"><span>Моноблоки</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-7.jpg" alt=""/></span><span class="link-text"><span>Электронные весы</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-8.jpg" alt=""/></span><span class="link-text"><span>Эквайринг (безналичная оплата)</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-9.jpg" alt=""/></span><span class="link-text"><span>Детекторы валют</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-10.jpg" alt=""/></span><span class="link-text"><span>Счетчики банкноты манет</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-11.jpg" alt=""/></span><span class="link-text"><span>Расходные материалы</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-12.jpg" alt=""/></span><span class="link-text"><span>Принтер чеков</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-13.jpg" alt=""/></span><span class="link-text"><span>Аксессуары для оборудования</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-14.jpg" alt=""/></span><span class="link-text"><span>Программное обеспечение</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-15.jpg" alt=""/></span><span class="link-text"><span>Услуги</span></span></a></li>
+																			<li class="menu-item"><a href="#"><span class="img-wrap"><img src="img/@2x/menu-sm-16.jpg" alt=""/></span><span class="link-text"><span>Распродажа</span></span></a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item"><a href="#">О компании</a></li>
+										<li class="menu-item"><a href="#">Контакты</a></li>
+										<li class="menu-item menu-item--rent"><a href="#"> <img src="img/svg/cloud.svg" alt=""/>Аренда «1С»</a></li>
+									</ul>
+								</div>
+								<div class="col-auto d-none d-sm-block">
+									<div class="row">
+										<div class="col-auto">
+											<div class="top-line-page__city">
+												<div class="top-line-page__city-name">
+													<svg class="icon icon-flag ">
+														<use xlink:href="img/svg/sprite.svg#flag"></use>
+													</svg>САМАРА
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="top-line-page__col col-auto">
+									<div class="row justify-content-end">
+										<div class="col-auto"><a class="top-line-page__tel top-line-page__tel--page" href="tel:+7(846)3004840">
+											<svg class="icon icon-phone-receiver ">
+												<use xlink:href="img/svg/sprite.svg#phone-receiver"></use>
+											</svg>+7 (846) 300 48 40 </a>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto d-xl-none">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js">
+										<div class="line-wrap hamburger">
+											<div class="line-wrap__item line">
+											</div>
+											<div class="line-wrap__item line">
+											</div>
+											<div class="line-wrap__item line">
+											</div>
+										</div>
+										<div class="toggle-menu-mobile__text d-none d-md-block"> меню
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> 
+					</div>
+					<!-- start mobile-menu-->
+					<div class="mobile-menu-page section block-with-lazy top-submenu top-submenu--js">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-4"><a class="mobile-menu-page__main-item" href="#"><span class="mobile-menu-page__logo-wrapper"><img src="img/1C-logo.png" alt=""/></span><span class="mobile-menu-page__item-title"><span>Интернет-магазин «1С»</span></span></a>
+								</div>
+								<div class="col-lg-4 order-md-0 order-first"><a class="mobile-menu-page__main-item mobile-menu-page__main-item--rent" href="#"><span class="mobile-menu-page__logo-wrapper mobile-menu-page__logo-wrapper--rent"><img src="img/svg/cloud.svg" alt=""/></span><span class="mobile-menu-page__item-title"><span>Аренда «1С» в облаке</span></span></a>
+								</div>
+							</div>
+							<ul>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m1 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m1"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Бухгалтерский учет</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m2 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m2"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Торговый и складской учет</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m3 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m3"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Розница</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m4 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m4"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Расчет зарплаты и кадры</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m5 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m5"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Общепит и гостиничный бизнес</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m6 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m6"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Медицина</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m7 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m7"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Автотранспорт и логистика</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m8 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m8"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Дополнительные лицензии</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m9 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m9"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Документооборот</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m10 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m10"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Комплексная автоматизация</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m11 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m11"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Серверные лицензии</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m12 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m12"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Производственные предприятия и&nbsp;ERP</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m13 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m13"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>ИТС</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m14 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m14"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>Отраслевые решения</span></span></a>
+										</li>
+										<li><a class="mobile-menu-page__item" href="#"><span class="mobile-menu-page__svg-wrapper">
+											<svg class="icon icon-mob-m15 ">
+												<use xlink:href="img/svg/sprite.svg#mob-m15"></use>
+											</svg></span><span class="mobile-menu-page__item-title"><span>CRM</span></span></a>
+										</li>
+							</ul>
+							<ul class="mobile-menu-page__mobile-links d-xl-none">
+								<li><a href="#"><span>Проектное направление</span></a></li>
+								<li><a href="#"><span>О компании</span></a></li>
+								<li><a href="#"><span>Контакты</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- end mobile-menu-->
+					<div class="top-line-page-search bg-light">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="top-line-page-search__search">
+										<div class="form-wrap">
+											<form>
+												<button class="form-wrap__btn-search" type="submit">
+													<svg class="icon icon-search ">
+														<use xlink:href="img/svg/sprite.svg#search"></use>
+													</svg>
+												</button>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="" placeholder="Начните поиск"/>
+												</div>
+												<!-- +e.input-wrap-->
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto"><a class="top-line-page-search__basket" href="#">
+									<svg class="icon icon-search-line-basket ">
+										<use xlink:href="img/svg/sprite.svg#search-line-basket"></use>
+									</svg>Корзина<span class="top-line-page-search__counter-wrapper"><span class="top-line-page-search__counter">56</span></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end .top-line-page-->
+			</header>
+			<!-- end HEADER.header-->
+			<div class="page-head page-top-block">
+				<div class="container">
+					<div class="section-title text-center">
+						<nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Торговое оборудование</a><a class="breadcrumb-item" href="#">Онлайн-кассы</a><span class="breadcrumb-item active">Смарт-терминал Эвотор 5</span>
+						</nav>
+						<h1>Смарт-терминал Эвотор 5</h1>
+					</div>
+				</div>
+			</div>
+			<!-- start s-product-->
+			<div class="s-product pt-0 section lazy-background" id="s-product">
+				<div class="container">
+					<div class="s-product__main-row row justify-content-center">
+						<div class="col-lg-5 col-sm-6 col-xl-3 text-center order-first">
+							<!-- Swiper-->
+							<div class="s-product__sliders-wrap"><a class="s-product__btn-play popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"></a>
+								<div class="swiper-container gallery-top">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></div>
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></div>
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></div>
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></div>
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></div>
+									</div>
+								</div>
+								<div class="swiper-container gallery-thumbs">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@1x/slide-prod.jpg" alt=""/></div>
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@1x/slide-prod.jpg" alt=""/></div>
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@1x/slide-prod.jpg" alt=""/></div>
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@1x/slide-prod.jpg" alt=""/></div>
+										<div class="swiper-slide"><img class="res-i swiper-lazy" src="#" data-src="img/@1x/slide-prod.jpg" alt=""/></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-5 col-sm-6 order-sm-0 order-last">
+							<div class="s-product__panel">
+								<div class="row align-items-center mb-3">
+									<div class="col fw-500">Количество:</div>
+									<div class="col-auto">
+										<div class="add-block">
+											<button class="add-block__btn add-block__btn--minus">
+											</button><input class="add-block__input" type="number" value="1"/>
+											<button class="add-block__btn add-block__btn--plus">
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="row align-items-end mb-1">
+									<div class="col fw-500 mb-2">Итог:</div>
+									<div class="col-auto text-right">
+										<div class="strike small text-gray">423 345 ₽</div>
+										<div class="h6 strong">233 800 ₽</div>
+									</div>
+								</div><a class="btn btn-block main-btn btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Добавить в корзину</a><a class="btn btn-primary btn-outline-gray btn-block popup-with-move-anim" href="#one-click">Купить в 1 клик</a>
+							</div>
+							<div class="text-center"><a class="s-product__link-price" href="#"> 
+								<svg class="icon icon-percent ">
+									<use xlink:href="img/svg/sprite.svg#percent"></use>
+								</svg>
+								<div><span>Запросить оптовые цены</span></div></a>
+							</div>
+						</div>
+						<div class="col-12 col-lg-10 col-12 col-xl-6 order-xl-first">
+							<div class="row align-items-center">
+								<div class="col-auto">
+									<div class="s-product__label" style="background-color: #00c257;">новый товар
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="s-product__art">Артикул: 4601546041654
+									</div>
+								</div>
+							</div>
+							<div class="s-product__sm-title">Выберите комплектацию:
+							</div>
+							<div class="form-wrap">
+								<form>
+									<label class="radio-prod">
+										<input type="radio" name="additional" checked="checked"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">Кассатка 7 (ПО Билетный режим) без ФН</span><span class="radio-prod__price col-auto">13 900<span class="i-font">o</span></span></span></span>
+									</label>
+									<label class="radio-prod">
+										<input type="radio" name="additional"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col"> Кассатка 7 (ПО Билетный режим) с ФН на 13 мес</span><span class="radio-prod__price col-auto">20 100<span class="i-font">o</span></span></span></span>
+									</label>
+									<label class="radio-prod">
+										<input type="radio" name="additional"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">Кассатка 7 (ПО Билетный режим) с ФН на 15 мес</span><span class="radio-prod__price col-auto">23 150<span class="i-font">o</span></span></span></span>
+									</label>
+									<label class="radio-prod">
+										<input type="radio" name="additional"/><span class="radio-prod__wrapper"><span class="radio-prod__lab"></span><span class="row"><span class="radio-prod__title col">Кассатка 7 (ПО Билетный режим) с ФН на 18 мес</span><span class="radio-prod__price col-auto">25 150<span class="i-font">o</span></span></span></span>
+									</label>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="s-product__tabs tabs">
+					<div class="tabs__caption">
+						<div class="container">
+							<div class="row">
+								<div class="s-product__tabs-col col-12 col-xl-10">
+									<div class="tabs__btn active"> 
+										<div class="tabs-btn-wrapper"><span>Назначение</span></div>
+									</div>
+									<div class="tabs__btn"> 
+										<div class="tabs-btn-wrapper"><span>Характеристики</span></div>
+									</div>
+									<div class="tabs__btn"> 
+										<div class="tabs-btn-wrapper"><span>Комплектация</span></div>
+									</div>
+									<div class="tabs__btn"> 
+										<div class="tabs-btn-wrapper"><span>Сопутствующие товары</span></div>
+									</div>
+									<div class="tabs__btn"> 
+										<div class="tabs-btn-wrapper"><span>Сравнение</span></div>
+									</div>
+									<div class="tabs__btn"> 
+										<div class="tabs-btn-wrapper"><span>Услуги</span></div>
+									</div>
+									<div class="tabs__btn"> 
+										<div class="tabs-btn-wrapper"><span>Обсуждение</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="s-product__content-block">
+						<div class="container">
+							<div class="row">
+								<div class="col-12 col-xl">
+									<div class="tabs__wrap">
+										<div class="tabs__content2 active">
+											<div class="s-product__content">
+												<h4>Описание товара “Смарт-терминал Эвотор 5”</h4>
+												<p>Программный продукт <strong>«1С:Бухгалтерия 8 КОРП» </strong>предназначен для автоматизации бухгалтерского и&nbsp;налогового учета, включая подготовку обязательной (регламентированной) отчетности в&nbsp;организациях, осуществляющих любые виды коммерческой деятельности: оптовую и&nbsp;розничную торговлю, комиссионную торговлю (включая субкомиссию), оказание услуг, производство и&nbsp;т.&nbsp;д. Программа предоставляет возможность вести бухгалтерский и&nbsp;налоговый учет сразу нескольких организаций (юридических лиц) в&nbsp;общей информационной базе.</p>
+												<h6>Маркированный список:</h6>
+												<ul>
+													<li>Авизо по ОС.</li>
+													<li>Авизо по МПЗ.</li>
+													<li> <a href="#">Авизо по расчетам.</a></li>
+													<li>Авизо по прочим операциям.</li>
+												</ul>
+												<h6>Нумированный список:</h6>
+												<ol>
+													<li>Разработана специализированная подсистема подготовки уведомления о контролируемых сделках</li>
+													<li>При подготовке уведомления не&nbsp;требуется повторно вводить или изменять данные в&nbsp;хозяйственных операциях, отраженных в&nbsp;информационной базе. Сформированное уведомление можно распечатать.</li>
+													<li>Авизо по прочим операциям.</li>
+												</ol><img src="img/content-img.jpg" alt=""/>
+												<h6>Двухуровневый маркированный список:</h6>
+												<ul>
+													<li>Авизо по ОС.</li>
+													<li>Авизо по МПЗ.
+														<ul>
+															<li><a href="#">Авизо по расчетам.</a></li>
+															<li>Авизо по прочим операциям.</li>
+														</ul>
+													</li>
+													<li>Авизо по МПЗ.</li>
+												</ul>
+											</div>
+										</div>
+										<div class="tabs__content2">
+											<div class="s-product__content">
+												<h4>Характеристики товара “Смарт-терминал Эвотор 5”</h4>
+												<div class="table-wrap">
+													<table>
+															<tr>
+																<td>НСИ:		</td>
+																<td>НСИ		</td>
+															</tr>
+															<tr>
+																<td>Торговля:</td>
+																<td>Торговля		</td>
+															</tr>
+															<tr>
+																<td>Склад:</td>
+																<td>Склад		</td>
+															</tr>
+															<tr>
+																<td>Казначейство:</td>
+																<td>Казначейство		</td>
+															</tr>
+															<tr>
+																<td>Монитор целевых показателей:</td>
+																<td>Монитор целевых показателей		</td>
+															</tr>
+															<tr>
+																<td>Планирование:</td>
+																<td>Планирование</td>
+															</tr>
+															<tr>
+																<td>Управление ассортиментом:</td>
+																<td>Управление ассортиментом</td>
+															</tr>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content2">
+											<div class="s-product__content">
+												<h4>Комплектация Смарт-терминала Эвотор 5</h4>
+												<p>Комплект Смарт-терминал Эвотор 5 включает:</p>
+												<table class="composition">
+													<tbody>
+														<tr>
+															<td><img class="table-svg" alt="" src="img/svg/yes.svg"/>платформу «1С:Предприятие 8.2»</td>
+														</tr>
+														<tr>
+															<td><img class="table-svg" alt="" src="img/svg/yes.svg"/>прикладное решение (конфигурацию) «Бухгалтерия КОРП»</td>
+														</tr>
+														<tr>
+															<td><img class="table-svg" alt="" src="img/svg/yes.svg"/>платформу «1С:Предприятие 8.2»</td>
+														</tr>
+														<tr>
+															<td><img class="table-svg" alt="" src="img/svg/yes.svg"/>прикладное решение (конфигурацию) «Бухгалтерия КОРП»</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="tabs__content2">
+											<div class="s-product__content">
+												<h4>Сопутствующие товары с Смарт-терминал Эвотор 5</h4>
+												<!-- start s-competences-->
+												<div class="s-competences competences-card">
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+												</div>
+												<!-- end s-competences-->
+											</div>
+										</div>
+										<div class="tabs__content2">
+											<div class="s-product__content">
+												<h4>Сопутствующие товары с Смарт-терминал Эвотор 5</h4>
+												<div class="table-wrapper">
+													<table class="functional compare">
+														<thead>
+															<tr>
+																<th>Смарт-терминал Эвотор 5</th>
+																<th> <a class="s-product__img-wrap" href="#"> <img src="img/@2x/slide-prod.jpg" alt=""/>
+																	<div class="s-product__title"><span>Касатка 7</span>
+																	</div></a>
+																</th>
+																<th><a class="s-product__img-wrap" href="#"> <img src="img/@2x/slide-prod.jpg" alt=""/>
+																	<div class="s-product__title"><span>Касатка 7_1</span>
+																	</div></a>
+																</th>
+																<th><a class="s-product__img-wrap" href="#"> <img src="img/@2x/slide-prod.jpg" alt=""/>
+																	<div class="s-product__title"><span>Касатка 7_2</span>
+																	</div></a>
+																</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Готовое решение для ведения бухгалтерского&nbsp;и налогового учета</td>
+																<td> <img class="table-svg" alt="" src="img/svg/yes.svg"/></td>
+																<td> <img class="table-svg" alt="" src="img/svg/yes.svg"/></td>
+																<td> <img class="table-svg" alt="" src="img/svg/yes.svg"/></td>
+															</tr>
+															<tr>
+																<td>Подготовка бухгалтерской и налоговой</td>
+																<td> <img class="table-svg" alt="" src="img/svg/no.svg"/></td>
+																<td> <img class="table-svg" alt="" src="img/svg/yes.svg"/></td>
+																<td> <img class="table-svg" alt="" src="img/svg/yes.svg"/></td>
+															</tr>
+															<tr>
+																<td>Готовое решение для ведения бухгалтерского и налогового учета</td>
+																<td> <img class="table-svg" alt="" src="img/svg/no.svg"/></td>
+																<td> <img class="table-svg" alt="" src="img/svg/yes.svg"/></td>
+																<td> <img class="table-svg" alt="" src="img/svg/yes.svg"/></td>
+															</tr>
+															<tr>
+																<td>Подготовка бухгалтерской и налоговой </td>
+																<td> <img class="table-svg" alt="" src="img/svg/no.svg"/></td>
+																<td> <img class="table-svg" alt="" src="img/svg/no.svg"/></td>
+																<td> <img class="table-svg" alt="" src="img/svg/yes.svg"/></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content2">
+											<div class="s-product__content">
+												<h4>Список услуг</h4>
+												<p>Список услуг для Смарт-терминала Эвотор 5:</p>
+												<!-- start s-competences-->
+												<div class="s-competences competences-card">
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+													<div class="s-competences__item">
+														<div class="s-competences__tabs-row row">
+															<div class="col-md-6 col-12 col-lg-8 col-xl-6 text-left">
+																<div class="row">
+																	<div class="s-competences__col-img col-auto d-none d-xl-block">
+																		<div class="s-competences__img-wrapper"><img src="img/@2x/tab-img.jpg" alt=""/>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="s-competences__item-title"><a href="#">Эквайринг Verifone VX820</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md">
+																<div class="row">
+																	<div class="s-competences__main-price col-6 col-md-6 d-flex d-lg-block align-items-center text-center">
+																		<div class="s-competences__price d-md-none d-xl-inline-block text-center text-gray">
+																			Цена:  <span class="h6 strong text-body">16 200 ₽</span>
+																		</div>
+																	</div>
+																	<div class="s-competences__btn-col col-6 col-md-6"><a class="s-competences__btn btn-primary btn-sm popup-with-move-anim" href="#order" data-title="купить" data-order="Эквайринг Verifone VX820" data-btn="Купить">Купить<span></span></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /+e.item-->
+												</div>
+												<!-- end s-competences-->
+											</div>
+										</div>
+										<div class="tabs__content2">
+											<div class="s-product__content s-product__content--rew">
+												<!-- start s-comments-->
+												<div class="s-comments"> 
+													<h4>Обсуждение товара Смарт-терминал Эвотор 5</h4>
+													<div class="comments-area" id="comments"> 
+														<!-- .comments-title-->
+														<ol class="comment-list">
+															<li class="comment even thread-even depth-1" id="comment-5109">
+																<article class="comment-body" id="div-comment-5109">
+																	<footer class="comment-meta">
+																		<div class="comment-author vcard"><img class="avatar avatar-32 photo" alt="" src="https://secure.gravatar.com/avatar/7594a9a9b2cdbd9092f021bba49cc16e?s=32&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/7594a9a9b2cdbd9092f021bba49cc16e?s=64&amp;d=mm&amp;r=g 2x" height="32" width="32"/><b class="fn">Александр</b><span class="says">:</span></div>
+																		<!-- .comment-author-->
+																		<div class="comment-metadata"><a href="https://datexsoft.ru/kak-podobrat-ekvajring-dlya-svoego-biznesa/#comment-5109">
+																				<time datetime="2019-11-08T20:33:23+04:00">08.11.2019 в 20:33</time></a></div>
+																		<!-- .comment-metadata-->
+																		<!-- .comment-meta-->
+																		<div class="comment-content">
+																			<p>Нормальный продукт</p>
+																		</div>
+																		<!-- .comment-content-->
+																		<div class="reply"><a class="comment-reply-link" rel="nofollow" href="#comment-5109" data-commentid="5109" data-postid="3366" data-belowelement="div-comment-5109" data-respondelement="respond" aria-label="Комментарий к записи Александр">Ответить</a></div>
+																	</footer>
+																</article>
+																<!-- .comment-body-->
+																<!-- #comment-##-->
+																<li class="comment byuser comment-author-vslysikov odd alt thread-odd thread-alt depth-1 parent" id="comment-5116">
+																	<article class="comment-body" id="div-comment-5116">
+																		<footer class="comment-meta">
+																			<div class="comment-author vcard"><img class="avatar avatar-32 photo" alt="" src="https://secure.gravatar.com/avatar/161c1547815f4cc3263f8bef2edcb153?s=32&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/161c1547815f4cc3263f8bef2edcb153?s=64&amp;d=mm&amp;r=g 2x" height="32" width="32"/><b class="fn">Всеволод Лысиков</b><span class="says">:</span></div>
+																			<!-- .comment-author-->
+																			<div class="comment-metadata"><a href="https://datexsoft.ru/kak-podobrat-ekvajring-dlya-svoego-biznesa/#comment-5116">
+																					<time datetime="2019-11-08T21:43:51+04:00">08.11.2019 в 21:43</time></a></div>
+																			<!-- .comment-metadata-->
+																			<!-- .comment-meta-->
+																			<div class="comment-content">
+																				<p>Нормальный комментарий</p>
+																			</div>
+																			<!-- .comment-content-->
+																			<div class="reply"><a class="comment-reply-link" rel="nofollow" href="#comment-5116" data-commentid="5116" data-postid="3366" data-belowelement="div-comment-5116" data-respondelement="respond" aria-label="Комментарий к записи Всеволод Лысиков">Ответить</a></div>
+																		</footer>
+																	</article>
+																	<!-- .comment-body-->
+																	<ol class="children">
+																		<li class="comment byuser comment-author-datex_adm bypostauthor even depth-2 parent" id="comment-5231">
+																			<article class="comment-body" id="div-comment-5231">
+																				<footer class="comment-meta">
+																					<div class="comment-author vcard"><img class="avatar avatar-32 photo" alt="" src="https://secure.gravatar.com/avatar/42e7d253c65e8aaa0d0a872d4b93cb2a?s=32&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/42e7d253c65e8aaa0d0a872d4b93cb2a?s=64&amp;d=mm&amp;r=g 2x" height="32" width="32"/><b class="fn">Михаил Ишметов</b><span class="says">:</span></div>
+																					<!-- .comment-author-->
+																					<div class="comment-metadata"><a href="https://datexsoft.ru/kak-podobrat-ekvajring-dlya-svoego-biznesa/#comment-5231">
+																							<time datetime="2019-11-09T18:48:29+04:00">09.11.2019 в 18:48</time></a></div>
+																					<!-- .comment-metadata-->
+																					<!-- .comment-meta-->
+																					<div class="comment-content">
+																						<p>ответ на комментарий</p>
+																					</div>
+																					<!-- .comment-content-->
+																					<div class="reply"><a class="comment-reply-link" rel="nofollow" href="#comment-5231" data-commentid="5231" data-postid="3366" data-belowelement="div-comment-5231" data-respondelement="respond" aria-label="Комментарий к записи Михаил Ишметов">Ответить</a></div>
+																				</footer>
+																			</article>
+																			<!-- .comment-body-->
+																			<ol class="children">
+																				<li class="comment byuser comment-author-wol1414 odd alt depth-3" id="comment-5388">
+																					<article class="comment-body" id="div-comment-5388">
+																						<footer class="comment-meta">
+																							<div class="comment-author vcard"><img class="avatar avatar-32 photo" alt="" src="https://secure.gravatar.com/avatar/a44d5003bb8bb15523cb32d1cb494928?s=32&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/a44d5003bb8bb15523cb32d1cb494928?s=64&amp;d=mm&amp;r=g 2x" height="32" width="32"/><b class="fn">Павел</b><span class="says">:</span></div>
+																							<!-- .comment-author-->
+																							<div class="comment-metadata"><a href="https://datexsoft.ru/kak-podobrat-ekvajring-dlya-svoego-biznesa/#comment-5388">
+																									<time datetime="2019-11-11T01:23:12+04:00">11.11.2019 в 01:23</time></a></div>
+																							<!-- .comment-metadata-->
+																							<!-- .comment-meta-->
+																							<div class="comment-content">
+																								<p>Какой-то не важный  ответ.  Совсем мало строчек текста. Че делать-то. Наверно свой надо написать  . Мало, еще надо дописать. Вот почти на вторую строку хватило текста))</p>
+																							</div>
+																							<!-- .comment-content-->
+																							<div class="reply"><a class="comment-reply-link" rel="nofollow" href="#comment-5388" data-commentid="5388" data-postid="3366" data-belowelement="div-comment-5388" data-respondelement="respond" aria-label="Комментарий к записи Павел">Ответить</a></div>
+																						</footer>
+																					</article>
+																					<!-- .comment-body-->
+																					<!-- #comment-##-->
+																					<!-- .children-->
+																					<!-- #comment-##-->
+																					<!-- .children-->
+																					<!-- #comment-##-->
+																					<!-- .comment-list-->
+																					<div class="comment-respond" id="respond">
+																						<h3 class="comment-reply-title" id="reply-title">Добавить комментарий <small><a id="cancel-comment-reply-link" rel="nofollow" href="/kak-podobrat-ekvajring-dlya-svoego-biznesa/#respond" style="display:none;">Отменить ответ</a></small></h3>
+																						<form class="comment-form" id="commentform" action="https://datexsoft.ru/wp-comments-post.php" method="post" novalidate="">
+																							<p class="comment-notes"><span id="email-notes">Ваш e-mail не будет опубликован.</span> Обязательные поля помечены <span class="required">*</span></p>
+																							<p class="comment-form-comment">
+																								<label for="comment">Комментарий</label>
+																								<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>
+																							</p>
+																							<p class="comment-form-author">
+																								<label for="author">Имя <span class="required">*</span></label>
+																								<input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"/>
+																							</p>
+																							<p class="comment-form-email">
+																								<label for="email">E-mail <span class="required">*</span></label>
+																								<input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"/>
+																							</p>
+																							<p class="comment-form-url">
+																								<label for="url">Сайт</label>
+																								<input id="url" name="url" type="url" value="" size="30" maxlength="200"/>
+																							</p>
+																							<p class="comment-form-cookies-consent">
+																								<input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"/>
+																								<label for="wp-comment-cookies-consent">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</label>
+																							</p>
+																							<div class="gglcptch gglcptch_invisible">
+																								<div class="gglcptch_recaptcha" id="gglcptch_recaptcha_624374140">
+																									<div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
+																										<div class="grecaptcha-logo">
+																											<iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LehvsEUAAAAAMjg2q1ECgabQJaz_uC5GGWVKXMx&amp;co=aHR0cHM6Ly9kYXRleHNvZnQucnU6NDQz&amp;hl=ru&amp;v=0bBqi43w2fj-Lg1N3qzsqHNu&amp;size=invisible&amp;cb=q9i6whgwawxo" width="256" height="60" role="presentation" name="a-8eok67d672hl" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+																										</div>
+																										<div class="grecaptcha-error"></div>
+																										<textarea class="g-recaptcha-response" id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+																									</div>
+																								</div>
+																								<noscript>
+																									<div style="width: 302px;">
+																										<div style="width: 302px; height: 422px; position: relative;">
+																											<div style="width: 302px; height: 422px; position: absolute;">
+																												<iframe src="https://www.google.com/recaptcha/api/fallback?k=6LehvsEUAAAAAMjg2q1ECgabQJaz_uC5GGWVKXMx" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;"></iframe>
+																											</div>
+																										</div>
+																										<div style="border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px; height: 60px; width: 300px;">
+																											<textarea class="g-recaptcha-response" id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px !important; height: 40px !important; border: 1px solid #c1c1c1 !important; margin: 10px 25px !important; padding: 0px !important; resize: none !important;"></textarea>
+																										</div>
+																									</div>
+																								</noscript>
+																							</div>
+																							<p class="form-submit">
+																								<input class="submit" id="submit" name="submit" type="submit" value="Отправить комментарий"/>
+																								<input id="comment_post_ID" type="hidden" name="comment_post_ID" value="3366"/>
+																								<input id="comment_parent" type="hidden" name="comment_parent" value="0"/>
+																							</p>
+																						</form>
+																					</div>
+																					<!-- #respond-->
+																				</li>
+																			</ol>
+																		</li>
+																	</ol>
+																</li>
+															</li>
+														</ol>
+													</div>
+												</div>
+												<!-- end s-comments-->
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-xl-3">
+									<div class="row aside-block-js" data-sticky-container="data-sticky-container">
+										<div class="col-12">
+											<div class="s-product__extra-block s-product__extra-block--truck">
+												<svg class="icon icon-truck ">
+													<use xlink:href="img/svg/sprite.svg#truck"></use>
+												</svg><span>Доставка товара по&nbsp;всей территории&nbsp;РФ</span>
+											</div>
+										</div>
+										<div class="col-12 sticky-block--js" data-margin-top="150" data-sticky-for="1200">
+											<div class="s-product__help-block">
+												<div class="form-wrap">
+													<form>
+														<div class="help-title">Нужна консультация?</div>
+														<div class="help-subtitle">Закажите консультацию в&nbsp;один&nbsp;клик!</div>
+														<div class="row">
+															<div class="col-md-6 col-xl-12">
+																<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control bg-light" type="tel" name="tel" placeholder="+7 (___)-___-__-__" required="required"/>
+																</div>
+																<!-- +e.input-wrap-->
+															</div>
+															<div class="col-md-6 col-xl-12">
+																<button class="form-wrap__btn" type="submit">Отправить
+																</button>
+															</div>
+															<div class="col-12">
+																<div class="form-wrap__polite">
+																	<label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</small>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end s-product-->
+			<!-- start s-product-carusel-->
+			<section class="s-product-carusel section" id="s-product-carusel">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>Похожие товары</h2>
+					</div>
+					<div class="s-product-carusel__slider s-product-carusel__slider--js swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="s-product-carusel__panel"><a class="s-product-carusel__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></a>
+									<div class="s-product-carusel__caption">
+										<div class="s-product-carusel__title"><a href="#">Эквайринг Verifone VX820</a>
+										</div>
+										<div class="s-product-carusel__price-wrap"><span class="text-gray">Цена:</span><span class="h6 strong">16 200 ₽</span>
+										</div><a class="btn btn-sm btn-block btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Добавить в корзину</a><a class="btn btn-sm btn-primary btn-outline-gray btn-block popup-with-move-anim" href="#one-click">Купить в 1 клик</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="s-product-carusel__panel"><a class="s-product-carusel__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></a>
+									<div class="s-product-carusel__caption">
+										<div class="s-product-carusel__title"><a href="#">Эквайринг Verifone VX820</a>
+										</div>
+										<div class="s-product-carusel__price-wrap"><span class="text-gray">Цена:</span><span class="h6 strong">16 200 ₽</span>
+										</div><a class="btn btn-sm btn-block btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Добавить в корзину</a><a class="btn btn-sm btn-primary btn-outline-gray btn-block popup-with-move-anim" href="#one-click">Купить в 1 клик</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="s-product-carusel__panel"><a class="s-product-carusel__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></a>
+									<div class="s-product-carusel__caption">
+										<div class="s-product-carusel__title"><a href="#">Эквайринг Verifone VX820</a>
+										</div>
+										<div class="s-product-carusel__price-wrap"><span class="text-gray">Цена:</span><span class="h6 strong">16 200 ₽</span>
+										</div><a class="btn btn-sm btn-block btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Добавить в корзину</a><a class="btn btn-sm btn-primary btn-outline-gray btn-block popup-with-move-anim" href="#one-click">Купить в 1 клик</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="s-product-carusel__panel"><a class="s-product-carusel__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></a>
+									<div class="s-product-carusel__caption">
+										<div class="s-product-carusel__title"><a href="#">Эквайринг Verifone VX820</a>
+										</div>
+										<div class="s-product-carusel__price-wrap"><span class="text-gray">Цена:</span><span class="h6 strong">16 200 ₽</span>
+										</div><a class="btn btn-sm btn-block btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Добавить в корзину</a><a class="btn btn-sm btn-primary btn-outline-gray btn-block popup-with-move-anim" href="#one-click">Купить в 1 клик</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="s-product-carusel__panel"><a class="s-product-carusel__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slide-prod.jpg" alt=""/></a>
+									<div class="s-product-carusel__caption">
+										<div class="s-product-carusel__title"><a href="#">Эквайринг Verifone VX820</a>
+										</div>
+										<div class="s-product-carusel__price-wrap"><span class="text-gray">Цена:</span><span class="h6 strong">16 200 ₽</span>
+										</div><a class="btn btn-sm btn-block btn-primary popup-with-move-anim" href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ">Добавить в корзину</a><a class="btn btn-sm btn-primary btn-outline-gray btn-block popup-with-move-anim" href="#one-click">Купить в 1 клик</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- end s-product-carusel-->
+			<!-- start s-contact-new-->
+			<section class="s-contact-new section" id="s-contact-new">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-md-auto">
+							<div class="section-title">
+								<h2>Получить <span class="text-primary">консультацию</span></h2>
+							</div>
+							<div class="s-contact-new__text">Свяжитесь с&nbsp;нами любым удобным способом, по&nbsp;телефону, эл. почте или воспользуйтесь любым из&nbsp;мессенджеров:
+							</div>
+							<div class="soc-block"><a class="soc-block__item soc-block__item--telegram" href="#">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg></a><a class="soc-block__item soc-block__item--whatsapp" href="#">
+								<svg class="icon icon-whatsapp ">
+									<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+								</svg></a><a class="soc-block__item soc-block__item--viber" href="#">
+								<svg class="icon icon-viber ">
+									<use xlink:href="img/svg/sprite.svg#viber"></use>
+								</svg></a><a class="soc-block__item soc-block__item--vk" href="#">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg></a>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col-lg-auto">
+									<div class="s-contact-new__img-wrap"><img class="res-i lazy" src="#" data-src="img/@2x/man-circle.png" alt=""/>
+									</div>
+								</div>
+								<div class="col">
+									<div class="s-contact-new__name">Нестеров Андрей
+									</div>
+									<div class="s-contact-new__prof">Коммерческий директор
+									</div><a class="s-contact-new__tel" href="tel:8(800)500-57-48">
+									<svg class="icon icon-phone-receiver ">
+										<use xlink:href="img/svg/sprite.svg#phone-receiver"></use>
+									</svg>8 (800) 500-57-48</a><br/><a class="s-contact-new__mail" href="mailto:sale@datexsoft.ru">sale@datexsoft.ru</a><br/><a class="s-contact-new__btn btn-primary btn btn--white popup-with-move-anim" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок" data-btn="Заказать звонок">Заказать звонок</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end s-contact-new-->
+			<footer class="footer block-with-lazy">
+				<div class="footer__body">
+					<div class="container">
+						<div class="row">
+							<div class="col"><a class="scroll-link" href="#header-block">
+									<div class="row row--sm align-items-center">
+										<div class="col-sm-auto"><img class="lazy" src="#" data-src="img/logo.png" alt=""/></div>
+										<div class="col samll d-none d-lg-block">Лучшая проектная команда в Самаре</div>
+									</div></a></div>
+							<div class="col-sm-auto">
+								<div class="soc"><a class="soc__item" href="" target="_blank">
+									<svg class="icon icon-vk ">
+										<use xlink:href="img/svg/sprite.svg#vk"></use>
+									</svg></a><a class="soc__item" href="" target="_blank">
+									<svg class="icon icon-fb ">
+										<use xlink:href="img/svg/sprite.svg#fb"></use>
+									</svg></a><a class="soc__item" href="" target="_blank">
+									<svg class="icon icon-inst ">
+										<use xlink:href="img/svg/sprite.svg#inst"></use>
+									</svg></a><a class="soc__item" href="" target="_blank">
+									<svg class="icon icon-youtube ">
+										<use xlink:href="img/svg/sprite.svg#youtube"></use>
+									</svg></a><a class="soc__item" href="" target="_blank">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg></a><a class="soc__item" href="" target="_blank">
+									<svg class="icon icon-twitter ">
+										<use xlink:href="img/svg/sprite.svg#twitter"></use>
+									</svg></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="footer__logo">
+									<svg class="icon icon-1c ">
+										<use xlink:href="img/svg/sprite.svg#1c"></use>
+									</svg>Сертифицированные партнеры 1С
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__foot">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm">© Datexsoft 2019. Все&nbsp;права&nbsp;защищены.</div>
+							<div class="footer__col col-sm-auto text-center"><a href="#" target="_blank">Политика конфиденциальности</a><a href="#" target="_blank">Пользовательское соглашение</a>
+							</div>
+							<div class="col text-sm-right"><a class="footer__developer" href="http://thepackers.ru/" target="_blank"> <span>Разработка сайта – </span> 
+								ThePackers.ru</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
+			<form>
+				<div class="text-center">
+					<div class="form-wrap__title form-wrap__title--js"> 
+					</div>
+					<div class="form-wrap__title-sub form-wrap__title-sub--js"> 
+					</div>
+				</div>
+				<input class="order" type="hidden"/>
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="name" placeholder="Введите имя"/>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Введите телефон" required="required"/>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
+				</div>
+				<!-- +e.input-wrap-->
+				<button class="form-wrap__btn" type="submit">
+				</button>
+				<div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
+				</div>
+			</form>
+		</div>
+		<!-- #modal-call-->
+		<div class="order-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="order">
+			<div class="order-modal__modal-title">Товар добавлен в корзину
+			</div>
+			<div class="order-modal__body">
+				<div class="row">
+					<div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
+					<div class="col">
+						<div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</a>
+						</div>
+						<div class="order-modal__art">Артикул: 4601546041654
+						</div>
+						<div class="order-modal__price">Цена:
+							<div class="order-modal__price-block">16 200<span class="i-font">o</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order-modal__footer">
+				<div class="row">
+					<div class="col-12 col-sm-auto"><a class="order-modal__btn btn-primary" href="#order-thanks">оформить заказ</a>
+					</div>
+					<div class="col-12 col-sm">
+						<div class="order-modal__info">Мы свяжемся с Вами в течение часа после оформления заказа.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="order-modal arend-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="arend">
+			<div class="order-modal__modal-title text-center">Арендовать
+			</div>
+			<div class="order-modal__body">
+				<div class="row">
+					<div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
+					<div class="col">
+						<div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
+						</div>
+						<div class="order-modal__art">Артикул: 4601546041654
+						</div>
+						<div class="order-modal__price">Цена:
+							<div class="order-modal__price-block bg-light">от 1 200<span class="i-font">o</span>/мес.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order-modal__footer text-center">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__modal-title">Заполните форму и мы свяжемся с Вами в&nbsp;течение рабочего дня.
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="name" placeholder="Ваше имя"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Ваш телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
+						</div>
+						<!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">отправить заявку</a>
+						<div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="order-modal arend-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="one-click">
+			<div class="order-modal__modal-title text-center">Купить в один клик
+			</div>
+			<div class="order-modal__body">
+				<div class="row">
+					<div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
+					<div class="col">
+						<div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
+						</div>
+						<div class="order-modal__art">Артикул: 4601546041654
+						</div>
+						<div class="order-modal__price">Цена:
+							<div class="order-modal__price-block">16 200<span class="i-font">o</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order-modal__footer text-center">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__modal-title">Заполните форму и мы свяжемся с Вами в&nbsp;течение рабочего дня.
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="name" placeholder="Ваше имя"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Ваш телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
+						</div>
+						<!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">оформить заказ</a>
+						<div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="order-modal arend-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="basket-modal">
+			<div class="order-modal__modal-title text-center">Оформить заказ
+				<div class="order-modal__modal-subtitle text-center">Заполните форму и мы свяжемся с Вами в течение 20 минут.
+				</div>
+			</div>
+			<div class="order-modal__footer text-center">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="name" placeholder="Ваше имя"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Ваш телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">отправить заявку</a>
+						<div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form text-center" id="thanks">
+			<div class="form-wrap__title">Спасибо за обращение!
+			</div>
+			<div class="form-wrap__title-sub">Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей
+			</div>
+		</div>
+		<!-- modal-->
+		<div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form text-center" id="order-thanks">
+			<div class="form-wrap__title">Спасибо за обращение!
+			</div>
+			<div class="form-wrap__title-sub">Мы свяжемся с Вами в течение&nbsp;часа и&nbsp;проконсультируем по любому вопросу.
+			</div>
+		</div>
+		<!-- modal-->
+		<div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form text-center" id="arend-thanks">
+			<div class="form-wrap__title">Спасибо за обращение!
+			</div>
+			<div class="form-wrap__title-sub">Мы свяжемся с Вами в течение рабочего дня.
+			</div>
+		</div>
+		<!-- modal-->
+		<div class="modal-team zoom-anim-dialog mfp-hide modal-win modal-win modal-win--lg" id="modal-team">
+			<div class="row">
+				<div class="col-xxl-6 col-sm-5">
+					<div class="row row--sm align-items-center">
+						<div class="col-auto col-sm">
+							<picture> <img src="#" alt=""/></picture>
+						</div>
+						<div class="col d-sm-none">
+							<h3>#</h3>
+							<div class="modal-team__small-text"> 
+							</div>
+							<div class="modal-team__logo">
+								<svg class="icon icon-1c ">
+									<use xlink:href="img/svg/sprite.svg#1c"></use>
+								</svg>Сертифицированные партнеры 1С
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="d-none d-sm-block">
+						<h3>#</h3>
+						<div class="modal-team__small-text"> 
+						</div>
+						<div class="modal-team__logo">
+							<svg class="icon icon-1c ">
+								<use xlink:href="img/svg/sprite.svg#1c"></use>
+							</svg>Сертифицированные партнеры 1С
+						</div>
+					</div>
+					<p>  </p><a class="modal-team__btn btn-primary popup-with-move-anim" href="#modal-call" data-title="Обсудить проект" data-btn="Обсудить проект">обсудить проект </a>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-team-->
+		<div class="modal-map zoom-anim-dialog mfp-hide modal-win modal-win modal-win--lg" id="modal-map"> 
+			<script>
+				var map;
+				function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 17,
+				//- center: new google.maps.LatLng(53.98205856875258,88.80421049999992),
+				center: new google.maps.LatLng(53.19045,50.171532880950885),
+				mapTypeId: 'roadmap',
+				styles: [
+						{
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"color": "#f5f5f5"
+								}
+							]
+						},
+						{
+							"elementType": "labels.icon",
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"elementType": "labels.text.fill",
+							"stylers": [
+								{
+									"color": "#616161"
+								}
+							]
+						},
+						{
+							"elementType": "labels.text.stroke",
+							"stylers": [
+								{
+									"color": "#f5f5f5"
+								}
+							]
+						},
+						{
+							"featureType": "administrative.land_parcel",
+							"elementType": "labels.text.fill",
+							"stylers": [
+								{
+									"color": "#bdbdbd"
+								}
+							]
+						},
+						{
+							"featureType": "poi",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"color": "#eeeeee"
+								}
+							]
+						},
+						{
+							"featureType": "poi",
+							"elementType": "labels.text.fill",
+							"stylers": [
+								{
+									"color": "#757575"
+								}
+							]
+						},
+						{
+							"featureType": "poi.park",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"color": "#e5e5e5"
+								}
+							]
+						},
+						{
+							"featureType": "poi.park",
+							"elementType": "labels.text.fill",
+							"stylers": [
+								{
+									"color": "#9e9e9e"
+								}
+							]
+						},
+						{
+							"featureType": "road",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"color": "#ffffff"
+								}
+							]
+						},
+						{
+							"featureType": "road.arterial",
+							"elementType": "labels.text.fill",
+							"stylers": [
+								{
+									"color": "#757575"
+								}
+							]
+						},
+						{
+							"featureType": "road.highway",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"color": "#dadada"
+								}
+							]
+						},
+						{
+							"featureType": "road.highway",
+							"elementType": "labels.text.fill",
+							"stylers": [
+								{
+									"color": "#616161"
+								}
+							]
+						},
+						{
+							"featureType": "road.local",
+							"elementType": "labels.text.fill",
+							"stylers": [
+								{
+									"color": "#9e9e9e"
+								}
+							]
+						},
+						{
+							"featureType": "transit.line",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"color": "#e5e5e5"
+								}
+							]
+						},
+						{
+							"featureType": "transit.station",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"color": "#eeeeee"
+								}
+							]
+						},
+						{
+							"featureType": "water",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"color": "#c9c9c9"
+								}
+							]
+						},
+						{
+							"featureType": "water",
+							"elementType": "labels.text.fill",
+							"stylers": [
+								{
+									"color": "#9e9e9e"
+								}
+							]
+						}
+					]
+				});
+				var iconBase = 'img/flag.png';
+				var icons = {
+				
+				info: {
+				icon: iconBase
+				}
+				};
+				var features = [
+				{
+				position: new google.maps.LatLng(53.19045,50.171532880950885),
+				type: 'info',
+				title: 'г. Красноярск',
+				}, 
+				//- {
+				//- position: new google.maps.LatLng(54.999397069703306,82.95985649999986),
+				//- type: 'info',
+				//- title: 'г. Новосибирск',
+				//- },  
+				];
+				// Create markers.
+				features.forEach(function(feature) {
+				var marker = new google.maps.Marker({
+				position: feature.position,
+				icon: icons[feature.type].icon,
+				map: map,
+				title: feature.title,
+				//- title: title
+				});
+				});
+				}
+			</script>
+			<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10&amp;callback=initMap"></script>
+			<div id="map"></div>
+		</div>
+		<div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-rent2">
+			<form>
+				<div class="text-center">
+					<div class="form-wrap__title form-wrap__title--sm form-wrap__title--js"> 
+					</div>
+				</div>
+				<input class="order" type="hidden"/>
+				<div class="text-center strong">Выберите программу:</div>
+				<div class="form-wrap__input-wrap form-group">
+					<select class="form-wrap__input form-control">
+						<option value="#">1С:Бухгалтерия</option>
+						<option value="#">1С:Бухгалтерия</option>
+						<option value="#">1С:Бухгалтерия</option>
+						<option value="#">1С:Бухгалтерия</option>
+					</select>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="form-wrap__title-sub text-center text-body mb-2">Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение рабочего дня.
+				</div>
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="name" placeholder="Введите имя"/>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Введите телефон" required="required"/>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail" required="required"/>
+				</div>
+				<!-- +e.input-wrap-->
+				<button class="form-wrap__btn" type="submit">
+				</button>
+				<div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
+				</div>
+			</form>
+		</div>
+		<!-- #modal-rent2-->
+		<!-- #modal-map-->
+		<script src="js/lazy.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/picturefill.min.js"></script>
+		<script src="libs/object-fit-images/dist/ofi.min.js"></script>
+		<!-- modal libs-->
+		<script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper-4.2.0/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<!-- for svg libs-->
+		<script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
+		<!-- /for svg libs-->
+		<script src="libs/jquery.inputmask.bundle.min.js"></script>
+		<script src="js/jquery.sticky-kit.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/customizer.js"></script>
+	</body>
+</html>

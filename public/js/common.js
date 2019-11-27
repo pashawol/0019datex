@@ -21,6 +21,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.tabscostumeSl('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
+	JSCCommon.customRange();
 	var $d3 = $(".input-range-js");
 	$d3.ionRangeSlider({
 		skin: "round",
@@ -36,8 +37,8 @@ jQuery(document).ready(function ($) {
 		var from = $inp.prop("value"); // reading input value
 
 		$('.counter-js').text(from); // FROM value
-	}); // $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/stat.png);"></div>')
-	// / закрыть меню при горизонтальном свайпе
+	});
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/cat.png);"></div>'); // / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -92,7 +93,7 @@ jQuery(document).ready(function ($) {
 		}); // закрыть/открыть мобильное меню
 
 		if (window.matchMedia("(max-width: 1200px)").matches) {
-			$(".menu-item-has-children,.addSvg").removeClass("active");
+			$(".menu-item-has-children--1c,.addSvg").removeClass("active");
 			$(".top-line-page-search").removeClass("d-none");
 			$(".top-submenu--js").hide();
 		}
@@ -251,12 +252,16 @@ jQuery(document).ready(function ($) {
 	});
 	var swiper6 = new Swiper('.slider-js', {
 		slidesPerView: 1,
-		spaceBetween: 10,
+		spaceBetween: 0,
 		speed: 400,
 		loop: true,
-		autoplay: {
-			delay: 6000
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4
 		},
+		// autoplay: {
+		//     delay: 6000
+		// },
 		pagination: {
 			el: $(this).find('.swiper-pagination'),
 			clickable: true
@@ -345,7 +350,7 @@ jQuery(document).ready(function ($) {
 	}); // Sticky block
 
 	$(".sticky-block--js").stick_in_parent({
-		offset_top: 170,
+		offset_top: 120,
 		parent: '.aside-block-js',
 		recalc_every: 1
 	});
@@ -359,6 +364,65 @@ jQuery(document).ready(function ($) {
 			scrollTop: destination
 		}, 1100);
 		return false;
+	}); // accordion
+
+	$(".showhide").click(function () {
+		$(this).toggleClass("active").next().slideToggle().parents().toggleClass("active");
+	});
+	$(".s-filter__btn--js").click(function () {
+		$(".s-filter-wrap").toggle();
+	});
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 4,
+		loop: true,
+		loopedSlides: 5,
+		//looped slides should be the same
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		lazy: {
+			loadPrevNext: true
+		}
+	});
+	var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 10,
+		loop: true,
+		loopedSlides: 5,
+		//looped slides should be the same
+		lazy: {
+			loadPrevNext: true
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		}
+	});
+	var prodCarusel = new Swiper('.s-product-carusel__slider--js', {
+		spaceBetween: 10,
+		slidesPerView: 4,
+		loop: true,
+		loopedSlides: 5,
+		//looped slides should be the same
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		lazy: {
+			loadPrevNext: true
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		},
+		// Responsive breakpoints
+		breakpoints: {
+			480: {
+				slidesPerView: 1
+			},
+			768: {
+				slidesPerView: 2
+			},
+			992: {
+				slidesPerView: 3
+			}
+		}
 	});
 });
 var JSCCommon = {
@@ -415,11 +479,29 @@ var JSCCommon = {
 	// /magnificPopupCall
 	mobileMenu: function mobileMenu() {
 		// закрыть/открыть мобильное меню
-		$(".menu-item-has-children > a,.addSvg>a").click(function (e) {
+		function search() {
+			var block = $(".top-line-page-search");
+
+			if (block.hasClass("d-none")) {
+				block.removeClass("d-none");
+			} else {
+				block.addClass("d-none");
+			}
+		}
+
+		$(".menu-item-has-children:not(.menu-item-has-children--1c) > a").click(function (e) {
 			e.preventDefault();
-			$(this).parent().toggleClass("active");
-			$(".top-line-page-search").toggleClass("d-none");
+			$(this).parent().toggleClass("active").siblings().removeClass("active");
+			search();
+			$(this).next().slideToggle(0);
+			$(".top-submenu--js").slideUp(0);
+		});
+		$(".menu-item-has-children--1c > a,.addSvg>a").click(function (e) {
+			e.preventDefault();
+			$(this).parent().toggleClass("active").siblings().removeClass("active");
+			search();
 			$(".top-submenu--js").slideToggle(0);
+			$(".sub-menu").attr('style', '');
 		});
 
 		function toggleMenu() {
@@ -441,26 +523,36 @@ var JSCCommon = {
 	},
 	// табы  . 
 	tabscostume: function tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content2').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
-		}); // $(".s-cloud").on('click', '.' + tab + '__btn(.active)', function(e) {
-		//     $(this).next().click();
+		var btn = $('.tabs__btn:not(.active)');
+		$('.tabs__caption').on('click', '.tabs__btn:not(.active)', function () {
+			getTab($(this));
+		}); // $(".s-cloud").on('click', '.' + tab +  
 
-		setTimeout(function run() {
+		function getTab(btn) {
+			btn.each(function () {
+				$(this).addClass('active').siblings().removeClass('active').closest('.tabs').find('.tabs__content2').hide().removeClass('active').eq($(this).index()).show().addClass('active');
+			});
+		}
+
+		;
+		var timer = setInterval(function () {
 			$('.s-cloud .tabs__btn.active ').each(function () {
-				if (!$(this).is(":last-child")) {
-					$(this).next().click();
-					setTimeout(run, 3000);
+				var th = $(this);
+
+				if (!th.is(":last-child")) {
+					getTab(th.next());
 				} else {
-					$('.s-cloud .tabs__btn:first-child').click();
-					setTimeout(run, 3000);
+					getTab($('.s-cloud .tabs__btn:first-child'));
 				}
 			});
 		}, 3000);
+		$('.s-cloud .tabs__btn').click(function () {
+			clearInterval(timer);
+		});
 	},
 	tabscostumeSl: function tabscostumeSl(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			console.log(1);
+			// console.log(1);
 			$(this).addClass('active').parent().siblings().find('.' + tab + '__btn').removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).parent().index()).fadeIn().addClass('active');
 		});
 	},
@@ -468,5 +560,66 @@ var JSCCommon = {
 	inputMask: function inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1} [(][0-9]{3}[)]-[0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7 (999)-999-99-99");
+	},
+	customRange: function customRange() {
+		$(".range-wrap").each(function () {
+			var _this = $(this);
+
+			var $d3 = _this.find(".slider-js");
+
+			var slider = $d3.ionRangeSlider({
+				skin: "round",
+				type: "double",
+				grid: false,
+				grid_snap: false,
+				hide_min_max: true,
+				hide_from_to: true,
+				onStart: function onStart(data) {
+					_this.find('.minus').val(data.from);
+
+					_this.find('.plus').val(data.to);
+				},
+				onChange: function onChange(data) {
+					_this.find('.minus').val(data.from);
+
+					_this.find('.plus').val(data.to);
+				},
+				onFinish: function onFinish(data) {
+					_this.find('.minus').val(data.from);
+
+					_this.find('.plus').val(data.to);
+				},
+				onUpdate: function onUpdate(data) {
+					_this.find('.minus').val(data.from);
+
+					_this.find('.plus').val(data.to);
+				}
+			});
+			var $d3_instance = slider.data("ionRangeSlider");
+			$(this).on('change  input  cut  copy  paste', '.minus', function () {
+				var th = $(this);
+				var data = th.val();
+				var min = +data; // th.val(data + ' т')
+
+				$d3_instance.update({
+					from: min
+				});
+			});
+			$(this).on('change  input  cut  copy  paste', '.plus', function () {
+				var th = $(this);
+				var data = th.val();
+				var max = +data; // th.val(data + ' т')
+
+				$d3_instance.update({
+					from: max
+				});
+			}); // $d3.on("change", function () {
+			// 	var $inp = $(this);
+			// 	var from = $inp.prop("value"); // reading input value
+			// 	var from2 = $inp.data("from"); // reading input data-from attribute
+			// 	_this.find('range-result--minus').val(from); // FROM value
+			// 	_this.find('range-result--plus').val(from); // FROM value
+			// });
+		});
 	}
 };

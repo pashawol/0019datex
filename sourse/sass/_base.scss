@@ -133,7 +133,13 @@ body {
 	span {
 		display: inline-block;
 	}
+	h4,
+	h3,
  h1,
+ .h1,
+ .h3,
+ .h4,
+ .h2,
 	>h2 {
 		font-size: inherit;
 
@@ -678,6 +684,11 @@ picture {
 
 }
 
+.btn-sm{
+	padding: rem(13.6) rem(10);
+	font-size: rem(16);
+}
+
 a {
 	@include mt;
 }
@@ -937,7 +948,15 @@ a {
 		}
 	}
 }
-
+.btn-outline-gray{
+	border: 2px solid $primary;
+	&:not(:hover) {
+		background-color: transparent;
+		border-color: $secondary;
+		border: 2px solid $secondary;
+		color: #6f7378 !important;
+	}
+}
 @include media-breakpoint-up(lg) {}
 
 @include media-breakpoint-up(md) {}
@@ -949,6 +968,7 @@ a {
 .page-head{
 	background-color: #ffffff;
 	padding-top: rem(30);
+	position: relative;
 	.breadcrumb{
 		margin-bottom: rem(2);
 	}
@@ -956,6 +976,33 @@ a {
 		padding-bottom: rem(5);
 	}
 }
+.page-head--bg{
+			color: #ffffff;
+			background-color: $body-color;
+			text-align: center;
+			@include media-breakpoint-up(sm) {
+
+				padding-top: rem(146);
+				padding-bottom: rem(146);
+			}
+			padding-top: rem(100);
+			padding-bottom: rem(100);
+			picture{
+				opacity: 0.4;
+			}
+			h1{ 
+				color: #ffffff;
+			}
+			.breadcrumb{
+				margin-bottom: rem(10);
+				&-item{
+					color: #c4c9ce;
+					&.active{
+						color: #ffffff;
+					}
+				}
+			}
+		}
 
 
 .cat-slider-nav{

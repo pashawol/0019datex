@@ -458,7 +458,10 @@
 			line-height: (26 / 16);
 			margin-bottom: rem(40);
 		}
-
+		&:not(.s-product__content--rew){
+			img {
+				margin-bottom: rem(26);
+			}
 		ul {
 			padding-left: rem(11);
 			list-style: none;
@@ -506,16 +509,7 @@
 			}
 		}
 
-		.table-svg {
-			width: 16px;
-			height: auto;
-			margin: 0 auto;
-		}
-
-		img {
-			margin-bottom: rem(26);
-		}
-
+		
 		ol {
 			font-size: 16px;
 			font-weight: 400;
@@ -540,6 +534,14 @@
 				}
 			}
 		}
+	}
+		.table-svg {
+			width: 16px;
+			height: auto;
+			margin: 0 auto;
+		}
+
+
 
 		.s-competences__item {
 			@include media-breakpoint-up(lg) {
@@ -679,7 +681,10 @@
 			tr {
 				border-bottom: 1px solid #dadde2;
 				position: relative;
-
+				@include mt;
+				&:hover{
+					background-color: $light;
+				}
 				.icon {
 					position: absolute;
 					@include a-cent(y);

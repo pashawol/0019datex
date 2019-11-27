@@ -1,5 +1,8 @@
 .s-cloud {
-		 padding-bottom: 0;
+	@include media-breakpoint-up(md) {
+
+		padding-bottom: 0;
+	}
 	.tabs{
 		&__caption{
 			display: block;
@@ -39,8 +42,8 @@
 					content: '';
 					position: absolute;
 					@include a-cent(y);
-					width: $h6-font-size;
-					height: $h6-font-size;
+					width: 20px;
+					height: 20px;
 					border: 2px solid $primary;
 					border-radius: 50%;
 					left: 0;
@@ -48,10 +51,24 @@
 				}
 			}
 			&__col{
-				min-height: rem(630);
+				@include media-breakpoint-up(md) {
+
+					min-height: 660px;
+					// display: block;
+					display: flex;
+					align-items: flex-end;
+					justify-content: flex-end;
+				}
+				display: none;
+				min-height: rem(230);
+				align-self: flex-end;
 			}
 			picture{
 
+			}
+
+			&__text{
+				font-weight: 300;
 			}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -166,35 +166,35 @@ mixin s-product()
 													tr
 														td Готовое решение для ведения бухгалтерского&nbsp;и налогового учета
 														td 
-															img.table-svg(src="img/svg/yes.svg")
+															img.table-svg(alt="" src="img/svg/yes.svg")
 														td 
-															img.table-svg(src="img/svg/yes.svg")
+															img.table-svg(alt="" src="img/svg/yes.svg")
 														td 
-															img.table-svg(src="img/svg/yes.svg")
+															img.table-svg(alt="" src="img/svg/yes.svg")
 													tr
 														td Подготовка бухгалтерской и налоговой
 														td 
-															img.table-svg(src="img/svg/no.svg")
+															img.table-svg(alt="" src="img/svg/no.svg")
 														td 
-															img.table-svg(src="img/svg/yes.svg")
+															img.table-svg(alt="" src="img/svg/yes.svg")
 														td 
-															img.table-svg(src="img/svg/yes.svg")
+															img.table-svg(alt="" src="img/svg/yes.svg")
 													tr
 														td Готовое решение для ведения бухгалтерского и налогового учета
 														td 
-															img.table-svg(src="img/svg/no.svg")
+															img.table-svg(alt="" src="img/svg/no.svg")
 														td 
-															img.table-svg(src="img/svg/yes.svg")
+															img.table-svg(alt="" src="img/svg/yes.svg")
 														td 
-															img.table-svg(src="img/svg/yes.svg")
+															img.table-svg(alt="" src="img/svg/yes.svg")
 													tr
 														td Подготовка бухгалтерской и налоговой 
 														td 
-															img.table-svg(src="img/svg/no.svg")
+															img.table-svg(alt="" src="img/svg/no.svg")
 														td 
-															img.table-svg(src="img/svg/no.svg")
+															img.table-svg(alt="" src="img/svg/no.svg")
 														td 
-															img.table-svg(src="img/svg/yes.svg")
+															img.table-svg(alt="" src="img/svg/yes.svg")
 														
 								.tabs__content2
 									+e.content
@@ -204,19 +204,19 @@ mixin s-product()
 											tbody
 												tr
 													td
-														img.table-svg(src="img/svg/yes.svg")
+														img.table-svg(alt="" src="img/svg/yes.svg")
 														|платформу «1С:Предприятие 8.2»
 												tr
 													td
-														img.table-svg(src="img/svg/yes.svg")
+														img.table-svg(alt="" src="img/svg/yes.svg")
 														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
 												tr
 													td
-														img.table-svg(src="img/svg/yes.svg")
+														img.table-svg(alt="" src="img/svg/yes.svg")
 														|платформу «1С:Предприятие 8.2»
 												tr
 													td
-														img.table-svg(src="img/svg/yes.svg")
+														img.table-svg(alt="" src="img/svg/yes.svg")
 														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
 										
 								.tabs__content2
@@ -254,6 +254,264 @@ mixin s-product()
 													+input("tel","tel","+7 (___)-___-__-__")( required class="bg-light")
 												.col-md-6.col-xl-12
 													+e.btn(type="submit") отправить
+												.col-12
+													+help-polite
+	// end s-product
+
+mixin s-product15()
+	// start s-product
+	+b.s-product.pt-0.section.lazy-background#s-product&attributes(attributes)
+		.container
+			+e.main-row.row.justify-content-center
+				.col-lg-5.col-sm-6.col-xl-3.text-center.order-first
+					// Swiper
+					+e.sliders-wrap
+						+e.btn-play(class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto")
+						.swiper-container.gallery-top
+							.swiper-wrapper
+								- for (var x = 0; x < 5; x++)
+									.swiper-slide()
+										img.res-i.swiper-lazy(src="#" data-src="img/@2x/slide-prod.jpg", alt="")
+						.swiper-container.gallery-thumbs
+							.swiper-wrapper
+								- for (var x = 0; x < 5; x++)
+									.swiper-slide
+										img.res-i.swiper-lazy(src="#" data-src="img/@1x/slide-prod.jpg", alt="")
+				
+				 
+				.col-xl-3.col-lg-5.col-sm-6.order-sm-0.order-last
+					+e.panel
+						.row.align-items-center.mb-3
+							.col.fw-500 Количество:
+							.col-auto
+								+b.add-block
+										+e.BUTTON.btn--minus
+										+e.INPUT.input(type="number" value="1")
+										+e.BUTTON.btn--plus
+						
+						.row.align-items-end.mb-1
+							.col.fw-500.mb-2 Итог:
+							.col-auto.text-right
+								.strike.small.text-gray 423 345 ₽
+								.h6.strong 233 800 ₽
+								
+						
+						a.btn.btn-block.main-btn.btn-primary.popup-with-move-anim(href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Добавить в корзину
+						a.btn.btn-primary.btn-outline-gray.btn-block.popup-with-move-anim(href="#one-click") Купить в 1 клик
+					.text-center
+						+e.link-price(href="#") 
+							+icon("percent")
+							div
+								span Запросить оптовые цены
+				.col-12.col-lg-10.col-12.col-xl-6.order-xl-first
+					.row.align-items-center
+						.col-auto
+							+e.label(style="background-color: #00c257;") новый товар
+						.col-auto
+							+e.art Артикул: 4601546041654
+					+e.sm-title Выберите комплектацию:
+					+form-wrap
+						mixin product-radio(t, p)
+							+b.LABEL.radio-prod
+								input(type='radio' name="additional" )&attributes(attributes)
+								+e.SPAN.wrapper
+									+e.SPAN.lab
+									span.row
+										+e.SPAN.title.col=t
+										+e.SPAN.price.col-auto=p
+											span.i-font o
+						+product-radio("Кассатка 7 (ПО Билетный режим) без ФН","13 900")(checked)
+						+product-radio(" Кассатка 7 (ПО Билетный режим) с ФН на 13 мес","20 100")
+						+product-radio("Кассатка 7 (ПО Билетный режим) с ФН на 15 мес","23 150")
+						+product-radio("Кассатка 7 (ПО Билетный режим) с ФН на 18 мес","25 150")
+		+e.tabs.tabs
+			.tabs__caption
+				.container
+					.row
+						+e.tabs-col.col-12.col-xl-10
+							.tabs__btn.active 
+								.tabs-btn-wrapper
+									span Назначение
+							.tabs__btn 
+								.tabs-btn-wrapper
+									span Характеристики
+							.tabs__btn 
+								.tabs-btn-wrapper
+									span Комплектация
+							.tabs__btn 
+								.tabs-btn-wrapper
+									span Сопутствующие товары
+							.tabs__btn 
+								.tabs-btn-wrapper
+									span Сравнение
+							.tabs__btn 
+								.tabs-btn-wrapper
+									span Услуги
+							
+							.tabs__btn 
+								.tabs-btn-wrapper
+									span Обсуждение
+							
+			+e.content-block
+				.container
+					.row
+						.col-12.col-xl
+							.tabs__wrap
+								.tabs__content2.active
+									+e.content
+										h4 Описание товара “Смарт-терминал Эвотор 5”
+										p Программный продукт 
+											strong «1С:Бухгалтерия 8 КОРП» 
+											|предназначен для автоматизации бухгалтерского и&nbsp;налогового учета, включая подготовку обязательной (регламентированной) отчетности в&nbsp;организациях, осуществляющих любые виды коммерческой деятельности: оптовую и&nbsp;розничную торговлю, комиссионную торговлю (включая субкомиссию), оказание услуг, производство и&nbsp;т.&nbsp;д. Программа предоставляет возможность вести бухгалтерский и&nbsp;налоговый учет сразу нескольких организаций (юридических лиц) в&nbsp;общей информационной базе.
+										h6 Маркированный список:
+										ul
+											li Авизо по ОС.
+											li Авизо по МПЗ.
+											li 
+												a(href="#") Авизо по расчетам.
+											li Авизо по прочим операциям.
+										h6 Нумированный список:
+										ol
+											li Разработана специализированная подсистема подготовки уведомления о контролируемых сделках
+											li При подготовке уведомления не&nbsp;требуется повторно вводить или изменять данные в&nbsp;хозяйственных операциях, отраженных в&nbsp;информационной базе. Сформированное уведомление можно распечатать.
+											li Авизо по прочим операциям.
+										img(src="img/content-img.jpg" alt="")
+										h6 Двухуровневый маркированный список:
+										ul
+											li Авизо по ОС.
+											li Авизо по МПЗ.
+												ul
+													li
+														a(href="#") Авизо по расчетам.
+													li Авизо по прочим операциям.
+											li Авизо по МПЗ.
+								.tabs__content2
+									+e.content
+										h4 Характеристики товара “Смарт-терминал Эвотор 5”
+										+b.table-wrap
+											table
+												mixin tr(t1,t2)
+													tr
+														td= t1
+														td= t2
+												+tr("НСИ:		",'НСИ		')
+												+tr("Торговля:",'Торговля		')
+												+tr("Склад:",'Склад		')
+												+tr("Казначейство:",'Казначейство		')
+												+tr("Монитор целевых показателей:",'Монитор целевых показателей		')
+												+tr("Планирование:",'Планирование')
+												+tr("Управление ассортиментом:",'Управление ассортиментом')
+								.tabs__content2
+									+e.content
+										h4 Комплектация Смарт-терминала Эвотор 5
+										p Комплект Смарт-терминал Эвотор 5 включает:
+										table.composition
+											tbody
+												tr
+													td
+														img.table-svg(alt="" src="img/svg/yes.svg")
+														|платформу «1С:Предприятие 8.2»
+												tr
+													td
+														img.table-svg(alt="" src="img/svg/yes.svg")
+														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
+												tr
+													td
+														img.table-svg(alt="" src="img/svg/yes.svg")
+														|платформу «1С:Предприятие 8.2»
+												tr
+													td
+														img.table-svg(alt="" src="img/svg/yes.svg")
+														|прикладное решение (конфигурацию) «Бухгалтерия КОРП»
+								.tabs__content2
+									+e.content
+										h4 Сопутствующие товары с Смарт-терминал Эвотор 5
+										+s-competences-card-15()(class="competences-card")
+								.tabs__content2
+									+e.content
+										h4 Сопутствующие товары с Смарт-терминал Эвотор 5
+										.table-wrapper
+											table.functional.compare
+												thead
+													tr
+														th Смарт-терминал Эвотор 5
+														th 
+															+e.img-wrap(href="#") 
+																img(src="img/@2x/slide-prod.jpg", alt="")
+																+e.DIV.title
+																	span Касатка 7
+														th
+															+e.img-wrap(href="#") 
+																img(src="img/@2x/slide-prod.jpg", alt="")
+																+e.DIV.title
+																	span Касатка 7_1
+														th
+															+e.img-wrap(href="#") 
+																img(src="img/@2x/slide-prod.jpg", alt="")
+																+e.DIV.title
+																	span Касатка 7_2
+												tbody
+													 
+													tr
+														td Готовое решение для ведения бухгалтерского&nbsp;и налогового учета
+														td 
+															img.table-svg(alt="" src="img/svg/yes.svg")
+														td 
+															img.table-svg(alt="" src="img/svg/yes.svg")
+														td 
+															img.table-svg(alt="" src="img/svg/yes.svg")
+													tr
+														td Подготовка бухгалтерской и налоговой
+														td 
+															img.table-svg(alt="" src="img/svg/no.svg")
+														td 
+															img.table-svg(alt="" src="img/svg/yes.svg")
+														td 
+															img.table-svg(alt="" src="img/svg/yes.svg")
+													tr
+														td Готовое решение для ведения бухгалтерского и налогового учета
+														td 
+															img.table-svg(alt="" src="img/svg/no.svg")
+														td 
+															img.table-svg(alt="" src="img/svg/yes.svg")
+														td 
+															img.table-svg(alt="" src="img/svg/yes.svg")
+													tr
+														td Подготовка бухгалтерской и налоговой 
+														td 
+															img.table-svg(alt="" src="img/svg/no.svg")
+														td 
+															img.table-svg(alt="" src="img/svg/no.svg")
+														td 
+															img.table-svg(alt="" src="img/svg/yes.svg")
+														
+								
+								.tabs__content2
+									+e.content
+										h4 Список услуг
+										p Список услуг для Смарт-терминала Эвотор 5:
+										+s-competences-card-15()(class="competences-card")
+								.tabs__content2
+									+e.content--rew
+										+s-comments-15()
+
+										
+						.col-12.col-xl-3
+							.row.aside-block-js(data-sticky-container)
+								.col-12
+									+e.extra-block--truck
+										+icon("truck")
+										span Доставка товара по&nbsp;всей территории&nbsp;РФ
+								.col-12.sticky-block--js(data-margin-top='150' data-sticky-for="1200")
+									+e.help-block
+										+form-wrap
+											.help-title Нужна консультация?
+											.help-subtitle Закажите консультацию в&nbsp;один&nbsp;клик!
+											.row
+												.col-md-6.col-xl-12
+													+input("tel","tel","+7 (___)-___-__-__")( required class="bg-light")
+												.col-md-6.col-xl-12
+													+e.btn(type="submit") Отправить
 												.col-12
 													+help-polite
 	// end s-product

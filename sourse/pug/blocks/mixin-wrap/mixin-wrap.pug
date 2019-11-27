@@ -119,12 +119,50 @@ mixin soc()
 		+item()
 			+icon("youtube")
 		
+		+item()
+			+icon("telegram")
+		
+		+item()
+			+icon("twitter")
+		
 mixin mnu()
-	- var nav= { "Проектное направление":"#","О компании":"#","Контакты":"#"}
+	- var nav= { "О компании":"#","Контакты":"#"}
 	ul.menu
-		li.menu-item.menu-item-has-children
+		li.menu-item.menu-item-has-children.menu-item-has-children--1c
 			a(href="#") Программы «1С»
 			+icon("top-nav-arrow")
+		
+		li.menu-item.menu-item-has-children
+			a(href="#") Торговое оборудование
+			ul.sub-menu
+				li.menu-item.menu-item-has-children
+					a(href="#")
+						span.link-text Торговое оборудование
+					ul.sub-menu
+						mixin item(i,t)
+							li.menu-item
+								a(href="#")
+									span.img-wrap
+										img(src=`img/@2x/menu-sm-${i}.jpg`, alt="")
+									span.link-text
+										span= t
+						+item('1',"Онлайн-кассы")
+						+item('2',"Сканеры штрих-кода")
+						+item('3',"Терминалы сбора данных")
+						+item('4',"Принтеры этикеток")
+						+item('5',"ПОС-Перифирия")
+						+item('6',"Моноблоки")
+						+item('7',"Электронные весы")
+						+item('8','Эквайринг (безналичная оплата)') 
+						+item('9',"Детекторы валют")
+						+item('10',"Счетчики банкноты манет")
+						+item('11',"Расходные материалы")
+						+item('12',"Принтер чеков")
+						+item('13','Аксессуары для оборудования') 
+						+item('14',"Программное обеспечение")
+						+item('15',"Услуги")
+						+item('16',"Распродажа")
+
 			//- ul.sub-menu
 				//- li.menu-item: a(href="#") Строительство загородных домов
 				//- li.menu-item: a(href="#") Отделка загородных домов
@@ -156,7 +194,7 @@ mixin control-sl()
 
 mixin mobile-menu()
 	// start mobile-menu
-	+b.mobile-menu-page.section.block-with-lazy#mobile-menu&attributes(attributes)
+	+b.mobile-menu-page.section.block-with-lazy&attributes(attributes)
 		.container
 			.row
 				.col-lg-4

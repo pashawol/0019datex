@@ -19,10 +19,10 @@ mixin s-cloud()
 							+e.title Техническая поддержка 24/7
 							+e.text Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст  сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
 				+e.col.col-lg-6.align-self-end
-					mixin cont()
+					mixin cont(i)
 						.tabs__content2.text-center&attributes(attributes)
-							+pic2("girl.png")
-					+cont()(class="active")
-					+cont()
-					+cont()
+							+pic2(`girl${i}.png`)
+					+cont("-1")(class="active")
+					+cont("-2")
+					+cont("-3")
 	// end s-cloud

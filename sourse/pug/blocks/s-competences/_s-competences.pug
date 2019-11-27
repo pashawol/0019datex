@@ -255,3 +255,36 @@ mixin s-competences-2()
 			+item('16','1С:Бухгалтерия государственного учреждения 8 ПРОФ','учёт автотранспорта и транспортная логистика')
 			//- +control-sl()
 	// end s-competences
+
+
+mixin s-competences-card-15()
+	// start s-competences
+	+b.s-competences&attributes(attributes)
+		mixin item(t) 
+			+e.item
+				//- .before 0
+				//- 	= i
+				+e.tabs-row.row
+					.col-md-6.col-12.col-lg-8.col-xl-6.text-left
+						.row
+							+e.col-img.col-auto.d-none.d-xl-block
+								+e.img-wrapper
+									img(src="img/@2x/tab-img.jpg" alt="")
+							.col
+								+e.item-title
+									a(href="#")=t
+					//- h6= or
+					.col-12.col-md
+						.row
+							+e.main-price.col-6.col-md-6.d-flex.d-lg-block.align-items-center.text-center
+								+e.price.d-md-none.d-xl-inline-block.text-center.text-gray Цена: 
+									| 
+									span.h6.strong.text-body 16 200 ₽
+							+e.btn-col.col-6.col-md-6
+								+e.btn.btn-primary.btn-sm.popup-with-move-anim(href="#order" data-title="купить" data-order=t data-btn="Купить") Купить
+									span
+			// /+e.item
+		- for (var x = 0; x < 7; x++)
+			+item('Эквайринг Verifone VX820') 
+			//- +control-sl()
+	// end s-competences

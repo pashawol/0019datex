@@ -104,9 +104,31 @@ mixin s-home-slider()
 							+home-slide("1")
 							+home-slide("3")
 							+home-slide("2")
+	// end s-home-slider
+	
+mixin s-home-slider2()
+	// start s-home-slider
+	+b.s-catalog-slider.section.block-with-lazy#s-catalog-slider&attributes(attributes)
+		+e.main-block.bg-wrap
+			//- +pic("slider-bg","jpg","bg")(class="picture-bg")
+			+e.slider-wrapper
+				+e.slider-nav.d-none.d-md-block
+					//- .container
+					+e.slider-prev.cat-slider-nav
+						+icon("slider-prev")
+					+e.slider-next.cat-slider-nav
+						+icon("slider-next") 
+				+e.slider--shop.slider-js.swiper-container#home-slider
+					.swiper-wrapper
+						mixin home-slide(i)
+							+e.slide--shop.swiper-slide.text-center.d-block
+								a(href="#").text-center
+									+e.IMG.image.object-fit-js.d-none.d-sm-block( class="swiper-lazy" src="#" data-src=`img/@2x/main-slide.jpg` alt="")
+									+e.IMG.image.object-fit-js.d-sm-none( class="swiper-lazy" src="#" data-src=`img/@2x/main-slide-sm.jpg` alt="")
 
-
-			
+						+home-slide("1")
+						+home-slide("3")
+						+home-slide("2")
+					.swiper-pagination.d-block
 				
-
 	// end s-home-slider

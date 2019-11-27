@@ -1,0 +1,42 @@
+mixin s-trade-software()
+	// start s-trade-software
+	+b.SECTION.s-trade-software.section#s-trade-software.bg-light&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Торговое оборудование
+				
+			.row
+
+				mixin item(i,t)
+					+e.col.col-lg-3.col-md-4.col-6
+						+e.item(href="#")
+							+e.DIV.img-wrap
+								//- +pic2(`s-trade-software-${i}`)
+								img.res-i.lazy(src="#" data-src=`img/@2x/s-trade-software-${i}.jpg`, alt="")
+							+e.DIV.title
+								if block
+									block
+								else
+									span= t
+					// /+e.col.col-lg-3.col-md-4.col-6
+				+item('1',"Онлайн-кассы")
+				+item('2',"Сканеры штрих-кода")
+				+item('3',"Терминалы сбора данных")
+				+item('4',"Принтеры этикеток")
+				+item('5',"ПОС-Перифирия")
+				+item('6',"Моноблоки")
+				+item('7',"Электронные весы")
+				+item('8')
+					span Эквайринг 
+						br
+						| (безналичная оплата)
+				+item('9',"Детекторы валют")
+				+item('10',"Счетчики банкноты манет")
+				+item('11',"Расходные материалы")
+				+item('12',"Принтер чеков")
+				+item('13')
+					span Аксессуары для&nbsp;оборудования
+				+item('14',"Программное обеспечение")
+				+item('15',"Услуги")
+				+item('16',"Распродажа")
+	// end s-trade-software

@@ -10,7 +10,9 @@
 		// flex-wrap: wrap;
 		padding: rem(30);
 		@include mt;
+		font-size: $small;
 		margin-bottom: rem(30);
+	
 		&:not(:hover){
 			.btn-primary{
 				border: 2px solid #dadde2;
@@ -26,6 +28,7 @@
 	.btn-primary{
 		width: rem(190);
 		border: 2px solid transparent;
+		padding: rem(13) rem(10);
 	}
 	&__img-wrap{
 		text-align: center;
@@ -36,6 +39,9 @@
 			margin-right: rem(30);
 		}
 		margin-bottom: rem(20);
+		img{
+			max-width: 90px;
+		}
 	}
 	&__title{
 		@extend .h6;

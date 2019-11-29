@@ -1,7 +1,7 @@
 mixin s-filter()
 	button.s-filter__btn.s-filter__btn--js.btn.btn-block.btn-primary.d-lg-none.mb-3.ttu(type='button')
-		| Фильтр товаров
-		span
+		strong.d-none Свернуть фильтр
+		strong Фильтр товаров  
 	.s-filter-wrap.d-lg-flex
 		// start s-filter
 		+b.s-filter&attributes(attributes) 
@@ -39,10 +39,7 @@ mixin s-filter()
 				+range("1855","2351")
 			+e.group
 				+e.btn-wrap
-					+e.BUTTON.btn.btn-primary(type="button") Применить
-						span
-					+e.BUTTON.btn--outline.btn-primary(type="button") Сбросить фильтр
-						span
-
+					+e.BUTTON.btn.btn-primary(type="button") Применить 
+					+e.BUTTON.btn--outline.btn-outline-secondary(type="button") Сбросить фильтр
 
 		// end s-filter

@@ -336,7 +336,7 @@
 		}
 
 		@include media-breakpoint-down(md) {
-			justify-content: space-around;
+			// justify-content: space-around;
 		}
 	}
 
@@ -369,6 +369,10 @@
 		}
 
 		&__btn {
+			@include media-breakpoint-down(md) {
+				flex-grow: 0;
+				margin-right: rem(10);
+			}
 			@include media-breakpoint-down(sm) {
 				margin-bottom: rem(10);
 				padding: rem(5) rem(10);
@@ -386,8 +390,13 @@
 			border: 2px solid #fff;
 
 			@include media-breakpoint-down(md) {
+				padding-left: rem(10);
+				padding-right: rem(10); 
+			}
+			@include media-breakpoint-down(sm) {
 				justify-content: start;
 				padding-left: rem(10);
+				max-width: rem(300);
 			}
 
 			&:hover {
@@ -562,7 +571,13 @@
 			border-radius: 3px;
 			border: 1px solid #dadde2;
 			margin-bottom: rem(30);
-
+			tr,
+			td{
+				vertical-align: middle;
+				img{
+					margin-bottom: 0;
+				}
+			}
 			.icon {
 				font-size: 14px;
 
@@ -953,4 +968,18 @@
 		}
 	}
 
+}
+
+
+@include media-breakpoint-down(lg) {
+  
+  .s-product__help-block{
+
+    .custom-input{
+      margin-top: rem(20);
+    }
+    .custom-input__lab{
+      margin-top: rem(-5);
+    }
+  }
 }

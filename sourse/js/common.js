@@ -373,6 +373,7 @@ jQuery(document).ready(function ($) {
     })
     
     $(".s-filter__btn--js").click(function(){
+        $(this).toggleClass('active').find("strong").toggleClass("d-none")
 		$(".s-filter-wrap").toggle();
     })
     
@@ -380,18 +381,18 @@ jQuery(document).ready(function ($) {
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
         slidesPerView: 4,
-        loop: true, 
-        loopedSlides: 5, //looped slides should be the same
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
+        // loop: true, 
+        // loopedSlides: 5, //looped slides should be the same
+        // watchSlidesVisibility: true,
+        // watchSlidesProgress: true,
         lazy: {
             loadPrevNext: true,
           },
       });
       var galleryTop = new Swiper('.gallery-top', {
         spaceBetween: 10,
-        loop:true,
-        loopedSlides: 5, //looped slides should be the same
+        // loop:true,
+        // loopedSlides: 5, //looped slides should be the same
         lazy: {
             loadPrevNext: true,
           }, 
@@ -402,7 +403,7 @@ jQuery(document).ready(function ($) {
 
       var prodCarusel = new Swiper('.s-product-carusel__slider--js', {
         spaceBetween: 10,
-        slidesPerView: 4,
+        slidesPerView: 1,
         loop: true, 
         loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
@@ -417,13 +418,13 @@ jQuery(document).ready(function ($) {
          // Responsive breakpoints
         breakpoints: { 
             480: {
-            slidesPerView: 1, 
-            }, 
-            768: {
             slidesPerView: 2, 
             }, 
-            992: {
+            768: {
             slidesPerView: 3, 
+            }, 
+            992: {
+            slidesPerView: 4, 
             }
         }
       });

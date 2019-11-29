@@ -2,10 +2,18 @@
 	// start .s-product-carusel
 	.s-product-carusel {
 		 text-align: center;
-		 padding-bottom: rem(20);
+		 padding-bottom: rem(40);
+		 &__slider{
+			 padding: 9px;
+			 margin: -9px;
+		 }
 		&__panel{
 			border: 2px solid #dadde2;
 			padding: rem(30);
+			@include mt;
+			&:hover{
+				box-shadow: 0 10px 10px rgba(41, 41, 41, 0.1);
+			}
 		}
 		&__img-wrap{
 			display: block;
@@ -80,3 +88,4 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.s-product-carusel
+

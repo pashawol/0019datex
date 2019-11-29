@@ -140,7 +140,7 @@ body {
  .h3,
  .h4,
  .h2,
-	>h2 {
+	 h2 {
 		font-size: inherit;
 
 		@include media-breakpoint-up(md) {}
@@ -151,6 +151,7 @@ body {
 		max-width: rem(940);
 		@extend .h6;
 		font-weight: normal;
+		line-height: 1.5;
 	}
 }
 
@@ -997,6 +998,7 @@ a {
 				margin-bottom: rem(10);
 				&-item{
 					color: #c4c9ce;
+					&:hover,
 					&.active{
 						color: #ffffff;
 					}
@@ -1085,4 +1087,8 @@ a {
 	.mfp-content  .mfp-close{
 		display: none;
 	}
+}
+
+.bg-tr{
+	background-color: transparent !important;
 }

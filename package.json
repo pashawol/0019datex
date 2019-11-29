@@ -9,8 +9,8 @@
   "author": "Khalunin Pavel",
   "license": "ISC",
   "devDependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
-    "@babel/preset-env": "^7.7.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "browser-sync": "^2.26.7",
@@ -41,7 +41,7 @@
   "optionalDependencies": {},
   "dependencies": {
     "gulp-group-css-media-queries": "^1.2.2",
-    "@babel/core": "^7.7.2",
+    "@babel/core": "^7.7.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "gulp-newer": "^1.4.0",
     "gulp-responsive": "^3.0.1",

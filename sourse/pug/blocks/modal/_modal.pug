@@ -40,24 +40,36 @@ mixin modal()
 	
 	
 	+b.order-modal(id="order" class="zoom-anim-dialog mfp-hide modal-win modal-form")
-		+e.modal-title Товар добавлен в корзину
-		+e.body
-			.row
-				.col-auto.d-flex.align-items-center
-					img(src="img/order-img.jpg" alt="")
-				.col
-					+e.title
-						a(href="#") 1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)
-					+e.art Артикул: 4601546041654
-					+e.price Цена:
-						+e.price-block 16 200
-							span.i-font o
-		+e.footer
-			.row
-				.col-12.col-sm-auto
-					+e.btn.btn-primary( href="#order-thanks") оформить заказ
-				.col-12.col-sm
-					+e.info Мы свяжемся с Вами в течение часа после оформления заказа.
+			.order-modal__modal-title
+				| Товар добавлен в корзину
+			.order-modal__body
+				.row
+					.col-auto.d-flex.align-items-center
+						img#catImg(src='https://datexsoft.ru/wp-content/uploads/2019/08/buh8.jpg', alt='')
+					.col
+						#catTitle.order-modal__title 1С:Бухгалтерия 8 ПРОФ
+						.order-modal__price
+							| Цена:
+							.order-modal__price-block
+								span#catPrice.regularprice 13 000
+								span.i-font o
+			.order-modal__footer
+				.row
+					.col-sm-6
+						a.order-modal__btn.btn-primary.btn.btn-block(href='https://datexsoft.ru/cart/')
+							| Оформить заказ
+					.col-sm-6
+						a.btn-outline-secondary.btn.btn-block.closePopup(href='#')
+							| Продолжить покупки
+				.text-center.small.mt-2
+					| Мы свяжемся с Вами в течение часа после оформления заказа.
+			button.mfp-close(title='Close (Esc)', type='button') ×
+				+e.footer
+					.row
+						.col-12.col-sm-auto
+							+e.btn.btn-primary( href="#order-thanks") оформить заказ
+						.col-12.col-sm
+							+e.info Мы свяжемся с Вами в течение часа после оформления заказа.
 
 	// #modal-call
 
@@ -203,3 +215,59 @@ mixin modal()
 		+polite
 	// #modal-rent2
 	// #modal-map
+
+	// модалки для шопа
+	+b.order-modal(id="order2" class="zoom-anim-dialog mfp-hide modal-win modal-form")
+			.order-modal__modal-title
+				| Товар добавлен в корзину
+			.order-modal__body
+				.row
+					.col-auto.d-flex.align-items-center
+						img#catImg(src='https://datexsoft.ru/wp-content/uploads/2019/08/buh8.jpg', alt='')
+					.col
+						#catTitle.order-modal__title 1С:Бухгалтерия 8 ПРОФ
+						.order-modal__price
+							| Цена:
+							.order-modal__price-block.bg-tr
+								span#catPrice.regularprice 13 000
+								span.i-font o
+			.order-modal__footer
+				.row
+					.col-sm-6
+						a.order-modal__btn.btn-primary.btn.btn-block(href='https://datexsoft.ru/cart/')
+							| Оформить заказ
+					.col-sm-6
+						a.btn-outline-secondary.btn.btn-block.closePopup(href='#')
+							| Продолжить покупки
+				.text-center.small.mt-2
+					| Мы свяжемся с Вами в течение часа после оформления заказа.
+
+	// #order2
+
+	+b.order-modal.arend-modal(id="one-click2" class="zoom-anim-dialog mfp-hide modal-win modal-form")
+		+e.modal-title.text-center Купить в один клик
+		+e.body
+			.row
+				.col-auto.d-flex.align-items-center
+					img(src="img/order-img.jpg" alt="")
+				.col
+					+e.title
+						a(href="#") 1С:Бухгалтерия государственного учреждения 8 ПРОФ
+					+e.art Артикул: 4601546041654
+					+e.price Цена:
+						+e.price-block.bg-tr 16 200
+							span.i-font o
+		+e.footer.text-center
+			+form-wrap
+				+e.modal-title Заполните форму и мы свяжемся с Вами в&nbsp;течение рабочего дня.
+				+input("text","name","Ваше имя")
+				+input("tel","tel","Ваш телефон")( required)
+				+input("email","email","Ваш e-mail")
+				+e.btn.btn-primary( href="#arend-thanks") оформить заказ
+				+polite
+			//- .row
+			//- 	.col-12.col-sm-auto
+			//- 	.col-12.col-sm
+			//- 		+e.info Мы свяжемся с Вами в течение часа после оформления заказа.
+
+	// #modal-call

@@ -884,7 +884,6 @@
 							<div class="col"><a class="scroll-link" href="#header-block">
 									<div class="row row--sm align-items-center">
 										<div class="col-sm-auto"><img class="lazy" src="#" data-src="img/logo.png" alt=""/></div>
-										<div class="col samll d-none d-lg-block">Лучшая проектная команда в Самаре</div>
 									</div></a></div>
 							<div class="col-sm-auto">
 								<div class="soc"><a class="soc__item" href="" target="_blank">
@@ -958,33 +957,37 @@
 		</div>
 		<!-- #modal-call-->
 		<div class="order-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="order">
-			<div class="order-modal__modal-title">Товар добавлен в корзину
-			</div>
+			<div class="order-modal__modal-title">Товар добавлен в корзину</div>
 			<div class="order-modal__body">
 				<div class="row">
-					<div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
+					<div class="col-auto d-flex align-items-center"><img id="catImg" src="https://datexsoft.ru/wp-content/uploads/2019/08/buh8.jpg" alt=""/></div>
 					<div class="col">
-						<div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ (USB)</a>
-						</div>
-						<div class="order-modal__art">Артикул: 4601546041654
-						</div>
+						<div class="order-modal__title" id="catTitle">1С:Бухгалтерия 8 ПРОФ</div>
 						<div class="order-modal__price">Цена:
-							<div class="order-modal__price-block">16 200<span class="i-font">o</span>
-							</div>
+							<div class="order-modal__price-block"><span class="regularprice" id="catPrice">13 000</span><span class="i-font">o</span></div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="order-modal__footer">
 				<div class="row">
-					<div class="col-12 col-sm-auto"><a class="order-modal__btn btn-primary" href="#order-thanks">оформить заказ</a>
-					</div>
-					<div class="col-12 col-sm">
-						<div class="order-modal__info">Мы свяжемся с Вами в течение часа после оформления заказа.
+					<div class="col-sm-6"><a class="order-modal__btn btn-primary btn btn-block" href="https://datexsoft.ru/cart/">Оформить заказ</a></div>
+					<div class="col-sm-6"><a class="btn-outline-secondary btn btn-block closePopup" href="#">Продолжить покупки</a></div>
+				</div>
+				<div class="text-center small mt-2">Мы свяжемся с Вами в течение часа после оформления заказа.</div>
+			</div>
+			<button class="mfp-close" title="Close (Esc)" type="button">×
+				<div class="order-modal__footer">
+					<div class="row">
+						<div class="col-12 col-sm-auto"><a class="order-modal__btn btn-primary" href="#order-thanks">оформить заказ</a>
+						</div>
+						<div class="col-12 col-sm">
+							<div class="order-modal__info">Мы свяжемся с Вами в течение часа после оформления заказа.
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</button>
 		</div>
 		<!-- #modal-call-->
 		<div class="order-modal arend-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="arend">
@@ -1382,6 +1385,68 @@
 		</div>
 		<!-- #modal-rent2-->
 		<!-- #modal-map-->
+		<!-- модалки для шопа-->
+		<div class="order-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="order2">
+			<div class="order-modal__modal-title">Товар добавлен в корзину</div>
+			<div class="order-modal__body">
+				<div class="row">
+					<div class="col-auto d-flex align-items-center"><img id="catImg" src="https://datexsoft.ru/wp-content/uploads/2019/08/buh8.jpg" alt=""/></div>
+					<div class="col">
+						<div class="order-modal__title" id="catTitle">1С:Бухгалтерия 8 ПРОФ</div>
+						<div class="order-modal__price">Цена:
+							<div class="order-modal__price-block bg-tr"><span class="regularprice" id="catPrice">13 000</span><span class="i-font">o</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order-modal__footer">
+				<div class="row">
+					<div class="col-sm-6"><a class="order-modal__btn btn-primary btn btn-block" href="https://datexsoft.ru/cart/">Оформить заказ</a></div>
+					<div class="col-sm-6"><a class="btn-outline-secondary btn btn-block closePopup" href="#">Продолжить покупки</a></div>
+				</div>
+				<div class="text-center small mt-2">Мы свяжемся с Вами в течение часа после оформления заказа.</div>
+			</div>
+		</div>
+		<!-- #order2-->
+		<div class="order-modal arend-modal zoom-anim-dialog mfp-hide modal-win modal-form" id="one-click2">
+			<div class="order-modal__modal-title text-center">Купить в один клик
+			</div>
+			<div class="order-modal__body">
+				<div class="row">
+					<div class="col-auto d-flex align-items-center"><img src="img/order-img.jpg" alt=""/></div>
+					<div class="col">
+						<div class="order-modal__title"><a href="#">1С:Бухгалтерия государственного учреждения 8 ПРОФ</a>
+						</div>
+						<div class="order-modal__art">Артикул: 4601546041654
+						</div>
+						<div class="order-modal__price">Цена:
+							<div class="order-modal__price-block bg-tr">16 200<span class="i-font">o</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order-modal__footer text-center">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__modal-title">Заполните форму и мы свяжемся с Вами в&nbsp;течение рабочего дня.
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="name" placeholder="Ваше имя"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Ваш телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" name="email" placeholder="Ваш e-mail"/>
+						</div>
+						<!-- +e.input-wrap--><a class="form-wrap__btn btn-primary" href="#arend-thanks">оформить заказ</a>
+						<div class="form-wrap__polite"><span class="wpcf7-form-control-wrap acceptance-133"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-133" value="1" aria-invalid="false" checked="checked"><span class="wpcf7-list-item-label">Принимаю условия передачи данных и&nbsp;согласен с&nbsp;политикой конфеденциальности.</span></label></span></span></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
 		<script src="js/lazy.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>

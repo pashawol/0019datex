@@ -1,19 +1,31 @@
  
 	  
 .soc{
-	margin: 0 rem(-18px);
+	@include media-breakpoint-up(lg) {
+
+		margin: 0 rem(-18px);
+	}
+	margin: 0 rem(-5px);
 	display: flex;
 	justify-content: center;
 	&__item{
 		display: inline-block;
 		text-decoration: none !important;
-		margin: 0 rem(18px);
+		@include media-breakpoint-up(lg) {
+
+			margin: 0 rem(18px);
+		}
+		margin: 0 rem(5px);
 		vertical-align: middle;
 		@include mt;
 		// color: #ffffff !important;
 		
 		.icon{
-			font-size: rem(30) !important;
+			@include media-breakpoint-up(lg) {
+
+				font-size: rem(30) !important;
+			}
+			font-size: rem(27) !important;
 			color: #ffffff !important;
 		}
 		&:hover{
@@ -55,12 +67,15 @@
 		color: #000000;
 		font-size: 16px;
 		text-decoration: none !important;
+		border-bottom: 2px solid #fff;
 	}
+	span,
 	a{
 		height: 100%;
 		@include mt;
-		&:hover{
+		&:not(.current):hover{
 			background-color: $light;
+			border-bottom: 2px solid  $light;
 		}
 	}
 	.icon{

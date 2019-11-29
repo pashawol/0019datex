@@ -17,6 +17,11 @@
     background-color: #ffffff;
     border-radius: 50%;
     z-index: 4;
+    @include mt;
+    &:hover{
+      
+      box-shadow: 0 rem(5px) rem(15px) rgba(41, 41, 41, 0.25);
+    }
     &::before{
       content: '';
       @include a-cent;
@@ -171,7 +176,12 @@
  
 	}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(md) {
+    .tabs__wrap{
+      min-height: initial;
+    }
+    
+  }
 
 	@include media-breakpoint-down(sm) {
  
@@ -183,6 +193,18 @@
   
 } // .s-product
 
+@include media-breakpoint-down(lg) {
+  
+  .s-product__help-block{
+
+    .custom-input{
+      margin-top: rem(20);
+    }
+    .custom-input__lab{
+      margin-top: rem(-5);
+    }
+  }
+}
 .table-wrap{
   table{
     width: 100%;

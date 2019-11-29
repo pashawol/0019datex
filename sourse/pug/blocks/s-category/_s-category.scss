@@ -9,6 +9,10 @@
 				font-weight: 500;
 				cursor: pointer;
 				border-bottom: 1px solid $gray;
+				@include mt;
+				&:not(.text-primary):hover{
+						border-color: transparent;
+				}
 				&.text-primary{
 					border-color: $primary;
 				}
@@ -108,8 +112,14 @@
 	}
 	&__price-wrap{
 		font-size: rem(16);
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-only(sm) {
+			padding-left: rem(180);
+		}
+		@include media-breakpoint-up(sm) {
+
 			text-align: left;
+		}
+		@include media-breakpoint-up(md) {
 			margin-bottom: 0;
 		}
 		margin-bottom: rem(15);
@@ -131,7 +141,10 @@
 	}
 	&__btn-wrap{
 		@include roww(8);
-		margin-left: rem(-20);
+		@include media-breakpoint-up(lg) {
+
+			margin-left: rem(-20);
+		}
 
 	}
 	&__foot{
@@ -139,23 +152,27 @@
 	}
 	&__btn{
 		@extend .btn;
-		@extend .btn-block;
-		@extend .btn-primary;
+		@extend .btn-block; 
 		font-weight: 500;
 		font-size: rem(16);
 		padding: rem(14) rem(10);
-		border: 2px solid $primary;
+		&.btn-primary{
+			padding: calc(#{rem(14)} + 2px) rem(10);
+
+			// border: 2px solid $primary;
+		}
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0;
 		}
 		margin-bottom: rem(20);
 		&--outline{
-			&:not(:hover) {
-				background-color: transparent;
-				border-color: $secondary;
-				border: 2px solid $secondary;
-				color: #6f7378 !important;
-			}
+			@extend .btn-outline-secondary;
+			// &:not(:hover) {
+			// 	background-color: transparent;
+			// 	border-color: $secondary;
+			// 	border: 2px solid $secondary;
+			// 	color: #6f7378 !important;
+			// }
 		}
 	}
 }

@@ -8,7 +8,7 @@ mixin s-category()
 				+e.main-col.col-lg-9
 					+e.head.text-gray
 						.row
-							.col
+							.col-md
 								.row
 									.col-auto.d-none.d-xl-block Сортировать по:
 									.col-auto: span.text-primary по популярности
@@ -44,7 +44,8 @@ mixin s-category()
 												.col-sm-6
 													+e.btn--outline.popup-with-move-anim(href="#one-click") Заказать в 1 клик
 												.col-sm-6
-													+e.btn(href="#") Купить
+													+e.btn.btn-primary(href="#") Купить
+														span
 					+item("Эквайринг Verifone VX820",'16 200 ₽')
 					+item("Эквайринг Verifone VX820",'3 345 ₽','3 200 ₽')
 						+e.label(style="background-color: #db1e32;") скидка 11%

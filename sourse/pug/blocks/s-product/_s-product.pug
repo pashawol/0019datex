@@ -268,13 +268,14 @@ mixin s-product15()
 					+e.sliders-wrap
 						+e.btn-play(class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto")
 						.swiper-container.gallery-top
-							.swiper-wrapper
-								- for (var x = 0; x < 5; x++)
+							.swiper-wrapper.gal
+								- for (var x = 0; x < 4; x++)
 									.swiper-slide()
-										img.res-i.swiper-lazy(src="#" data-src="img/@2x/slide-prod.jpg", alt="")
+										a(href="img/@2x/slide-prod.jpg")
+											img.res-i.swiper-lazy(src="#" data-src="img/@2x/slide-prod.jpg", alt="")
 						.swiper-container.gallery-thumbs
 							.swiper-wrapper
-								- for (var x = 0; x < 5; x++)
+								- for (var x = 0; x < 4; x++)
 									.swiper-slide
 										img.res-i.swiper-lazy(src="#" data-src="img/@1x/slide-prod.jpg", alt="")
 				
@@ -296,10 +297,11 @@ mixin s-product15()
 								.h6.strong 233 800 ₽
 								
 						
-						a.btn.btn-block.main-btn.btn-primary.popup-with-move-anim(href="#order" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Добавить в корзину
-						a.btn.btn-primary.btn-outline-gray.btn-block.popup-with-move-anim(href="#one-click") Купить в 1 клик
+						a.btn.btn-block.main-btn.btn-primary.popup-with-move-anim(href="#order2" data-title="1С:Бухгалтерия 8 ПРОФ" data-btn="1С:Бухгалтерия 8 ПРОФ") Добавить в корзину
+							span
+						a.btn.btn-outline-secondary.btn-block.popup-with-move-anim(href="#one-click2") Купить в 1 клик
 					.text-center
-						+e.link-price(href="#") 
+						+e.link-price.popup-with-move-anim(href="#modal-call" data-title="Запросить оптовые цены" data-order="Запросить оптовые цены"   data-btn="Запросить оптовые цены"  )
 							+icon("percent")
 							div
 								span Запросить оптовые цены
@@ -328,7 +330,7 @@ mixin s-product15()
 			.tabs__caption
 				.container
 					.row
-						+e.tabs-col.col-12.col-xl-10
+						+e.tabs-col.col-12.col-xl-12
 							.tabs__btn.active 
 								.tabs-btn-wrapper
 									span Назначение

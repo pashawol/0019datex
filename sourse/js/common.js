@@ -405,7 +405,7 @@ jQuery(document).ready(function ($) {
         spaceBetween: 10,
         slidesPerView: 1,
         loop: true, 
-        loopedSlides: 5, //looped slides should be the same
+        // loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         lazy: {

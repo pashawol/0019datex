@@ -1,13 +1,12 @@
 mixin mob-mnu() 
 	+b.menu-mobile-page--js 
 		+e.inner
-			+mobile-menu 
+			+mnu()
 	//  мобильное меню
 
 
-mixin top-line-page-2()
-	span
-	+mob-mnu()
+mixin top-line-page-2() 
+	
 	// start .top-line-page
 	a.top-line-page__tel.top-line-page__tel--mob.d-sm-none(href="tel:+7(846)3004840") 
 		+icon("phone-receiver")
@@ -49,9 +48,10 @@ mixin top-line-page-2()
 									+e.item.line
 								+e.text.d-none.d-md-block  меню
 				block
-		+body()(class="wow fadeIn body-1" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 1}s`) 
+		+body()(class="wow fadeIn body-1" data-wow-duration=`${dur * 1}s` data-wow-delay=`${delay * 1}s`)
+		+mob-mnu()
 		//- +body()(class="body-2")
-		+mobile-menu()(class="top-submenu--js")
+		//- +mobile-menu()(class="top-submenu--js")
 		+b.top-line-page-search.bg-light
 			.container
 				.row

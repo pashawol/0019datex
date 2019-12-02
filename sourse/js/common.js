@@ -483,7 +483,7 @@ var JSCCommon = {
     // /magnificPopupCall
     mobileMenu: function mobileMenu() {
         // закрыть/открыть мобильное меню
-        function search(){
+        function searchTogggle(){
             let block  = $(".top-line-page-search");
             if (block.hasClass("d-none")) {
                 block.removeClass("d-none")
@@ -493,22 +493,40 @@ var JSCCommon = {
 
             }
         }
-        $(".menu-item-has-children:not(.menu-item-has-children--1c) > a").click(function (e) {
+        $(".menu-mobile-page__inner .menu > .menu-item-has-children > a").click(function (e) {
             e.preventDefault();
             $(this).parent().toggleClass("active").siblings().removeClass("active");
-            search();
-            $(this).next().slideToggle(0);
-            $(".top-submenu--js").slideUp(0);
+            searchTogggle();
+            $(this).next().toggleClass("active");
+            // $(".top-submenu--js").slideUp(0);
 
         });
-        $(".menu-item-has-children--1c > a,.addSvg>a").click(function (e) {
-            e.preventDefault();
-            $(this).parent().toggleClass("active").siblings().removeClass("active");
-            search();
-            $(".top-submenu--js").slideToggle(0);
-
-            $(".sub-menu").attr('style','');
+        
+        $(".menu-mobile-page__inner .menu .sub-menu   .menu-item-has-children > a").each(function(){
+            var title= $(this).text();
+            var toggleBlock = $(this).next();
+            toggleBlock.prepend('<li class="hide-parent-js">' +title+ '</li>')
+            $(this).click(function (e) {
+                e.preventDefault();
+                $(this).parent().toggleClass("active").siblings().removeClass("active");
+                searchTogggle();
+                toggleBlock.toggleClass("active");
+                // $(".top-submenu--js").slideUp(0);
+                
+            })
         });
+        $(".hide-parent-js").click(function(){
+            $(this).parent().removeClass('active');
+        })
+
+        // $(".menu-item-has-children--1c > a,.addSvg>a").click(function (e) {
+        //     e.preventDefault();
+        //     $(this).parent().toggleClass("active").siblings().removeClass("active");
+        //     search();
+        //     $(".top-submenu--js").slideToggle(0);
+
+        //     $(".sub-menu").attr('style','');
+        // });
 
         function toggleMenu() {
             btnToggle.toggleClass("on");
@@ -520,12 +538,12 @@ var JSCCommon = {
         btnToggle.click(function () {
             toggleMenu();
         });
-        menu.find('.menu-item a').on('click', function (e) {
-            // e.preventDefault();
-            btnToggle.removeClass("on");
-            menu.removeClass("active");
-            $("body, html").removeClass("fixed");
-        });
+        // menu.find('.menu-item a').on('click', function (e) {
+        //     // e.preventDefault();
+        //     btnToggle.removeClass("on");
+        //     menu.removeClass("active");
+        //     $("body, html").removeClass("fixed");
+        // });
     },
     // табы  . 
     tabscostume: function tabscostume(tab) {

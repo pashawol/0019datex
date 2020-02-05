@@ -17,6 +17,27 @@ mixin s-category()
 									.col-auto: span по возрастанию цены
 
 							+e.total.col-auto  67 товаров
+					
+					+e.head.text-gray
+						.row
+							.col-md
+								.row
+									form.woocommerce-ordering(method='get')
+										.col-auto.d-none.d-xl-block Сортировать по:
+										.col-auto
+											select.orderby(name='orderby', aria-label='Заказ в магазине')
+												option(value='menu_order', selected='selected')
+													| Исходная сортировка
+												option(value='popularity')
+													| По популярности
+												option(value='date')
+													| Сортировка по более позднему
+												option(value='price')
+													| Цены: по возрастанию
+												option(value='price-desc')
+													| Цены: по убыванию
+							+e.total.col-auto  67 товаров
+					
 					mixin item(t, pr, ne)
 						+b.s-category-item
 							+e.row.row
@@ -60,4 +81,13 @@ mixin s-category()
 					+item("Эквайринг Verifone VX820",'16 200 ₽')
 					+item("Эквайринг Verifone VX820",'16 200 ₽')
 					+pugin()
+			nav.woocommerce-pagination
+				ul.page-numbers
+					li
+						span.page-numbers.current(aria-current='page') 1
+					li
+						a.page-numbers(href='https://datexsoft.ru/product-category/shopto/kkm/page/2/') 2
+					li
+						a.next.page-numbers(href='https://datexsoft.ru/product-category/shopto/kkm/page/2/') →
+
 	// end s-category

@@ -11,9 +11,18 @@
 			border: 2px solid #dadde2;
 			padding: rem(30);
 			@include mt;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
 			&:hover{
 				box-shadow: 0 10px 10px rgba(41, 41, 41, 0.1);
 			}
+		}
+
+		&__caption{
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
 		}
 		&__img-wrap{
 			display: block;
@@ -46,7 +55,8 @@
 			}
 		}
 		&__price-wrap{
-			margin-bottom: rem(16);
+			margin-bottom: auto;
+			padding-bottom: rem(16);
 		}
 		.swiper-pagination{
 			position: relative;
@@ -61,6 +71,10 @@
 		.swiper-pagination-bullet-active, .swiper-pagination-bullet:hover {
 			background-color: $primary;
 			border-color: $primary;
+		}
+
+		.swiper-slide{
+			height: initial;
 		}
 
 	@include media-breakpoint-up(xl) {}

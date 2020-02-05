@@ -59,7 +59,7 @@
     border-radius: 3px;
     border: 1px solid #dadde2;
     background-color: #ffffff;
-    padding: rem(30) rem(25);
+    padding: rem(30) rem(20);
     font-size: rem(16);
     .btn{
       font-size: rem(16);
@@ -188,7 +188,10 @@
 	}
 
 	@include media-breakpoint-down(xs) {
-	 
+    .tabs__btn{
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   
 } // .s-product

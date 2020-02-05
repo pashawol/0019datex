@@ -1,18 +1,21 @@
 .s-competences {
 	background-color: $light;
-	@include media-breakpoint-down(sm){
+
+	@include media-breakpoint-down(sm) {
 		padding: rem(35) 0;
 	}
-	&__main-price{
 
-	}
-	&__tabs-row{
+	&__main-price {}
+
+	&__tabs-row {
 		@include roww(10);
-		.row{
+
+		.row {
 			@include roww(10);
 
 		}
 	}
+
 	img {
 		height: rem(72);
 	}
@@ -129,7 +132,8 @@
 		&:hover {
 			z-index: 2;
 			box-shadow: 0 rem(3) rem(20) rgba($color: #000000, $alpha: .1);
-			.s-competences__item-title a{
+
+			.s-competences__item-title a {
 				color: $primary;
 				border-color: $primary;
 			}
@@ -174,7 +178,7 @@
 	&__btn {
 		width: rem(172);
 		// height: rem(50);
-
+		text-transform: capitalize;
 	}
 
 
@@ -195,9 +199,11 @@
 		font-size: 16px;
 		font-weight: 500;
 		margin-bottom: rem(10);
-		span{
+
+		span {
 			font-weight: normal;
 		}
+
 		a {
 			color: $body-color;
 			display: inline;
@@ -222,6 +228,7 @@
 		padding-left: rem(24);
 		position: relative;
 		margin-bottom: rem(10);
+
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0;
 		}
@@ -243,13 +250,14 @@
 		font-size: 12px;
 		font-weight: 500;
 		text-align: center;
+
 		@include media-breakpoint-up(md) {
 			padding-top: 0;
 			margin-bottom: 0;
 			display: inline-block;
 			font-size: 16px;
 		}
-		
+
 		@include media-breakpoint-up(xl) {
 			text-align: right;
 			display: block;
@@ -274,6 +282,7 @@
 
 	&__price-col {
 		align-items: center;
+
 		@include media-breakpoint-up(md) {
 			display: flex;
 			align-items: flex-end;
@@ -294,17 +303,19 @@
 			display: flex;
 			justify-content: center;
 		}
+
 		@include media-breakpoint-down(md) {
 			align-items: center;
-			&:not(:last-child){
+
+			&:not(:last-child) {
 				margin-top: rem(20);
 			}
 		}
 	}
-	
-	.price-light-col{
+
+	.price-light-col {
 		@include media-breakpoint-down(md) {
-			align-items: flex-end;	
+			align-items: flex-end;
 		}
 	}
 
@@ -315,6 +326,7 @@
 		border-radius: 3px;
 		background-color: #fdd058;
 		padding: rem(3);
+
 		@include media-breakpoint-up(md) {
 			font-size: 16px;
 		}
@@ -323,29 +335,32 @@
 			border-radius: 3px;
 		}
 	}
-	.btn-primary{
+
+	.btn-primary {
 		// margin-bottom: rem(20);
 		// @include media-breakpoint-up(md){
 		// 	margin-bottom: 0;
 		// }
 	}
+
 	.price--small {
 		font-size: $small;
 		font-weight: 400;
 		margin-bottom: 0;
 		padding-top: 0;
-		
+
 
 		@include media-breakpoint-up(xl) {
 			margin-top: rem(35);
 		}
 	}
 
-	&__item--prod{
-		.s-competences__btn{
+	&__item--prod {
+		.s-competences__btn {
 			padding-top: rem(15);
 			padding-bottom: rem(15);
 		}
+
 		@include media-breakpoint-up(xl) {
 
 			padding-left: rem(30);
@@ -429,33 +444,37 @@
 	}
 }
 
-.competences-card{
+.competences-card {
 	padding: 0 !important;
-	 img{
+
+	img {
 		margin-bottom: 0 !important;
 		max-width: 52px;
 		height: auto;
 	}
-	.s-competences__item{
-		&:last-child{
+
+	.s-competences__item {
+		&:last-child {
 			border-bottom: none;
 		}
 	}
 }
 
-.license-card{
-	.s-competences__item{
-		&:hover{
-			.s-competences__item-title a{
+.license-card {
+	.s-competences__item {
+		&:hover {
+			.s-competences__item-title a {
 				// border-color: #fff;
 				// color: #000;
 				// border-color: #000;
 			}
 		}
 	}
-	.s-competences__item-title a{
+
+	.s-competences__item-title a {
+
 		// border-color: #fff;
-		&:hover{
+		&:hover {
 			// color: #000;
 			// border-color: #000;
 		}

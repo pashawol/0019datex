@@ -4,10 +4,17 @@ mixin s-filter()
 		strong Фильтр товаров  
 	.s-filter-wrap.d-lg-flex
 		// start s-filter
+		mixin in-c3(a, b)
+			label.custom-input.woof_term_89
+				input#woof_89_5dedfb8190066.woof_checkbox_term.woof_checkbox_term_89(type='checkbox',   data-tax='product_tag', name='atol', data-term-id='89', value='89')
+				label.woof_checkbox_label(for='woof_89_5dedfb8190066')
+					= b
+					span.woof_checkbox_count (0)
+				input(type='hidden', value='Атол', data-anchor='woof_n_product_tag_atol')
 		+b.s-filter&attributes(attributes) 
 			mixin range(c1, c2)
-				.range-wrap
-					.row
+				.range-wrap.price_slider_amount
+					.d-flex
 						label.col-6 
 							strong от 
 							+b.INPUT.range-result--minus.minus.form-control(type="text")
@@ -27,6 +34,7 @@ mixin s-filter()
 					var list = ["1D сканеры", "2D сканеры штрих-кода для ЕГАИС и маркировки", "Ручной сканер штрих-кода", "Стационарные сканеры штрих кода", "USB-сканер штрих-кода", "Стационарные сканеры штрих кода", "USB-сканер штрих-кода"]
 				each item in list
 					+in-c2("checkbox",item)
+					+in-c3("checkbox",item)
 		
 			+group('Бренды')
 				-

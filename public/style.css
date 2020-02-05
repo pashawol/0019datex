@@ -1,0 +1,389 @@
+/*!
+Theme Name: datex
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: datex
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+datex is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+    ## Links
+    ## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+    ## Comments
+# Infinite scroll
+# Media
+    ## Captions
+    ## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+.wpcf7-mail-sent-ok {
+    display: none !important;
+}
+.s-segments li::before {
+    display: none !important;
+}
+.s-segments img {
+    height: 4rem;
+}
+.s-segments .s-why__icon-wrap {
+    margin-bottom: 1rem;
+}
+.mobile-menu-page__mobile-links .addSvg {
+    display: none;
+}
+table.functional img {
+    width: 16px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.categoryShopItem img{
+    width: 1.11111rem;
+    height: auto;
+}
+
+p.woocommerce-info{
+     text-align: center;
+}
+
+body.it_is_shop  .section-title.text-center{
+       /*margin-bottom: 0 !important;*/
+}
+
+form.woocommerce-cart-form  td.product-thumbnail img{
+      max-width: 52px;
+      height: auto;
+}
+
+.woocommerce-notices-wrapper{
+     text-align: center;
+     padding-top: 20px;
+}
+.top-line-page__tagline{
+    letter-spacing: normal !important;
+}
+.top-line-page__city-name a{
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.woocommerce-notices-wrapper{
+    padding-top: 0 !important;
+}
+
+.main-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+            .main-wrapper .error-page{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .prld-on {
+                overflow: auto !important;
+            }
+
+
+           .admin-bar {
+                margin-top: -32px !important;
+            }
+
+            .section-title  .breadcrumb span{
+                display: inline;
+            }
+            .btn-outline-secondary{
+                background-color: transparent;
+                transition: all .26s;
+            }
+
+
+            .bread-wrap a.breadcrumb-item:hover{
+                color: #000;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199.98px) {
+
+                .s-product__btn-wrap-right .row{
+                    min-width: 630px;
+                    justify-content: center;
+                }
+            }
+            
+            @media  (max-width: 991.98px) {
+                
+                .s-product__btn-wrap-right .row{
+                    min-width: calc(100% + 30px);
+                    justify-content: center;
+                  
+                }
+            }
+       .landing-page .top-line-page--page .body-1 ,
+         .landing-page  .top-line-page--page{
+              background-color: #0c0c0e;
+            }
+           .landing-page  .top-line-page--page{
+                border-bottom: 1px solid #313132;
+
+                      }
+
+
+.s-buy-prog__item{
+    text-decoration: none !important;
+}
+
+@media (max-width: 575.98px){
+   body .tabs_product_cont{
+        display: flex;
+        margin-left: -5px;
+        margin-right: -5px;
+        flex-wrap: wrap;
+    }
+   body .s-product .tabs__btn{
+        width: calc(50% - 10px);
+        /* margin-left: 5px;
+        margin-right: 5px; */
+        font-size: 0.8rem;
+        /* ефс 
+        осс  */
+        justify-content: center;
+    }
+}
+
+body .s-product__price-wrapper{
+    display: inline-block;
+    padding: 3px 5px;
+    text-align: center;
+}
+
+
+.grecaptcha-badge{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.woocommerce{
+    position: relative;
+}
+#LoaderShow{
+     position: absolute;
+     left: 0;
+     top:0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0,0,0,.5);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000;
+     color: #fff;
+     font-size: 30px;
+}
+.hideEmpty .cart-empty{
+    display:none !important;
+}
+
+.cityWrap{
+     /* display:flex; */
+     /* justify-content: space-between; */
+}
+
+.regionCorrection {
+       position: absolute;
+       background-color: rgba(255, 255, 255, 1);
+       font-family: "Roboto";
+       top: 40px;
+       left: -50px;
+       padding: 30px;
+       width: 615px;
+       -webkit-border-radius: 5px;
+       border-radius: 5px;
+       -webkit-box-sizing: border-box;
+       box-sizing: border-box;
+       -webkit-transition: 0.4s;
+       -o-transition: 0.4s;
+       transition: 0.4s;
+       border: 1px solid #eee;
+       box-shadow: 0 10px 15px rgba(41, 41, 41, 0.1);
+   }
+
+   .regionCorrection:after {
+       content: '';
+       top: -15px;
+       left: 50%;
+       transform: translateX(-50%);
+       position: absolute; 
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 1rem 1rem 1rem;
+        border-color: transparent transparent #fff transparent;
+
+   }
+
+   .regionCorrection {
+       padding: 20px 15px;
+       min-width: 260px;
+       width: auto;
+       font-size: 14px;
+       margin-bottom: 10px;
+       color: #28292c;
+       z-index: 999;
+       display: none;
+   }
+
+   .regionCorrection .region_content .text_bold {
+       font-weight: bold;
+       /* font-family: "Roboto"; */
+   }
+
+   .regionCorrection .region_content .button_block .link_ {
+       cursor: pointer;
+       /* border-bottom: 1px solid; */
+       /* font-family: "Roboto"; */
+       color: #28292c;
+       display: inline-block;
+       -webkit-transition: 0.4s;
+       -o-transition: 0.4s;
+       transition: 0.4s;
+   }
+
+
+
+   img.swiper-lazy:not(.swiper-lazy-loaded){
+       opacity: 0;
+   }
+
+#comments h2.comments-title{
+   display: none !important;
+}
+
+[name="min_price"],
+[name="max_price"]{
+   display:block !important;
+}
+
+.woof_products_top_panel{
+     display:none !important;
+}
+.menu-mobile-page .menu-item-has-children#menu-item-5511{
+    display: none !important;
+}

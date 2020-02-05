@@ -72,6 +72,7 @@
 	.custom-input{
 		display: flex;
 		align-items: center;
+		position: relative;
 		// margin-top: rem(15);
 		padding-top: rem(10);
 		padding-bottom: rem(10);
@@ -85,10 +86,54 @@
 		font-weight: 400;
 		min-height: rem(52);
 		// margin-bottom: rem(10);
-		border-bottom: 1px solid #dadde2;
+		&:not(:last-child){
+
+			border-bottom: 1px solid #dadde2;
+		}
 		color: $body-color;
 		line-height: 1.13;
 		width: calc(100% + #{rem(60)});
+		label{
+			margin-bottom: 0;
+		}
+		input{
+			@extend .invisible;
+			position: absolute;
+		}
+		input:disabled + label{
+			opacity: 0.5;
+		}
+		label::before{
+
+			border: 1px solid #dadde2;
+			background-color: #ffffff;
+		}
+		label::after,
+		label::before{
+			content: '';
+			position: absolute;
+			width: rem(22px);
+			height:  rem(22px); 
+			left: rem(30);
+			top: 50%;
+			transform: translateY(-50%);
+			margin-top: 0;
+			border-radius: rem(5px);
+		}
+		label::after{
+			background-color: transparent;
+			border: none;
+			background-image: url(../img/svg/chevron-red.svg) !important;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 70%;
+			opacity: 0;
+		}
+		input:checked + label{
+			&::after{
+				opacity: 1;
+			}
+		}
 		&__lab{
 			border: 1px solid #dadde2;
 			background-color: #ffffff;
@@ -193,6 +238,32 @@
 				display: none !important;
 			}
 		}
+	}
+
+	.price_slider_amount{
+		.d-flex{
+			@include roww(8);
+		}
+	}
+	.woof .widget_price_filter .ui-slider .ui-slider-range{
+		height: 2px; 
+		background-color: $danger;
+	}
+	.woof .widget_price_filter .ui-slider .ui-slider-handle{
+	 
+		width: $h6-font-size;
+		height: $h6-font-size;
+		box-shadow: 0 rem(3px) rem(5px) rgba(32, 22, 0, 0.45);
+		border: rem(2px) solid #ffffff;
+		background-color: $primary;
+		cursor: pointer;
+		top: rem(-9);
+	}
+	.woof .widget_price_filter .price_slider{
+
+		background-color: #dadde2;
+		height: 2px;
+		margin-top: rem(20);
 	}
 		 
 	@include media-breakpoint-up(xl) {}

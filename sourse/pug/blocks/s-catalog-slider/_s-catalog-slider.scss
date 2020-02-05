@@ -138,6 +138,9 @@
 	&__slide{
 		width: 100%;
 		&--shop{
+			img{
+				height: 100%;
+			}
 			a{
 				@include media-breakpoint-up(sm) {
 

@@ -20,6 +20,18 @@
 	}
 
 	.accordion {
+		&__head {
+
+			@include media-breakpoint-up(lg) {
+				padding-top: rem(50);
+			}
+
+			@include media-breakpoint-up(lg) {
+
+				padding-bottom: rem(30);
+			}
+		}
+
 		&__name {
 			margin-right: rem(30);
 

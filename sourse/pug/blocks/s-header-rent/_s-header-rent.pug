@@ -28,3 +28,26 @@ mixin s-header-rent()
 					+icon("arrow-down")
 					|  Подробнее
 	// end s-header-rent
+
+mixin s-header-rent16()
+	// start s-header-rent
+	+b.SECTION.s-header-rent.lazy-background#s-header-rent.bg-wrap&attributes(attributes)
+		//- +pic2("rent-bg.jpg",'bg')(class="picture-bg")
+		picture.lazy.picture-bg
+			source(srcset='#', data-srcset='img/@2x/career-bg.jpg', type='image/jpg', media='(min-width:576px)')
+			source(srcset='#', data-srcset='img/@1x/career-bg.jpg', type='image/jpg')
+			img.object-fit-js(src='#', data-src='img/@2x/career-bg.jpg', alt='')
+		
+		.container
+			+e.inner
+				+e.career
+					h1 Начни карьеру в&nbsp;технологичной компании DATEX SOFT
+					p Стать экспертом в&nbsp;сфере автоматизации бизнеса
+				+e.btn--career.scroll-link(href="#") 
+					span
+					| Смотреть вакансии
+				+e.more.more-js
+					+icon("arrow-down")
+					|  Подробнее
+	// end s-header-rent
+

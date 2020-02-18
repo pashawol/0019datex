@@ -504,6 +504,9 @@ jQuery(document).ready(function ($) {
 			// autoplay: {
 			//     delay: 6000,
 			//   },
+			lazy: {
+				loadPrevNext: true
+			},
 			pagination: {
 				el: $(this).find('.swiper-pagination'),
 				clickable: true

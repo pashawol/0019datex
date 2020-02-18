@@ -1,0 +1,62 @@
+mixin s-vacancies()
+	// start s-vacancies
+	+b.SECTION.s-vacancies.section#s-vacancies&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Актуальные #[span вакансии]
+				
+			mixin accord() 
+				+b.accordion--js
+					+e.head
+						block
+					+e.body 
+						+e.body-inner
+							p #[strong Требуемый опыт работы:] не&nbsp;требуется
+
+							p #[strong Ты&nbsp;амбициозный и&nbsp;нацелен развивать себя в&nbsp;IT-сфере?]
+
+							p Тебе не&nbsp;нравится рутина и&nbsp;хочешь постоянного роста?
+
+							p Мы&nbsp;предлагаем тебе решение&nbsp;&mdash; приходи к&nbsp;нам в&nbsp;команду DATEX. Мы&nbsp;объявляем новый набор!
+
+							p Мы&nbsp;ищем #[strong перспективного стажера,] который станет частью нашей компании.
+
+							p #[strong Теперь конкретнее:]
+
+							p Если ты&nbsp;пройдешь собеседование, тебе предстоит оплачиваемая стажировка 5&nbsp;дней в&nbsp;неделю по&nbsp;8&nbsp;часов. В&nbsp;это время ты&nbsp;будешь
+							p учиться&nbsp;1С, в&nbsp;теории и&nbsp;на&nbsp;практике. У&nbsp;тебя будет персональный сенсей-наставник, который сделает из&nbsp;тебя профессионала.
+
+							p #[strong За&nbsp;время стажировки ты&nbsp;научишься:]
+
+							ul
+								li  Навыкам программирования и&nbsp;администрирования в&nbsp;1С;
+								li  Выполнять разнообразные задачи самостоятельно;
+								li  Работать в&nbsp;команде.
+
+							p #[strong Мы&nbsp;ждем от&nbsp;тебя:]
+
+							ul
+								li  Невероятного стремления обучаться новому;
+								li  Готовности к&nbsp;интересным задачам;
+								li  Желания помогать клиентам.
+
+							p Съезжай от&nbsp;мамы, приходи в&nbsp;DATEX.
+
+							p Хватит читать, бери телефон и&nbsp;звони нам! Мы&nbsp;доступны для звонка 24/7.
+				// /.accordion
+			+accord()
+				+e.title
+					+e.SPAN.name Программист 1С (стажер)
+					+e.SPAN.salary 30 000 руб.
+			
+			+accord()
+				+e.title
+					+e.SPAN.name Руководитель HR-отдела
+					+e.SPAN.salary 30 000 руб.
+			
+			+accord()
+				+e.title
+					+e.SPAN.name Программист 1С
+					+e.SPAN.salary 48 000 руб.
+			
+	// end s-vacancies

@@ -1,0 +1,130 @@
+// start .s-vacancies
+.s-vacancies {
+	background-color: $light;
+
+	h2 {
+		span {
+
+			color: $primary;
+		}
+	}
+
+	.accordion {
+		margin-bottom: 1px;
+	}
+
+	.accordion__title {
+		&::before {
+			display: none;
+		}
+	}
+
+	.accordion {
+		&__name {
+			margin-right: rem(30);
+
+			@include media-breakpoint-up(lg) {
+				display: inline-block;
+			}
+
+			display: block;
+		}
+
+		&__title {
+			font-size: rem(28);
+			vertical-align: middle;
+
+			@include media-breakpoint-up(md) {
+
+				display: flex;
+			}
+
+			align-items: center;
+		}
+
+		&__salary {
+			display: inline-block;
+			background-color: $primary;
+			font-size: $small;
+			font-weight: 900;
+			color: #ffffff;
+
+			padding: rem(7) rem(10);
+			position: relative;
+
+		}
+
+		&__body {
+			padding-top: rem(20);
+
+			p,
+			* {
+				line-height: 1.75;
+			}
+		}
+
+		&__body-inner {
+			border-top: 1px solid $light;
+
+			@include media-breakpoint-up(lg) {
+
+				padding: rem(50) rem(30);
+			}
+
+			padding: rem(30) 0;
+		}
+
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		position: relative;
+
+		&::before {
+			content: '• ';
+			color: $primary;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.s-vacancies

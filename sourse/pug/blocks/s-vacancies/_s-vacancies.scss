@@ -4,11 +4,12 @@
 
 	@include media-breakpoint-up(xl) {
 		padding-top: rem(70);
+		padding-bottom: rem(80);
 	}
 
 	h2 {
 		@include media-breakpoint-up(xl) {
-			padding-bottom: rem(35);
+			padding-bottom: rem(25);
 			// margin-bottom: 2.5rem;
 			// margin-bottom: .5rem;
 		}
@@ -45,6 +46,10 @@
 
 		&__name {
 			margin-right: rem(25);
+
+			@include media-breakpoint-down(xs) {
+				font-size: rem(20);
+			}
 
 			@include media-breakpoint-up(lg) {
 				display: inline-block;

@@ -256,7 +256,7 @@ jQuery(document).ready(function ($) {
 			$('.counter-js').text(from); // FROM value
 	});
 	*/
-    // $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/cat.png);"></div>'); // / закрыть меню при горизонтальном свайпе
+    // $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/Career.png);"></div>'); // / закрыть меню при горизонтальном свайпе
     // /закрыть/открыть мобильное меню
 
     function heightses() {

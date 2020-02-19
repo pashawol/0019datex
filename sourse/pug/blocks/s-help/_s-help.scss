@@ -2,7 +2,7 @@
 .s-help {
 	.section-title {
 		@include media-breakpoint-up(xl) {
-			padding-bottom: rem(80);
+			padding-bottom: rem(30);
 		}
 
 		.row {
@@ -33,6 +33,7 @@
 
 	@include media-breakpoint-up(xl) {
 		padding-top: rem(100);
+		padding-bottom: rem(45);
 	}
 
 	@include media-breakpoint-up(lg) {}

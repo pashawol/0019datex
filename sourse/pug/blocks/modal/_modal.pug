@@ -271,3 +271,20 @@ mixin modal()
 			//- 		+e.info Мы свяжемся с Вами в течение часа после оформления заказа.
 
 	// #modal-call
+	+b.modal--vacancies(id="modal-vacancies" class="zoom-anim-dialog mfp-hide modal-win modal-form") 
+		+b.s-contact-new 
+			.row
+				.col-sm-auto
+					+e.img-wrap
+						img.res-i(src="img/@2x/man-circle.png", alt="")
+				.col
+					+e.name Нестеров Андрей
+					+e.prof HR-директор
+					+e.tel(href="tel:8(800)500-57-48")
+						+icon("phone-receiver")
+						| 8 (800) 500-57-48
+					br
+					+e.mail(href="mailto:sale@datexsoft.ru") sale@datexsoft.ru
+					br
+
+	// #modal-call

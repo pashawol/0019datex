@@ -23,6 +23,12 @@
 
 	.accordion {
 		margin-bottom: 1px;
+
+		&__btn {
+			@extend .btn;
+			@extend .btn-primary;
+			width: rem(200);
+		}
 	}
 
 	.accordion__title {

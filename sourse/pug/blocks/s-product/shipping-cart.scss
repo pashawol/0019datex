@@ -1,0 +1,43 @@
+.shipping-cart {
+  text-align: center;
+
+  &__icon-wrap {
+    display: inline-flex;
+    width: rem(68px);
+    height: rem(68px);
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(20);
+  }
+
+  .icon {
+    color: $primary;
+    font-size: rem(36);
+    flex-shrink: 0;
+  }
+
+  a {
+    text-decoration: none !important;
+    border-bottom: 1px solid;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  p {
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: rem(12);
+  }
+}
+
+.panel-white {
+  border: 2px solid #dadde2;
+  background-color: #ffffff;
+  padding: rem(32) rem(20) rem(15);
+  margin-bottom: rem(20);
+}

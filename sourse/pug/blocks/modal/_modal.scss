@@ -528,3 +528,16 @@ body .modal-city {
 		}
 	}
 }
+
+.modal-shipping {
+	p {
+		font-size: rem(16);
+	}
+
+	@include media-breakpoint-up(sm) {
+
+		.order-modal__body {
+			padding: rem(40) rem(60) rem(30);
+		}
+	}
+}

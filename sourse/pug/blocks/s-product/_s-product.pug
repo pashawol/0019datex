@@ -235,6 +235,13 @@ mixin s-product()
 						.col-12.col-xl-3
 							.row.aside-block-js(data-sticky-container)
 								.col-12
+									+b.shipping-cart.panel-white
+										+e.icon-wrap
+											+icon('mob-m7')
+										p Доставка товара по&nbsp;всей территории&nbsp;РФ
+										p
+											a.popup-with-move-anim(href="#modal-shipping") Информация о доставке
+								.col-12
 									+e.extra-block
 										+e.extra-title
 											span Бесплатно 

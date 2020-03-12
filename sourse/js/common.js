@@ -256,7 +256,7 @@ jQuery(document).ready(function ($) {
 			$('.counter-js').text(from); // FROM value
 	});
 	*/
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/Career.png);"></div>'); // / закрыть меню при горизонтальном свайпе
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(/screen/01.png);"></div>'); // / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -337,6 +337,16 @@ jQuery(document).ready(function ($) {
 		}, 800);
 		return false;
 	});
+
+	$(".scroll-link-left").click(function () {
+		var elementClick = $(this).attr("href");
+		var destination = $(this).parents(".header-block").next().offset().top;
+		$('html, body').animate({
+			scrollTop: destination
+		}, 800);
+		return false;
+	});
+
 	$(" .toggle-menu-mobile--js").click(function () {
 		$(".top-line-page-search").toggleClass("search-disable");
 	}); // slider

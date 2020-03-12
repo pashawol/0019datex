@@ -190,12 +190,14 @@
 
 	&__btn {
 		width: rem(230);
+		box-shadow: none;
 
 		&:not(:hover) {
 
 			color: $body-color !important;
 		}
 	}
+
 
 	@include media-breakpoint-up(lg) {}
 

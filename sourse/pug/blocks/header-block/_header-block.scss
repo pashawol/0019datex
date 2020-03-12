@@ -233,7 +233,17 @@
 			}
 
 			// @include rfs(56);
-			margin-bottom: rem(40);
+
+			@include media-breakpoint-up(sm) {
+
+				margin-bottom: rem(40);
+			}
+
+			margin-bottom: rem(20);
+		}
+
+		@include media-breakpoint-down(xs) {
+			padding-top: rem(80);
 		}
 	}
 
@@ -249,7 +259,7 @@
 
 		@include media-breakpoint-down(xs) {
 			font-size: $h5-font-size * .8;
-			margin-bottom: rem(35);
+			margin-bottom: rem(25);
 			// @extend .h5;
 		}
 
@@ -258,8 +268,14 @@
 	}
 
 	&__text-footer {
+
 		// max-width: rem(610);
-		margin-bottom: rem(45);
+		@include media-breakpoint-up(sm) {
+
+			margin-bottom: rem(45);
+		}
+
+		margin-bottom: rem(25);
 	}
 
 	&__btn-wrap {
@@ -283,6 +299,7 @@
 		@include media-breakpoint-down(xs) {
 
 			width: 100%;
+			margin-bottom: rem(30);
 		}
 
 	}

@@ -922,6 +922,13 @@
 	//
 	@include media-breakpoint-down(xl) {}
 
+	&__btn-wrap-right {
+		.s-product__one-click {
+			margin-bottom: rem(20) !important;
+		}
+
+	}
+
 	@include media-breakpoint-down(lg) {
 		&__btn-wrap-right {
 			margin-top: 20px;
@@ -936,6 +943,11 @@
 				border-top: 1px solid #dadde2;
 				height: 1px;
 				width: calc(100% - 30px);
+			}
+
+			.s-product__one-click {
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}

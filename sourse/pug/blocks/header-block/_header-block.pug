@@ -35,3 +35,27 @@ mixin header-block()
 		
 		//- 	.row
 	// end header-block
+
+	
+mixin header-block-real()
+	// start header-block
+	+b.header-block--real
+		//- div
+		+e.main.container(class="wow fadeIn" data-wow-duration=`${dur * 2}s` data-wow-delay=`${delay * 3.2}s`) 
+			.row.align-items-center
+				.col-lg-6.col-md-7
+					h1  Реальная автоматизация Вашего&nbsp;бизнеса
+					+e.sub-title-color от надежной проектной команды 
+					+e.text-footer Поможем настроить &laquo;1C&raquo; под ваш бизнес. Вместе&nbsp;сформулируем&nbsp;задачи, предложим оптимальное решение, автоматизируем, научим пользоваться системой на&nbsp;100%
+					+e.btn-wrap
+						+e.btn--real.btn-primary.popup-with-move-anim(href="#modal-call" data-title="Оставить заявку" data-order="Оставить заявку"   data-btn="оставить заявку") Оставить заявку
+						+e.btn--real.btn-primary.btn--white(href="#") Узнать подробнее
+				.col
+					+e.img-wrap
+						PICTURE(class="wow fadeIn" data-wow-duration=`${dur * 2}s` data-wow-delay=`${delay * 3.2}s`) 
+						
+							img.res-i(src="img/@2x/2man.jpg", alt="")  
+ 
+		//- 	.row
+	// end header-block-real
+

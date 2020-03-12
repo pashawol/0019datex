@@ -6,5 +6,6 @@
 1.	<https://pashawol.github.io/0019datex/public/13-shop-main.html>
 1.	<https://pashawol.github.io/0019datex/public/14-category.html>
 1.	<https://pashawol.github.io/0019datex/public/15-prod.html>
+1.	<https://pashawol.github.io/0019datex/public/03-product-page.html>
 
 1.	Карьера <https://pashawol.github.io/0019datex/public/16-career.html>
